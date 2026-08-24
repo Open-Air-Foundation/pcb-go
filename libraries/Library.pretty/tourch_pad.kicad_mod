@@ -1,0 +1,112 @@
+(footprint "tourch_pad"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0.1 -5.7 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "967af710-938d-4fd3-a4cb-b9c610d029dc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "tourch_pad"
+		(at 0 1.2 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "18d9afdc-575d-4447-97d0-fe8d30658652")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0.2 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bdd23253-63a2-4d12-b6b0-333939cfe62f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0.2 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "abf3fd75-91b4-4c0a-b9af-66a57dcf5128")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_poly
+		(pts
+			(xy -4.9 -4.8) (xy 3.8 -4.8) (xy 3.8 -3.8) (xy 4.9 -3.8) (xy 4.9 5) (xy -4.9 5)
+		)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Cu")
+		(uuid "3eb2081c-7170-4cb7-ab69-dff314b8d22c")
+	)
+	(fp_rect
+		(start -5 -4.9)
+		(end 5 5.1)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "0618222f-7bb7-465c-8125-33d77d7852b9")
+	)
+	(fp_rect
+		(start 3.8 -4.9)
+		(end 5 -3.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "2371540f-498a-48df-8074-7c03b5c0244f")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -0.1 6.4 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "2a2a7558-53a2-4e21-8a35-0c7993c1c6dc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at 4.275 -4.225)
+		(size 1.25 1.25)
+		(layers "F.Cu" "F.Paste")
+		(roundrect_rratio 0.15)
+		(thermal_bridge_angle 45)
+		(uuid "390d1614-1bc1-4ab2-8fa9-8d75704810c6")
+	)
+	(embedded_fonts no)
+)

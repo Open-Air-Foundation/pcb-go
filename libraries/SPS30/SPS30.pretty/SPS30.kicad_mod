@@ -1,0 +1,92 @@
+(footprint "SPS30"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -0.25 -0.75 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "ce959349-83da-4bb2-ae8c-66e207ae3e7c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "SPS30"
+		(at -0.25 0.75 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "591c4a6e-3275-41d8-ad5a-09e98691aa28")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at -0.25 -0.25 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ac53cc77-5729-4bf3-a36a-4f789d1ed165")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at -0.25 -0.25 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "28761ab1-b08c-4c84-9019-9ec71dd267ee")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -20.51 -21.5)
+		(end 20.21 20)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "dbc418b4-94de-4945-897f-fb04facd1359")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -0.25 2.25 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "f892e7aa-f4ee-466a-96f2-c6db3b070f20")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(embedded_fonts no)
+	(model "/Users/formylife/Documents/KiCad/SPS30/PS_CAD_SPS30_D1.STEP"
+		(offset
+			(xyz 11.75 -4.75 6)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)

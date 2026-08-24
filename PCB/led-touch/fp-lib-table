@@ -1,0 +1,7 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "AG-lib")(type "KiCad")(uri "${KIPRJMOD}/../../libraries/AirGradient/AG_lib/footprints/AG-lib.pretty")(options "")(descr ""))
+  (lib (name "AG_display")(type "KiCad")(uri "${KIPRJMOD}/../../libraries/AirGradient/AG_display/AG_display.pretty")(options "")(descr ""))
+  (lib (name "Library")(type "KiCad")(uri "${KIPRJMOD}/../../libraries/Library.pretty")(options "")(descr ""))
+  (lib (name "easyeda2kicad")(type "KiCad")(uri "${KIPRJMOD}/../../libraries/easyeda2kicad/easyeda2kicad.pretty")(options "")(descr ""))
+)

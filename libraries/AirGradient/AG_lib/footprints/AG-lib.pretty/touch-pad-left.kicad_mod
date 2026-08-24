@@ -1,0 +1,183 @@
+(footprint "touch-pad-left"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "1a4e6dbf-e83d-4193-a56e-c06d06cf8152")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "touch-pad-left"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "c0a0a62a-60d7-4e8a-9ede-300d80e60f34")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "82cd7377-b78b-414d-95cf-2df3459b2047")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dabecf43-a13e-48c8-926a-f50540e80460")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -5.431004 -33.143)
+		(end -6.263 -2.901078)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8973216d-8e6d-4140-8dc5-8a3074ba02fe")
+	)
+	(fp_line
+		(start 6.347 -2.901078)
+		(end -6.263 -2.901078)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "431f59d1-61e5-4d66-84b0-105362d18c1c")
+	)
+	(fp_line
+		(start 6.347 -2.901078)
+		(end 6.367 -27.889539)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "cf4ba804-d979-417d-aac3-cf4654a13e2c")
+	)
+	(fp_line
+		(start 6.367 -27.889539)
+		(end 12.618996 -27.893072)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "2c5f94b6-a699-4fe7-8e22-83fde3b9bcc1")
+	)
+	(fp_line
+		(start 12.618996 -33.143)
+		(end -5.431004 -33.143)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d4578b70-ddfe-4d40-8181-5010b2fe26d3")
+	)
+	(fp_line
+		(start 12.618996 -27.893)
+		(end 12.618996 -33.143)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fddc2988-9d93-4d8a-a1d0-8d3d529cbbf2")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "3679193c-780b-4a8f-bf52-7e0c94f2280f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at 6.185 -16.331539)
+		(size 1.6 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(zone_connect 2)
+		(uuid "738570f8-41db-403b-a47c-ec113282f233")
+	)
+	(pad "2" smd rect
+		(at 6.24 -13.251539)
+		(size 1.6 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(zone_connect 2)
+		(uuid "14776a85-1e37-4164-bcbc-643d951333ce")
+	)
+	(pad "3" smd rect
+		(at 7.93 -33.02)
+		(size 1.6 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(zone_connect 2)
+		(uuid "713a3605-0469-44b8-8138-a3e9b84b12bb")
+	)
+	(pad "4" smd rect
+		(at 5.39 -33.02)
+		(size 1.6 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(zone_connect 2)
+		(uuid "42adb07a-5c13-49db-a017-eefefa6442ee")
+	)
+	(pad "5" smd rect
+		(at 2.85 -33.02)
+		(size 1.6 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(zone_connect 2)
+		(uuid "e2524e9c-f46a-49b2-a419-be6711f31122")
+	)
+	(pad "6" smd rect
+		(at 0.31 -33.02)
+		(size 1.6 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(zone_connect 2)
+		(uuid "bf7356ef-1490-4bfe-870b-8a52e60387d2")
+	)
+	(embedded_fonts no)
+	(model "/Users/formylife/Documents/airgradient_pcb/touch-pad/touch-pad-left/touch-pad-left.step"
+		(offset
+			(xyz -6.15 3 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

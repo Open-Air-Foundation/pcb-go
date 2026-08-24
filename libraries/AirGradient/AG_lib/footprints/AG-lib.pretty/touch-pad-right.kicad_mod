@@ -1,0 +1,229 @@
+(footprint "touch-pad-right"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -0.18 -1.26 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "048fbc3b-7416-46c7-ad1a-c7046adbfd0b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "touch-pad-right"
+		(at -0.18 0.24 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "33dd25ec-3493-4a35-81bd-c3acc0f0c0b5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4eedd220-5bf7-460e-8d0e-cb681a6db8ea")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d06c3450-6c73-4e9c-b92a-f9e229ffd0f5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -13.427063 -21.563)
+		(end -5.554763 -21.563)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d0a39e2f-bc5f-4869-9127-a1237c56732b")
+	)
+	(fp_line
+		(start -13.427063 -16.313)
+		(end -13.427063 -21.563)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "896e8084-b1ea-41d1-8d38-d4cda3397f40")
+	)
+	(fp_line
+		(start -6.357 -16.313)
+		(end -13.427063 -16.313)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "60b7d0d5-2bb9-4062-99aa-a9f001f2a66a")
+	)
+	(fp_line
+		(start -6.357 -16.313)
+		(end -6.357 -2.813)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2139345f-9567-452c-ab0f-6b35b3d7efab")
+	)
+	(fp_line
+		(start -6.357 -2.813)
+		(end 5.5 -2.813)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f81d1860-d6b0-417a-a3a0-01fb9117d21a")
+	)
+	(fp_line
+		(start -5.554768 -21.308255)
+		(end -5.554763 -21.563)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "07c1d456-dfd3-43b2-99d6-0dc0287b5f6c")
+	)
+	(fp_line
+		(start 0.445208 -21.563)
+		(end 0.445232 -21.308255)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "573f31e0-2e2e-4444-bb97-c4b74d797098")
+	)
+	(fp_line
+		(start 4.970008 -21.563)
+		(end 0.445208 -21.563)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5d953e0c-ab15-4710-a95b-1ffce936b14c")
+	)
+	(fp_line
+		(start 4.970008 -21.563)
+		(end 5.5 -2.813)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4b458d92-01c7-40c4-8a2c-071862484f99")
+	)
+	(fp_arc
+		(start 0.445232 -21.308255)
+		(mid -2.554768 -18.308255)
+		(end -5.554768 -21.308255)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "190f4165-e171-4187-8a43-fe1e80456901")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -0.18 1.74 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "71949b20-fb07-452e-b826-f9e2dc9f7913")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -6.23 -4.76)
+		(size 1.6 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(zone_connect 2)
+		(uuid "6a14e52f-b186-416c-9ae4-8db0dd117b9e")
+	)
+	(pad "2" smd rect
+		(at -8.1002 -21.4517)
+		(size 1.6 1.6)
+		(property pad_prop_castellated)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(zone_connect 2)
+		(uuid "bb879bac-383a-4c75-a9ed-4e18fb8ed747")
+	)
+	(pad "2" smd rect
+		(at -3.697 -2.813)
+		(size 1.6 1.6)
+		(property pad_prop_castellated)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(zone_connect 2)
+		(uuid "fe87c58c-79f6-4e45-a034-0bb6ccc39f51")
+	)
+	(pad "2" smd rect
+		(at 2.2378 -21.4517)
+		(size 1.6 1.6)
+		(property pad_prop_castellated)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(zone_connect 2)
+		(uuid "b9e44d65-2403-40f2-bdd2-920d8493ebde")
+	)
+	(pad "2" smd rect
+		(at 2.84 -2.813)
+		(size 1.6 1.6)
+		(property pad_prop_castellated)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(zone_connect 2)
+		(uuid "b6bd2648-041f-4ab6-b109-3d34e32429d4")
+	)
+	(pad "3" smd rect
+		(at -10.6402 -21.4517)
+		(size 1.6 1.6)
+		(property pad_prop_castellated)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(zone_connect 2)
+		(uuid "0a422c7b-4d69-4395-8f15-ffc9231ed04e")
+	)
+	(embedded_fonts no)
+	(model "/Users/formylife/Documents/airgradient_pcb/openair-mobile-pcb/touch-pad/touch-pad-right/touch-pad-right.step"
+		(offset
+			(xyz -6.2 2.9 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

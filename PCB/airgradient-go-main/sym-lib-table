@@ -1,0 +1,8 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Espressif")(type "KiCad")(uri "${KIPRJMOD}/../../libraries/Espressif/Espressif.kicad_sym")(options "")(descr ""))
+  (lib (name "RF_GPS")(type "KiCad")(uri "${KIPRJMOD}/../../libraries/RF_GPS/RF_GPS.kicad_sym")(options "")(descr ""))
+  (lib (name "S12")(type "KiCad")(uri "${KIPRJMOD}/../../libraries/My-lib/S12.kicad_sym")(options "")(descr ""))
+  (lib (name "Senserion")(type "KiCad")(uri "${KIPRJMOD}/../../libraries/My-lib/SGP41-D-R4/SGP41-D-R4.kicad_sym")(options "")(descr ""))
+  (lib (name "easyeda2kicad")(type "KiCad")(uri "${KIPRJMOD}/../../libraries/easyeda2kicad/easyeda2kicad.kicad_sym")(options "")(descr ""))
+)

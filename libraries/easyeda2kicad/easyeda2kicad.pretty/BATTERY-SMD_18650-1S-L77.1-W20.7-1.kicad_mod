@@ -1,0 +1,210 @@
+(footprint "BATTERY-SMD_18650-1S-L77.1-W20.7-1"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -45.31 0)
+		(layer "F.SilkS")
+		(uuid "5b6c8962-675d-4512-b4f9-0ff77211d0bf")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "BATTERY-SMD_18650-1S-L77.1-W20.7-1"
+		(at 0 45.31 0)
+		(layer "F.Fab")
+		(uuid "c8135a86-d324-4a96-9513-00e6ca0bd9f4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5095cf87-9276-44d1-8fd1-c3c0d69ab723")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9c431aa6-7a47-4018-8413-42ffc9f58beb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 0 -28.96)
+		(end 0 -26.67)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ac0bc91a-67d9-43a1-8602-e0bdd505d4a5")
+	)
+	(fp_line
+		(start 0 26.67)
+		(end 0 28.95)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f13d865a-2c89-4786-aed9-82ef177a7c57")
+	)
+	(fp_line
+		(start 1.15 -27.81)
+		(end -1.14 -27.81)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "db0a6eac-c709-4858-819c-5a0d53fee07c")
+	)
+	(fp_circle
+		(center 0 -27.81)
+		(end 1.6 -27.81)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "8c073634-d9b5-44f2-a174-b2d19048f63f")
+	)
+	(fp_circle
+		(center 0 27.81)
+		(end 1.6 27.81)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "451221b3-d2d5-4cf1-ad82-7dfefe949043")
+	)
+	(fp_circle
+		(center 8 -35.84)
+		(end 8.39 -35.84)
+		(stroke
+			(width 0.79)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "021da633-334f-439f-b4e0-742f0cb0fdc1")
+	)
+	(fp_line
+		(start -10.35 -38.54)
+		(end -10.35 -38.54)
+		(stroke
+			(width 3)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8d258ceb-9602-40d1-b066-f1d89fa88130")
+	)
+	(fp_line
+		(start -10.35 -38.54)
+		(end 10.35 -38.54)
+		(stroke
+			(width 3)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2146a73a-23bb-41fb-b78c-d5860386a596")
+	)
+	(fp_line
+		(start 10.35 -38.54)
+		(end 10.35 38.54)
+		(stroke
+			(width 3)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ec22fa03-9b64-43b7-ae40-90d4c0113e6b")
+	)
+	(fp_line
+		(start 10.35 38.54)
+		(end -10.35 38.54)
+		(stroke
+			(width 3)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2acc7256-f077-4253-af76-78f1732301b9")
+	)
+	(fp_circle
+		(center 10.35 43.02)
+		(end 10.38 43.02)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "69afd950-cb63-40de-9dfe-2d6516b694eb")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "1be92d69-e6c8-4a94-bf6d-29f8427ce5a4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" thru_hole circle
+		(at 8 -35.84)
+		(size 2.4 2.4)
+		(drill 2.4)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "2b6cda0c-f8a7-4d9e-b00f-986c9854cc6d")
+	)
+	(pad "1" smd rect
+		(at 0 41.31)
+		(size 7.62 5.08)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "4c7abab7-d266-4b63-a6c6-1dd927849256")
+	)
+	(pad "2" smd rect
+		(at 0 -41.31)
+		(size 7.62 5.08)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ecbf1d4e-0ed5-4b6f-887d-bd19d901f37f")
+	)
+	(embedded_fonts no)
+	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/BATTERY-SMD_18650-1S-L77.1-W20.7-1.wrl"
+		(offset
+			(xyz 0 -0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

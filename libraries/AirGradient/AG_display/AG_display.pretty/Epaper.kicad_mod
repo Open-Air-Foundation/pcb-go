@@ -1,0 +1,92 @@
+(footprint "Epaper"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "EPAPER**"
+		(at 0.1 -0.65 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "b82ac18e-01ee-437b-ad18-6b050f572659")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Epaper"
+		(at 0.1 0.85 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "8b321d2b-3a86-42d4-9af7-3f6811c51626")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f010ddf7-cfa4-4026-a59a-60153efcd1a5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "736c0c1d-6863-485e-b4ff-58d8791ea388")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -14.5 -9.2)
+		(end 15 16.05)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "59189176-d229-4362-b62f-611c77f52f97")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.1 2.35 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "48971ed0-b74c-49f8-8f45-347e590c026d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(embedded_fonts no)
+	(model "/Users/formylife/Documents/KiCad/AG_display/3d/Portable Monitor_Display.stp"
+		(offset
+			(xyz 0.21 6.4 -10.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 90 -90)
+		)
+	)
+)

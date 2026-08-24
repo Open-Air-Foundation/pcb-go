@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "AG_lib")(type "KiCad")(uri "${KIPRJMOD}/../../libraries/AirGradient/AG_lib/AG_lib.kicad_sym")(options "")(descr ""))
+  (lib (name "Library")(type "KiCad")(uri "${KIPRJMOD}/../../libraries/easyeda2kicad/Library.kicad_sym")(options "")(descr ""))
+  (lib (name "easyeda2kicad")(type "KiCad")(uri "${KIPRJMOD}/../../libraries/easyeda2kicad/easyeda2kicad.kicad_sym")(options "")(descr ""))
+)

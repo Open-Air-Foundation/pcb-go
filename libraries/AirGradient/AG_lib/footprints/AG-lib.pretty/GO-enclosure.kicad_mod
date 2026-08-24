@@ -1,0 +1,97 @@
+(footprint "GO-enclosure"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "89565d43-89bb-42af-80ba-bb89c69f4782")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "GO-enclosure"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "f46448d6-b377-4d9a-a68d-2461da713fb0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "56197e37-159c-425b-aa04-4d4094cd4b3f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "978a100d-62ad-4ac0-b861-f2844836fd7a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "d575d316-66bb-415f-88c5-00493d7f68fe")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" thru_hole circle
+		(at -29.25 0)
+		(size 2 2)
+		(drill 2.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "5d677870-a0e4-4244-b4db-9905f4854fd1")
+	)
+	(pad "" thru_hole circle
+		(at 29.250012 0 180)
+		(size 2 2)
+		(drill 2.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "45b6b531-0f1a-4f10-993e-656f35e86db2")
+	)
+	(embedded_fonts no)
+	(model "/Users/formylife/Documents/3D cad/Portable%20Monitor_ver.11-B/protable-Monitor-bottom.step"
+		(offset
+			(xyz 0 53.8 -3)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -180 -90 -90)
+		)
+	)
+)

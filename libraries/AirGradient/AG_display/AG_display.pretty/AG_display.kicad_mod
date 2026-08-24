@@ -1,0 +1,138 @@
+(footprint "AG_display"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "118e275b-72e6-42c5-a709-f1bb60fb301f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "AG_display"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0f2c994f-ae6b-4738-9a5a-78791a6c7c03")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7643bb83-4162-46a0-bce5-1895bbe91d2a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5c8e3f2e-23dc-496a-9898-bbac8a4b4d75")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC Part" "C5160787"
+		(at 11.04 -1.41 270)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bbf2f860-299c-4442-9e93-43ae5264f612")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(pad "" np_thru_hole circle
+		(at -23.801548 5.146993)
+		(size 5 5)
+		(drill 3.2)
+		(layers "*.Cu" "*.Mask")
+		(uuid "4029d046-7696-49fd-81b2-a3050415b513")
+	)
+	(pad "" np_thru_hole circle
+		(at 21.201515 -23.753007)
+		(size 5 5)
+		(drill 3.2)
+		(layers "*.Cu" "*.Mask")
+		(uuid "3689e041-a5e9-4c02-9017-5c4d506aeee2")
+	)
+	(pad "" np_thru_hole circle
+		(at 24.201515 3.246993)
+		(size 5 5)
+		(drill 3.2)
+		(layers "*.Cu" "*.Mask")
+		(uuid "22f07de8-790d-4f2b-b60a-e9071f1e29e0")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../libraries/3d/mobile_display_260403.step"
+		(offset
+			(xyz 131.25 -42.75 12)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+	(model "/Users/formylife/Documents/airgradient_pcb/openair-mobile-pcb/3d/SMD_Spacer_2.5x4.5x12.step"
+		(offset
+			(xyz 24.2 -3.25 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+	(model "/Users/formylife/Documents/airgradient_pcb/openair-mobile-pcb/3d/SMD_Spacer_2.5x4.5x12.step"
+		(offset
+			(xyz -23.8 -5.15 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+	(model "/Users/formylife/Documents/airgradient_pcb/openair-mobile-pcb/3d/SMD_Spacer_2.5x4.5x12.step"
+		(offset
+			(xyz 21.2 23.75 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

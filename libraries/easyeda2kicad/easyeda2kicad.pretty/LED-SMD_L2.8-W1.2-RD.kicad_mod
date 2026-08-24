@@ -1,23 +1,23 @@
 (footprint "LED-SMD_L2.8-W1.2-RD"
-	(version 20241229)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
-		(at 0 -4 0)
+		(at -0.015498 -3.039773 180)
 		(layer "F.SilkS")
-		(uuid "7786dac3-e0c5-4ed4-a519-640f2aa1e3e7")
+		(uuid "e1c280bb-c4b6-4e83-816d-b302296b36d9")
 		(effects
 			(font
-				(size 1 1)
+				(size 0.6 0.6)
 				(thickness 0.15)
 			)
 		)
 	)
 	(property "Value" "LED-SMD_L2.8-W1.2-RD"
-		(at 0 4 0)
+		(at 0 4 180)
 		(layer "F.Fab")
-		(uuid "7ae337c2-d923-46cf-9190-ece09c7bc41b")
+		(uuid "ed75ebae-83df-42af-9d95-2ef6e3d8612c")
 		(effects
 			(font
 				(size 1 1)
@@ -25,11 +25,11 @@
 			)
 		)
 	)
-	(property "Datasheet" ""
-		(at 0 0 0)
+	(property "Datasheet" "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_SMDLED-Side-luminescence_C181869.html"
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "f7d7ccb3-b059-4283-acb2-0d998bc5aaf6")
+		(uuid "ed090a06-ed6c-4689-8fc3-82e7936575b5")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -38,10 +38,10 @@
 		)
 	)
 	(property "Description" ""
-		(at 0 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "8225fa97-4481-4da9-8076-8f9261c9702f")
+		(uuid "ce1caf44-eadb-4a3b-9c6c-15ec8618ca60")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -49,7 +49,10 @@
 			)
 		)
 	)
+	(sheetname "/")
+	(sheetfile "led_pcb.kicad_sch")
 	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
 		(start -1.52 -1.02)
 		(end -1.52 -0.68)
@@ -58,7 +61,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "3bd9d1df-4dd6-4d1d-bced-d14a7bb8825a")
+		(uuid "8f09f07e-82aa-4cd3-a73e-6e175cc4870e")
 	)
 	(fp_line
 		(start -1.52 -1.02)
@@ -68,7 +71,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "33aba884-d9ad-489e-a49e-1c9e3737bd30")
+		(uuid "436710a7-01c5-4f50-99da-870b5d0c6a22")
 	)
 	(fp_line
 		(start -1.52 0.63)
@@ -78,7 +81,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "18f2bf64-2126-403e-bf62-b80e645daacb")
+		(uuid "2833424a-8a3b-489f-b622-2f851a48a0c0")
 	)
 	(fp_line
 		(start -0.63 -1.02)
@@ -88,7 +91,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "a58b5934-a1e5-4b97-845d-c3ca1ad6885e")
+		(uuid "fe981d1f-0584-44df-842b-358f7836b4dc")
 	)
 	(fp_line
 		(start -0.38 -0.76)
@@ -98,7 +101,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "e9f6201f-b21b-45bd-9b0c-4257d07ecc00")
+		(uuid "38a991a8-4b74-42ac-92e9-482eebec8e27")
 	)
 	(fp_line
 		(start 0.38 -0.76)
@@ -108,7 +111,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "b28e8c65-9d84-475f-8150-c6bf9481347d")
+		(uuid "d3d9d55f-db19-4bee-9ea5-1f77a0d6b11f")
 	)
 	(fp_line
 		(start 0.64 -1.02)
@@ -118,7 +121,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "0930688f-3f5d-4bdc-a4bb-ae07c08fcc9f")
+		(uuid "2ba2a5bd-4492-406c-a6d1-54549016f992")
 	)
 	(fp_line
 		(start 1.53 -1.02)
@@ -128,7 +131,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "a2d6d73f-743c-4181-8166-9285015a4455")
+		(uuid "d5a8fbc5-7a8d-41d9-b020-71c7975539d2")
 	)
 	(fp_circle
 		(center -1.4 0.28)
@@ -139,15 +142,15 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "a8c2b5b6-8f70-40c7-9e7b-e696e31ea8b8")
+		(uuid "ec1ab801-504e-40e4-847c-009b9bde6a6c")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
-		(uuid "4c43a9b8-3a75-43a3-a90f-f384c3e7ffb5")
+		(uuid "6a2b9f24-2130-4e5a-abe2-ce1c6458b28b")
 		(effects
 			(font
-				(size 1 1)
+				(size 0.6 0.6)
 				(thickness 0.15)
 			)
 		)
@@ -156,16 +159,16 @@
 		(at -1.2 0)
 		(size 1.4 0.9)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "e02e66a0-f0f9-4dcb-bdd1-3d7bf4fae635")
+		(uuid "cc615eaf-7913-474c-a2df-bb88850348da")
 	)
 	(pad "2" smd rect
 		(at 1.2 0)
 		(size 1.4 0.9)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "ad8ab110-755c-47db-af51-0c758b7019af")
+		(uuid "a722afc6-9200-4c5c-806c-46248ba7c395")
 	)
 	(embedded_fonts no)
-	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/LED-SMD_2P-L2.5-W1.2-H0.8-LS2.8.wrl"
+	(model "${KIPRJMOD}/../../libraries/easyeda2kicad/easyeda2kicad.3dshapes/LED-SMD_2P-L2.5-W1.2-H0.8-LS2.8.wrl"
 		(offset
 			(xyz 0 -0.5 0.4)
 		)

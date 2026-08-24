@@ -155,6 +155,26 @@
 		(layer "F.SilkS")
 		(uuid "190f4165-e171-4187-8a43-fe1e80456901")
 	)
+	(fp_line
+		(start 0.445269 -21.463447)
+		(end 0.445232 -21.308255)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "490fe800-0546-494d-bc5d-87d8c092daee")
+	)
+	(fp_line
+		(start 0.445269 -21.463447)
+		(end 4.777908 -21.461268)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "14938b12-86d7-48ce-9c50-b3a3dadff096")
+	)
 	(fp_text user "${REFERENCE}"
 		(at -0.18 1.74 0)
 		(unlocked yes)
@@ -182,30 +202,6 @@
 		(zone_connect 2)
 		(uuid "bb879bac-383a-4c75-a9ed-4e18fb8ed747")
 	)
-	(pad "2" smd rect
-		(at -3.697 -2.813)
-		(size 1.6 1.6)
-		(property pad_prop_castellated)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(zone_connect 2)
-		(uuid "fe87c58c-79f6-4e45-a034-0bb6ccc39f51")
-	)
-	(pad "2" smd rect
-		(at 2.2378 -21.4517)
-		(size 1.6 1.6)
-		(property pad_prop_castellated)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(zone_connect 2)
-		(uuid "b9e44d65-2403-40f2-bdd2-920d8493ebde")
-	)
-	(pad "2" smd rect
-		(at 2.84 -2.813)
-		(size 1.6 1.6)
-		(property pad_prop_castellated)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(zone_connect 2)
-		(uuid "b6bd2648-041f-4ab6-b109-3d34e32429d4")
-	)
 	(pad "3" smd rect
 		(at -10.6402 -21.4517)
 		(size 1.6 1.6)
@@ -215,7 +211,7 @@
 		(uuid "0a422c7b-4d69-4395-8f15-ffc9231ed04e")
 	)
 	(embedded_fonts no)
-	(model "/Users/formylife/Documents/airgradient_pcb/openair-mobile-pcb/touch-pad/touch-pad-right/touch-pad-right.step"
+	(model "${KIPRJMOD}/../../libraries/3d/touch-pad-right.step"
 		(offset
 			(xyz -6.2 2.9 0)
 		)

@@ -83,7 +83,7 @@
 		(uuid "45b6b531-0f1a-4f10-993e-656f35e86db2")
 	)
 	(embedded_fonts no)
-	(model "/Users/formylife/Documents/3D cad/Portable%20Monitor_ver.11-B/protable-Monitor-bottom.step"
+	(model "${KIPRJMOD}/../../libraries/3d/protable-Monitor-bottom.step"
 		(offset
 			(xyz 0 53.8 -3)
 		)

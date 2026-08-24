@@ -22,7 +22,7 @@
 				)
 			)
 		)
-		(property "Footprint" "S12:S12"
+		(property "Footprint" "S12-oaf:S12"
 			(at 0 0 0)
 			(effects
 				(font

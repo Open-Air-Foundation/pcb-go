@@ -35,7 +35,7 @@
 	(pad 11 smd rect (at 6.87 4.15 0.00) (size 1.45 2.00) (layers F.Cu F.Paste F.Mask))
 	(pad 12 smd rect (at 6.88 -4.15 0.00) (size 1.45 2.00) (layers F.Cu F.Paste F.Mask))
 	(fp_circle (center 7.22 5.55) (end 7.25 5.55) (layer F.Fab) (width 0.06))
-	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/TF-SMD_TF-CARD-XG8P-H1.5.wrl"
+	(model "${KIPRJMOD}/../../libraries/easyeda2kicad/easyeda2kicad.3dshapes/TF-SMD_TF-CARD-XG8P-H1.5.wrl"
 		(offset (xyz -0.000 1.150 -0.000))
 		(scale (xyz 1 1 1))
 		(rotate (xyz 0 0 0))

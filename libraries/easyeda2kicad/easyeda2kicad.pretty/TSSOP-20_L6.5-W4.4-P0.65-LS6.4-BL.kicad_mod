@@ -37,7 +37,7 @@
 	(fp_circle (center -3.56 2.87) (end -3.41 2.87) (layer F.SilkS) (width 0.30))
 	(fp_circle (center -2.93 3.60) (end -2.78 3.60) (layer Cmts.User) (width 0.30))
 	(fp_circle (center -3.25 3.20) (end -3.22 3.20) (layer F.Fab) (width 0.06))
-	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/TSSOP-20_L6.5-W4.4-H1.0-LS6.4-P0.65.wrl"
+	(model "${KIPRJMOD}/../../libraries/easyeda2kicad/easyeda2kicad.3dshapes/TSSOP-20_L6.5-W4.4-H1.0-LS6.4-P0.65.wrl"
 		(offset (xyz -911.470 683.720 -0.000))
 		(scale (xyz 1 1 1))
 		(rotate (xyz 0 0 270))

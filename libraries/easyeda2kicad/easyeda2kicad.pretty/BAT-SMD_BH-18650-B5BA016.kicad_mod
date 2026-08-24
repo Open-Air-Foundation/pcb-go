@@ -28,7 +28,7 @@
 	(pad "" thru_hole circle (at -36.00 -25.85) (size 1.80 1.80) (drill 1.80) (layers *.Cu *.Mask))
 	(fp_circle (center -43.25 -28.40) (end -43.22 -28.40) (layer F.Fab) (width 0.06))
 	(fp_circle (center -36.00 -25.85) (end -35.62 -25.85) (layer Cmts.User) (width 0.75))
-	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/BAT-SMD_BH-18650-B5BA016.wrl"
+	(model "${KIPRJMOD}/../../libraries/easyeda2kicad/easyeda2kicad.3dshapes/BAT-SMD_BH-18650-B5BA016.wrl"
 		(offset (xyz -0.000 -0.000 1.200))
 		(scale (xyz 1 1 1))
 		(rotate (xyz 0 0 0))

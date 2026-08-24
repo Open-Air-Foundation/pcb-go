@@ -169,7 +169,7 @@
 		(uuid "bf7356ef-1490-4bfe-870b-8a52e60387d2")
 	)
 	(embedded_fonts no)
-	(model "/Users/formylife/Documents/airgradient_pcb/touch-pad/touch-pad-left/touch-pad-left.step"
+	(model "${KIPRJMOD}/../../libraries/3d/touch-pad-left.step"
 		(offset
 			(xyz -6.15 3 0)
 		)

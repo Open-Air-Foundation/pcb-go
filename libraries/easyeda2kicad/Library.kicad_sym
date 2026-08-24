@@ -22,7 +22,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:tourch_pad"
+		(property "Footprint" "Library-oaf:tourch_pad"
 			(at 0 0 0)
 			(effects
 				(font

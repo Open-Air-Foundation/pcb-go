@@ -32,7 +32,7 @@
 	(fp_circle (center -0.65 0.32) (end -0.58 0.32) (layer F.Fab) (width 0.15))
 	(fp_circle (center -1.40 0.89) (end -1.27 0.89) (layer F.SilkS) (width 0.25))
 	(fp_circle (center -1.14 0.63) (end -1.01 0.63) (layer Cmts.User) (width 0.25))
-	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/PICOSTAR-6_L2.2-W1.1-R2-C3-P0.65-BL.wrl"
+	(model "${KIPRJMOD}/../../libraries/easyeda2kicad/easyeda2kicad.3dshapes/PICOSTAR-6_L2.2-W1.1-R2-C3-P0.65-BL.wrl"
 		(offset (xyz 0.000 -0.000 -0.000))
 		(scale (xyz 1 1 1))
 		(rotate (xyz 0 0 270))

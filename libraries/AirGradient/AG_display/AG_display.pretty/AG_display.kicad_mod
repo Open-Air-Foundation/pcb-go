@@ -69,64 +69,168 @@
 		)
 	)
 	(attr smd)
-	(pad "" np_thru_hole circle
-		(at -23.801548 5.146993)
-		(size 5 5)
-		(drill 3.2)
-		(layers "*.Cu" "*.Mask")
-		(uuid "4029d046-7696-49fd-81b2-a3050415b513")
+	(fp_line
+		(start -24.15 -20.575)
+		(end -24.155 3.925)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bbf3cc08-7521-4673-965c-101727c66fd7")
 	)
-	(pad "" np_thru_hole circle
-		(at 21.201515 -23.753007)
-		(size 5 5)
-		(drill 3.2)
-		(layers "*.Cu" "*.Mask")
-		(uuid "3689e041-a5e9-4c02-9017-5c4d506aeee2")
+	(fp_line
+		(start -14.9 -20.575)
+		(end -24.15 -20.575)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ffa16428-4dbe-44d7-a19f-4a34787efe35")
 	)
-	(pad "" np_thru_hole circle
-		(at 24.201515 3.246993)
-		(size 5 5)
+	(fp_line
+		(start -14.9 -20.575)
+		(end -8.9 -20.575)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1023d24b-0ba2-42bd-be30-6c805fc6bc54")
+	)
+	(fp_line
+		(start -8.9 -20.575)
+		(end -8.905 -16.175)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "efb05d8b-2972-4749-9dbd-24c0c7d090fe")
+	)
+	(fp_line
+		(start 8.595 -16.175)
+		(end -8.905 -16.175)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e2f6d7da-6315-459b-94ff-1c5b4076dc84")
+	)
+	(fp_line
+		(start 8.6 -20.575)
+		(end 8.595 -16.175)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "336a3c95-51b1-4556-b191-ecbbfb90ff72")
+	)
+	(fp_line
+		(start 8.6 -20.575)
+		(end 23.85 -20.575)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bdafcf84-95b3-469c-b8ff-c052b297eb0c")
+	)
+	(fp_line
+		(start 14.595 3.925)
+		(end -24.155 3.925)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b4797fed-c0cd-4451-91d8-f2f7be9f7057")
+	)
+	(fp_line
+		(start 14.595 3.925)
+		(end 23.845 3.925)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d0bb080d-3619-4410-8d63-75144fc2ec2d")
+	)
+	(fp_line
+		(start 23.845 3.925)
+		(end 23.845 2.425)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "4bc51527-df8c-411c-ab6b-46488d315d22")
+	)
+	(fp_line
+		(start 23.845 3.925)
+		(end 23.85 -16.075)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bce0b4f0-dd43-407f-b2fa-8131fcdc93e8")
+	)
+	(fp_line
+		(start 23.85 -16.075)
+		(end 23.85 -20.575)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6a9eefa7-4d0e-4cd8-96a4-a35fd94e7ed1")
+	)
+	(fp_circle
+		(center 20.66 -21.515)
+		(end 20.69 -21.515)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "286a12f8-c213-4b06-a02b-763d2a413ff8")
+	)
+	(fp_circle
+		(center 20.66 -21.515)
+		(end 20.69 -21.515)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "77b1f286-356e-4353-8024-b23cb1e06779")
+	)
+	(pad "" thru_hole circle
+		(at -20.155 -0.075)
+		(size 4.3 4.3)
 		(drill 3.2)
 		(layers "*.Cu" "*.Mask")
-		(uuid "22f07de8-790d-4f2b-b60a-e9071f1e29e0")
+		(remove_unused_layers no)
+		(uuid "ff13abaf-b33e-40ad-b8c6-72070e238b59")
+	)
+	(pad "" thru_hole circle
+		(at 19.845 -0.075)
+		(size 4.3 4.3)
+		(drill 3.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "2a9aa09f-e6a3-46ca-b86b-af77ffcc479a")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../../libraries/3d/mobile_display_260403.step"
+	(model "${KIPRJMOD}/../../libraries/3d/mobile_display.step"
 		(offset
-			(xyz 131.25 -42.75 12)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz -0 -0 -0)
-		)
-	)
-	(model "/Users/formylife/Documents/airgradient_pcb/openair-mobile-pcb/3d/SMD_Spacer_2.5x4.5x12.step"
-		(offset
-			(xyz 24.2 -3.25 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz -0 -0 -0)
-		)
-	)
-	(model "/Users/formylife/Documents/airgradient_pcb/openair-mobile-pcb/3d/SMD_Spacer_2.5x4.5x12.step"
-		(offset
-			(xyz -23.8 -5.15 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz -0 -0 -0)
-		)
-	)
-	(model "/Users/formylife/Documents/airgradient_pcb/openair-mobile-pcb/3d/SMD_Spacer_2.5x4.5x12.step"
-		(offset
-			(xyz 21.2 23.75 0)
+			(xyz -151.15 88.65 12.3)
 		)
 		(scale
 			(xyz 1 1 1)

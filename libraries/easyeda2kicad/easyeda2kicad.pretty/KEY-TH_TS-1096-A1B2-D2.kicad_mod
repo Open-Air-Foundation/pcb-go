@@ -239,7 +239,7 @@
 		(uuid "5cfcc3f5-d7e2-4661-8cf7-373285c7bcec")
 	)
 	(embedded_fonts no)
-	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/KEY-TH_TS-1096-A1B2-D2.wrl"
+	(model "${KIPRJMOD}/../../libraries/easyeda2kicad/easyeda2kicad.3dshapes/KEY-TH_TS-1096-A1B2-D2.wrl"
 		(offset
 			(xyz -0 0.25 2.5)
 		)

@@ -27,7 +27,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" "Senserion:XDCR_SGP41-D-R4"
+		(property "Footprint" "Senserion-oaf:XDCR_SGP41-D-R4"
 			(at 0 0 0)
 			(effects
 				(font

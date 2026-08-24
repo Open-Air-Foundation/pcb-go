@@ -5226,7 +5226,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Esparessif:ESP32-C5-MINI-1"
+		(property "Footprint" "Esparessif-oaf:ESP32-C5-MINI-1"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6512,7 +6512,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Esparessif:ESP32-C5-MINI-1U"
+		(property "Footprint" "Esparessif-oaf:ESP32-C5-MINI-1U"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)

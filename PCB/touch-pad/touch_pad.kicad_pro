@@ -194,7 +194,11 @@
         }
       ],
       "track_widths": [
-        0.0
+        0.0,
+        0.2,
+        0.25,
+        0.5,
+        1.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -226,6 +230,10 @@
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 0.5,
+          "drill": 0.3
         },
         {
           "diameter": 0.6,
@@ -650,13 +658,18 @@
       {
         "filename": "touch_pad.kicad_sch",
         "name": "touch_pad",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "6a5d421d-93bc-45c1-8843-32dac20a46e1"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#PWR88,#PWR92-93",
     "variants": []
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "6a5d421d-93bc-45c1-8843-32dac20a46e1",
+      "touch_pad"
+    ]
+  ],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {

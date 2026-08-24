@@ -461,7 +461,7 @@
 		(uuid "3eaa8c87-2cfd-4809-9f7f-1252492c40db")
 	)
 	(embedded_fonts no)
-	(model "${EASYEDA2KICAD}/ESP32-C6-WROOM-1-N4.STEP"
+	(model "${KIPRJMOD}/../../libraries/easyeda2kicad/ESP32-C6-WROOM-1-N4.STEP"
 		(offset
 			(xyz 0 3 0)
 		)

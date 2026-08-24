@@ -1,15 +1,15 @@
 (footprint "SOD-882_L1.0-W0.6-RD"
-	(version 20241229)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
-		(at 0 -4 0)
+		(at 1.53 0.26 0)
 		(layer "F.SilkS")
-		(uuid "d6324e4d-f168-42ff-a34e-01f489ddb193")
+		(uuid "4fc37bf3-ee5e-409c-baf7-4c19736b0a79")
 		(effects
 			(font
-				(size 1 1)
+				(size 0.6 0.6)
 				(thickness 0.15)
 			)
 		)
@@ -17,7 +17,7 @@
 	(property "Value" "SOD-882_L1.0-W0.6-RD"
 		(at 0 4 0)
 		(layer "F.Fab")
-		(uuid "7913a134-0968-4a3e-ab53-1f13fe2cba2c")
+		(uuid "03e4b7b3-b449-4810-88ce-8ce064f49e93")
 		(effects
 			(font
 				(size 1 1)
@@ -25,11 +25,11 @@
 			)
 		)
 	)
-	(property "Datasheet" ""
+	(property "Datasheet" "https://lcsc.com/product-detail/Schottky-Barrier-Diodes-SBD_Nexperia_PMEG3005EL-315_Nexperia-PMEG3005EL-315_C282565.html"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "1238f5d3-9920-4b6b-9077-9ae4e7597b01")
+		(uuid "5c7f18b5-621c-4cea-90bd-f9bd988f7c40")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -41,7 +41,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "ba1be317-5cdd-48d3-8d07-0625b09707a3")
+		(uuid "6873c615-dfa4-41c0-b2b7-caa8b52c62df")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -49,7 +49,10 @@
 			)
 		)
 	)
+	(sheetname "/")
+	(sheetfile "airgradient-go-main.kicad_sch")
 	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
 		(start -0.74 -0.41)
 		(end -0.59 -0.56)
@@ -58,7 +61,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "096e2de2-d9c1-46a3-8585-f29419000e79")
+		(uuid "e0e7f514-0d1e-49d9-8741-9afea4066fd4")
 	)
 	(fp_line
 		(start -0.74 0.41)
@@ -68,7 +71,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "8bb30da7-6c27-43bd-a282-b1ae1df9123f")
+		(uuid "f3505718-00aa-4d65-9a2e-d5bd11c1e5fc")
 	)
 	(fp_line
 		(start -0.59 -0.56)
@@ -78,7 +81,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "b5f561bb-ab32-4cab-84f0-96656880638a")
+		(uuid "75f0e971-5ba3-4724-8d80-cfb9aa26ba75")
 	)
 	(fp_line
 		(start -0.59 0.56)
@@ -88,7 +91,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "14a154bd-86c1-4dc1-9520-5f40413dd14a")
+		(uuid "023bfb33-c503-48a1-8d80-0d9c108daca1")
 	)
 	(fp_line
 		(start -0.01 0.57)
@@ -98,7 +101,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "bc5c2db6-38d8-41bb-99d0-a41eb95c101d")
+		(uuid "d1c91d8a-ea7b-4514-b622-461317c72b65")
 	)
 	(fp_line
 		(start 0.23 -0.56)
@@ -108,7 +111,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "2b138604-b64a-4437-b0f1-e8703c0ac90f")
+		(uuid "f08e8988-f495-4b0d-8867-d218f64c33d2")
 	)
 	(fp_line
 		(start 0.74 -0.56)
@@ -118,7 +121,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "a419a42e-9aed-4aab-9c47-fdf1a455903f")
+		(uuid "4b7c44ba-c70a-4b63-ad13-25e14591478e")
 	)
 	(fp_line
 		(start 0.74 0.56)
@@ -128,7 +131,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "24670802-4c11-4918-9bb6-7eb06ce31f1d")
+		(uuid "b683addb-8544-4f9a-b529-6bcebe60a470")
 	)
 	(fp_circle
 		(center -0.5 0.3)
@@ -139,12 +142,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "5dab8802-90c1-47d5-bf5d-4f2be007b4f0")
+		(uuid "ed1f8159-f942-48c2-869e-d66854c3241d")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "c928be52-6604-46f6-8092-d8412e2e774f")
+		(uuid "f8d8dd54-39e4-4643-85de-0576e972d1c9")
 		(effects
 			(font
 				(size 1 1)
@@ -156,16 +159,16 @@
 		(at -0.35 0)
 		(size 0.4 0.7)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "323a1d9e-256d-4060-bfdc-fea84b098783")
+		(uuid "4ac69945-77bb-4bb1-95d1-bf9088b419de")
 	)
 	(pad "2" smd rect
 		(at 0.35 0)
 		(size 0.4 0.7)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "3e79a268-247f-4039-9ee0-d08dfcef0aa8")
+		(uuid "d8d21084-7d9f-43b3-b395-f5e1a61adb7b")
 	)
 	(embedded_fonts no)
-	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/SOD-882_L1.0-W0.6-H0.5-LS0.65.wrl"
+	(model "${KIPRJMOD}/../../libraries/easyeda2kicad/easyeda2kicad.3dshapes/SOD-882_L1.0-W0.6-H0.5-LS0.65.wrl"
 		(offset
 			(xyz 0 0 -0)
 		)

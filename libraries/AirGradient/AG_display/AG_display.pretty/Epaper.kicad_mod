@@ -78,7 +78,7 @@
 		)
 	)
 	(embedded_fonts no)
-	(model "/Users/formylife/Documents/KiCad/AG_display/3d/Portable Monitor_Display.stp"
+	(model "${KIPRJMOD}/../../libraries/3d/Portable Monitor_Display.stp"
 		(offset
 			(xyz 0.21 6.4 -10.5)
 		)

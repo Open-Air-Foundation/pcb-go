@@ -1,0 +1,289 @@
+(footprint "AGGO-battery"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "6e47630f-4808-41a8-95f2-2c22f3841d18")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "AGGO-battery"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "e2f66aaa-b647-4f35-be0f-a4f4f8b41b88")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "76ba7721-753a-4e00-b2f2-f9b9c3254d9a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b5e917cf-bf44-40e3-80bf-bbefd3df8ac1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "KiLib_Generator" "connector/wire"
+		(at 30.7 -4.01 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "9ad6d6b7-51c0-494d-bef4-2ef24f8677b1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "KiLib_Generator" "connector/wire"
+		(at 8.18 -0.28 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "c0b51861-3233-4ca8-9481-ffd23449c201")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Sim.Device" "V"
+		(at -22.52 3.73 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "df46a37b-43de-485f-8727-df97708d996d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Sim.Type" "DC"
+		(at -22.52 3.73 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5e2c941a-49b8-4276-925c-7eb5845d56d1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Sim.Pins" "1=+ 2=-"
+		(at -22.52 3.73 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3ce192c0-98ab-420c-9c87-8859389c49ad")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "KiLib_Generator" "mounting_hardware/mounting_hole"
+		(at -22.52 3.73 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "06545ea8-76a1-4513-be9a-c2394d77364d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "KiLib_Generator" "mounting_hardware/mounting_hole"
+		(at -22.52 3.73 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "cfc58131-b6a9-4945-a9ad-504affc7c9d9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center -22.52 3.73)
+		(end -20.77 3.73)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "4b61c075-19f9-4e8c-b2c3-8f840561fba4")
+	)
+	(fp_circle
+		(center -22.52 3.73)
+		(end -20.77 3.73)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "80187fab-39be-443b-877a-eb828cbd30f2")
+	)
+	(fp_circle
+		(center 24.48 -18.55)
+		(end 26.23 -18.55)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "0076f513-bf79-405a-add2-22b7420c4de8")
+	)
+	(fp_circle
+		(center 24.48 -18.55)
+		(end 26.23 -18.55)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "be8efa1a-507b-4fed-af6a-b234d83e9fd2")
+	)
+	(fp_circle
+		(center -22.52 3.73)
+		(end -20.52 3.73)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "31e94ea2-8855-43c9-a5e4-0457d93eaa2f")
+	)
+	(fp_circle
+		(center -22.52 3.73)
+		(end -20.52 3.73)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "521d005d-20a5-43f9-9962-1843eab0bb4d")
+	)
+	(fp_circle
+		(center 24.48 -18.55)
+		(end 26.48 -18.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "0265da1e-e732-44e4-8362-4bd69dd963fb")
+	)
+	(fp_circle
+		(center 24.48 -18.55)
+		(end 26.48 -18.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "7b88c4e4-b7c5-4396-a925-ec9f89b0b282")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "fae4e2b5-0259-49f8-9d26-d5f05b92c4cd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at -22.52 3.73)
+		(size 2.04 2.04)
+		(drill 2.04)
+		(layers "*.Cu" "*.Mask")
+		(uuid "7165a18c-1c6f-43a1-8fe5-cabb7efa0a7c")
+	)
+	(pad "" np_thru_hole circle
+		(at 24.48 -18.55)
+		(size 2.04 2.04)
+		(drill 2.04)
+		(layers "*.Cu" "*.Mask")
+		(uuid "3ecea7f4-c245-4bc4-b287-ca4c155d097e")
+	)
+	(pad "1" thru_hole roundrect
+		(at 30.21 -7.38)
+		(size 2.75 2.75)
+		(drill 1.4)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.090909)
+		(uuid "c83f915a-1ba0-47e5-9a86-904fbadf8a93")
+	)
+	(pad "2" thru_hole roundrect
+		(at -28.259271 -7.381488)
+		(size 2.75 2.75)
+		(drill 1.4)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.090909)
+		(uuid "abe6e167-ef49-49ed-bdd7-dd6e25b3dccf")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../libraries/3d/Air Gradient_GO_batterly_holder.step"
+		(offset
+			(xyz 47.6 -0.65 -1)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

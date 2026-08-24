@@ -498,7 +498,7 @@
 		(uuid "2f33c255-5580-4f4c-8f61-36cac5f88ad5")
 	)
 	(embedded_fonts no)
-	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/VQFNHR-9_L2.2-W2.0_TPS62993QRYTRQ1.wrl"
+	(model "${KIPRJMOD}/../../libraries/easyeda2kicad/easyeda2kicad.3dshapes/VQFNHR-9_L2.2-W2.0_TPS62993QRYTRQ1.wrl"
 		(offset
 			(xyz 0 -0 -0)
 		)

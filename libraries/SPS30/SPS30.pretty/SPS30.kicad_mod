@@ -78,7 +78,7 @@
 		)
 	)
 	(embedded_fonts no)
-	(model "/Users/formylife/Documents/KiCad/SPS30/PS_CAD_SPS30_D1.STEP"
+	(model "${KIPRJMOD}/../../libraries/3d/PS_CAD_SPS30_D1.STEP"
 		(offset
 			(xyz 11.75 -4.75 6)
 		)

@@ -28,7 +28,7 @@
 	(fp_circle (center -7.45 -1.77) (end -7.42 -1.77) (layer F.Fab) (width 0.06))
 	(fp_circle (center -5.73 -1.67) (end -5.60 -1.67) (layer F.SilkS) (width 0.25))
 	(fp_circle (center -4.40 -0.60) (end -4.27 -0.60) (layer Cmts.User) (width 0.25))
-	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/CONN-SMD_8P-P1.25_HC-1.25-8PLT.wrl"
+	(model "${KIPRJMOD}/../../libraries/easyeda2kicad/easyeda2kicad.3dshapes/CONN-SMD_8P-P1.25_HC-1.25-8PLT.wrl"
 		(offset (xyz 0.000 -0.080 -0.000))
 		(scale (xyz 1 1 1))
 		(rotate (xyz 0 0 180))

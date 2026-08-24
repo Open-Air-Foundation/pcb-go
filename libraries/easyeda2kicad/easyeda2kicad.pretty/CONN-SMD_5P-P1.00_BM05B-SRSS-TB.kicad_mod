@@ -24,7 +24,7 @@
 	(fp_circle (center 3.50 -1.69) (end 3.53 -1.69) (layer F.Fab) (width 0.06))
 	(fp_circle (center 2.92 -1.65) (end 3.10 -1.65) (layer F.SilkS) (width 0.25))
 	(fp_circle (center 2.92 -1.65) (end 3.12 -1.65) (layer Cmts.User) (width 0.40))
-	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/CONN-SMD_SR1.00-LS-5P.wrl"
+	(model "${KIPRJMOD}/../../libraries/easyeda2kicad/easyeda2kicad.3dshapes/CONN-SMD_SR1.00-LS-5P.wrl"
 		(offset (xyz 0.000 -0.150 -0.000))
 		(scale (xyz 1 1 1))
 		(rotate (xyz 0 0 180))

@@ -1,0 +1,267 @@
+(footprint "PQFN-8_L5.8-W4.9-P1.27-LS6.0-BL"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -3.58 3.07 0)
+		(layer "F.SilkS")
+		(uuid "bdd30ddf-3266-4961-9ac2-6d3148fa8f07")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "PQFN-8_L5.8-W4.9-P1.27-LS6.0-BL"
+		(at 0 6.97 0)
+		(layer "F.Fab")
+		(uuid "ceea3fe6-50ea-49a6-9891-901a858eead0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "http://www.ti.com/lit/gpn/csd18534q5a"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "627a3091-2252-4a15-ae0e-b4783b6ab040")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "50A Id, 60V Vds, NexFET N-Channel Power MOSFET, 9.8mOhm Ron, 17nC Qg(typ), SON8 5x6mm"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1f86f805-e028-44b6-a185-5ffce19f7b4b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property ki_fp_filters "TDSON*")
+	(sheetname "/Battery_holder/")
+	(sheetfile "Battery-Holder.kicad_sch")
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.58 -3.08)
+		(end -2.58 -3.08)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8e17244f-8f97-4d82-89a6-7642ac26b657")
+	)
+	(fp_line
+		(start -2.58 -3.08)
+		(end -2.58 3.08)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a898ffd7-811b-4976-a0a9-1d267e0e262a")
+	)
+	(fp_line
+		(start -2.58 3.08)
+		(end -2.58 3.08)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "450f6578-7e2b-4376-9eba-6bba292baf64")
+	)
+	(fp_line
+		(start -2.58 3.08)
+		(end -2.38 3.08)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fd4b0ffe-e940-4e41-8660-5e96a368c1d9")
+	)
+	(fp_line
+		(start -2.38 -3.08)
+		(end -2.58 -3.08)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a45438f5-dece-46b0-bec4-bc9225b99887")
+	)
+	(fp_line
+		(start 2.38 -3.08)
+		(end 2.58 -3.08)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "42968dd8-53d2-4846-a2b2-fedcbd0bdf4e")
+	)
+	(fp_line
+		(start 2.58 -3.08)
+		(end 2.58 -3.08)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6a1cecdb-bc9a-4cf9-b0f7-f9c26f9ff761")
+	)
+	(fp_line
+		(start 2.58 -3.08)
+		(end 2.58 3.08)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8e19f368-280f-4234-ad76-c6ed0c754bd7")
+	)
+	(fp_line
+		(start 2.58 3.08)
+		(end 2.38 3.08)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "446093c2-6026-4926-ace7-2c01e4c65a50")
+	)
+	(fp_line
+		(start 2.58 3.08)
+		(end 2.58 3.08)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "05510892-e452-4dc4-889e-2bebe3c2d1d5")
+	)
+	(fp_circle
+		(center -2.67 3.81)
+		(end -2.52 3.81)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "98bdf7e3-2577-4419-a46d-89a2fbafcd4a")
+	)
+	(fp_circle
+		(center -1.91 3.43)
+		(end -1.71 3.43)
+		(stroke
+			(width 0.4)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "fb9bf75f-a9af-48c5-a919-7be21d67c7dc")
+	)
+	(fp_circle
+		(center -2.5 3)
+		(end -2.47 3)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "6c81fc4b-4f33-4389-bf58-c7711c09bf8a")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "f00006d7-6597-4a42-afec-f5e8d33ed10a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd oval
+		(at -1.91 2.97)
+		(size 0.57 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "9eb9f1fd-6580-4bca-94fb-1c992c7dd014")
+	)
+	(pad "2" smd oval
+		(at -0.63 2.97)
+		(size 0.57 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6062caf2-a1d8-4c5e-8492-6f39a01e45f6")
+	)
+	(pad "3" smd oval
+		(at 0.63 2.97)
+		(size 0.57 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "600e5de8-47d6-4232-9efc-d68396579694")
+	)
+	(pad "4" smd oval
+		(at 1.9 2.97)
+		(size 0.57 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7b69aa6d-cba2-4ecb-bfd9-a847809e65cb")
+	)
+	(pad "5" smd oval
+		(at 1.9 -2.97)
+		(size 0.57 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "621bb6d4-a2fa-4947-b78f-6ce4870be943")
+	)
+	(pad "6" smd oval
+		(at 0.63 -2.97)
+		(size 0.57 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b201f1b4-cc7d-4038-8ccb-7c008a6a7542")
+	)
+	(pad "7" smd oval
+		(at -0.63 -2.97)
+		(size 0.57 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c445b0da-fd8a-450d-a475-722fe48fa3d4")
+	)
+	(pad "8" smd oval
+		(at -1.91 -2.97)
+		(size 0.57 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7c3c36f6-4b9f-433e-825a-307d250d5d14")
+	)
+	(pad "9" smd rect
+		(at 0 -0.79)
+		(size 4.2 3.58)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "3bb1ac73-1987-4a66-a577-9a27a910f050")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../libraries/easyeda2kicad/easyeda2kicad.3dshapes/PQFN-8_L5.8-W4.9-H1.0-P1.27-LS6.0-BL.wrl"
+		(offset
+			(xyz -912.5 688.62 -0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

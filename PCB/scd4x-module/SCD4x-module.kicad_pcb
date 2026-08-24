@@ -1,7 +1,7 @@
 (kicad_pcb
-	(version 20241229)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(general
 		(thickness 1.6)
 		(legacy_teardrops no)
@@ -42,7 +42,20 @@
 	(setup
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
-		(tenting front back)
+		(tenting
+			(front yes)
+			(back yes)
+		)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(capping no)
+		(filling no)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -51,15 +64,12 @@
 			(usegerberattributes yes)
 			(usegerberadvancedattributes yes)
 			(creategerberjobfile yes)
-			(dashed_line_dash_ratio 12.000000)
-			(dashed_line_gap_ratio 3.000000)
+			(dashed_line_dash_ratio 12)
+			(dashed_line_gap_ratio 3)
 			(svgprecision 4)
 			(plotframeref no)
 			(mode 1)
 			(useauxorigin no)
-			(hpglpennumber 1)
-			(hpglpenspeed 20)
-			(hpglpendiameter 15.000000)
 			(pdf_front_fp_property_popups yes)
 			(pdf_back_fp_property_popups yes)
 			(pdf_metadata yes)
@@ -83,11 +93,6 @@
 			(outputdirectory "")
 		)
 	)
-	(net 0 "")
-	(net 1 "VDD")
-	(net 2 "/SCL")
-	(net 3 "GND")
-	(net 4 "/SDA")
 	(footprint "Sensor:Sensirion_SCD4x-1EP_10.1x10.1mm_P1.25mm_EP4.8x4.8mm"
 		(layer "F.Cu")
 		(uuid "3dfb8052-8020-4117-bad3-5d18a03e10e9")
@@ -145,6 +150,7 @@
 		(sheetname "/")
 		(sheetfile "SCD4x-module.kicad_sch")
 		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -5.16 -5.16)
 			(end -3.185 -5.16)
@@ -528,7 +534,7 @@
 			(size 0.85 1.9)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net 3 "GND")
+			(net "GND")
 			(pinfunction "GND")
 			(pintype "power_in")
 			(uuid "faf2d939-51d3-4b36-bd78-fb6d5773d4d5")
@@ -538,7 +544,7 @@
 			(size 0.85 1.9)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net 1 "VDD")
+			(net "VDD")
 			(pinfunction "VDD")
 			(pintype "power_in")
 			(uuid "fe467e45-31d3-4e74-9cda-4149721a2ddb")
@@ -555,7 +561,7 @@
 			(size 0.85 1.9)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net 2 "/SCL")
+			(net "/SCL")
 			(pinfunction "SCL")
 			(pintype "input")
 			(uuid "09e96b44-7a62-4559-8ff1-8da981624c2b")
@@ -565,7 +571,7 @@
 			(size 0.85 1.9)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net 4 "/SDA")
+			(net "/SDA")
 			(pinfunction "SDA")
 			(pintype "bidirectional")
 			(uuid "a2445906-8e8c-4340-9d9d-26fea46520e2")
@@ -631,7 +637,7 @@
 			(size 0.85 1.9)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net 1 "VDD")
+			(net "VDD")
 			(pinfunction "VDD")
 			(pintype "passive")
 			(uuid "0048c555-5439-4768-bc48-275fe669b275")
@@ -641,7 +647,7 @@
 			(size 0.85 1.9)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net 3 "GND")
+			(net "GND")
 			(pinfunction "GND")
 			(pintype "passive")
 			(uuid "674a50d0-1948-4790-96d3-99d25dcea7b5")
@@ -651,14 +657,14 @@
 			(size 4.8 4.8)
 			(property pad_prop_heatsink)
 			(layers "F.Cu" "F.Mask")
-			(net 3 "GND")
+			(net "GND")
 			(pinfunction "GND")
 			(pintype "passive")
 			(zone_connect 2)
 			(uuid "25d23ca5-9f5f-4dfe-b96f-ff6fd7662b42")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Sensor.3dshapes/Sensirion_SCD4x-1EP_10.1x10.1mm_P1.25mm_EP4.8x4.8mm.step"
+		(model "${KICAD10_3DMODEL_DIR}/Sensor.3dshapes/Sensirion_SCD4x-1EP_10.1x10.1mm_P1.25mm_EP4.8x4.8mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -720,6 +726,7 @@
 				)
 			)
 		)
+		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole trapezoid
 			(at 0 0)
 			(size 1.6 1.5)
@@ -783,6 +790,7 @@
 				)
 			)
 		)
+		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole trapezoid
 			(at 0 0)
 			(size 1.6 1.5)
@@ -846,6 +854,7 @@
 				)
 			)
 		)
+		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole trapezoid
 			(at 0 0)
 			(size 1.6 1.5)
@@ -853,7 +862,7 @@
 			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 1 "VDD")
+			(net "VDD")
 			(pinfunction "GND")
 			(pintype "input")
 			(uuid "95fcfb3a-95e9-4e44-96db-194213e3f653")
@@ -910,6 +919,7 @@
 				)
 			)
 		)
+		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole trapezoid
 			(at 0 0)
 			(size 1.6 1.5)
@@ -917,7 +927,7 @@
 			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 4 "/SDA")
+			(net "/SDA")
 			(pinfunction "GND")
 			(pintype "input")
 			(uuid "fa6f5dd9-cc7d-4e35-ac05-7fad7b7b03ce")
@@ -974,6 +984,7 @@
 				)
 			)
 		)
+		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole trapezoid
 			(at 0 0)
 			(size 1.6 1.5)
@@ -1037,6 +1048,7 @@
 				)
 			)
 		)
+		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole trapezoid
 			(at 0 0)
 			(size 1.6 1.5)
@@ -1044,7 +1056,7 @@
 			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 2 "/SCL")
+			(net "/SCL")
 			(pinfunction "GND")
 			(pintype "input")
 			(uuid "85d339a8-0b3f-4986-8669-a7b31f4257fb")
@@ -1101,6 +1113,7 @@
 				)
 			)
 		)
+		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole trapezoid
 			(at 0 0)
 			(size 1.6 1.5)
@@ -1108,7 +1121,7 @@
 			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 3 "GND")
+			(net "GND")
 			(pinfunction "GND")
 			(pintype "input")
 			(uuid "d32222c7-a914-45f0-9bab-16dedfeee0f6")
@@ -1165,6 +1178,7 @@
 				)
 			)
 		)
+		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole trapezoid
 			(at 0 0)
 			(size 1.6 1.5)
@@ -1194,7 +1208,7 @@
 		(end 156.4 80.22)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 1)
+		(net "VDD")
 		(uuid "3045d9d2-4b4d-4c7f-85ab-dcd4c67756e2")
 	)
 	(segment
@@ -1202,7 +1216,7 @@
 		(end 155.57 93.65)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 1)
+		(net "VDD")
 		(uuid "5600edce-c5ac-44cc-8c67-af12503577a9")
 	)
 	(segment
@@ -1210,7 +1224,7 @@
 		(end 156.325 80.295)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 1)
+		(net "VDD")
 		(uuid "5cab5ac3-8482-48ef-9aa3-091cc5035856")
 	)
 	(segment
@@ -1218,7 +1232,7 @@
 		(end 156.325 92.895)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 1)
+		(net "VDD")
 		(uuid "96063733-de28-4cea-9a32-74cf12c203dd")
 	)
 	(via
@@ -1226,7 +1240,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 1)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "VDD")
 		(uuid "547e73cb-c31e-4a63-a7b4-34e03af7c499")
 	)
 	(via
@@ -1234,7 +1258,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 1)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "VDD")
 		(uuid "9612d905-ee0c-4223-b746-7fc64f5161f7")
 	)
 	(segment
@@ -1242,7 +1276,7 @@
 		(end 162.695 86.875)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "VDD")
 		(uuid "0d3806fb-eaa4-4c83-ba2c-8dbcee02ca84")
 	)
 	(segment
@@ -1250,7 +1284,7 @@
 		(end 161.01 80.22)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "VDD")
 		(uuid "1b0d775a-1037-43a4-a452-11403ae350c4")
 	)
 	(segment
@@ -1258,7 +1292,7 @@
 		(end 156.4 80.22)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "VDD")
 		(uuid "5b2a0cb5-6913-4b03-a88b-b1d4019115dd")
 	)
 	(segment
@@ -1266,7 +1300,7 @@
 		(end 165.075 86.875)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "VDD")
 		(uuid "68efed83-7e14-4c39-a929-ac4146666fb1")
 	)
 	(segment
@@ -1274,7 +1308,7 @@
 		(end 161.91 86.09)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "VDD")
 		(uuid "7de34115-a622-4e3f-914c-82ff995bac59")
 	)
 	(segment
@@ -1282,7 +1316,7 @@
 		(end 161.89 81.1)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "VDD")
 		(uuid "7f6514c3-0b6a-494a-b9e1-02de544dc1c0")
 	)
 	(segment
@@ -1290,7 +1324,7 @@
 		(end 155.57 81.05)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "VDD")
 		(uuid "9d463dc4-56fe-4533-979d-a29b1ec5794d")
 	)
 	(segment
@@ -1298,7 +1332,7 @@
 		(end 161.89 86.09)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "VDD")
 		(uuid "bc268b27-713b-4774-bedf-67171db03928")
 	)
 	(segment
@@ -1306,7 +1340,7 @@
 		(end 163.825 93.205)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 2)
+		(net "/SCL")
 		(uuid "023d6953-46da-4e47-9d5e-19abcb8f24bc")
 	)
 	(segment
@@ -1314,7 +1348,7 @@
 		(end 165.075 91.955)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 2)
+		(net "/SCL")
 		(uuid "3872ead9-aeb0-40bd-986b-df8881b135bb")
 	)
 	(segment
@@ -1322,7 +1356,7 @@
 		(end 158.825 91.66922)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 2)
+		(net "/SCL")
 		(uuid "bd252416-02fa-4d99-a6f4-5133a7791be1")
 	)
 	(segment
@@ -1330,7 +1364,7 @@
 		(end 160.36078 93.205)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 2)
+		(net "/SCL")
 		(uuid "ca88ba0f-b51f-4740-9bd6-1033b740cf48")
 	)
 	(segment
@@ -1338,7 +1372,7 @@
 		(end 165.075 89.415)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 4)
+		(net "/SDA")
 		(uuid "15447766-9079-4101-89b7-5a1ab771cf9a")
 	)
 	(segment
@@ -1346,12 +1380,11 @@
 		(end 163.465 91.025)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 4)
+		(net "/SDA")
 		(uuid "f6daf8ac-af0f-48fa-8b6b-e00a44618b8b")
 	)
 	(zone
-		(net 3)
-		(net_name "GND")
+		(net "GND")
 		(layers "F.Cu" "B.Cu")
 		(uuid "c0b1d5e9-2a6b-4475-8da2-2f944b9a1443")
 		(hatch edge 0.5)
@@ -1359,10 +1392,10 @@
 			(clearance 0.5)
 		)
 		(min_thickness 0.25)
-		(filled_areas_thickness no)
 		(fill yes
 			(thermal_gap 0.5)
 			(thermal_bridge_width 0.5)
+			(island_removal_mode 0)
 		)
 		(polygon
 			(pts

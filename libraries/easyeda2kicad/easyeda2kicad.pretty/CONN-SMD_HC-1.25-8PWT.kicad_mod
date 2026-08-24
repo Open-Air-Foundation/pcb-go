@@ -235,7 +235,7 @@
 		(uuid "165b4517-2e9e-4e5b-abb8-d34cc9994c2d")
 	)
 	(embedded_fonts no)
-	(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/CONN-SMD_HC-1.25-8PWT.wrl"
+	(model "${KIPRJMOD}/../../libraries/easyeda2kicad/easyeda2kicad.3dshapes/CONN-SMD_HC-1.25-8PWT.wrl"
 		(offset
 			(xyz -0 1 1.8)
 		)

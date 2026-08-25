@@ -18317,6 +18317,12 @@
 		(uuid "285d68ef-4203-4ce7-8c92-ca177c441bae")
 	)
 	(junction
+		(at 401.32 266.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "28a007fe-2842-4514-a06a-9b0265ef2953")
+	)
+	(junction
 		(at 68.58 237.49)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -30252,7 +30258,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "100K"
 			(at 24.13 128.2699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32233,6 +32239,85 @@
 			(project "airgradient-go-main"
 				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
 					(reference "#PWR0100")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VDD")
+		(at 401.32 266.7 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1942331c-98d3-4e80-8005-9d3d348e02cc")
+		(property "Reference" "#PWR0167"
+			(at 401.32 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.1V"
+			(at 403.86 265.4299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 401.32 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 401.32 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VDD\""
+			(at 401.32 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2a42b6cb-157e-4945-8b96-f27167fa43b0")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "#PWR0167")
 					(unit 1)
 				)
 			)
@@ -34541,7 +34626,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "100K"
 			(at 90.17 128.2699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -57769,7 +57854,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "100K"
 			(at 33.02 128.2699 0)
 			(show_name no)
 			(do_not_autoplace no)

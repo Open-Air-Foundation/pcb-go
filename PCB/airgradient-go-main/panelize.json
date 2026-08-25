@@ -1,0 +1,68 @@
+{
+  "layout": {
+    "type": "grid",
+    "rows": 4,
+    "cols": 5,
+    "hspace": "2mm",
+    "vspace": "2mm",
+    "rotation": "0deg",
+    "alternation": "none",
+    "renamenet": "Board_{n}-{orig}",
+    "renameref": "{orig}"
+  },
+  "source": {
+    "type": "auto",
+    "tolerance": "0.05mm"
+  },
+  "tabs": {
+    "type": "fixed",
+    "hcount": 2,
+    "vcount": 2,
+    "width": "3mm",
+    "mindistance": "5mm"
+  },
+  "cuts": {
+    "type": "mousebites",
+    "drill": "0.5mm",
+    "spacing": "0.8mm",
+    "offset": "0.25mm",
+    "prolong": "0.5mm"
+  },
+  "framing": {
+    "type": "frame",
+    "width": "5mm",
+    "space": "2mm",
+    "cuts": "both"
+  },
+  "tooling": {
+    "type": "3hole",
+    "hoffset": "2.5mm",
+    "voffset": "2.5mm",
+    "size": "1.5mm"
+  },
+  "fiducials": {
+    "type": "3fid",
+    "hoffset": "5mm",
+    "voffset": "2.5mm",
+    "coppersize": "2mm",
+    "opening": "1mm"
+  },
+  "text": {
+    "type": "simple",
+    "text": "Airgradient-GO v0.3 JLCJLCJLCJLC",
+    "anchor": "mt",
+    "voffset": "2.5mm",
+    "hoffset": "0mm",
+    "orientation": "0deg"
+  },
+  "post": {
+    "type": "auto",
+    "copperfill": false,
+    "millradius": "1mm",
+    "origin": "tl",
+    "edgewidth": "0.1mm"
+  },
+  "page": {
+    "type": "inherit"
+  }
+}

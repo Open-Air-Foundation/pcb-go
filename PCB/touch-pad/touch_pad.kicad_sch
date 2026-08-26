@@ -773,14 +773,14 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "easyeda2kicad-oaf:SM05B-SRSS-TB(LF)(SN)"
+		(symbol "easyeda2kicad-oaf:HCZZ0032-5"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "CN"
-				(at 0 10.16 0)
+			(property "Reference" "U"
+				(at 0 15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -789,8 +789,8 @@
 					)
 				)
 			)
-			(property "Value" "SM05B-SRSS-TB (LF)(SN)"
-				(at 0 -10.16 0)
+			(property "Value" "HCZZ0032-5"
+				(at 0 -15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -799,8 +799,8 @@
 					)
 				)
 			)
-			(property "Footprint" "easyeda2kicad-oaf:CONN-SMD_SM05B-SRSS-TB-LF-SN"
-				(at 0 -12.7 0)
+			(property "Footprint" "easyeda2kicad-oaf:CONN-SMD_HCZZ0032-5"
+				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -810,8 +810,8 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://lcsc.com/product-detail/Connectors_JST_SM05B-SRSS-TB-LF-SN_SM05B-SRSS-TB-LF-SN_C136657.html"
-				(at 0 -15.24 0)
+			(property "Datasheet" ""
+				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -832,8 +832,8 @@
 					)
 				)
 			)
-			(property "LCSC Part" "C136657"
-				(at 0 -17.78 0)
+			(property "LCSC Part" "C7433426"
+				(at 0 -20.32 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -843,9 +843,9 @@
 					)
 				)
 			)
-			(symbol "SM05B-SRSS-TB(LF)(SN)_0_1"
+			(symbol "HCZZ0032-5_0_1"
 				(rectangle
-					(start -5.08 7.62)
+					(start -2.54 7.62)
 					(end 5.08 -7.62)
 					(stroke
 						(width 0)
@@ -856,7 +856,7 @@
 					)
 				)
 				(circle
-					(center -3.81 6.35)
+					(center -1.27 6.35)
 					(radius 0.38)
 					(stroke
 						(width 0)
@@ -867,7 +867,7 @@
 					)
 				)
 				(pin unspecified line
-					(at -7.62 5.08 0)
+					(at -5.08 5.08 0)
 					(length 2.54)
 					(name "1"
 						(effects
@@ -885,7 +885,7 @@
 					)
 				)
 				(pin unspecified line
-					(at -7.62 2.54 0)
+					(at -5.08 2.54 0)
 					(length 2.54)
 					(name "2"
 						(effects
@@ -903,7 +903,7 @@
 					)
 				)
 				(pin unspecified line
-					(at -7.62 0 0)
+					(at -5.08 0 0)
 					(length 2.54)
 					(name "3"
 						(effects
@@ -921,7 +921,7 @@
 					)
 				)
 				(pin unspecified line
-					(at -7.62 -2.54 0)
+					(at -5.08 -2.54 0)
 					(length 2.54)
 					(name "4"
 						(effects
@@ -939,7 +939,7 @@
 					)
 				)
 				(pin unspecified line
-					(at -7.62 -5.08 0)
+					(at -5.08 -5.08 0)
 					(length 2.54)
 					(name "5"
 						(effects
@@ -957,7 +957,7 @@
 					)
 				)
 				(pin unspecified line
-					(at 7.62 -5.08 180)
+					(at 3.81 -10.16 90)
 					(length 2.54)
 					(name "6"
 						(effects
@@ -975,7 +975,7 @@
 					)
 				)
 				(pin unspecified line
-					(at 7.62 5.08 180)
+					(at 3.81 10.16 270)
 					(length 2.54)
 					(name "7"
 						(effects
@@ -1408,10 +1408,10 @@
 		(uuid "4b607550-265e-43a2-831e-b880ba1825b7")
 	)
 	(junction
-		(at 107.95 125.73)
+		(at 152.4 129.54)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "52fe33e4-d9f9-4cf8-b2b0-3405ba2fa426")
+		(uuid "5ec89f60-e20d-44c9-aed8-41a0d1ce87df")
 	)
 	(junction
 		(at 152.4 139.7)
@@ -1420,24 +1420,16 @@
 		(uuid "89273d9a-1715-4597-8b8b-d0db270769e8")
 	)
 	(junction
+		(at 107.95 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9712e5b1-73d6-4dd6-9c43-96b1bb6d2d7a")
+	)
+	(junction
 		(at 120.65 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e28a648d-d481-4d59-b823-bd54cacf5242")
-	)
-	(no_connect
-		(at 138.43 128.27)
-		(uuid "005c718e-d6df-446a-af89-e595c4e9c102")
-	)
-	(wire
-		(pts
-			(xy 107.95 132.08) (xy 107.95 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "00627f3c-0d79-4fc1-b642-c87a65532b8f")
 	)
 	(wire
 		(pts
@@ -1521,6 +1513,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 129.54) (xy 152.4 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5849560b-7bd1-42d5-9eb0-4745b21cefef")
+	)
+	(wire
+		(pts
 			(xy 161.29 123.19) (xy 161.29 120.65)
 		)
 		(stroke
@@ -1528,6 +1530,16 @@
 			(type default)
 		)
 		(uuid "5bc7f805-9d60-43fe-9dc9-d20ccbe26ddf")
+	)
+	(wire
+		(pts
+			(xy 100.33 132.08) (xy 107.95 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62c13859-89f3-4acf-b913-8b7237a25c1b")
 	)
 	(wire
 		(pts
@@ -1561,13 +1573,23 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 125.73) (xy 107.95 125.73)
+			(xy 100.33 109.22) (xy 100.33 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "73df8e94-6298-47ba-8bb0-81e1a43e61cd")
+		(uuid "738189bb-751e-4530-8518-4e7b47d3aca6")
+	)
+	(wire
+		(pts
+			(xy 138.43 128.27) (xy 138.43 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80a510c1-169e-414f-ba1b-ae047862fa57")
 	)
 	(wire
 		(pts
@@ -1578,16 +1600,6 @@
 			(type default)
 		)
 		(uuid "88109a30-1f6d-48e0-8388-348278110db9")
-	)
-	(wire
-		(pts
-			(xy 107.95 115.57) (xy 106.68 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8a52eb23-8ef1-487e-afe8-5c7a26749771")
 	)
 	(wire
 		(pts
@@ -1631,13 +1643,13 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 125.73) (xy 107.95 115.57)
+			(xy 107.95 109.22) (xy 107.95 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "af72e3dc-e982-4c7b-9ee8-5c4e078b227b")
+		(uuid "a8b477c1-b21a-47e5-a70a-c1bc48b92e8f")
 	)
 	(wire
 		(pts
@@ -1648,6 +1660,16 @@
 			(type default)
 		)
 		(uuid "b16a3a0a-ba59-4f8b-90e3-3def70a43ca3")
+	)
+	(wire
+		(pts
+			(xy 138.43 129.54) (xy 152.4 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b70791e0-bf3f-4a99-b164-94e06256da9e")
 	)
 	(wire
 		(pts
@@ -1691,7 +1713,17 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 139.7) (xy 152.4 123.19)
+			(xy 100.33 132.08) (xy 100.33 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d36717bd-e386-4709-b783-314360ad1db2")
+	)
+	(wire
+		(pts
+			(xy 152.4 139.7) (xy 152.4 129.54)
 		)
 		(stroke
 			(width 0)
@@ -1728,6 +1760,16 @@
 			(type default)
 		)
 		(uuid "ed28b6de-1100-4e42-bd26-ccd91fc05d86")
+	)
+	(wire
+		(pts
+			(xy 107.95 109.22) (xy 100.33 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed45c05f-7bb8-4d19-b707-af9c17144b02")
 	)
 	(label "SCL"
 		(at 116.84 120.65 0)
@@ -1788,6 +1830,114 @@
 			(justify left bottom)
 		)
 		(uuid "cc0cdf15-27fc-4f94-a04a-ef6cad817b20")
+	)
+	(symbol
+		(lib_id "easyeda2kicad-oaf:HCZZ0032-5")
+		(at 96.52 120.65 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "059ab456-0635-472c-9d4b-8c95e98c5621")
+		(property "Reference" "CN1"
+			(at 102.87 119.3799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "HCZZ0032-5"
+			(at 102.87 121.9199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "easyeda2kicad-oaf:CONN-SMD_HCZZ0032-5"
+			(at 96.52 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 96.52 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C7433426"
+			(at 96.52 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "80827a07-13d5-4fcc-b041-bacbca0789df")
+		)
+		(pin "3"
+			(uuid "04e2d98f-5688-42a8-83f0-6b50efde0173")
+		)
+		(pin "4"
+			(uuid "587cd48e-0347-48e9-899b-62a5be24a093")
+		)
+		(pin "5"
+			(uuid "34ed88e5-1e43-4899-927d-4c6b89d3e9af")
+		)
+		(pin "6"
+			(uuid "9c527cba-472d-472b-8e59-73b10736259a")
+		)
+		(pin "7"
+			(uuid "187ec10d-685c-4bc4-a71d-f779146bee0e")
+		)
+		(pin "1"
+			(uuid "9110381d-c626-4936-8ed7-22ae53c46daa")
+		)
+		(instances
+			(project "touch_pad"
+				(path "/6a5d421d-93bc-45c1-8843-32dac20a46e1"
+					(reference "CN1")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:Earth")
@@ -1862,112 +2012,6 @@
 			(project "touch_pad"
 				(path "/6a5d421d-93bc-45c1-8843-32dac20a46e1"
 					(reference "#PWR092")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "easyeda2kicad-oaf:SM05B-SRSS-TB(LF)(SN)")
-		(at 99.06 120.65 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "26d45b32-c0d0-407b-9024-76be0a00bdcf")
-		(property "Reference" "CN1"
-			(at 99.06 107.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SM05B-SRSS-TB (LF)(SN)"
-			(at 99.06 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "easyeda2kicad-oaf:CONN-SMD_SM05B-SRSS-TB-LF-SN"
-			(at 99.06 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Connectors_JST_SM05B-SRSS-TB-LF-SN_SM05B-SRSS-TB-LF-SN_C136657.html"
-			(at 99.06 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 99.06 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C136657"
-			(at 99.06 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "6"
-			(uuid "ecc2e94b-9bec-4bb6-b9ce-206418451b80")
-		)
-		(pin "7"
-			(uuid "37416f82-beb9-4648-b5e4-085e9041d412")
-		)
-		(pin "2"
-			(uuid "7b6e12fb-f3ee-4862-a46b-9c35a000bf7d")
-		)
-		(pin "3"
-			(uuid "41205b9a-1ae6-43d8-a9e7-5706d5fec2b8")
-		)
-		(pin "1"
-			(uuid "c656a985-6d6e-4fcd-a023-c36146997c10")
-		)
-		(pin "4"
-			(uuid "fb665a6b-725f-4dae-8749-4c97e0f4de1b")
-		)
-		(pin "5"
-			(uuid "895bed2c-1028-41e6-99c0-a31b3ffe628c")
-		)
-		(instances
-			(project "touch_pad"
-				(path "/6a5d421d-93bc-45c1-8843-32dac20a46e1"
-					(reference "CN1")
 					(unit 1)
 				)
 			)

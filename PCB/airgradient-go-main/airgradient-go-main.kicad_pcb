@@ -14334,7 +14334,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd dnp)
+		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.153641 -0.38)
@@ -27670,7 +27670,7 @@
 				)
 			)
 		)
-		(attr smd exclude_from_bom)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -8 0.1)
@@ -36462,7 +36462,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr exclude_from_bom allow_missing_courtyard)
+		(attr exclude_from_bom allow_missing_courtyard dnp)
 		(net_tie_pad_groups "1, 2")
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
@@ -36780,7 +36780,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd exclude_from_bom)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.107836 -0.36)
@@ -36935,7 +36935,7 @@
 				(pins "1" "2" "3")
 			)
 		)
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -4.81 14.06)

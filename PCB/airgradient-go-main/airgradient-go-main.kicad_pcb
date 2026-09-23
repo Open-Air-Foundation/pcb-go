@@ -9,8 +9,8 @@
 	(paper "A4")
 	(title_block
 		(title "Airgradient-GO")
-		(date "2026-05-13")
-		(rev "2.0")
+		(date "2026-09-23")
+		(rev "2.1")
 		(company "Airgradient")
 		(comment 1 "CC-BY-SA")
 	)
@@ -44391,7 +44391,7 @@
 		(layer "User.1")
 		(uuid "4e0767ca-ad06-403c-ae49-99606617ab7b")
 	)
-	(gr_text "GO-mainboard v2.0\nCC-BY-SA"
+	(gr_text "GO-mainboard v2.1\nCC-BY-SA"
 		(at 103.991466 67.67 0)
 		(layer "F.SilkS")
 		(uuid "f2b2b566-62f9-4ee9-882e-49942577af53")

@@ -10998,139 +10998,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "easyeda2kicad-oaf:KNTC0805_10KF3950"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "KNTC0805/10KF3950"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "easyeda2kicad-oaf:R0805"
-				(at 0 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC Part" "C2892549"
-				(at 0 -10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "KNTC0805_10KF3950_0_1"
-				(rectangle
-					(start -2.54 1.02)
-					(end 2.54 -1.02)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.52 2.03) (xy -1.27 -2.03) (xy -2.54 -2.03)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "easyeda2kicad-oaf:LIS2DH12TR"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -18389,6 +18256,12 @@
 		(uuid "403edc7f-7918-4c9f-b609-f1b4a7f34c01")
 	)
 	(junction
+		(at 49.53 275.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "40527770-c5cd-402d-9111-0c75479f5cde")
+	)
+	(junction
 		(at 60.96 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -18759,6 +18632,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ae46f00f-7e5a-4759-9ccf-96e552b8e9b5")
+	)
+	(junction
+		(at 199.39 166.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ae9865c8-504b-47d4-8a73-34fae2fa18e1")
 	)
 	(junction
 		(at 393.7 281.94)
@@ -20702,6 +20581,16 @@
 	)
 	(wire
 		(pts
+			(xy 199.39 177.8) (xy 199.39 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33163605-b247-4b40-879a-ff1719946fee")
+	)
+	(wire
+		(pts
 			(xy 170.18 69.85) (xy 175.26 69.85)
 		)
 		(stroke
@@ -20809,6 +20698,16 @@
 			(type default)
 		)
 		(uuid "372ebeaf-547c-e7db-6958-566c471947ce")
+	)
+	(wire
+		(pts
+			(xy 199.39 166.37) (xy 199.39 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37aadef3-2d8f-4c49-80f4-1e530e3da892")
 	)
 	(wire
 		(pts
@@ -22042,7 +21941,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 166.37) (xy 223.52 166.37)
+			(xy 196.85 166.37) (xy 199.39 166.37)
 		)
 		(stroke
 			(width 0)
@@ -23062,6 +22961,16 @@
 	)
 	(wire
 		(pts
+			(xy 199.39 186.69) (xy 213.36 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d93b3f7-453a-4303-b558-286b5781deef")
+	)
+	(wire
+		(pts
 			(xy 223.52 198.12) (xy 223.52 196.85)
 		)
 		(stroke
@@ -23549,6 +23458,16 @@
 			(type default)
 		)
 		(uuid "8cfb0f60-85e5-4498-88ba-cd2eac58cb82")
+	)
+	(wire
+		(pts
+			(xy 49.53 287.02) (xy 49.53 288.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e07faee-dc2d-457c-b9fa-34b0d44f5a4a")
 	)
 	(wire
 		(pts
@@ -25352,6 +25271,16 @@
 	)
 	(wire
 		(pts
+			(xy 199.39 166.37) (xy 223.52 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6978fd8-cc7e-4e5c-b173-a1f524fbb568")
+	)
+	(wire
+		(pts
 			(xy 359.41 182.88) (xy 363.22 182.88)
 		)
 		(stroke
@@ -25989,6 +25918,16 @@
 			(type default)
 		)
 		(uuid "d76a87f4-e17c-43dd-a935-ab2f3ff84d87")
+	)
+	(wire
+		(pts
+			(xy 49.53 275.59) (xy 49.53 279.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7d7d64b-f1fa-44af-ba3f-2f4120aad019")
 	)
 	(wire
 		(pts
@@ -30050,7 +29989,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4.12K"
+		(property "Value" "5.23k"
 			(at 102.87 325.1199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30280,7 +30219,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Others_Huaxin-S-T-MR04X1002FTL_C327797.html"
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_100KR-1003-1_C60491.html"
 			(at 31.75 127 0)
 			(hide yes)
 			(show_name no)
@@ -30302,7 +30241,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C327797"
+		(property "LCSC Part" "C60491"
 			(at 34.29 127 0)
 			(hide yes)
 			(show_name no)
@@ -31406,7 +31345,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/gpn/tca6408a"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C181499.html"
 			(at 223.52 204.47 0)
 			(hide yes)
 			(show_name no)
@@ -31419,6 +31358,17 @@
 		)
 		(property "Description" "Low-Voltage 8-bit I2C and SMBus I/O Expander, VQFN-16"
 			(at 223.52 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C181499"
+			(at 223.52 204.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31845,7 +31795,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL05A105KO5NNNC_1uF-105-10-16V_C29266.html"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C2934765.html"
 			(at 149.86 266.7 0)
 			(hide yes)
 			(show_name no)
@@ -31867,7 +31817,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C7500380"
+		(property "LCSC Part" "C2934765"
 			(at 160.02 266.7 0)
 			(hide yes)
 			(show_name no)
@@ -32239,6 +32189,86 @@
 			(project "airgradient-go-main"
 				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
 					(reference "#PWR0100")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:Earth")
+		(at 49.53 288.29 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "18b05195-023e-48dd-901e-58b0d992b7e7")
+		(property "Reference" "#PWR0121"
+			(at 49.53 294.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PGND"
+			(at 52.07 289.5599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 288.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 288.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
+			(at 49.53 288.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "398bee28-8591-4dc1-91c7-0b9444ba55bc")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "#PWR0121")
 					(unit 1)
 				)
 			)
@@ -33360,7 +33390,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lp5036.pdf"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C701961.html"
 			(at 468.63 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -33373,6 +33403,17 @@
 		)
 		(property "Description" "36-Channel 12-Bit PWM Ultra-low Quiescent Current I2C RGB LED Driver"
 			(at 468.63 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C701961"
+			(at 468.63 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -33835,7 +33876,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_1KR-1001-1_C106235.html"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C25077.html"
 			(at 72.39 283.21 0)
 			(hide yes)
 			(show_name no)
@@ -33857,7 +33898,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C106235"
+		(property "LCSC Part" "C25077"
 			(at 72.39 285.75 0)
 			(hide yes)
 			(show_name no)
@@ -34395,111 +34436,6 @@
 		)
 	)
 	(symbol
-		(lib_id "easyeda2kicad-oaf:KNTC0805_10KF3950")
-		(at 88.9 339.09 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2803e1c3-379e-4b9b-bff3-e4dbe8871e09")
-		(property "Reference" "NTC1"
-			(at 92.71 339.0899 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "KNTC0805/10KF3950"
-			(at 92.71 340.3599 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "easyeda2kicad-oaf:R0805"
-			(at 96.52 339.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 88.9 339.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 88.9 339.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C2892549"
-			(at 99.06 339.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 88.9 339.09 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "94cc5f13-d070-48b3-b458-8a6e636897d6")
-		)
-		(pin "2"
-			(uuid "dbc357b2-3844-4cc4-a11a-8f5a6c335f90")
-		)
-		(instances
-			(project "airgradient-go-main"
-				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
-					(reference "NTC1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 100.33 339.09 180)
 		(unit 1)
@@ -34522,7 +34458,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "17.33K"
+		(property "Value" "30.1k"
 			(at 102.87 340.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34648,7 +34584,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Others_Huaxin-S-T-MR04X1002FTL_C327797.html"
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_100KR-1003-1_C60491.html"
 			(at 97.79 127 0)
 			(hide yes)
 			(show_name no)
@@ -34670,7 +34606,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C327797"
+		(property "LCSC Part" "C60491"
 			(at 100.33 127 0)
 			(hide yes)
 			(show_name no)
@@ -36520,7 +36456,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C6119813.html"
 			(at 127 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -36542,7 +36478,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C315248"
+		(property "LCSC Part" "C6119813"
 			(at 129.54 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -36780,6 +36716,110 @@
 			(project "airgradient-go-main"
 				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
 					(reference "C26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "easyeda2kicad-oaf:NCP15XH103F03RC")
+		(at 88.9 339.09 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "390e8658-f061-4ee5-bb4f-06376dfe02bb")
+		(property "Reference" "NTC1"
+			(at 85.09 337.8199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NCP15XH103F03RC"
+			(at 85.09 340.3599 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "easyeda2kicad-oaf:R0402"
+			(at 96.52 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/NTC-Thermistors_muRata_NCP15XH103F03RC_NTCThermistor-10kR-1_C77131.html"
+			(at 99.06 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C77131"
+			(at 101.6 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 88.9 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "5c533b65-5ffc-4f90-bfee-3131d6bc59b0")
+		)
+		(pin "1"
+			(uuid "3e69224a-38b8-405b-a7fc-289ff6dad008")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "NTC1")
 					(unit 1)
 				)
 			)
@@ -37148,7 +37188,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Others_Huaxin-S-T-MR04X1002FTL_C327797.html"
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_100KR-1003-1_C60491.html"
 			(at 209.55 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -37170,7 +37210,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C327797"
+		(property "LCSC Part" "C60491"
 			(at 212.09 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -37475,7 +37515,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_0R-0R0-1_C106231.html"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C247602.html"
 			(at 200.66 372.11 0)
 			(hide yes)
 			(show_name no)
@@ -37497,7 +37537,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C106231"
+		(property "LCSC Part" "C247602"
 			(at 200.66 374.65 0)
 			(hide yes)
 			(show_name no)
@@ -37579,7 +37619,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Others_Huaxin-S-T-MR04X1002FTL_C327797.html"
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_100KR-1003-1_C60491.html"
 			(at 234.95 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -37601,7 +37641,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C327797"
+		(property "LCSC Part" "C60491"
 			(at 237.49 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -38624,7 +38664,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_1KR-1001-1_C106235.html"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C25077.html"
 			(at 63.5 285.75 0)
 			(hide yes)
 			(show_name no)
@@ -38646,7 +38686,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C106235"
+		(property "LCSC Part" "C25077"
 			(at 63.5 288.29 0)
 			(hide yes)
 			(show_name no)
@@ -42019,7 +42059,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -43145,7 +43185,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C25087.html"
 			(at 82.55 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -43157,6 +43197,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 82.55 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25087"
 			(at 82.55 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -44422,7 +44473,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_0R-0R0-1_C106231.html"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C705493.html"
 			(at 248.92 345.44 0)
 			(hide yes)
 			(show_name no)
@@ -44444,7 +44495,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C106231"
+		(property "LCSC Part" "C705493"
 			(at 248.92 347.98 0)
 			(hide yes)
 			(show_name no)
@@ -46926,7 +46977,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -47457,6 +47508,110 @@
 			(project "airgradient-go-main"
 				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
 					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 49.53 283.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "84cf9f59-82c2-4b05-8537-8d2c371aaf1a")
+		(property "Reference" "C75"
+			(at 53.34 281.9399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF/25V"
+			(at 53.34 284.4799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 41.91 283.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL05A104KA5NNNC_100nF-104-10-25V_C100072.html"
+			(at 39.37 283.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 283.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C100072"
+			(at 36.83 283.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 49.53 283.21 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "147c1437-dfc7-4e49-8046-816c35fb8d39")
+		)
+		(pin "2"
+			(uuid "c8201e55-2374-455f-b198-41978fd8f924")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "C75")
 					(unit 1)
 				)
 			)
@@ -52233,7 +52388,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C25087.html"
 			(at 54.61 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -52245,6 +52400,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 54.61 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25087"
 			(at 54.61 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -52955,7 +53121,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C100072.html"
 			(at 113.03 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -52977,7 +53143,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C315248"
+		(property "LCSC Part" "C100072"
 			(at 115.57 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -53229,7 +53395,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_1KR-1001-1_C106235.html"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C4109.html"
 			(at 86.36 280.67 0)
 			(hide yes)
 			(show_name no)
@@ -53251,7 +53417,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C106235"
+		(property "LCSC Part" "C4109"
 			(at 86.36 283.21 0)
 			(hide yes)
 			(show_name no)
@@ -54070,7 +54236,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Others_Huaxin-S-T-MR04X1002FTL_C327797.html"
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_100KR-1003-1_C60491.html"
 			(at 420.37 313.69 0)
 			(hide yes)
 			(show_name no)
@@ -54092,7 +54258,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C327797"
+		(property "LCSC Part" "C60491"
 			(at 422.91 313.69 0)
 			(hide yes)
 			(show_name no)
@@ -56328,7 +56494,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -57876,7 +58042,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Others_Huaxin-S-T-MR04X1002FTL_C327797.html"
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_100KR-1003-1_C60491.html"
 			(at 40.64 127 0)
 			(hide yes)
 			(show_name no)
@@ -57898,7 +58064,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C327797"
+		(property "LCSC Part" "C60491"
 			(at 43.18 127 0)
 			(hide yes)
 			(show_name no)
@@ -58974,7 +59140,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C2988648.html"
 			(at 68.58 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -58986,6 +59152,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 68.58 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C2988648"
 			(at 68.58 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -59487,7 +59664,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Others_Huaxin-S-T-MR04X1002FTL_C327797.html"
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_100KR-1003-1_C60491.html"
 			(at 328.93 270.51 0)
 			(hide yes)
 			(show_name no)
@@ -59509,7 +59686,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C327797"
+		(property "LCSC Part" "C60491"
 			(at 331.47 270.51 0)
 			(hide yes)
 			(show_name no)
@@ -63062,6 +63239,110 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 199.39 173.99 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fdf9fc76-8cca-4df9-9612-49c4915d9920")
+		(property "Reference" "R60"
+			(at 201.93 172.7199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100K"
+			(at 201.93 175.2599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 207.01 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_100KR-1003-1_C60491.html"
+			(at 209.55 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "MR04X1002FTL"
+			(at 199.39 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C60491"
+			(at 212.09 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 199.39 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "35129e1c-978f-485f-87c2-031cd9b72ac7")
+		)
+		(pin "2"
+			(uuid "e489fdb4-4dff-436b-b248-9b5d52511b04")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "R60")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:Earth")
 		(at 530.86 72.39 0)
 		(unit 1)
@@ -63250,7 +63531,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)

@@ -811,7 +811,7 @@
         "uuid": "63bfc1c7-4623-455a-8f83-dca1d491c7db"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#PWR121,NTC3,C75,R60",
     "variants": []
   },
   "sheets": [

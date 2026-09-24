@@ -6,7 +6,7 @@
 	(paper "A2")
 	(title_block
 		(title "Airgradient-GO")
-		(date "2026-09-23")
+		(date "2026-01-16")
 		(rev "2.1")
 		(company "Arigradient")
 		(comment 1 "CC-BY-SA")
@@ -10830,6 +10830,228 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "easyeda2kicad-oaf:HCZZ0032-5"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "HCZZ0032-5"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "easyeda2kicad-oaf:CONN-SMD_HCZZ0032-5"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC Part" "C7433426"
+				(at 0 -20.32 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "HCZZ0032-5_0_1"
+				(rectangle
+					(start -2.54 7.62)
+					(end 5.08 -7.62)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(circle
+					(center -1.27 6.35)
+					(radius 0.38)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at -5.08 5.08 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at -5.08 2.54 0)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at -5.08 -2.54 0)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at -5.08 -5.08 0)
+					(length 2.54)
+					(name "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 3.81 -10.16 90)
+					(length 2.54)
+					(name "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 3.81 10.16 270)
+					(length 2.54)
+					(name "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "easyeda2kicad-oaf:HYG-8503A"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -13751,228 +13973,6 @@
 						)
 					)
 					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "easyeda2kicad-oaf:SM05B-SRSS-TB(LF)(SN)"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "CN"
-				(at 0 10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SM05B-SRSS-TB (LF)(SN)"
-				(at 0 -10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "easyeda2kicad-oaf:CONN-SMD_SM05B-SRSS-TB-LF-SN"
-				(at 0 -12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://lcsc.com/product-detail/Connectors_JST_SM05B-SRSS-TB-LF-SN_SM05B-SRSS-TB-LF-SN_C136657.html"
-				(at 0 -15.24 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC Part" "C136657"
-				(at 0 -17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SM05B-SRSS-TB(LF)(SN)_0_1"
-				(rectangle
-					(start -5.08 7.62)
-					(end 5.08 -7.62)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(circle
-					(center -3.81 6.35)
-					(radius 0.38)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at -7.62 5.08 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at -7.62 -5.08 0)
-					(length 2.54)
-					(name "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 7.62 -5.08 180)
-					(length 2.54)
-					(name "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 7.62 5.08 180)
-					(length 2.54)
-					(name "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -18154,12 +18154,6 @@
 		(uuid "2392dbb4-cc35-4476-9632-dac3689029a0")
 	)
 	(junction
-		(at 379.73 215.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "23f5f81b-886b-4c41-9f65-643976a71f22")
-	)
-	(junction
 		(at 63.5 218.44)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -18520,6 +18514,12 @@
 		(uuid "8b7e62b7-82d6-4f0f-9070-007da6c83947")
 	)
 	(junction
+		(at 289.56 317.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8c87ea19-f486-4764-808a-83ab1479fe2b")
+	)
+	(junction
 		(at 504.19 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -18530,6 +18530,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8cc06832-60dd-432d-b499-d736a2366e0e")
+	)
+	(junction
+		(at 289.56 276.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8e73f155-2e0c-4c02-853d-5d6d8c8bb53e")
 	)
 	(junction
 		(at 210.82 332.74)
@@ -18554,12 +18560,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "95332a97-0521-4e71-aa02-e6e13de331c8")
-	)
-	(junction
-		(at 297.18 269.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9688b054-b8c1-4eb6-b656-3b8a8ea43b9b")
 	)
 	(junction
 		(at 383.54 287.02)
@@ -18742,12 +18742,6 @@
 		(uuid "cace2e07-2773-4607-b7fa-c0a9fc78e8b4")
 	)
 	(junction
-		(at 295.91 311.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cd17302c-05ce-43ef-8ce4-de11d9e67fd7")
-	)
-	(junction
 		(at 100.33 331.47)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -18848,6 +18842,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f227c9ff-fdfe-4a2a-a1fb-5ca5ead12629")
+	)
+	(junction
+		(at 370.84 223.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f2a6671e-2ef7-4a6b-ac54-37f4048eed09")
 	)
 	(junction
 		(at 212.09 198.12)
@@ -19301,6 +19301,16 @@
 	)
 	(wire
 		(pts
+			(xy 289.56 317.5) (xy 278.13 317.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07ba36a1-50a2-4924-8705-e5f106386853")
+	)
+	(wire
+		(pts
 			(xy 381 123.19) (xy 387.35 123.19)
 		)
 		(stroke
@@ -19508,16 +19518,6 @@
 			(type default)
 		)
 		(uuid "102ad4eb-acf7-5ea5-ac12-2425f50c6660")
-	)
-	(wire
-		(pts
-			(xy 377.19 215.9) (xy 379.73 215.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11b68c75-c974-4912-86b0-e64584e1bec2")
 	)
 	(wire
 		(pts
@@ -19801,7 +19801,7 @@
 	)
 	(wire
 		(pts
-			(xy 360.68 223.52) (xy 379.73 223.52)
+			(xy 360.68 223.52) (xy 370.84 223.52)
 		)
 		(stroke
 			(width 0)
@@ -19881,7 +19881,7 @@
 	)
 	(wire
 		(pts
-			(xy 295.91 300.99) (xy 295.91 311.15)
+			(xy 295.91 294.64) (xy 295.91 317.5)
 		)
 		(stroke
 			(width 0)
@@ -19998,16 +19998,6 @@
 			(type default)
 		)
 		(uuid "20d46437-1192-7e2e-fb6c-d5194e5275b1")
-	)
-	(wire
-		(pts
-			(xy 295.91 259.08) (xy 297.18 259.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "212abb47-1434-40ce-8ba7-e589910ee6cc")
 	)
 	(wire
 		(pts
@@ -20931,7 +20921,7 @@
 	)
 	(wire
 		(pts
-			(xy 297.18 269.24) (xy 297.18 276.86)
+			(xy 297.18 251.46) (xy 297.18 276.86)
 		)
 		(stroke
 			(width 0)
@@ -21148,6 +21138,16 @@
 			(type default)
 		)
 		(uuid "436456b1-c3d8-4bb9-94ea-4b4b2e8307bd")
+	)
+	(wire
+		(pts
+			(xy 289.56 294.64) (xy 289.56 295.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "437fedc9-34fa-4bd3-b018-36e43f8da7b3")
 	)
 	(wire
 		(pts
@@ -21518,6 +21518,16 @@
 			(type default)
 		)
 		(uuid "4e93ff88-9347-467f-9aea-f5dc579f2dbc")
+	)
+	(wire
+		(pts
+			(xy 370.84 223.52) (xy 379.73 223.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f13c54d-f31b-49ac-be54-69c8e28708a1")
 	)
 	(wire
 		(pts
@@ -22491,7 +22501,7 @@
 	)
 	(wire
 		(pts
-			(xy 295.91 317.5) (xy 278.13 317.5)
+			(xy 295.91 317.5) (xy 289.56 317.5)
 		)
 		(stroke
 			(width 0)
@@ -22548,6 +22558,16 @@
 			(type default)
 		)
 		(uuid "6ffa4945-1564-4681-a4c3-ee2b58da9404")
+	)
+	(wire
+		(pts
+			(xy 297.18 251.46) (xy 289.56 251.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "702c48a2-7f5a-4b96-ae34-e18e9f0ff6b9")
 	)
 	(wire
 		(pts
@@ -23111,16 +23131,6 @@
 	)
 	(wire
 		(pts
-			(xy 379.73 205.74) (xy 379.73 215.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "814ea27d-9aa3-4e54-96e0-0a122d6b8b6b")
-	)
-	(wire
-		(pts
 			(xy 340.36 248.92) (xy 345.44 248.92)
 		)
 		(stroke
@@ -23371,6 +23381,16 @@
 	)
 	(wire
 		(pts
+			(xy 289.56 316.23) (xy 289.56 317.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89464068-4342-4130-a4be-d8ef02c20b38")
+	)
+	(wire
+		(pts
 			(xy 481.33 163.83) (xy 490.22 163.83)
 		)
 		(stroke
@@ -23518,6 +23538,16 @@
 			(type default)
 		)
 		(uuid "8f17648a-1dde-41b4-9040-850c4ed61a0d")
+	)
+	(wire
+		(pts
+			(xy 289.56 276.86) (xy 297.18 276.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f32135e-10ca-43c9-8c14-4af650ae42cd")
 	)
 	(wire
 		(pts
@@ -25181,7 +25211,7 @@
 	)
 	(wire
 		(pts
-			(xy 377.19 205.74) (xy 379.73 205.74)
+			(xy 370.84 199.39) (xy 379.73 199.39)
 		)
 		(stroke
 			(width 0)
@@ -25261,7 +25291,7 @@
 	)
 	(wire
 		(pts
-			(xy 379.73 215.9) (xy 379.73 223.52)
+			(xy 379.73 199.39) (xy 379.73 223.52)
 		)
 		(stroke
 			(width 0)
@@ -25711,16 +25741,6 @@
 	)
 	(wire
 		(pts
-			(xy 295.91 269.24) (xy 297.18 269.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d037bb81-ba65-4d31-8c00-a8816ec22d37")
-	)
-	(wire
-		(pts
 			(xy 481.33 209.55) (xy 490.22 209.55)
 		)
 		(stroke
@@ -25818,6 +25838,16 @@
 			(type default)
 		)
 		(uuid "d3a2d469-6594-45c4-9dcb-e9b22125c077")
+	)
+	(wire
+		(pts
+			(xy 295.91 294.64) (xy 289.56 294.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3c77bbe-6b7d-4abc-ae74-1d80538a4b19")
 	)
 	(wire
 		(pts
@@ -26011,6 +26041,16 @@
 	)
 	(wire
 		(pts
+			(xy 370.84 220.98) (xy 370.84 223.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db1d073a-a2bc-40af-a2b6-faa4ea60eee0")
+	)
+	(wire
+		(pts
 			(xy 314.96 175.26) (xy 314.96 194.31)
 		)
 		(stroke
@@ -26128,6 +26168,16 @@
 			(type default)
 		)
 		(uuid "dde720f7-b064-48dd-8a79-2045ea6cfdde")
+	)
+	(wire
+		(pts
+			(xy 370.84 199.39) (xy 370.84 200.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de0d0bc1-96d8-4789-ae7c-4e73a844aa12")
 	)
 	(wire
 		(pts
@@ -26691,6 +26741,16 @@
 	)
 	(wire
 		(pts
+			(xy 289.56 251.46) (xy 289.56 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edbba86e-3bc8-431f-b0f5-a8792896a9dd")
+	)
+	(wire
+		(pts
 			(xy 74.93 294.64) (xy 45.72 294.64)
 		)
 		(stroke
@@ -26838,16 +26898,6 @@
 			(type default)
 		)
 		(uuid "f2a7b8ec-0fcb-402c-84f4-0f579da3232a")
-	)
-	(wire
-		(pts
-			(xy 295.91 311.15) (xy 295.91 317.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f2e61bb4-dc1c-4f46-b62a-26f92749af4a")
 	)
 	(wire
 		(pts
@@ -27161,6 +27211,16 @@
 	)
 	(wire
 		(pts
+			(xy 289.56 274.32) (xy 289.56 276.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f895d647-b326-413c-9abd-6e3300021a7d")
+	)
+	(wire
+		(pts
 			(xy 99.06 262.89) (xy 99.06 248.92)
 		)
 		(stroke
@@ -27291,7 +27351,7 @@
 	)
 	(wire
 		(pts
-			(xy 279.4 276.86) (xy 297.18 276.86)
+			(xy 279.4 276.86) (xy 289.56 276.86)
 		)
 		(stroke
 			(width 0)
@@ -27318,16 +27378,6 @@
 			(type default)
 		)
 		(uuid "fe306c92-3056-3c3d-83a7-003dcda36e85")
-	)
-	(wire
-		(pts
-			(xy 297.18 259.08) (xy 297.18 269.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe7f14eb-d460-4fda-bce2-48eb3eda918d")
 	)
 	(wire
 		(pts
@@ -32820,7 +32870,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "1cc5e9a6-e3c1-4280-a2aa-b6d99821bbe2")
 		(property "Reference" "#PWR0170"
@@ -33148,6 +33198,114 @@
 			(project "airgradient-go-main"
 				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
 					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "easyeda2kicad-oaf:HCZZ0032-5")
+		(at 367.03 210.82 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2063a0b7-1b6b-4c6d-a0e1-6dac84308b41")
+		(property "Reference" "CN1"
+			(at 373.38 209.5499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "HCZZ0032-5"
+			(at 373.38 212.0899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "easyeda2kicad-oaf:CONN-SMD_HCZZ0032-5"
+			(at 367.03 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 367.03 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 367.03 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C7433426"
+			(at 367.03 231.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "578dbcdc-bb57-4d76-bb6f-7fb98197b2e4")
+		)
+		(pin "4"
+			(uuid "a6b9d270-8476-4471-96c3-9659ebd278ef")
+		)
+		(pin "3"
+			(uuid "56abaa99-567b-4d75-b965-1e06071a295b")
+		)
+		(pin "2"
+			(uuid "d67b6fc2-361d-424b-83cd-3ba062526acb")
+		)
+		(pin "1"
+			(uuid "d915661d-5602-43e2-ad8d-7412c54ab0fb")
+		)
+		(pin "6"
+			(uuid "e0f42168-eaaa-4969-8526-5ef1e09b8cf9")
+		)
+		(pin "7"
+			(uuid "eb668367-70ac-4418-8e1d-f97e400825bc")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "CN1")
 					(unit 1)
 				)
 			)
@@ -35543,123 +35701,6 @@
 		)
 	)
 	(symbol
-		(lib_id "easyeda2kicad-oaf:SM05B-SRSS-TB(LF)(SN)")
-		(at 288.29 306.07 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2feaccf7-174c-4365-8fba-9f671a91e7ed")
-		(property "Reference" "CN4"
-			(at 288.29 293.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SM05B-SRSS-TB (LF)(SN)"
-			(at 288.29 295.91 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "easyeda2kicad-oaf:CONN-SMD_SM05B-SRSS-TB-LF-SN"
-			(at 288.29 318.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Connectors_JST_SM05B-SRSS-TB-LF-SN_SM05B-SRSS-TB-LF-SN_C136657.html"
-			(at 288.29 321.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 288.29 306.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C136657"
-			(at 288.29 323.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 288.29 306.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "6"
-			(uuid "75853e61-10b0-4bc7-a690-6e38129cafc7")
-		)
-		(pin "7"
-			(uuid "9cc05190-227e-4c87-94d2-2eb5728070ee")
-		)
-		(pin "3"
-			(uuid "cc3f72d9-8f76-4d6c-9ee6-873c3ce3f295")
-		)
-		(pin "5"
-			(uuid "dd1a6adf-e4e1-4b67-95b4-c4ecd9568863")
-		)
-		(pin "1"
-			(uuid "3676ee4f-04bc-4105-bfee-dc964688883e")
-		)
-		(pin "2"
-			(uuid "58f6417d-33a6-44d2-bf5b-7b092c6225dd")
-		)
-		(pin "4"
-			(uuid "444c2494-4b0d-4208-97e5-eb621a6f7059")
-		)
-		(instances
-			(project "airgradient-go-main"
-				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
-					(reference "CN4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 314.96 198.12 180)
 		(unit 1)
@@ -37360,7 +37401,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "3de33cc3-064d-45e8-b19d-e1b272089cdc")
 		(property "Reference" "TF1"
@@ -41545,7 +41586,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "5d97623b-b8c3-4155-b8d4-62472c436d52")
 		(property "Reference" "R57"
@@ -41650,7 +41691,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "5da3a41e-2f40-452d-ac2e-877256ab6309")
 		(property "Reference" "R52"
@@ -42059,7 +42100,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -42299,123 +42340,6 @@
 			(project "airgradient-go-main"
 				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
 					(reference "U10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "easyeda2kicad-oaf:SM05B-SRSS-TB(LF)(SN)")
-		(at 369.57 210.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "63066ff3-4c60-4c8c-b4ce-60dff06f32cb")
-		(property "Reference" "CN3"
-			(at 369.57 198.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SM05B-SRSS-TB (LF)(SN)"
-			(at 369.57 200.66 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "easyeda2kicad-oaf:CONN-SMD_SM05B-SRSS-TB-LF-SN"
-			(at 369.57 223.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Connectors_JST_SM05B-SRSS-TB-LF-SN_SM05B-SRSS-TB-LF-SN_C136657.html"
-			(at 369.57 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 369.57 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C136657"
-			(at 369.57 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 369.57 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "6"
-			(uuid "3db20830-b693-4609-bb2e-748b96e2613f")
-		)
-		(pin "7"
-			(uuid "d632052a-8332-442b-9123-0e1e7fbbc796")
-		)
-		(pin "3"
-			(uuid "c10da194-76d3-4ab8-a07f-dae2b0f6f051")
-		)
-		(pin "5"
-			(uuid "d8805c76-13f9-4bc4-a6b7-8f487cafbe28")
-		)
-		(pin "1"
-			(uuid "62256a42-8d38-4857-abe3-bed477c02658")
-		)
-		(pin "2"
-			(uuid "46ed3e2a-323b-478d-a829-fe8b3c69e90e")
-		)
-		(pin "4"
-			(uuid "f604ebe9-65d7-4e35-8e1c-8b83858ff5cd")
-		)
-		(instances
-			(project "airgradient-go-main"
-				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
-					(reference "CN3")
 					(unit 1)
 				)
 			)
@@ -42876,7 +42800,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "69a79ec2-0fd0-48c8-bec3-48b5cb634874")
 		(property "Reference" "#PWR0169"
@@ -43688,6 +43612,114 @@
 		)
 	)
 	(symbol
+		(lib_id "easyeda2kicad-oaf:HCZZ0032-5")
+		(at 285.75 306.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6e600225-1d73-4bd5-a3c3-196a4af7a8fc")
+		(property "Reference" "CN2"
+			(at 292.1 304.7999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "HCZZ0032-5"
+			(at 292.1 307.3399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "easyeda2kicad-oaf:CONN-SMD_HCZZ0032-5"
+			(at 285.75 323.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 285.75 306.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 285.75 306.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C7433426"
+			(at 285.75 326.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "593a0d34-1cac-4691-89c9-20cc1780cc35")
+		)
+		(pin "4"
+			(uuid "68c460af-00fc-491b-bbca-7c5d26db3304")
+		)
+		(pin "3"
+			(uuid "8938072d-6416-44f5-a821-770430fb98bb")
+		)
+		(pin "2"
+			(uuid "f77f7e28-8add-4040-8aee-9b435cf6e77d")
+		)
+		(pin "1"
+			(uuid "72cac204-6439-4be8-9a1b-2d7a852072b6")
+		)
+		(pin "6"
+			(uuid "9b92d6f5-1c14-4305-a157-5722bd6ca9e1")
+		)
+		(pin "7"
+			(uuid "59d9b72d-11d5-4a1f-afee-ad4b5c13cd74")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "CN2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 368.3 318.77 180)
 		(unit 1)
@@ -44152,7 +44184,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "71a3171a-ef46-492f-9224-06690ab82232")
 		(property "Reference" "C71"
@@ -46067,7 +46099,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -46211,7 +46243,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "7e60c5d3-abd8-4539-99be-d86b809bc1e2")
 		(property "Reference" "C42"
@@ -46977,7 +47009,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -48291,7 +48323,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "89636eb4-82cf-4e25-91f7-e467d27631c9")
 		(property "Reference" "#PWR0108"
 			(at 434.34 255.27 0)
@@ -49704,7 +49736,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -50101,7 +50133,7 @@
 		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "90ea3e1a-d49e-4ac2-8cba-6c2e78f12b84")
 		(property "Reference" "U11"
@@ -51533,6 +51565,114 @@
 			(project "airgradient-go-main"
 				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
 					(reference "#PWR053")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "easyeda2kicad-oaf:HCZZ0032-5")
+		(at 285.75 264.16 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a0a88fcd-b486-4e76-b472-831d7d2d5c45")
+		(property "Reference" "CN3"
+			(at 292.1 265.4301 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "HCZZ0032-5"
+			(at 292.1 262.8901 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "easyeda2kicad-oaf:CONN-SMD_HCZZ0032-5"
+			(at 285.75 246.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 285.75 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 285.75 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C7433426"
+			(at 285.75 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "1262bf8c-a18b-4ac6-8c7e-58165c5cabb0")
+		)
+		(pin "4"
+			(uuid "60141344-104f-49fb-9466-e8ca2ae06ce8")
+		)
+		(pin "3"
+			(uuid "6d2fd912-3157-49e1-aba5-75e722590540")
+		)
+		(pin "2"
+			(uuid "cb2294f8-d9bb-4880-89a5-a651a016a05f")
+		)
+		(pin "1"
+			(uuid "ee46dc64-77e5-4a6e-8e31-abc4b4b27523")
+		)
+		(pin "6"
+			(uuid "f1967d08-f1d0-4e93-9c05-574140c1abcb")
+		)
+		(pin "7"
+			(uuid "ef0b57bd-6158-412e-aba9-ddb6ffa13866")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "CN3")
 					(unit 1)
 				)
 			)
@@ -52983,7 +53123,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ae5fe9ff-7a96-4384-85cd-927824c18f01")
 		(property "Reference" "R53"
@@ -54020,7 +54160,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "b5d26031-9320-4f7d-bbb3-9ef795b3914b")
 		(property "Reference" "R51"
 			(at 461.01 278.384 90)
@@ -56396,7 +56536,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "cadde364-7b85-4109-928d-8eaf307a03a1")
 		(property "Reference" "R50"
 			(at 471.17 283.464 90)
@@ -56732,7 +56872,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "cb3be161-287b-43b4-93e0-1e9938e7197f")
 		(property "Reference" "R56"
@@ -57045,7 +57185,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ce80e0ec-2c2e-4dfd-a3bb-057a006d6190")
 		(property "Reference" "#PWR0168"
@@ -57666,123 +57806,6 @@
 			(project "airgradient-go-main"
 				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
 					(reference "R28")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "easyeda2kicad-oaf:SM05B-SRSS-TB(LF)(SN)")
-		(at 288.29 264.16 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d48eee9f-4941-4f7b-b51f-24d44ab94f88")
-		(property "Reference" "CN5"
-			(at 288.29 251.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SM05B-SRSS-TB (LF)(SN)"
-			(at 288.29 254 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "easyeda2kicad-oaf:CONN-SMD_SM05B-SRSS-TB-LF-SN"
-			(at 288.29 251.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Connectors_JST_SM05B-SRSS-TB-LF-SN_SM05B-SRSS-TB-LF-SN_C136657.html"
-			(at 288.29 248.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 288.29 264.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C136657"
-			(at 288.29 246.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 288.29 264.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "6"
-			(uuid "8274e1fa-c6da-4ad6-89a0-1d6a4c5ade3e")
-		)
-		(pin "7"
-			(uuid "38f25a83-2a44-461d-b70b-5bb45f9eb00a")
-		)
-		(pin "3"
-			(uuid "1ef23fd8-85fb-4255-bf37-27df1a5e9289")
-		)
-		(pin "5"
-			(uuid "f07c35fb-8f40-4698-848e-4bcb2e410789")
-		)
-		(pin "1"
-			(uuid "99ba2a25-ea7c-4cd4-81c5-b26e3a33386b")
-		)
-		(pin "2"
-			(uuid "dc47abb7-8112-4caf-9f5c-0b201b415694")
-		)
-		(pin "4"
-			(uuid "ce3ab76d-ae01-4ddb-9c8f-51e37fd11530")
-		)
-		(instances
-			(project "airgradient-go-main"
-				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
-					(reference "CN5")
 					(unit 1)
 				)
 			)
@@ -62109,7 +62132,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "f79f5eeb-b0e0-4e28-85cf-04a500ab5bcd")
 		(property "Reference" "R55"
@@ -63430,7 +63453,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "fe5ecdfe-bb13-4272-8f36-874ec15c3c03")
 		(property "Reference" "R54"
@@ -63531,7 +63554,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -63633,7 +63656,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ffbee5c6-1963-4587-9cba-789d1ccf2e58")
 		(property "Reference" "R58"

@@ -276,7 +276,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "2.0"
+      "sch_revision": "2.1"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -759,8 +759,8 @@
       "group_symbols": true,
       "include_excluded_from_bom": true,
       "name": "",
-      "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_asc": false,
+      "sort_field": "${EXCLUDE_FROM_BOM}"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -811,7 +811,7 @@
         "uuid": "63bfc1c7-4623-455a-8f83-dca1d491c7db"
       }
     ],
-    "used_designators": "#PWR121,NTC3,C75,R60",
+    "used_designators": "CN2-3,U21",
     "variants": []
   },
   "sheets": [

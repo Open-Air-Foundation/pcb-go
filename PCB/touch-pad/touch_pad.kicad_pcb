@@ -10,7 +10,7 @@
 	(title_block
 		(title "Touch_sensor")
 		(date "2026-05-13")
-		(rev "v2.0")
+		(rev "v2.1")
 		(company "Airgradient")
 		(comment 1 "CC-BY-SA")
 	)
@@ -12433,7 +12433,7 @@
 		(layer "Edge.Cuts")
 		(uuid "7075a984-2ae3-4581-b97d-6d61bc4410bb")
 	)
-	(gr_text "AG-TOUCH-GO-v2.0"
+	(gr_text "AG-TOUCH-GO-v2.1"
 		(at 79.715464 70.847225 0)
 		(layer "B.SilkS")
 		(uuid "1d29828f-f490-4acd-818b-a3f00064e61e")

@@ -10965,7 +10965,7 @@
 			(uuid "fe94669d-040a-4a0e-8c3d-574f034d1dcd")
 		)
 		(embedded_fonts no)
-		(model "/Users/formylife/Documents/airgradient_pcb/airgradient-go-pcb/libraries/easyeda2kicad/easyeda2kicad.3dshapes/CONN-SMD_HCZZ0032-5.wrl"
+		(model "/Users/formylife/Documents/Work/AirGradient/PCB/airgradient-go-pcb/libraries/easyeda2kicad/easyeda2kicad.3dshapes/CONN-SMD_HCZZ0032-5.wrl"
 			(offset
 				(xyz 0 -0.31 -0.25)
 			)

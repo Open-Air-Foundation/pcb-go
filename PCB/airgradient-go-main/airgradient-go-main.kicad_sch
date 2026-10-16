@@ -4999,7 +4999,7 @@
 					)
 				)
 			)
-			(property "Description" "New 2026 Senseair CO2 sensor"
+			(property "Description" "Senseair S12 CO2 sensor (art. 012-0-0001). Pin 6 = EEPA (EEPROM access output) from rev 2.00 per PCN16844, DE on rev 1.00. Footprint S12 = rev 1.00 land pattern, S12_rev2 = rev 2.00 land pattern."
 				(at -2.54 2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5034,7 +5034,7 @@
 						(color 255 255 194 1)
 					)
 				)
-				(pin input line
+				(pin power_in line
 					(at -10.16 -3.81 0)
 					(length 2.54)
 					(name "GND"
@@ -5052,7 +5052,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin power_in line
 					(at -10.16 3.81 0)
 					(length 2.54)
 					(name "VCC"
@@ -5070,7 +5070,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin bidirectional line
 					(at -10.16 1.27 0)
 					(length 2.54)
 					(name "Rx/SDA"
@@ -5088,7 +5088,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin bidirectional line
 					(at -10.16 -1.27 0)
 					(length 2.54)
 					(name "Tx/SCL"
@@ -5124,10 +5124,10 @@
 						)
 					)
 				)
-				(pin input line
+				(pin output line
 					(at 10.16 -1.27 180)
 					(length 2.54)
-					(name "DE"
+					(name "EEPA"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5142,7 +5142,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin output line
 					(at 10.16 1.27 180)
 					(length 2.54)
 					(name "RDYN"
@@ -5163,7 +5163,7 @@
 				(pin input line
 					(at 10.16 3.81 180)
 					(length 2.54)
-					(name "COMSET"
+					(name "COMSEL"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -56660,7 +56660,7 @@
 				)
 			)
 		)
-		(property "Footprint" "S12-oaf:S12"
+		(property "Footprint" "S12-oaf:S12_rev2"
 			(at 392.43 314.96 0)
 			(hide yes)
 			(show_name no)
@@ -56682,7 +56682,7 @@
 				)
 			)
 		)
-		(property "Description" "New 2026 Senseair CO2 sensor"
+		(property "Description" "Senseair S12 CO2 sensor (art. 012-0-0001). Pin 6 = EEPA (EEPROM access output) from rev 2.00 per PCN16844, DE on rev 1.00. Footprint S12 = rev 1.00 land pattern, S12_rev2 = rev 2.00 land pattern."
 			(at 389.89 312.42 0)
 			(hide yes)
 			(show_name no)

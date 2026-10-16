@@ -1,0 +1,222 @@
+(footprint "S12_rev2"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -10.25 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "66978ccc-ebbd-58f3-843d-78fc940b2d3c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "S12_rev2"
+		(at 0 10.25 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "e5f2e3e4-ff1c-522c-b90b-0890bf079aa6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e8f08bfe-0fc0-51f8-b639-eb669bb8034b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Senseair S12 CO2 sensor (art. 012-0-0001) rev 2.00 land pattern per PCN16844 / drawing 740-02022 rev 2.00: pads 2.5x1.75 mm, c-c 14.5 mm, outer 17 mm, pitch 2.54 mm. Origin = body centre."
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4483caa8-b098-5215-ac90-7350fc6d608f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -7.61 -9.11)
+		(end 7.61 -9.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "01a30662-4757-5e41-89fe-96c8782640b9")
+	)
+	(fp_line
+		(start -7.61 9.11)
+		(end 7.61 9.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f2d38c05-7954-5980-ba1c-0e68672d6ca7")
+	)
+	(fp_line
+		(start -7.61 -9.11)
+		(end -7.61 -3.68)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d4d540f2-1197-5898-9ca1-1a8fe8eff0bc")
+	)
+	(fp_line
+		(start -7.61 6.22)
+		(end -7.61 9.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d2dba5e1-6b0a-5b9c-b678-5b1c1495865e")
+	)
+	(fp_line
+		(start 7.61 -9.11)
+		(end 7.61 -3.68)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "406e67ae-f872-54ba-a5c7-5977c0e77d90")
+	)
+	(fp_line
+		(start 7.61 6.22)
+		(end 7.61 9.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5d1079ce-7bb4-57ca-9da9-f012ff12b797")
+	)
+	(fp_line
+		(start -7.61 -3.68)
+		(end -8.5 -3.68)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3d2b8d00-94c1-5eb3-a1e7-692d76a28668")
+	)
+	(fp_poly
+		(pts
+			(xy -6.5 -9.0) (xy 7.5 -9.0) (xy 7.5 9.0) (xy -7.5 9.0) (xy -7.5 -8.0)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "f64f66b5-8f87-51e7-833c-f4a0f371960e")
+	)
+	(fp_rect
+		(start -8.75 -9.25)
+		(end 8.75 9.25)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "f706f8d0-9ca8-5390-b2f2-f1dbc7da712e")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "eef57271-e3a0-5146-8701-49f6db1bca18")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -7.25 -2.54)
+		(size 2.5 1.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f9f3eff2-641a-55df-9ee6-0f04da1034f3")
+	)
+	(pad "2" smd rect
+		(at -7.25 0.0)
+		(size 2.5 1.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "bcfd2704-e274-5a0e-9059-fb71f6dc1b3a")
+	)
+	(pad "3" smd rect
+		(at -7.25 2.54)
+		(size 2.5 1.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "1b27d9e6-d1b7-5f8c-96ad-5323048795a7")
+	)
+	(pad "4" smd rect
+		(at -7.25 5.08)
+		(size 2.5 1.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "bc4b8871-c9fc-5f69-bbb2-c227afc8225b")
+	)
+	(pad "5" smd rect
+		(at 7.25 5.08)
+		(size 2.5 1.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ecf6bc85-235a-55bb-aaa7-1b61dae1c7c2")
+	)
+	(pad "6" smd rect
+		(at 7.25 2.54)
+		(size 2.5 1.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "fbb6feb6-dd55-5529-9d2e-bbeed1d4874e")
+	)
+	(pad "7" smd rect
+		(at 7.25 0.0)
+		(size 2.5 1.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7dae38c5-7bc5-528f-87b1-2e3fd7f00a9f")
+	)
+	(pad "8" smd rect
+		(at 7.25 -2.54)
+		(size 2.5 1.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "49492cab-1ba1-5d1c-942d-fc47fb0ba5bd")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../libraries/3d/S12.step"
+		(offset
+			(xyz 23.65 -24.05 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -180 -180)
+		)
+	)
+)

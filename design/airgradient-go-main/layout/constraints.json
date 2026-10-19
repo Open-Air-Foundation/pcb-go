@@ -1,0 +1,179 @@
+{
+ "board": {
+  "layers": 4
+ },
+ "net_classes": [],
+ "rules": [
+  {
+   "id": "HS-32",
+   "type": "near",
+   "a": "C76.1",
+   "b": "Y1.1",
+   "max": 1.0,
+   "status": "approved",
+   "source": "load cap at the crystal pad; HS-32, Epson FC-135R p7"
+  },
+  {
+   "id": "HS-32",
+   "type": "near",
+   "a": "C77.1",
+   "b": "Y1.2",
+   "max": 1.0,
+   "status": "approved",
+   "source": "load cap at the crystal pad; HS-32"
+  },
+  {
+   "id": "XT-01",
+   "type": "near",
+   "a": "Y1.1",
+   "b": "U4.16",
+   "max": 3.0,
+   "status": "approved",
+   "source": "Epson p7: shortest line pattern"
+  },
+  {
+   "id": "XT-01",
+   "type": "near",
+   "a": "Y1.2",
+   "b": "U4.17",
+   "max": 3.0,
+   "status": "approved",
+   "source": "Epson p7: shortest line pattern"
+  },
+  {
+   "id": "GEN-02",
+   "type": "gnd_via_near",
+   "pad": "C76.2",
+   "max": 0.5,
+   "status": "approved",
+   "source": "pcb-layout-rules GEN-02"
+  },
+  {
+   "id": "GEN-02",
+   "type": "gnd_via_near",
+   "pad": "C77.2",
+   "max": 0.5,
+   "status": "approved",
+   "source": "pcb-layout-rules GEN-02"
+  },
+  {
+   "id": "RF-21",
+   "type": "net_vias",
+   "nets": [
+    "/XTAL_32K_P",
+    "/XTAL_32K_N"
+   ],
+   "max": 0,
+   "status": "approved",
+   "source": "RF-21 (by analogy for the 32 kHz crystal)"
+  },
+  {
+   "id": "RF-22",
+   "type": "no_trace_under",
+   "ref": "Y1",
+   "except_nets": [
+    "GND"
+   ],
+   "status": "approved",
+   "source": "Epson p4 shaded area; RF-22"
+  },
+  {
+   "id": "RF-22",
+   "type": "no_trace_under",
+   "ref": "C77",
+   "except_nets": [
+    "GND"
+   ],
+   "severity": "warn",
+   "status": "approved",
+   "source": "RF-22 around the crystal cluster"
+  },
+  {
+   "id": "RT-01",
+   "type": "bends",
+   "min_angle": 135,
+   "status": "approved",
+   "source": "house: no 90-degree corners"
+  },
+  {
+   "id": "RT-02",
+   "type": "junctions",
+   "min_angle": 90,
+   "strict_nets": [
+    "/XTAL_32K_P",
+    "/XTAL_32K_N"
+   ],
+   "status": "approved",
+   "source": "house: harmless junctions; crystal is a strict net"
+  },
+  {
+   "id": "RT-03",
+   "type": "pour_redundant",
+   "nets": [
+    "GND"
+   ],
+   "max_stub": 0.8,
+   "status": "approved",
+   "source": "house"
+  },
+  {
+   "id": "RT-05",
+   "type": "detour",
+   "max_ratio": 2.0,
+   "min_len": 4.0,
+   "except": [
+    "GND",
+    "+3.1V",
+    "SYS",
+    "PMID",
+    "Pack+",
+    "VBUS",
+    "+5V"
+   ],
+   "severity": "warn",
+   "status": "approved",
+   "source": "house: no wandering routes"
+  },
+  {
+   "id": "RT-07",
+   "type": "no_trace_under",
+   "ref": "U4",
+   "area": "body",
+   "inset": 1.0,
+   "layers": [
+    "F.Cu"
+   ],
+   "own_nets": false,
+   "except_nets": [
+    "GND"
+   ],
+   "severity": "warn",
+   "status": "approved",
+   "source": "house: signals under the module body, reported"
+  },
+  {
+   "id": "RT-08",
+   "type": "apart",
+   "nets_a": [
+    "/XTAL_32K_P",
+    "/XTAL_32K_N"
+   ],
+   "nets_b": [
+    "*"
+   ],
+   "except_b": [
+    "GND"
+   ],
+   "min": 0.5,
+   "status": "approved",
+   "source": "house crystal guard; RF-21/22, HS-32"
+  },
+  {
+   "id": "RT-09",
+   "type": "class_width",
+   "floor": 0.15,
+   "status": "approved",
+   "source": "DFM-01"
+  }
+ ]
+}

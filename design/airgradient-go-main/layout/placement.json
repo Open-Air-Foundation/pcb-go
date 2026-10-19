@@ -1,0 +1,32 @@
+{
+ "_why": "ECO v2.1-xtal32k: RTC crystal cluster beside U4 pads 16/17, in the column between the U4 and U2 courtyards (abs x 122.6-125.7). C77 above Y1 (XTAL_N), C76 below (XTAL_P, next to the existing GND via at 124.99,124.2). Y1 rot 270 puts pad 1 (XTAL_P) at the bottom, nearest U4.16. C77 rot 180 (2026-10-19): GND pad on the left so its 0.5 mm via sits beside U4, leaving the spot above C77 for the MOSI via.",
+ "parts": [
+  {
+   "ref": "C77",
+   "at": [
+    23.088,
+    59.81
+   ],
+   "rot": 180,
+   "side": "top"
+  },
+  {
+   "ref": "Y1",
+   "at": [
+    23.388,
+    62.81
+   ],
+   "rot": 270,
+   "side": "top"
+  },
+  {
+   "ref": "C76",
+   "at": [
+    23.088,
+    65.86
+   ],
+   "rot": 0,
+   "side": "top"
+  }
+ ]
+}

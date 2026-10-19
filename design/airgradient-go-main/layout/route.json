@@ -1,0 +1,319 @@
+{
+ "groups": {
+  "xtal32k": {
+   "_why": "32.768 kHz crystal: shortest F.Cu path U4 pad 16/17 -> Y1 -> load cap, no vias (RF-21), caps at the crystal ends (HS-32), 45-degree bends (RT-01). Epson FC-135R p7: shortest line pattern.",
+   "tracks": [
+    {
+     "net": "/XTAL_32K_P",
+     "layer": "F.Cu",
+     "width": 0.2,
+     "path": [
+      [
+       21.008,
+       63.13
+      ],
+      [
+       21.938,
+       63.13
+      ],
+      [
+       22.868,
+       64.06
+      ],
+      [
+       23.388,
+       64.06
+      ]
+     ]
+    },
+    {
+     "net": "/XTAL_32K_P",
+     "layer": "F.Cu",
+     "width": 0.2,
+     "path": [
+      [
+       23.388,
+       64.06
+      ],
+      [
+       23.388,
+       65.08
+      ],
+      [
+       22.608,
+       65.86
+      ]
+     ]
+    },
+    {
+     "net": "/XTAL_32K_N",
+     "layer": "F.Cu",
+     "width": 0.2,
+     "path": [
+      [
+       21.008,
+       62.28
+      ],
+      [
+       21.728,
+       62.28
+      ],
+      [
+       22.448,
+       61.56
+      ],
+      [
+       23.388,
+       61.56
+      ]
+     ]
+    },
+    {
+     "net": "/XTAL_32K_N",
+     "layer": "F.Cu",
+     "width": 0.2,
+     "path": [
+      [
+       23.388,
+       61.56
+      ],
+      [
+       23.388,
+       59.99
+      ],
+      [
+       23.568,
+       59.81
+      ]
+     ]
+    }
+   ],
+   "vias": []
+  },
+  "xtal32k-gnd": {
+   "_why": "Load-cap ground: C77.2 to a 0.5/0.3 GND via beside U4 (0.52 mm stub, RT-03 allows <= 0.8). C76.2 joins the F.Cu GND pour, which also holds the GND vias at (124.99,124.2) 0.40 mm away and (124.89,125.5) - no track (RT-03). GEN-02.",
+   "tracks": [
+    {
+     "net": "GND",
+     "layer": "F.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       22.608,
+       59.81
+      ],
+      [
+       22.088,
+       59.81
+      ]
+     ]
+    }
+   ],
+   "vias": [
+    {
+     "net": "GND",
+     "at": [
+      22.088,
+      59.81
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    }
+   ]
+  },
+  "mosi-u1": {
+   "_why": "MOSI U4 trunk -> U1.5 (W25N DI) above the RTC crystal (old path ran down the crystal column). 0.5/0.3 via = board via size; 0.53 mm from C77 XTAL_N pad.",
+   "tracks": [
+    {
+     "net": "/MOSI",
+     "layer": "F.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       26.405,
+       58.345
+      ],
+      [
+       25.918,
+       58.84
+      ],
+      [
+       22.868,
+       58.84
+      ]
+     ]
+    },
+    {
+     "net": "/MOSI",
+     "layer": "B.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       22.868,
+       58.84
+      ],
+      [
+       22.818,
+       58.79
+      ],
+      [
+       22.818,
+       54.76
+      ],
+      [
+       22.978,
+       54.6
+      ]
+     ]
+    }
+   ],
+   "vias": [
+    {
+     "net": "/MOSI",
+     "at": [
+      22.868,
+      58.84
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    }
+   ]
+  },
+  "mosi-sd": {
+   "_why": "MOSI U1.5 -> U2.5 (SD NAND, DNP) on the right of the RTC crystal (>= 1.4 mm from its pads), replacing the old path down the crystal column.",
+   "tracks": [
+    {
+     "net": "/MOSI",
+     "layer": "F.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       26.4,
+       67.83
+      ],
+      [
+       26.4,
+       62.495
+      ],
+      [
+       25.7,
+       61.795
+      ]
+     ]
+    },
+    {
+     "net": "/MOSI",
+     "layer": "B.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       25.7,
+       61.795
+      ],
+      [
+       25.7,
+       58.895
+      ]
+     ]
+    },
+    {
+     "net": "/MOSI",
+     "layer": "F.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       25.7,
+       58.895
+      ],
+      [
+       26.1,
+       58.495
+      ],
+      [
+       26.405,
+       58.345
+      ]
+     ]
+    }
+   ],
+   "vias": [
+    {
+     "net": "/MOSI",
+     "at": [
+      25.7,
+      61.795
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    },
+    {
+     "net": "/MOSI",
+     "at": [
+      25.7,
+      58.895
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    }
+   ]
+  },
+  "cs-io4": {
+   "_why": "ePaper CS from U4 IO4 (pad 8) under the module body on F.Cu (outside the antenna keepout, not between the bottom-row pads) to the CS trunk at (109.10,113.04); one 0.5/0.3 via. Replaces the old CS route from IO0 (pad 16), which is now the crystal.",
+   "tracks": [
+    {
+     "net": "/ePaper CS",
+     "layer": "F.Cu",
+     "width": 0.2,
+     "path": [
+      [
+       14.008,
+       64.18
+      ],
+      [
+       14.008,
+       63.423
+      ],
+      [
+       8.375,
+       57.79
+      ],
+      [
+       8.375,
+       54.59
+      ]
+     ]
+    },
+    {
+     "net": "/ePaper CS",
+     "layer": "B.Cu",
+     "width": 0.2,
+     "path": [
+      [
+       8.375,
+       54.59
+      ],
+      [
+       8.585,
+       54.38
+      ],
+      [
+       8.585,
+       54.25
+      ]
+     ]
+    }
+   ],
+   "vias": [
+    {
+     "net": "/ePaper CS",
+     "at": [
+      8.375,
+      54.59
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    }
+   ]
+  }
+ }
+}

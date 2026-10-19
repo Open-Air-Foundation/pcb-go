@@ -28488,7 +28488,7 @@
 		)
 		(uuid "8236db36-2dcc-4f20-a46c-4cde84adf290")
 	)
-	(label "IO4"
+	(label "ePaper CS"
 		(at 120.65 73.66 0)
 		(effects
 			(font
@@ -64149,25 +64149,9 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 236.22 191.77) (xy 238.76 191.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8fe59f03-72eb-52a5-970f-78bc09612f19")
-	)
-	(label "ePaper CS"
-		(at 238.76 191.77 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "655d9776-d225-5a07-a0d4-6caf22cbc6c9")
+	(no_connect
+		(at 236.22 191.77)
+		(uuid "db62b115-ba7d-573f-9185-ba19e05d7e6e")
 	)
 	(wire
 		(pts
@@ -64698,7 +64682,7 @@
 		)
 		(uuid "7097356e-c62a-5c77-9516-89008fd7b1ab")
 	)
-	(text "Y1 FC-135R CL 6 pF, ESR 50 kOhm max (FC-135R p2)\nESP32-C5 limit ESR <= 70 kOhm (MINI-1 Fig 9-1 p49)\nC76 = C77 = 2 x (CL - Cstray) = 2 x (6 - 2) = 8.2 pF C0G (R-XT-01)\nXTAL_32K_P/N = U4 IO0/IO1. ePaper CS moved to U17 P7 (R-XT-02)"
+	(text "Y1 FC-135R CL 6 pF, ESR 50 kOhm max (FC-135R p2)\nESP32-C5 limit ESR <= 70 kOhm (MINI-1 Fig 9-1 p49)\nC76 = C77 = 2 x (CL - Cstray) = 2 x (6 - 2) = 8.2 pF C0G (R-XT-01)\nXTAL_32K_P/N = U4 IO0/IO1. ePaper CS moved to U4 IO4 (R-XT-02)"
 		(exclude_from_sim no)
 		(at 264.16 370.84 0)
 		(effects

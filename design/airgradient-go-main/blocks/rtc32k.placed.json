@@ -3,8 +3,7 @@
  "schematic": "/Users/formylife/Documents/Work/AirGradient/PCB/airgradient-go-pcb/PCB/airgradient-go-main/airgradient-go-main.kicad_sch",
  "block": "rtc32k",
  "items": {
-  "8fe59f03-72eb-52a5-970f-78bc09612f19": "[\"wire\", [[236.22, 191.77], [238.76, 191.77]]]",
-  "655d9776-d225-5a07-a0d4-6caf22cbc6c9": "[\"label\", \"ePaper CS\", [238.76, 191.77, 0.0]]",
+  "db62b115-ba7d-573f-9185-ba19e05d7e6e": "[\"no_connect\", [236.22, 191.77]]",
   "99476109-f2b8-580e-8437-e9200a0112f7": "[\"wire\", [[300.99, 350.52], [295.91, 350.52]]]",
   "8879c75b-25fe-5b21-bdd1-d16fb0f4fcf9": "[\"wire\", [[295.91, 350.52], [293.37, 350.52]]]",
   "c53c66fd-2de5-5ec4-84c9-8c4ca1296879": "[\"label\", \"XTAL_32K_P\", [293.37, 350.52, 180.0]]",
@@ -20,7 +19,7 @@
   "11be2bc9-a409-5965-ad9d-bf60f339b2ea": "[\"symbol\", \"power:Earth\", [313.69, 358.14, 0.0], \"\", \"PGND\"]",
   "0bada3e4-6e00-54a0-ae91-81f99f64a09d": "[\"rectangle\", [260.985, 334.01], [345.44, 386.08]]",
   "7097356e-c62a-5c77-9516-89008fd7b1ab": "[\"text\", \"RTC 32K\", [263.525, 336.55, 0.0]]",
-  "b8e42800-ba61-55d6-97ce-11b240b8f029": "[\"text\", \"Y1 FC-135R CL 6 pF, ESR 50 kOhm max (FC-135R p2)\\nESP32-C5 limit ESR <= 70 kOhm (MINI-1 Fig 9-1 p49)\\nC76 = C77 = 2 x (CL - Cstray) = 2 x (6 - 2) = 8.2 pF C0G (R-XT-01)\\nXTAL_32K_P/N = U4 IO0/IO1. ePaper CS moved to U17 P7 (R-XT-02)\", [264.16, 370.84, 0.0]]"
+  "b8e42800-ba61-55d6-97ce-11b240b8f029": "[\"text\", \"Y1 FC-135R CL 6 pF, ESR 50 kOhm max (FC-135R p2)\\nESP32-C5 limit ESR <= 70 kOhm (MINI-1 Fig 9-1 p49)\\nC76 = C77 = 2 x (CL - Cstray) = 2 x (6 - 2) = 8.2 pF C0G (R-XT-01)\\nXTAL_32K_P/N = U4 IO0/IO1. ePaper CS moved to U4 IO4 (R-XT-02)\", [264.16, 370.84, 0.0]]"
  },
  "pwr": {
   "C76.2#2": "#PWR001",

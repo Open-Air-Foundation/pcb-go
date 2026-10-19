@@ -1,0 +1,17 @@
+# LP I2C block intent. Sources: ESP-IDF v5.5.2 hal/esp32c5/include/hal/i2c_ll.h:88-89 (LP I2C SDA = GPIO2, SCL = GPIO3, fixed LP IO MUX, no LP GPIO matrix on C5); ESP32-C5-MINI-1 datasheet v1.3 Table 3-1 p14 (pad numbers), Table 4-1 p16, 4-4 p18, 4-7 p20 (straps); requirements R-LP-01..03
+ref,pin,pin_name,net,note
+U4,6,IO2,SDA,LP_I2C_SDA; was WD_RST. MTMS strap: R26 10K pull-up holds it high at reset
+U4,7,IO3,SCL,LP_I2C_SCL; was unused label IO3. MTDI strap (SDIO edge only, unused)
+# R-LP-02: TPL5010 DONE stays on an LP GPIO so the LP core can feed the watchdog while the HP core sleeps. IO4, not IO6: from pad 10 the route to U7 needed 5 vias, from pad 8 it reuses the old CS path (1 via)
+U4,8,IO4,WD_RST,was ePaper CS (IO4) and WD_RST before that sat on IO2
+U7,4,DONE,WD_RST,TPL5010 DONE; RSTn drives EN
+# R-LP-03: IO7 is freed. JTAG-source strap is ignored while EFUSE_JTAG_SEL_ENABLE = 0
+U4,19,IO7,IO7,was SDA; unused label
+R26,1,,SDA,10K pull-up
+R30,1,,SCL,10K pull-up
+U12,1,SDA,SDA,SHT4x
+U12,2,SCL,SCL,SHT4x
+U15,1,,SCL,TMUX121 to PM_SCL (SPS30)
+U15,2,,SDA,TMUX121 to PM_SDA (SPS30)
+U16,3,Rx/SDA,SDA,S12
+U16,4,Tx/SCL,SCL,S12

@@ -257,8 +257,164 @@
     }
    ]
   },
-  "cs-io4": {
-   "_why": "ePaper CS from U4 IO4 (pad 8) under the module body on F.Cu (outside the antenna keepout, not between the bottom-row pads) to the CS trunk at (109.10,113.04); one 0.5/0.3 via. Replaces the old CS route from IO0 (pad 16), which is now the crystal.",
+  "lp-i2c-scl": {
+   "_why": "LP I2C SCL = U4 IO3 (pad 7), R-LP-01: same corridor as SDA, south lane, to the SCL bus via at (120.02,120.21). pcb_path A*.",
+   "tracks": [
+    {
+     "net": "/SCL",
+     "layer": "F.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       13.158,
+       64.18
+      ],
+      [
+       13.158,
+       63.81
+      ],
+      [
+       13.508,
+       63.46
+      ]
+     ]
+    },
+    {
+     "net": "/SCL",
+     "layer": "B.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       13.508,
+       63.46
+      ],
+      [
+       15.358,
+       63.46
+      ]
+     ]
+    },
+    {
+     "net": "/SCL",
+     "layer": "F.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       15.358,
+       63.46
+      ],
+      [
+       17.47,
+       63.46
+      ],
+      [
+       19.51,
+       61.42
+      ]
+     ]
+    }
+   ],
+   "vias": [
+    {
+     "net": "/SCL",
+     "at": [
+      13.508,
+      63.46
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    },
+    {
+     "net": "/SCL",
+     "at": [
+      15.358,
+      63.46
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    }
+   ]
+  },
+  "lp-i2c-sda": {
+   "_why": "LP I2C SDA = U4 IO2 (pad 6), R-LP-01: into the pocket under U4, B.Cu under pads 7-9 (crossing WD_RST and QON), F.Cu north of pads 10-15 to the SDA bus via at (120.03,119.40). pcb_path A*.",
+   "tracks": [
+    {
+     "net": "/SDA",
+     "layer": "F.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       12.308,
+       64.18
+      ],
+      [
+       12.308,
+       63.95
+      ],
+      [
+       13.508,
+       62.75
+      ]
+     ]
+    },
+    {
+     "net": "/SDA",
+     "layer": "B.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       13.508,
+       62.75
+      ],
+      [
+       15.408,
+       62.75
+      ]
+     ]
+    },
+    {
+     "net": "/SDA",
+     "layer": "F.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       15.408,
+       62.75
+      ],
+      [
+       17.38,
+       62.75
+      ],
+      [
+       19.52,
+       60.61
+      ]
+     ]
+    }
+   ],
+   "vias": [
+    {
+     "net": "/SDA",
+     "at": [
+      13.508,
+      62.75
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    },
+    {
+     "net": "/SDA",
+     "at": [
+      15.408,
+      62.75
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    }
+   ]
+  },
+  "cs-io6": {
+   "_why": "ePaper CS from U4 IO6 (pad 10), R-XT-02: one via below the pad, B.Cu south of the pad row and up the west side to the CS trunk at (108.89,113.38); the old CS via there is gone (the route arrives on B.Cu). 0.2 mm as before. pcb_path A*.",
    "tracks": [
     {
      "net": "/ePaper CS",
@@ -266,20 +422,16 @@
      "width": 0.2,
      "path": [
       [
-       14.008,
+       15.708,
        64.18
       ],
       [
-       14.008,
-       63.423
+       15.708,
+       64.423
       ],
       [
-       8.375,
-       57.79
-      ],
-      [
-       8.375,
-       54.59
+       16.315,
+       65.03
       ]
      ]
     },
@@ -289,16 +441,36 @@
      "width": 0.2,
      "path": [
       [
+       16.315,
+       65.03
+      ],
+      [
+       15.815,
+       65.53
+      ],
+      [
+       14.565,
+       65.53
+      ],
+      [
+       13.715,
+       66.38
+      ],
+      [
+       10.715,
+       66.38
+      ],
+      [
+       7.965,
+       63.63
+      ],
+      [
+       7.965,
+       55.0
+      ],
+      [
        8.375,
        54.59
-      ],
-      [
-       8.585,
-       54.38
-      ],
-      [
-       8.585,
-       54.25
       ]
      ]
     }
@@ -307,8 +479,62 @@
     {
      "net": "/ePaper CS",
      "at": [
-      8.375,
-      54.59
+      16.315,
+      65.03
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    }
+   ]
+  },
+  "wd-rst-io4": {
+   "_why": "TPL5010 DONE from U4 IO4 (pad 8), R-LP-02: the old CS path from pad 8 with the bend raised to y 121.2 (opens room for the SDA/SCL vias NE of the INT diagonal), one 0.5/0.3 via 0.78 mm SE of the old WD_RST trunk (clear of ePaper RES 0.35 mm west of it), B.Cu onto the trunk. Replaces the WD_RST stub from IO2.",
+   "tracks": [
+    {
+     "net": "/WD_RST",
+     "layer": "F.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       14.008,
+       64.18
+      ],
+      [
+       14.008,
+       62.41
+      ],
+      [
+       9.44,
+       57.842
+      ]
+     ]
+    },
+    {
+     "net": "/WD_RST",
+     "layer": "B.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       9.44,
+       57.842
+      ],
+      [
+       8.66,
+       57.062
+      ],
+      [
+       8.66,
+       55.81
+      ]
+     ]
+    }
+   ],
+   "vias": [
+    {
+     "net": "/WD_RST",
+     "at": [
+      9.44,
+      57.842
      ],
      "size": 0.5,
      "drill": 0.3

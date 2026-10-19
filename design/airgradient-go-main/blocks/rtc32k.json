@@ -85,7 +85,7 @@
   ],
   "notes": [
     {
-      "text": "Y1 FC-135R CL 6 pF, ESR 50 kOhm max (FC-135R p2)\nESP32-C5 limit ESR <= 70 kOhm (MINI-1 Fig 9-1 p49)\nC76 = C77 = 2 x (CL - Cstray) = 2 x (6 - 2) = 8.2 pF C0G (R-XT-01)\nXTAL_32K_P/N = U4 IO0/IO1. ePaper CS moved to U4 IO4 (R-XT-02)",
+      "text": "Y1 FC-135R CL 6 pF, ESR 50 kOhm max (FC-135R p2)\nESP32-C5 limit ESR <= 70 kOhm (MINI-1 Fig 9-1 p49)\nC76 = C77 = 2 x (CL - Cstray) = 2 x (6 - 2) = 8.2 pF C0G (R-XT-01)\nXTAL_32K_P/N = U4 IO0/IO1. ePaper CS moved to U4 IO6 (R-XT-02)",
       "at": [
         264.16,
         370.84

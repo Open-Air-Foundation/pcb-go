@@ -8,8 +8,8 @@ C77,1,,XTAL_32K_N,8.2pF C0G load
 C77,2,,PGND,
 U4,16,IO0,XTAL_32K_P,was ePaper CS
 U4,17,IO1,XTAL_32K_N,was unused label IO1
-# R-XT-02: ePaper CS moves to U4 IO4 (pad 8); U17 P7 stays unused (expander route needed 5 vias, 2026-10-19)
-U4,8,IO4,ePaper CS,was unused label IO4
+# R-XT-02: ePaper CS moves to U4 IO6 (pad 10); U17 P7 stays unused (expander route needed 5 vias, 2026-10-19). It sat on IO4 until the LP I2C change (lp_i2c.csv) gave IO4 to WD_RST.
+U4,10,IO6,ePaper CS,was SCL
 U17,10,P7,NC,unused
 R39,2,,ePaper CS,100K pull-up kept
 FPC1,12,,ePaper CS,display CS

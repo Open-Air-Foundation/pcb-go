@@ -1,0 +1,46 @@
+{
+  "block": "rtc32k",
+  "title": "RTC 32K",
+  "frame": [260.985, 334.01, 345.44, 386.08],
+  "defaults": {"ground": "power:Earth", "supply": "power:VDD", "stub": 2.54},
+  "symbols": [
+    {
+      "ref": "Y1",
+      "lib_id": "Device:Crystal",
+      "at": [304.8, 350.52],
+      "value": "32.768kHz CL6pF",
+      "footprint": "Crystal:Crystal_SMD_3215-2Pin_3.2x1.5mm",
+      "datasheet": "https://download.epsondevice.com/td/pdf/app/FC-135R_en.pdf",
+      "description": "X1A0001410006",
+      "fields": {"LCSC Part": "C94673"}
+    },
+    {
+      "ref": "C76",
+      "lib_id": "Device:C",
+      "value": "8.2pF/50V",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "description": "0402CG8R2C500NT",
+      "fields": {"LCSC Part": "C1579"},
+      "attach": {"to": "Y1.1", "mode": "shunt", "gap": 5.08, "toward": "down"}
+    },
+    {
+      "ref": "C77",
+      "lib_id": "Device:C",
+      "value": "8.2pF/50V",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "description": "0402CG8R2C500NT",
+      "fields": {"LCSC Part": "C1579"},
+      "attach": {"to": "Y1.2", "mode": "shunt", "gap": 5.08, "toward": "down"}
+    }
+  ],
+  "connect": [
+    {"pin": "Y1.1", "label": "XTAL_32K_P"},
+    {"pin": "Y1.2", "label": "XTAL_32K_N"},
+    {"pin": "C76.2", "power": "PGND"},
+    {"pin": "C77.2", "power": "PGND"},
+    {"pin": "U17.10", "label": "ePaper CS"}
+  ],
+  "notes": [
+    {"text": "Y1 FC-135R CL 6 pF, ESR 50 kOhm max (FC-135R p2)\nESP32-C5 limit ESR <= 70 kOhm (MINI-1 Fig 9-1 p49)\nC76 = C77 = 2 x (CL - Cstray) = 2 x (6 - 2) = 8.2 pF C0G (R-XT-01)\nXTAL_32K_P/N = U4 IO0/IO1. ePaper CS moved to U17 P7 (R-XT-02)", "at": [264.16, 370.84]}
+  ]
+}

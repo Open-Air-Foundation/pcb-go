@@ -1,0 +1,14 @@
+# RTC 32K block intent. Sources: parts/X1A0001410006/part.md; ESP32-C5-MINI-1 datasheet v1.3 Table 3-1 p14 and Fig 9-1 p49; requirements R-XT-01..02
+ref,pin,pin_name,net,note
+Y1,1,,XTAL_32K_P,FC-135R X1A0001410006 (C94673)
+Y1,2,,XTAL_32K_N,
+C76,1,,XTAL_32K_P,8.2pF C0G load = 2 x (6 - 2)
+C76,2,,PGND,
+C77,1,,XTAL_32K_N,8.2pF C0G load
+C77,2,,PGND,
+U4,16,IO0,XTAL_32K_P,was ePaper CS
+U4,17,IO1,XTAL_32K_N,was unused label IO1
+# R-XT-02: ePaper CS moves to the expander
+U17,10,P7,ePaper CS,was unused
+R39,2,,ePaper CS,100K pull-up kept
+FPC1,12,,ePaper CS,display CS

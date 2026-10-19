@@ -1,0 +1,3 @@
+pin,name,type,function,page
+1,X'tal,passive,Crystal terminal (non-polarised; net XTAL_32K_P = U4 pin 16 / IO0),FC-135R_epson_datasheet.pdf p4
+2,X'tal,passive,Crystal terminal (non-polarised; net XTAL_32K_N = U4 pin 17 / IO1),FC-135R_epson_datasheet.pdf p4

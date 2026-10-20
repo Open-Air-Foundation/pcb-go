@@ -1,9 +1,8 @@
-# Interrupt line intent (expander only, 2026-10-20). Sources: TCA6408A SCPS192E 8.3.3 (open-drain INT, held until the input port is read); BQ25628 SLUSEG4C 8.3.8.1 (flags latch until read); ESP32-C5-MINI-1 datasheet v1.3 Table 3-1 p14 (pads), Table 4-7 p20 (GPIO7 strap); requirements R-INT-01..04
+# Interrupt line intent (wired-OR, 2026-10-20). Sources: BQ25628 SLUSEG4C pin table (pin 11 open drain) and 8.3.8.3 p31 (256 us INT pulse), 8.3.8.1 (flags latch); TCA6408A SCPS192E 8.3.3 (open-drain INT, held until the input port is read); ESP32-C5-MINI-1 datasheet v1.3 Table 3-1 p14 (pads), Table 4-7 p20 (GPIO7 strap); requirements R-INT-01..04
 ref,pin,pin_name,net,note
-U17,11,~{INT},EXP_INT,was floating; open drain, aggregates P4 touch INT and P5 ACC_INT
-U4,19,IO7,EXP_INT,was unused label IO7; internal pull-up; JTAG-source strap ignored while EFUSE_JTAG_SEL_ENABLE = 0
-# R-INT-02: charger INT stays NC, pin 11 is walled in at layout (SDA escape via, L1 SYS pad, SYS pour, SW island on In2)
-U5,11,~{INT},NC,unchanged NC flag
+U5,11,~{INT},I2C_INT,was NC flag; open drain, 256 us low pulse
+U17,11,~{INT},I2C_INT,was floating; open drain, aggregates P4 touch INT and P5 ACC_INT
+U4,19,IO7,I2C_INT,was unused label IO7; internal pull-up; JTAG-source strap ignored while EFUSE_JTAG_SEL_ENABLE = 0
 U5,10,STAT,NC,unchanged
 # IO15 stays free: its pad is walled in by the UART, NAND CS and MOSI routing
 U4,26,IO15,IO15,unused label

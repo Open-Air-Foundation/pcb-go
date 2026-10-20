@@ -1,6 +1,6 @@
 {
   "block": "int_lines",
-  "title": "INT PULL-UPS",
+  "title": "INT PULL-UP",
   "frame": [
     345.44,
     334.01,
@@ -18,23 +18,7 @@
       "lib_id": "Device:R",
       "at": [
         381.0,
-        349.25
-      ],
-      "rot": 90,
-      "value": "10K",
-      "footprint": "Resistor_SMD:R_0402_1005Metric",
-      "datasheet": "https://lcsc.com/product-detail/Others_Huaxin-S-T-MR04X1002FTL_C327797.html",
-      "description": "MR04X1002FTL",
-      "fields": {
-        "LCSC Part": "C327797"
-      }
-    },
-    {
-      "ref": "R62",
-      "lib_id": "Device:R",
-      "at": [
-        381.0,
-        359.41
+        351.79
       ],
       "rot": 90,
       "value": "10K",
@@ -49,27 +33,19 @@
   "connect": [
     {
       "pin": "R61.1",
-      "label": "CHG_INT"
+      "label": "I2C_INT"
     },
     {
       "pin": "R61.2",
-      "power": "+3.1V"
-    },
-    {
-      "pin": "R62.1",
-      "label": "EXP_INT"
-    },
-    {
-      "pin": "R62.2",
       "power": "+3.1V"
     }
   ],
   "notes": [
     {
-      "text": "CHG_INT: U5 BQ25628 ~INT -> U4 IO15 (R-INT-01)\n  open drain, 256 us low pulse (SLUSEG4C 8.3.8.3 p31)\nEXP_INT: U17 TCA6408A ~INT -> U4 IO7 (R-INT-02)\n  touch INT (P4) + ACC_INT (P5) no longer polled\nR61 = R62 = 10K to +3.1V (BQ25628 pin 11, R-INT-03)\nIO7/IO15 wake light sleep only, not deep sleep (R-INT-04)",
+      "text": "I2C_INT: open-drain wired-OR -> U4 IO7 (R-INT-01)\n  U5 BQ25628 ~INT: 256 us low pulse (SLUSEG4C 8.3.8.3)\n  U17 TCA6408A ~INT: touch P4 + ACC_INT P5 (SCPS192E 8.3.3)\nFW: on falling edge read TCA6408A input + Charger_Flag_X\nR61 = 10K to +3.1V (BQ25628 pin 11, R-INT-03)\nIO7 wakes light sleep only, not deep sleep (R-INT-04)",
       "at": [
         349.25,
-        367.03
+        364.49
       ]
     }
   ]

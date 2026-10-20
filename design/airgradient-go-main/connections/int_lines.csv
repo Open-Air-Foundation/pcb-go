@@ -1,11 +1,10 @@
-# Interrupt lines intent. Sources: BQ25628 SLUSEG4C pin table (pin 11, 10-kOhm pull-up) and 8.3.8.3 p31 (256 us INT pulse); TCA6408A SCPS192E 8.3.3 (open-drain INT, cleared when the input returns); ESP32-C5-MINI-1 datasheet v1.3 Table 3-1 p14 (pads), Table 4-7 p20 (GPIO7 strap); requirements R-INT-01..04
+# Interrupt line intent (wired-OR, 2026-10-20). Sources: BQ25628 SLUSEG4C pin table (pin 11 open drain, 10-kOhm pull-up) and 8.3.8.3 p31 (256 us INT pulse); TCA6408A SCPS192E 8.3.3 (open-drain INT, cleared when the input returns or the port is read); ESP32-C5-MINI-1 datasheet v1.3 Table 3-1 p14 (pads), Table 4-7 p20 (GPIO7 strap); requirements R-INT-01..04
 ref,pin,pin_name,net,note
-U5,11,~{INT},CHG_INT,was NC flag; open drain, 256 us low pulse
-U4,26,IO15,CHG_INT,was unused label IO15; not an LP pin (no deep-sleep wake)
-R61,1,,CHG_INT,10K pull-up (C327797)
+U5,11,~{INT},I2C_INT,was NC flag; open drain, 256 us low pulse
+U17,11,~{INT},I2C_INT,was floating; open drain, aggregates P4 touch INT and P5 ACC_INT
+U4,19,IO7,I2C_INT,was unused label IO7; JTAG-source strap, pulled high, ignored while EFUSE_JTAG_SEL_ENABLE = 0
+R61,1,,I2C_INT,10K pull-up (C327797), one for both open-drain outputs
 R61,2,,+3.1V,
-U17,11,~{INT},EXP_INT,was floating; open drain, aggregates P4 touch INT and P5 ACC_INT
-U4,19,IO7,EXP_INT,was unused label IO7; JTAG-source strap, pulled high, ignored while EFUSE_JTAG_SEL_ENABLE = 0
-R62,1,,EXP_INT,10K pull-up (C327797)
-R62,2,,+3.1V,
+# IO15 stays free: its pad is walled in by the UART, NAND CS and MOSI routing (layout 2026-10-20)
+U4,26,IO15,IO15,unused label
 U5,10,STAT,NC,unchanged

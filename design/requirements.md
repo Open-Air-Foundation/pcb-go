@@ -1,6 +1,6 @@
 # GO main v2.1-xtal32k: change requirements
 
-Status: layout done (crystal + LP I²C). Requirements and part approved by Tanapat 2026-10-19.
+Status: layout done (crystal + LP I²C). Requirements and part approved by Tanapat 2026-10-19. Interrupt lines (R-INT): schematic in progress 2026-10-20.
 
 Scope: an engineering change on top of v2.1 (branch `v2.1-xtal32k`, from 426c645). The rest of the GO main board is hand-drawn and out of scope; only the items below change.
 
@@ -21,9 +21,19 @@ Why: in offline mode the LP core reads the sensors while the HP core stays in de
 |---|---|---|
 | R-LP-01 | I²C SDA on U4 IO2 (pad 6), SCL on U4 IO3 (pad 7) | LP_I2C_SDA = GPIO2, LP_I2C_SCL = GPIO3 |
 | R-LP-02 | TPL5010 DONE (`WD_RST`) on an LP GPIO, so the LP core can feed the watchdog while the HP core sleeps longer than the watchdog period: U4 IO4 (pad 8). IO6 would also be LP, but its route to U7 needed 5 vias; IO4 reuses the old CS path with 1 via | R25 = 51 kΩ, roughly 7–8 min (TPL5010 resistor table) |
-| R-LP-03 | IO7 (pad 19) is left unconnected | JTAG-source strap, ignored while EFUSE_JTAG_SEL_ENABLE = 0 (MINI-1 v1.3 Table 4-7 p20) |
+| R-LP-03 | IO7 (pad 19) is left unconnected (superseded 2026-10-20 by R-INT-02: IO7 = EXP_INT) | JTAG-source strap, ignored while EFUSE_JTAG_SEL_ENABLE = 0 (MINI-1 v1.3 Table 4-7 p20) |
 
 Straps after the move: GPIO2 = MTMS and GPIO3 = MTDI (MINI-1 v1.3 Table 4-1 p16) are both held high at reset by R26/R30 10K. MTDI only selects the SDIO edge (Table 4-4 p18), which this board does not use; MTMS has no strap function listed in the module datasheet.
+
+## Interrupt lines (approved by Tanapat 2026-10-20)
+Why: on v2.1 the charger `~INT` (U5 pin 11, NC flag) and the expander `~INT` (U17 pin 11, floating) reach nothing, so charger events, touch (`INT` on P4) and `ACC_INT` (P5) can only be polled. The two free ESP32 pins are IO7 and IO15; LP GPIO0–6 are all taken.
+
+| ID | Requirement | Number |
+|---|---|---|
+| R-INT-01 | U5 BQ25628 `~INT` → U4 IO15 (pad 26), net `CHG_INT`. Direct to a GPIO, not through expander P7: INT is a 256 µs low pulse, and the TCA6408A clears its interrupt as soon as the input returns to its old level, so a polled expander never sees it | BQ25628 SLUSEG4C §8.3.8.3 p31; TCA6408A SCPS192E §8.3.3 |
+| R-INT-02 | U17 TCA6408A `~INT` → U4 IO7 (pad 19), net `EXP_INT`, so touch and ACC_INT stop being polled | IO7 strap: pulled high, ignored while EFUSE_JTAG_SEL_ENABLE = 0 (MINI-1 v1.3 Table 4-7 p20) |
+| R-INT-03 | 10K pull-up to +3.1V on each line (both outputs are open drain) | BQ25628 pin table, pin 11: "10-kΩ"; same part as R26 (C327797) |
+| R-INT-04 | Neither line wakes the chip from deep sleep (deep-sleep GPIO wake = GPIO0–6 only). Light sleep and active only; in deep sleep the LP core reads the latched `Charger_Flag_X` registers over LP I²C instead | ESP-IDF v5.5.2 `soc/esp32c5/include/soc/soc_caps.h:231` |
 
 ## PCB constraints (Tanapat, 2026-10-19)
 Do not move: all LEDs, FPC1, BT1, U16, U11, U10, NTCx, SPS30, SWx, U12, USB-C (USB1), CN1, CN2.
@@ -32,11 +42,13 @@ Do not move: all LEDs, FPC1, BT1, U16, U11, U10, NTCx, SPS30, SWx, U12, USB-C (U
 - `PIN_DISPLAY_CS` becomes GPIO6 on this board variant (V1 keeps GPIO0).
 - `CONFIG_RTC_CLK_SRC_EXT_CRYS=y` on boards with the crystal.
 - `PIN_I2C_SDA = GPIO2`, `PIN_I2C_SCL = GPIO3`, `PIN_EXT_WDT = GPIO4` (was GPIO2). `PIN_ACCEL_INT = GPIO3` is a V1 pin and must be variant-guarded, or it collides with SCL.
+- `CHG_INT = GPIO15` (falling edge, then read `Charger_Flag_X`; set the BQ25628 INT masks), `EXP_INT = GPIO7` (falling edge, then read the TCA6408A input port, which also clears its INT). Touch and ACC_INT polling can go on boards with these lines.
 
 ## Blocks
 1. `rtc32k`: Y1 + C76 + C77, plus an NC flag on U17 P7.
 2. Hand edits (not generated): U4 pin 16 label `ePaper CS` → `XTAL_32K_P`; U4 pin 17 label `IO1` → `XTAL_32K_N`.
 3. LP I²C hand edits (intent `connections/lp_i2c.csv`): U4 pin 6 `WD_RST` → `SDA`, pin 7 `IO3` → `SCL`, pin 8 `IO4` → `WD_RST`, pin 10 `SCL` → `ePaper CS`, pin 19 `SDA` → `IO7`.
+4. `int_lines`: R61/R62 10K pull-ups, labels on U5 pin 11 and U17 pin 11. Hand edits (intent `connections/int_lines.csv`): U4 pin 19 label `IO7` → `EXP_INT`, pin 26 `IO15` → `CHG_INT`, NC flag off U5 pin 11.
 
 ## Layout (pcb-design, 2026-10-19)
 Status: layout done. DRC 230 = baseline (0 new), 0 unconnected, parity 0. Route groups in `design/airgradient-go-main/layout/route.json`, checks in `constraints.json`.

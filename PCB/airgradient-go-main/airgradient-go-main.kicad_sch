@@ -19157,10 +19157,6 @@
 		(uuid "85f02ef9-8ef9-4c5a-98bb-b3215b6dea13")
 	)
 	(no_connect
-		(at 162.56 323.85)
-		(uuid "8c147faa-ec4e-4daf-8758-96154308b75f")
-	)
-	(no_connect
 		(at 349.25 38.1)
 		(uuid "8da94769-0ebb-4ef2-b58c-8b04f2efb2ac")
 	)
@@ -27988,6 +27984,46 @@
 		)
 		(uuid "34a5f5f1-2b34-4954-92b8-f8289450a3b7")
 	)
+	(wire
+		(pts
+			(xy 162.56 323.85) (xy 172.72 323.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10a94a7f-24fa-4f37-94d2-f2009c9b2d51")
+	)
+	(label "CHG_INT"
+		(at 172.72 323.85 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f0bad867-c17d-4994-830d-7d84f3c86834")
+	)
+	(wire
+		(pts
+			(xy 213.36 181.61) (xy 212.09 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22fa1d94-70f6-45b4-a760-79f806d4fb40")
+	)
+	(label "EXP_INT"
+		(at 212.09 181.61 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ead46988-268d-48b1-ae89-44b21a808430")
+	)
 	(label "SCL"
 		(at 134.62 259.08 180)
 		(effects
@@ -28418,7 +28454,7 @@
 		)
 		(uuid "78a66469-a774-4d83-933b-5dfae5a2f146")
 	)
-	(label "IO7"
+	(label "EXP_INT"
 		(at 120.65 83.82 0)
 		(effects
 			(font
@@ -28618,7 +28654,7 @@
 		)
 		(uuid "928118bf-d87b-423f-b6bd-e893056d2377")
 	)
-	(label "IO15"
+	(label "CHG_INT"
 		(at 176.53 76.2 180)
 		(effects
 			(font
@@ -43709,7 +43745,7 @@
 		(fields_autoplaced yes)
 		(uuid "6e292349-140c-4f23-8983-e79418fb1dc3")
 		(property "Reference" "C63"
-			(at 200.66 181.6099 0)
+			(at 200.66 189.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -43720,7 +43756,7 @@
 			)
 		)
 		(property "Value" "0.1uF/25V"
-			(at 200.66 184.1499 0)
+			(at 200.66 191.77 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -64692,6 +64728,439 @@
 			(justify left top)
 		)
 		(uuid "b8e42800-ba61-55d6-97ce-11b240b8f029")
+	)
+	(wire
+		(pts
+			(xy 377.19 349.25) (xy 370.84 349.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d65ce8de-22eb-501e-8251-38f7cd7b78f6")
+	)
+	(label "CHG_INT"
+		(at 370.84 349.25 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "72879c50-cc3b-56d3-bf38-9e3587c0f6df")
+	)
+	(wire
+		(pts
+			(xy 384.81 349.25) (xy 391.16 349.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "118fd316-5849-53ec-9f2d-9177fd84ac6e")
+	)
+	(wire
+		(pts
+			(xy 377.19 359.41) (xy 370.84 359.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0986304f-19c6-53f5-a26c-2ff3e9931d1b")
+	)
+	(label "EXP_INT"
+		(at 370.84 359.41 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b532f84b-664a-5f42-8da9-0dacc8fb68ae")
+	)
+	(wire
+		(pts
+			(xy 384.81 359.41) (xy 391.16 359.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d32b3b0c-2b3e-5f1b-9783-5a915665c457")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 381 349.25 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ad5b5578-116b-51bd-b113-3013c3ed1df6")
+		(property "Reference" "R61"
+			(at 381 346.71 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 381 351.79 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 381 349.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Others_Huaxin-S-T-MR04X1002FTL_C327797.html"
+			(at 381 349.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "MR04X1002FTL"
+			(at 381 349.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C327797"
+			(at 381 349.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "91a5f26d-d66c-52ce-88ee-0e14bd082193")
+		)
+		(pin "2"
+			(uuid "c72e29da-cebd-5888-b574-571b16fcd633")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "R61")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 381 359.41 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "45b0bb5f-87b8-5292-a4f9-bea80ba9ecd0")
+		(property "Reference" "R62"
+			(at 381 356.87 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 381 361.95 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 381 359.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Others_Huaxin-S-T-MR04X1002FTL_C327797.html"
+			(at 381 359.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "MR04X1002FTL"
+			(at 381 359.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C327797"
+			(at 381 359.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "012de020-7987-5eab-b053-4e1bb10f84ea")
+		)
+		(pin "2"
+			(uuid "eff85a4f-7623-5c20-88a3-c2a9b3210aa5")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "R62")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VDD")
+		(at 391.16 349.25 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c0cdc941-2f84-5d1a-9ed9-42907bc03918")
+		(property "Reference" "#PWR003"
+			(at 391.16 353.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.1V"
+			(at 391.16 345.694 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 391.16 349.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 391.16 349.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VDD\""
+			(at 391.16 349.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2fc17c71-934f-5f15-a06c-6666014a5d1f")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "#PWR003")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VDD")
+		(at 391.16 359.41 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "19361d84-6646-5b61-b5d0-8b8c076b6e0e")
+		(property "Reference" "#PWR004"
+			(at 391.16 363.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.1V"
+			(at 391.16 355.854 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 391.16 359.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 391.16 359.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VDD\""
+			(at 391.16 359.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1c4a35da-692e-519e-9060-fbfd61d1192a")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "#PWR004")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(rectangle
+		(start 345.44 334.01)
+		(end 424.18 386.08)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "d9d7eb65-a088-5649-bd54-c356973da214")
+	)
+	(text "INT PULL-UPS"
+		(exclude_from_sim no)
+		(at 347.98 336.55 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "eef8276a-6039-58ab-8e4d-e2a974785aa7")
+	)
+	(text "CHG_INT: U5 BQ25628 ~INT -> U4 IO15 (R-INT-01)\n  open drain, 256 us low pulse (SLUSEG4C 8.3.8.3 p31)\nEXP_INT: U17 TCA6408A ~INT -> U4 IO7 (R-INT-02)\n  touch INT (P4) + ACC_INT (P5) no longer polled\nR61 = R62 = 10K to +3.1V (BQ25628 pin 11, R-INT-03)\nIO7/IO15 wake light sleep only, not deep sleep (R-INT-04)"
+		(exclude_from_sim no)
+		(at 349.25 367.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "b20b2658-976d-5830-99f6-816464bc56aa")
 	)
 	(sheet_instances
 		(path "/"

@@ -5,8 +5,7 @@ U4,7,IO3,SCL,LP_I2C_SCL; was unused label IO3. MTDI strap (SDIO edge only, unuse
 # R-LP-02: TPL5010 DONE stays on an LP GPIO so the LP core can feed the watchdog while the HP core sleeps. IO4, not IO6: from pad 10 the route to U7 needed 5 vias, from pad 8 it reuses the old CS path (1 via)
 U4,8,IO4,WD_RST,was ePaper CS (IO4) and WD_RST before that sat on IO2
 U7,4,DONE,WD_RST,TPL5010 DONE; RSTn drives EN
-# R-LP-03: IO7 is freed. JTAG-source strap is ignored while EFUSE_JTAG_SEL_ENABLE = 0
-U4,19,IO7,IO7,was SDA; unused label
+# R-LP-03: IO7 is freed (taken by EXP_INT on 2026-10-20, see int_lines.csv). JTAG-source strap is ignored while EFUSE_JTAG_SEL_ENABLE = 0
 R26,1,,SDA,10K pull-up
 R30,1,,SCL,10K pull-up
 U12,1,SDA,SDA,SHT4x

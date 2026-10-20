@@ -540,6 +540,404 @@
      "drill": 0.3
     }
    ]
+  },
+  "prtrg-dip": {
+   "_why": "R-INT-01: makes room for the EXP_INT via beside U17 pin 11. The F.Cu pocket east of the pad (SCL above, SD_CS below and east) and the free B.Cu band (EN_PM1 above, PRTRG below) did not overlap, so PRTRG (GPS trigger, expander P0 left as input) dips 0.24 mm to y 70.90 between x 21.75 and 23.04. Old B.Cu segments (23.09,70.71)-(23.04,70.66) and (23.04,70.66)-(18.94,70.66) deleted by hand (uuids 3e8fce8f, 87275bb3); the dip leaves the existing jog at (23.09,70.71) with a 45-degree turn (RT-01).",
+   "tracks": [
+    {
+     "net": "/PRTRG",
+     "layer": "B.Cu",
+     "width": 0.2,
+     "path": [
+      [
+       23.0945,
+       70.7107
+      ],
+      [
+       22.9052,
+       70.9
+      ],
+      [
+       21.99,
+       70.9
+      ],
+      [
+       21.75,
+       70.66
+      ],
+      [
+       18.9416,
+       70.66
+      ]
+     ]
+    }
+   ],
+   "vias": []
+  },
+  "exp-int": {
+   "_why": "R-INT-01 I2C_INT (expander branch): U17 pin 11 -> U4 IO7 (pad 19). pcb_path --routed at 0.12 mm clearance (no path at 0.15) with --avoid round Y1 (RF-22): 15.6 mm, 4 vias, 0.5/0.3. B.Cu runs under C76 (In1 GND between; C76 has no RF-22 rule) and under the module edge west of pads 16-18; the last F.Cu run enters pad 19 from the pocket under U4, as the LP I2C routes do (RT-07 is report-only).",
+   "tracks": [
+    {
+     "net": "/I2C_INT",
+     "layer": "F.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       21.447,
+       70.362
+      ],
+      [
+       22.358,
+       70.38
+      ]
+     ]
+    },
+    {
+     "net": "/I2C_INT",
+     "layer": "B.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       22.358,
+       70.38
+      ],
+      [
+       23.408,
+       69.33
+      ],
+      [
+       24.958,
+       69.33
+      ],
+      [
+       25.108,
+       69.18
+      ]
+     ]
+    },
+    {
+     "net": "/I2C_INT",
+     "layer": "F.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       25.108,
+       69.18
+      ],
+      [
+       25.358,
+       68.93
+      ],
+      [
+       25.358,
+       68.38
+      ],
+      [
+       24.108,
+       67.13
+      ],
+      [
+       23.558,
+       67.13
+      ]
+     ]
+    },
+    {
+     "net": "/I2C_INT",
+     "layer": "B.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       23.558,
+       67.13
+      ],
+      [
+       21.458,
+       65.03
+      ],
+      [
+       21.458,
+       64.58
+      ],
+      [
+       20.258,
+       63.38
+      ],
+      [
+       20.258,
+       61.78
+      ]
+     ]
+    },
+    {
+     "net": "/I2C_INT",
+     "layer": "F.Cu",
+     "width": 0.25,
+     "path": [
+      [
+       20.258,
+       61.78
+      ],
+      [
+       20.258,
+       61.23
+      ],
+      [
+       20.758,
+       60.73
+      ],
+      [
+       21.008,
+       60.58
+      ]
+     ]
+    }
+   ],
+   "vias": [
+    {
+     "net": "/I2C_INT",
+     "at": [
+      22.358,
+      70.38
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    },
+    {
+     "net": "/I2C_INT",
+     "at": [
+      25.108,
+      69.18
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    },
+    {
+     "net": "/I2C_INT",
+     "at": [
+      23.558,
+      67.13
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    },
+    {
+     "net": "/I2C_INT",
+     "at": [
+      20.258,
+      61.78
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    }
+   ]
+  },
+  "u5-i2c-escape": {
+   "_why": "R-INT-01: frees a via spot for U5 pin 11. The SDA escape via moves from (24.25,39.81) to (24.20,39.62), stacked 0.65 mm under the SCL via in the 0.95 mm column between U5's east pads and L1; F.Cu stub and In2 jog redrawn (old 5 F.Cu segments, via and 3 In2 segments deleted by hand). Clearances >= 0.15.",
+   "tracks": [
+    {
+     "net": "/SDA",
+     "layer": "F.Cu",
+     "width": 0.2,
+     "path": [
+      [
+       23.3516,
+       39.5
+      ],
+      [
+       24.08,
+       39.5
+      ],
+      [
+       24.2,
+       39.62
+      ]
+     ]
+    },
+    {
+     "net": "/SDA",
+     "layer": "PWR",
+     "width": 0.25,
+     "path": [
+      [
+       24.2,
+       39.62
+      ],
+      [
+       23.9484,
+       39.62
+      ],
+      [
+       23.5766,
+       39.2482
+      ]
+     ]
+    }
+   ],
+   "vias": [
+    {
+     "net": "/SDA",
+     "at": [
+      24.2,
+      39.62
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    }
+   ]
+  },
+  "int-u5-escape": {
+   "_why": "R-INT-01 charger branch: U5 pin 11 leaves east at 0.15 mm width between pad 10's corner and the SDA via (0.14 mm each side), to a via at the bottom of the column (0.25 mm from L1's SYS pad, 0.15 from pad 10). The via crosses the SYS pour on F.Cu and the SW island on In2 (antipads only, as the SDA/SCL vias do); estimated SW coupling on B.Cu ~0.09 pF.",
+   "tracks": [
+    {
+     "net": "/I2C_INT",
+     "layer": "F.Cu",
+     "width": 0.15,
+     "path": [
+      [
+       23.35,
+       39.9
+      ],
+      [
+       23.824,
+       39.9
+      ],
+      [
+       24.2,
+       40.276
+      ]
+     ]
+    }
+   ],
+   "vias": [
+    {
+     "net": "/I2C_INT",
+     "at": [
+      24.2,
+      40.276
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    }
+   ]
+  },
+  "int-chg-west": {
+   "_why": "R-INT-01 charger branch: from the U5 column via to the expander branch's via at (20.26,61.78). Every way south from U5 is walled in on F.Cu (SYS pour, C4/C11), In2 (SW island, Pack+ V) and B.Cu (TS pair, BAT+); the only clean way round is the west end. Found with a zone-aware 3-layer A* (scratch pcb_path3.py: fills of non-GND nets are obstacles, L1 +0.15/0.3 kept out, footprint keepouts honoured) at 0.12 mm clearance: 51 mm, B.Cu north-west round U5, south under the module body 3 mm east of the antenna keepout (x 6.3), F.Cu and In2 hops at y 61.9 (2.1 mm across +3.1V). The A* 0.05 mm jog at (12.3-12.65, 46.45) became a 0.35 mm east step at y 46.10, passing 0.47 mm north of the +3.1V via at (12.14,46.92); the x 9.3 leg cannot move east (BAT+).",
+   "tracks": [
+    {
+     "net": "/I2C_INT",
+     "layer": "B.Cu",
+     "width": 0.2,
+     "path": [
+      [
+       24.2,
+       40.3
+      ],
+      [
+       20.85,
+       36.95
+      ],
+      [
+       20.85,
+       35.3
+      ],
+      [
+       19.0,
+       33.45
+      ],
+      [
+       16.3,
+       33.45
+      ],
+      [
+       9.3,
+       40.45
+      ],
+      [
+       9.3,
+       43.45
+      ],
+      [
+       11.95,
+       46.1
+      ],
+      [
+       12.3,
+       46.1
+      ],
+      [
+       12.65,
+       46.45
+      ],
+      [
+       12.65,
+       50.6
+      ],
+      [
+       11.6,
+       51.65
+      ],
+      [
+       11.6,
+       58.1
+      ],
+      [
+       15.4,
+       61.9
+      ]
+     ]
+    },
+    {
+     "net": "/I2C_INT",
+     "layer": "F.Cu",
+     "width": 0.2,
+     "path": [
+      [
+       15.4,
+       61.9
+      ],
+      [
+       17.35,
+       61.9
+      ]
+     ]
+    },
+    {
+     "net": "/I2C_INT",
+     "layer": "PWR",
+     "width": 0.2,
+     "path": [
+      [
+       17.35,
+       61.9
+      ],
+      [
+       20.05,
+       61.9
+      ]
+     ]
+    }
+   ],
+   "vias": [
+    {
+     "net": "/I2C_INT",
+     "at": [
+      15.4,
+      61.9
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    },
+    {
+     "net": "/I2C_INT",
+     "at": [
+      17.35,
+      61.9
+     ],
+     "size": 0.5,
+     "drill": 0.3
+    }
+   ]
   }
  }
 }

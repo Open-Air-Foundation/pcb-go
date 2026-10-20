@@ -1,6 +1,6 @@
 # GO main v2.1-xtal32k: change requirements
 
-Status: layout done (crystal + LP I²C). Requirements and part approved by Tanapat 2026-10-19. Interrupt line (R-INT, expander only): schematic done, layout in progress 2026-10-20.
+Status: layout done (crystal + LP I²C). Requirements and part approved by Tanapat 2026-10-19. Interrupt line (R-INT, wired-OR): schematic and layout done 2026-10-20.
 
 Scope: an engineering change on top of v2.1 (branch `v2.1-xtal32k`, from 426c645). The rest of the GO main board is hand-drawn and out of scope; only the items below change.
 
@@ -21,7 +21,7 @@ Why: in offline mode the LP core reads the sensors while the HP core stays in de
 |---|---|---|
 | R-LP-01 | I²C SDA on U4 IO2 (pad 6), SCL on U4 IO3 (pad 7) | LP_I2C_SDA = GPIO2, LP_I2C_SCL = GPIO3 |
 | R-LP-02 | TPL5010 DONE (`WD_RST`) on an LP GPIO, so the LP core can feed the watchdog while the HP core sleeps longer than the watchdog period: U4 IO4 (pad 8). IO6 would also be LP, but its route to U7 needed 5 vias; IO4 reuses the old CS path with 1 via | R25 = 51 kΩ, roughly 7–8 min (TPL5010 resistor table) |
-| R-LP-03 | IO7 (pad 19) is left unconnected (superseded 2026-10-20 by R-INT-01: IO7 = EXP_INT) | JTAG-source strap, ignored while EFUSE_JTAG_SEL_ENABLE = 0 (MINI-1 v1.3 Table 4-7 p20) |
+| R-LP-03 | IO7 (pad 19) is left unconnected (superseded 2026-10-20 by R-INT-01: IO7 = I2C_INT) | JTAG-source strap, ignored while EFUSE_JTAG_SEL_ENABLE = 0 (MINI-1 v1.3 Table 4-7 p20) |
 
 Straps after the move: GPIO2 = MTMS and GPIO3 = MTDI (MINI-1 v1.3 Table 4-1 p16) are both held high at reset by R26/R30 10K. MTDI only selects the SDIO edge (Table 4-4 p18), which this board does not use; MTMS has no strap function listed in the module datasheet.
 
@@ -30,9 +30,9 @@ Why: on v2.1 the charger `~INT` (U5 pin 11, NC flag) and the expander `~INT` (U1
 
 | ID | Requirement | Number |
 |---|---|---|
-| R-INT-01 | U17 TCA6408A `~INT` → U4 IO7 (pad 19), net `EXP_INT`, so touch (`INT` on P4) and `ACC_INT` (P5) stop being polled | TCA6408A SCPS192E §8.3.3 |
-| R-INT-02 | U5 BQ25628 `~INT` stays NC. At layout pin 11 was walled in: pad 12 SDA and its escape via, pad 10 STAT, L1's SYS pad at x ≥ 24.70 and the SYS pour on F.Cu, and the SW island on In2 under U5. Freeing it means re-doing the U5 I²C escape inside the charger's SW/SYS copper. Firmware reads the latched `Charger_Flag_X` registers on wake or on a timer instead. (Drawn first as two lines, CHG_INT → IO15 + EXP_INT → IO7, then as a wired-OR onto IO7; both dropped at layout, Tanapat 2026-10-20.) | BQ25628 SLUSEG4C §8.3.8.1 (flags latch until read) |
-| R-INT-03 | No external pull-up: firmware enables the GPIO7 internal pull-up. The TCA6408A holds INT low until the input port is read, so the weak pull-up's rise time does not matter | SCPS192E §8.3.3 |
+| R-INT-01 | U5 BQ25628 `~INT` and U17 TCA6408A `~INT` wired-OR on one net `I2C_INT` → U4 IO7 (pad 19). Both are open drain. Touch (`INT` on P4) and `ACC_INT` (P5) stop being polled, and charger events interrupt the MCU | BQ25628 SLUSEG4C pin table, §8.3.8.3 p31; TCA6408A SCPS192E §8.3.3 |
+| R-INT-02 | Firmware: on a falling edge of IO7, read the TCA6408A input port (clears its INT) and `Charger_Flag_X` (latched until read), so neither source is lost while the other holds the line low | SLUSEG4C §8.3.8.1 |
+| R-INT-03 | No external pull-up: firmware enables the GPIO7 internal pull-up (~45 kΩ). Rise time ≈ 45 kΩ × ~20 pF ≈ 1 µs, far shorter than the charger's 256 µs pulse; the expander holds INT low until read. (TI suggests 10 kΩ; no 0402 spot with +3.1V nearby at either end) | SLUSEG4C §8.3.8.3; SCPS192E §8.3.3 |
 | R-INT-04 | IO7 does not wake the chip from deep sleep (deep-sleep GPIO wake = GPIO0–6 only); light sleep and active only. IO7 is the JTAG-source strap, ignored while EFUSE_JTAG_SEL_ENABLE = 0 | ESP-IDF v5.5.2 `soc/esp32c5/include/soc/soc_caps.h:231`; MINI-1 v1.3 Table 4-7 p20 |
 
 ## PCB constraints (Tanapat, 2026-10-19)
@@ -42,18 +42,25 @@ Do not move: all LEDs, FPC1, BT1, U16, U11, U10, NTCx, SPS30, SWx, U12, USB-C (U
 - `PIN_DISPLAY_CS` becomes GPIO6 on this board variant (V1 keeps GPIO0).
 - `CONFIG_RTC_CLK_SRC_EXT_CRYS=y` on boards with the crystal.
 - `PIN_I2C_SDA = GPIO2`, `PIN_I2C_SCL = GPIO3`, `PIN_EXT_WDT = GPIO4` (was GPIO2). `PIN_ACCEL_INT = GPIO3` is a V1 pin and must be variant-guarded, or it collides with SCL.
-- `EXP_INT = GPIO7`: input with the internal pull-up on (keep it in light sleep), falling edge, then read the TCA6408A input port (clears its INT). Touch and ACC_INT polling can go. Charger INT is not wired: read `Charger_Flag_X` on wake or on a timer. GPIO15 stays unconnected.
+- `I2C_INT = GPIO7`: input with the internal pull-up on (keep it in light sleep), falling edge; read the TCA6408A input port and `Charger_Flag_X` every time; set the BQ25628 INT masks. Touch and ACC_INT polling can go. GPIO15 stays unconnected.
 
 ## Blocks
 1. `rtc32k`: Y1 + C76 + C77, plus an NC flag on U17 P7.
 2. Hand edits (not generated): U4 pin 16 label `ePaper CS` → `XTAL_32K_P`; U4 pin 17 label `IO1` → `XTAL_32K_N`.
 3. LP I²C hand edits (intent `connections/lp_i2c.csv`): U4 pin 6 `WD_RST` → `SDA`, pin 7 `IO3` → `SCL`, pin 8 `IO4` → `WD_RST`, pin 10 `SCL` → `ePaper CS`, pin 19 `SDA` → `IO7`.
-4. `int_lines`: notes-only frame (INT LINE). Hand edits (intent `connections/int_lines.csv`): U4 pin 19 label `IO7` → `EXP_INT`, `EXP_INT` label on U17 pin 11, C63 field text moved below the RESET wire. U5 pin 11 keeps its NC flag; U4 pin 26 keeps its `IO15` label.
+4. `int_lines`: notes-only frame (INT LINE). Hand edits (intent `connections/int_lines.csv`): `I2C_INT` labels on U5 pin 11 (NC flag removed), U17 pin 11 and U4 pin 19 (was `IO7`); C63 field text moved below the RESET wire. U4 pin 26 keeps its `IO15` label.
 
 ## Layout (pcb-design, 2026-10-19)
 Status: layout done. DRC 230 = baseline (0 new), 0 unconnected, parity 0. Route groups in `design/airgradient-go-main/layout/route.json`, checks in `constraints.json`.
 
 LP I²C (same day): groups `lp-i2c-sda`, `lp-i2c-scl` (pads 6/7 into the pocket under U4, B.Cu under pads 7–9, F.Cu north of pads 10–15 to the bus vias at x 120.0; 2 vias each), `wd-rst-io4` (old CS path from pad 8, bend raised to y 121.2 to make room for the SDA/SCL vias, 1 via onto the old WD_RST trunk) and `cs-io6` (1 via under pad 10, B.Cu south of the pad row and up the west side; the old CS via at the trunk is gone). Net +4 vias. DRC still 230 = baseline, 0 unconnected, parity 0; no new bends, junctions, dangling ends or tiny segments; pcb_check same as before except RT-07 (19 → 18 nets under U4).
+
+INT line (2026-10-20, approved by Tanapat): net `I2C_INT`, 68 mm of track, 7 vias 0.5/0.3, all locked route groups.
+- Expander branch, group `exp-int`: U17 pin 11 → U4 pad 19, 15.6 mm, 4 vias, `pcb_path --routed` at 0.12 mm with Y1 kept out (no path at 0.15). PRTRG (B.Cu) dips 0.24 mm under the first via, group `prtrg-dip` (two old segments deleted). B.Cu passes under C76 and along the module edge west of pads 16–18 (In1 GND between); the last F.Cu run enters pad 19 from the pocket under U4.
+- U5 escape, groups `u5-i2c-escape` + `int-u5-escape`: the SDA escape via moved from (24.25,39.81) to (24.20,39.62), under the SCL via in the 0.95 mm column between U5's east pads and L1 (old F.Cu stub, via and In2 jog deleted). Pin 11 leaves at 0.15 mm width between pad 10's corner and the SDA via to a via at (24.20,40.28), 0.25 mm from L1's SYS pad; the via crosses the SYS pour and the In2 SW island as antipads only.
+- Charger branch, group `int-chg-west`: 51 mm, 2 vias. Every way south from U5 is walled in on all three routing layers (F.Cu SYS pour + C4/C11, In2 SW island + Pack+ V, B.Cu TS pair + BAT+); a zone-aware 3-layer search (scratch `pcb_path3.py`) found no crossing between x 16 and 34. It runs on B.Cu north-west round U5 (≈2.4 mm under the In2 SW island: ~0.09 pF, ~45 mV estimated spike), south under the module body 3 mm east of the antenna keepout (x 6.3), and joins the expander branch's via at (20.26,61.78) with F.Cu and In2 hops (2.1 mm across +3.1V). L1 + 0.15/0.3 mm kept out (PWR-22).
+- Accepted by Tanapat 2026-10-20: 0.15 mm neck and 0.12 mm clearance at the U5 escape, 68 mm / 7 vias, via in the SYS pour, short F.Cu/In2 runs under the module, internal pull-up instead of TI's 10 kΩ.
+- Zones refilled and saved. DRC 230 = baseline, 0 unconnected, parity 0. `pcb_check` vs 1d977c7: no new FAIL; RT-09 minimum width 0.19 → 0.15 (= DFM-01 floor), RT-05 one more detour (this net), RT-07 18 nets (I2C_INT in place of IO15), RT-08 0.73 → 0.68 mm (limit 0.5). RT-03 not run: `pcb_check` aborts in `GetFilledPolysList(z.GetLayer())` on GO's multi-layer GND zone under KiCad 10.0.1, on 1d977c7 too (no GND tracks were added). `pcb_import` re-adds TP1–TP17 (on_board yes, DNP in the schematic); deleted again, since this board has never carried them.
 
 ### Accepted
 - **RF-22 (by analogy for the 32 kHz crystal):** the existing I²C on B.Cu runs under Y1 (SCL) and C77 (SCL, SDA). The solid GND plane (In1) lies between them and the crystal, and I²C edges are slow. Accepted by Tanapat 2026-10-19 instead of re-routing SDA/SCL under U4.

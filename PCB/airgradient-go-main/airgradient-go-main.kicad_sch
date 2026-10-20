@@ -19165,6 +19165,10 @@
 		(uuid "903cc862-e590-4ffd-b934-5e913282362c")
 	)
 	(no_connect
+		(at 162.56 323.85)
+		(uuid "8c147faa-ec4e-4daf-8758-96154308b75f")
+	)
+	(no_connect
 		(at 162.56 326.39)
 		(uuid "9501a0d0-5193-4fab-946c-32f21833beb0")
 	)
@@ -27986,26 +27990,6 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 323.85) (xy 172.72 323.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "10a94a7f-24fa-4f37-94d2-f2009c9b2d51")
-	)
-	(label "I2C_INT"
-		(at 172.72 323.85 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f0bad867-c17d-4994-830d-7d84f3c86834")
-	)
-	(wire
-		(pts
 			(xy 213.36 181.61) (xy 212.09 181.61)
 		)
 		(stroke
@@ -28014,7 +27998,7 @@
 		)
 		(uuid "22fa1d94-70f6-45b4-a760-79f806d4fb40")
 	)
-	(label "I2C_INT"
+	(label "EXP_INT"
 		(at 212.09 181.61 180)
 		(effects
 			(font
@@ -28454,7 +28438,7 @@
 		)
 		(uuid "78a66469-a774-4d83-933b-5dfae5a2f146")
 	)
-	(label "I2C_INT"
+	(label "EXP_INT"
 		(at 120.65 83.82 0)
 		(effects
 			(font
@@ -64729,205 +64713,6 @@
 		)
 		(uuid "b8e42800-ba61-55d6-97ce-11b240b8f029")
 	)
-	(wire
-		(pts
-			(xy 377.19 351.79) (xy 370.84 351.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d65ce8de-22eb-501e-8251-38f7cd7b78f6")
-	)
-	(label "I2C_INT"
-		(at 370.84 351.79 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "72879c50-cc3b-56d3-bf38-9e3587c0f6df")
-	)
-	(wire
-		(pts
-			(xy 384.81 351.79) (xy 391.16 351.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "118fd316-5849-53ec-9f2d-9177fd84ac6e")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 381 351.79 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ad5b5578-116b-51bd-b113-3013c3ed1df6")
-		(property "Reference" "R61"
-			(at 381 349.25 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10K"
-			(at 381 354.33 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 381 351.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Others_Huaxin-S-T-MR04X1002FTL_C327797.html"
-			(at 381 351.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "MR04X1002FTL"
-			(at 381 351.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C327797"
-			(at 381 351.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "91a5f26d-d66c-52ce-88ee-0e14bd082193")
-		)
-		(pin "2"
-			(uuid "c72e29da-cebd-5888-b574-571b16fcd633")
-		)
-		(instances
-			(project "airgradient-go-main"
-				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
-					(reference "R61")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VDD")
-		(at 391.16 351.79 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c0cdc941-2f84-5d1a-9ed9-42907bc03918")
-		(property "Reference" "#PWR003"
-			(at 391.16 355.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.1V"
-			(at 391.16 348.234 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 391.16 351.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 391.16 351.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VDD\""
-			(at 391.16 351.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2fc17c71-934f-5f15-a06c-6666014a5d1f")
-		)
-		(instances
-			(project "airgradient-go-main"
-				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
-					(reference "#PWR003")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(rectangle
 		(start 345.44 334.01)
 		(end 424.18 386.08)
@@ -64940,7 +64725,7 @@
 		)
 		(uuid "d9d7eb65-a088-5649-bd54-c356973da214")
 	)
-	(text "INT PULL-UP"
+	(text "INT LINE"
 		(exclude_from_sim no)
 		(at 347.98 336.55 0)
 		(effects
@@ -64952,9 +64737,9 @@
 		)
 		(uuid "eef8276a-6039-58ab-8e4d-e2a974785aa7")
 	)
-	(text "I2C_INT: open-drain wired-OR -> U4 IO7 (R-INT-01)\n  U5 BQ25628 ~INT: 256 us low pulse (SLUSEG4C 8.3.8.3)\n  U17 TCA6408A ~INT: touch P4 + ACC_INT P5 (SCPS192E 8.3.3)\nFW: on falling edge read TCA6408A input + Charger_Flag_X\nR61 = 10K to +3.1V (BQ25628 pin 11, R-INT-03)\nIO7 wakes light sleep only, not deep sleep (R-INT-04)"
+	(text "EXP_INT: U17 TCA6408A ~INT (open drain) -> U4 IO7 (R-INT-01)\n  touch INT (P4) + ACC_INT (P5) stop being polled\n  pull-up: ESP32 internal on GPIO7; INT holds low until\n  the input port is read (SCPS192E 8.3.3), so speed is no issue\nU5 BQ25628 ~INT stays NC: pin 11 is walled in by the SDA\n  escape via, L1 and the SYS pour (R-INT-02); FW reads the\n  latched Charger_Flag_X instead (SLUSEG4C 8.3.8.1)\nIO7 wakes light sleep only, not deep sleep (R-INT-04)"
 		(exclude_from_sim no)
-		(at 349.25 364.49 0)
+		(at 349.25 344.17 0)
 		(effects
 			(font
 				(size 1.27 1.27)

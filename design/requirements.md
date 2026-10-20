@@ -1,6 +1,6 @@
 # GO main v2.1-xtal32k: change requirements
 
-Status: layout done (crystal + LP I²C). Requirements and part approved by Tanapat 2026-10-19. Interrupt line (R-INT, wired-OR): schematic done, layout in progress 2026-10-20.
+Status: layout done (crystal + LP I²C). Requirements and part approved by Tanapat 2026-10-19. Interrupt line (R-INT, expander only): schematic done, layout in progress 2026-10-20.
 
 Scope: an engineering change on top of v2.1 (branch `v2.1-xtal32k`, from 426c645). The rest of the GO main board is hand-drawn and out of scope; only the items below change.
 
@@ -21,7 +21,7 @@ Why: in offline mode the LP core reads the sensors while the HP core stays in de
 |---|---|---|
 | R-LP-01 | I²C SDA on U4 IO2 (pad 6), SCL on U4 IO3 (pad 7) | LP_I2C_SDA = GPIO2, LP_I2C_SCL = GPIO3 |
 | R-LP-02 | TPL5010 DONE (`WD_RST`) on an LP GPIO, so the LP core can feed the watchdog while the HP core sleeps longer than the watchdog period: U4 IO4 (pad 8). IO6 would also be LP, but its route to U7 needed 5 vias; IO4 reuses the old CS path with 1 via | R25 = 51 kΩ, roughly 7–8 min (TPL5010 resistor table) |
-| R-LP-03 | IO7 (pad 19) is left unconnected (superseded 2026-10-20 by R-INT-01: IO7 = I2C_INT) | JTAG-source strap, ignored while EFUSE_JTAG_SEL_ENABLE = 0 (MINI-1 v1.3 Table 4-7 p20) |
+| R-LP-03 | IO7 (pad 19) is left unconnected (superseded 2026-10-20 by R-INT-01: IO7 = EXP_INT) | JTAG-source strap, ignored while EFUSE_JTAG_SEL_ENABLE = 0 (MINI-1 v1.3 Table 4-7 p20) |
 
 Straps after the move: GPIO2 = MTMS and GPIO3 = MTDI (MINI-1 v1.3 Table 4-1 p16) are both held high at reset by R26/R30 10K. MTDI only selects the SDIO edge (Table 4-4 p18), which this board does not use; MTMS has no strap function listed in the module datasheet.
 
@@ -30,10 +30,10 @@ Why: on v2.1 the charger `~INT` (U5 pin 11, NC flag) and the expander `~INT` (U1
 
 | ID | Requirement | Number |
 |---|---|---|
-| R-INT-01 | U5 BQ25628 `~INT` and U17 TCA6408A `~INT` wired-OR on one net `I2C_INT` → U4 IO7 (pad 19). Both are open drain. Not through expander P7 alone: the charger INT is a 256 µs low pulse, and the TCA6408A clears its interrupt when the input returns. (First drawn as two lines, CHG_INT → IO15 and EXP_INT → IO7; at layout U5 pin 11, U17 pin 11 and IO15 pad 26 were all walled in by existing routing, and Tanapat chose the wired-OR on 2026-10-20. IO15 stays free.) | BQ25628 SLUSEG4C pin table, §8.3.8.3 p31; TCA6408A SCPS192E §8.3.3 |
-| R-INT-02 | Firmware: on a falling edge of IO7, read the TCA6408A input port (clears its INT) and `Charger_Flag_X` (latched until read), so neither source is lost while the other holds the line low | SLUSEG4C §8.3.8.1 |
-| R-INT-03 | One 10K pull-up to +3.1V (R61) | BQ25628 pin table, pin 11: "10-kΩ"; same part as R26 (C327797) |
-| R-INT-04 | The line does not wake the chip from deep sleep (deep-sleep GPIO wake = GPIO0–6 only). Light sleep and active only; in deep sleep the LP core reads the latched `Charger_Flag_X` registers over LP I²C instead | ESP-IDF v5.5.2 `soc/esp32c5/include/soc/soc_caps.h:231`; IO7 strap ignored while EFUSE_JTAG_SEL_ENABLE = 0 (MINI-1 v1.3 Table 4-7 p20) |
+| R-INT-01 | U17 TCA6408A `~INT` → U4 IO7 (pad 19), net `EXP_INT`, so touch (`INT` on P4) and `ACC_INT` (P5) stop being polled | TCA6408A SCPS192E §8.3.3 |
+| R-INT-02 | U5 BQ25628 `~INT` stays NC. At layout pin 11 was walled in: pad 12 SDA and its escape via, pad 10 STAT, L1's SYS pad at x ≥ 24.70 and the SYS pour on F.Cu, and the SW island on In2 under U5. Freeing it means re-doing the U5 I²C escape inside the charger's SW/SYS copper. Firmware reads the latched `Charger_Flag_X` registers on wake or on a timer instead. (Drawn first as two lines, CHG_INT → IO15 + EXP_INT → IO7, then as a wired-OR onto IO7; both dropped at layout, Tanapat 2026-10-20.) | BQ25628 SLUSEG4C §8.3.8.1 (flags latch until read) |
+| R-INT-03 | No external pull-up: firmware enables the GPIO7 internal pull-up. The TCA6408A holds INT low until the input port is read, so the weak pull-up's rise time does not matter | SCPS192E §8.3.3 |
+| R-INT-04 | IO7 does not wake the chip from deep sleep (deep-sleep GPIO wake = GPIO0–6 only); light sleep and active only. IO7 is the JTAG-source strap, ignored while EFUSE_JTAG_SEL_ENABLE = 0 | ESP-IDF v5.5.2 `soc/esp32c5/include/soc/soc_caps.h:231`; MINI-1 v1.3 Table 4-7 p20 |
 
 ## PCB constraints (Tanapat, 2026-10-19)
 Do not move: all LEDs, FPC1, BT1, U16, U11, U10, NTCx, SPS30, SWx, U12, USB-C (USB1), CN1, CN2.
@@ -42,13 +42,13 @@ Do not move: all LEDs, FPC1, BT1, U16, U11, U10, NTCx, SPS30, SWx, U12, USB-C (U
 - `PIN_DISPLAY_CS` becomes GPIO6 on this board variant (V1 keeps GPIO0).
 - `CONFIG_RTC_CLK_SRC_EXT_CRYS=y` on boards with the crystal.
 - `PIN_I2C_SDA = GPIO2`, `PIN_I2C_SCL = GPIO3`, `PIN_EXT_WDT = GPIO4` (was GPIO2). `PIN_ACCEL_INT = GPIO3` is a V1 pin and must be variant-guarded, or it collides with SCL.
-- `I2C_INT = GPIO7` (falling edge; read the TCA6408A input port and `Charger_Flag_X` every time; set the BQ25628 INT masks). Touch and ACC_INT polling can go on boards with this line. GPIO15 stays unconnected.
+- `EXP_INT = GPIO7`: input with the internal pull-up on (keep it in light sleep), falling edge, then read the TCA6408A input port (clears its INT). Touch and ACC_INT polling can go. Charger INT is not wired: read `Charger_Flag_X` on wake or on a timer. GPIO15 stays unconnected.
 
 ## Blocks
 1. `rtc32k`: Y1 + C76 + C77, plus an NC flag on U17 P7.
 2. Hand edits (not generated): U4 pin 16 label `ePaper CS` → `XTAL_32K_P`; U4 pin 17 label `IO1` → `XTAL_32K_N`.
 3. LP I²C hand edits (intent `connections/lp_i2c.csv`): U4 pin 6 `WD_RST` → `SDA`, pin 7 `IO3` → `SCL`, pin 8 `IO4` → `WD_RST`, pin 10 `SCL` → `ePaper CS`, pin 19 `SDA` → `IO7`.
-4. `int_lines`: R61 10K pull-up on `I2C_INT`. Hand edits (intent `connections/int_lines.csv`): U4 pin 19 label `IO7` → `I2C_INT`, `I2C_INT` labels on U5 pin 11 (NC flag removed) and U17 pin 11, C63 field text moved below the RESET wire. U4 pin 26 keeps its `IO15` label.
+4. `int_lines`: notes-only frame (INT LINE). Hand edits (intent `connections/int_lines.csv`): U4 pin 19 label `IO7` → `EXP_INT`, `EXP_INT` label on U17 pin 11, C63 field text moved below the RESET wire. U5 pin 11 keeps its NC flag; U4 pin 26 keeps its `IO15` label.
 
 ## Layout (pcb-design, 2026-10-19)
 Status: layout done. DRC 230 = baseline (0 new), 0 unconnected, parity 0. Route groups in `design/airgradient-go-main/layout/route.json`, checks in `constraints.json`.

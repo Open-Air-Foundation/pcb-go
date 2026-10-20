@@ -3,16 +3,9 @@
  "schematic": "/Users/formylife/Documents/Work/AirGradient/PCB/airgradient-go-pcb/PCB/airgradient-go-main/airgradient-go-main.kicad_sch",
  "block": "int_lines",
  "items": {
-  "d65ce8de-22eb-501e-8251-38f7cd7b78f6": "[\"wire\", [[377.19, 351.79], [370.84, 351.79]]]",
-  "72879c50-cc3b-56d3-bf38-9e3587c0f6df": "[\"label\", \"I2C_INT\", [370.84, 351.79, 180.0]]",
-  "118fd316-5849-53ec-9f2d-9177fd84ac6e": "[\"wire\", [[384.81, 351.79], [391.16, 351.79]]]",
-  "ad5b5578-116b-51bd-b113-3013c3ed1df6": "[\"symbol\", \"Device:R\", [381.0, 351.79, 90.0], \"\", \"10K\"]",
-  "c0cdc941-2f84-5d1a-9ed9-42907bc03918": "[\"symbol\", \"power:VDD\", [391.16, 351.79, 0.0], \"\", \"+3.1V\"]",
   "d9d7eb65-a088-5649-bd54-c356973da214": "[\"rectangle\", [345.44, 334.01], [424.18, 386.08]]",
-  "eef8276a-6039-58ab-8e4d-e2a974785aa7": "[\"text\", \"INT PULL-UP\", [347.98, 336.55, 0.0]]",
-  "b20b2658-976d-5830-99f6-816464bc56aa": "[\"text\", \"I2C_INT: open-drain wired-OR -> U4 IO7 (R-INT-01)\\n  U5 BQ25628 ~INT: 256 us low pulse (SLUSEG4C 8.3.8.3)\\n  U17 TCA6408A ~INT: touch P4 + ACC_INT P5 (SCPS192E 8.3.3)\\nFW: on falling edge read TCA6408A input + Charger_Flag_X\\nR61 = 10K to +3.1V (BQ25628 pin 11, R-INT-03)\\nIO7 wakes light sleep only, not deep sleep (R-INT-04)\", [349.25, 364.49, 0.0]]"
+  "eef8276a-6039-58ab-8e4d-e2a974785aa7": "[\"text\", \"INT LINE\", [347.98, 336.55, 0.0]]",
+  "b20b2658-976d-5830-99f6-816464bc56aa": "[\"text\", \"EXP_INT: U17 TCA6408A ~INT (open drain) -> U4 IO7 (R-INT-01)\\n  touch INT (P4) + ACC_INT (P5) stop being polled\\n  pull-up: ESP32 internal on GPIO7; INT holds low until\\n  the input port is read (SCPS192E 8.3.3), so speed is no issue\\nU5 BQ25628 ~INT stays NC: pin 11 is walled in by the SDA\\n  escape via, L1 and the SYS pour (R-INT-02); FW reads the\\n  latched Charger_Flag_X instead (SLUSEG4C 8.3.8.1)\\nIO7 wakes light sleep only, not deep sleep (R-INT-04)\", [349.25, 344.17, 0.0]]"
  },
- "pwr": {
-  "R61.2#2": "#PWR003"
- }
+ "pwr": {}
 }

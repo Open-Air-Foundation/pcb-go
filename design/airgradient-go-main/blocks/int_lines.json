@@ -1,6 +1,6 @@
 {
   "block": "int_lines",
-  "title": "INT PULL-UP",
+  "title": "INT LINE",
   "frame": [
     345.44,
     334.01,
@@ -12,40 +12,14 @@
     "supply": "power:VDD",
     "stub": 6.35
   },
-  "symbols": [
-    {
-      "ref": "R61",
-      "lib_id": "Device:R",
-      "at": [
-        381.0,
-        351.79
-      ],
-      "rot": 90,
-      "value": "10K",
-      "footprint": "Resistor_SMD:R_0402_1005Metric",
-      "datasheet": "https://lcsc.com/product-detail/Others_Huaxin-S-T-MR04X1002FTL_C327797.html",
-      "description": "MR04X1002FTL",
-      "fields": {
-        "LCSC Part": "C327797"
-      }
-    }
-  ],
-  "connect": [
-    {
-      "pin": "R61.1",
-      "label": "I2C_INT"
-    },
-    {
-      "pin": "R61.2",
-      "power": "+3.1V"
-    }
-  ],
+  "symbols": [],
+  "connect": [],
   "notes": [
     {
-      "text": "I2C_INT: open-drain wired-OR -> U4 IO7 (R-INT-01)\n  U5 BQ25628 ~INT: 256 us low pulse (SLUSEG4C 8.3.8.3)\n  U17 TCA6408A ~INT: touch P4 + ACC_INT P5 (SCPS192E 8.3.3)\nFW: on falling edge read TCA6408A input + Charger_Flag_X\nR61 = 10K to +3.1V (BQ25628 pin 11, R-INT-03)\nIO7 wakes light sleep only, not deep sleep (R-INT-04)",
+      "text": "EXP_INT: U17 TCA6408A ~INT (open drain) -> U4 IO7 (R-INT-01)\n  touch INT (P4) + ACC_INT (P5) stop being polled\n  pull-up: ESP32 internal on GPIO7; INT holds low until\n  the input port is read (SCPS192E 8.3.3), so speed is no issue\nU5 BQ25628 ~INT stays NC: pin 11 is walled in by the SDA\n  escape via, L1 and the SYS pour (R-INT-02); FW reads the\n  latched Charger_Flag_X instead (SLUSEG4C 8.3.8.1)\nIO7 wakes light sleep only, not deep sleep (R-INT-04)",
       "at": [
         349.25,
-        364.49
+        344.17
       ]
     }
   ]

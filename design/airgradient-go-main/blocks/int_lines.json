@@ -16,7 +16,7 @@
   "connect": [],
   "notes": [
     {
-      "text": "I2C_INT: open-drain wired-OR -> U4 IO7 (R-INT-01)\n  U5 BQ25628 ~INT: 256 us low pulse (SLUSEG4C 8.3.8.3)\n  U17 TCA6408A ~INT: touch P4 + ACC_INT P5 (SCPS192E 8.3.3)\nFW: on falling edge read TCA6408A input + Charger_Flag_X\nPull-up: ESP32 internal on GPIO7, rise ~1 us << 256 us (R-INT-03)\nIO7 wakes light sleep only, not deep sleep (R-INT-04)",
+      "text": "CHG_INT: U5 BQ25628 ~INT -> U4 IO15 (R-INT-01)\n  open drain, 256 us low pulse (SLUSEG4C 8.3.8.3)\nEXP_INT: U17 TCA6408A ~INT -> U4 IO7 (R-INT-01)\n  touch P4 + ACC_INT P5, held until read (SCPS192E 8.3.3)\nPull-ups: ESP32 internal on GPIO15 and GPIO7 (R-INT-03)\nLight sleep only, no deep-sleep wake (R-INT-04)",
       "at": [
         349.25,
         344.17

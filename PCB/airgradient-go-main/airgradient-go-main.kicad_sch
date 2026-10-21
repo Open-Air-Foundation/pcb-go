@@ -1242,6 +1242,195 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:Crystal"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Y"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Crystal"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Two pin crystal"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "quartz ceramic resonator oscillator"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Crystal*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Crystal_0_1"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -1.905 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -1.27) (xy -1.905 1.27)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.143 2.54)
+					(end 1.143 -2.54)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 -1.27) (xy 1.905 1.27)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.905 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Crystal_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:NetTie_2"
 			(pin_numbers
 				(hide yes)
@@ -17860,195 +18049,18 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:Crystal"
-				(pin_numbers
-					(hide yes)
-				)
-				(pin_names
-					(offset 1.016)
-					(hide yes)
-				)
-				(exclude_from_sim no)
-				(in_bom yes)
-				(on_board yes)
-				(in_pos_files yes)
-				(duplicate_pin_numbers_are_jumpers no)
-				(property "Reference" "Y"
-					(at 0 3.81 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "Value" "Crystal"
-					(at 0 -3.81 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "Footprint" ""
-					(at 0 0 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(hide yes)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "Datasheet" ""
-					(at 0 0 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(hide yes)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "Description" "Two pin crystal"
-					(at 0 0 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(hide yes)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "ki_keywords" "quartz ceramic resonator oscillator"
-					(at 0 0 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(hide yes)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "ki_fp_filters" "Crystal*"
-					(at 0 0 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(hide yes)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(symbol "Crystal_0_1"
-					(polyline
-						(pts
-							(xy -2.54 0) (xy -1.905 0)
-						)
-						(stroke
-							(width 0)
-							(type default)
-						)
-						(fill
-							(type none)
-						)
-					)
-					(polyline
-						(pts
-							(xy -1.905 -1.27) (xy -1.905 1.27)
-						)
-						(stroke
-							(width 0.508)
-							(type default)
-						)
-						(fill
-							(type none)
-						)
-					)
-					(rectangle
-						(start -1.143 2.54)
-						(end 1.143 -2.54)
-						(stroke
-							(width 0.3048)
-							(type default)
-						)
-						(fill
-							(type none)
-						)
-					)
-					(polyline
-						(pts
-							(xy 1.905 -1.27) (xy 1.905 1.27)
-						)
-						(stroke
-							(width 0.508)
-							(type default)
-						)
-						(fill
-							(type none)
-						)
-					)
-					(polyline
-						(pts
-							(xy 2.54 0) (xy 1.905 0)
-						)
-						(stroke
-							(width 0)
-							(type default)
-						)
-						(fill
-							(type none)
-						)
-					)
-				)
-				(symbol "Crystal_1_1"
-					(pin passive line
-						(at -3.81 0 0)
-						(length 1.27)
-						(name "1"
-							(effects
-								(font
-									(size 1.27 1.27)
-								)
-							)
-						)
-						(number "1"
-							(effects
-								(font
-									(size 1.27 1.27)
-								)
-							)
-						)
-					)
-					(pin passive line
-						(at 3.81 0 180)
-						(length 1.27)
-						(name "2"
-							(effects
-								(font
-									(size 1.27 1.27)
-								)
-							)
-						)
-						(number "2"
-							(effects
-								(font
-									(size 1.27 1.27)
-								)
-							)
-						)
-					)
-				)
-				(embedded_fonts no)
-			)
+	)
+	(rectangle
+		(start 260.985 334.01)
+		(end 345.44 386.08)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "0bada3e4-6e00-54a0-ae91-81f99f64a09d")
 	)
 	(rectangle
 		(start 424.18 92.71)
@@ -18134,6 +18146,18 @@
 		)
 		(uuid "c121e5e8-e9a7-4852-b8b1-fbcc1c357567")
 	)
+	(rectangle
+		(start 345.44 334.01)
+		(end 424.18 386.08)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "d9d7eb65-a088-5649-bd54-c356973da214")
+	)
 	(text "DISPLAY"
 		(exclude_from_sim no)
 		(at 266.192 14.732 0)
@@ -18186,6 +18210,18 @@
 		)
 		(uuid "6e5e6a74-ce41-4718-8f9d-5c819fed5375")
 	)
+	(text "RTC 32K"
+		(exclude_from_sim no)
+		(at 263.525 336.55 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "7097356e-c62a-5c77-9516-89008fd7b1ab")
+	)
 	(text "I2C Address: 0x33"
 		(exclude_from_sim no)
 		(at 450.342 108.204 0)
@@ -18195,6 +18231,28 @@
 			)
 		)
 		(uuid "ae132da3-fa2d-4878-af82-6e062fa3c066")
+	)
+	(text "CHG_INT: U5 BQ25628 ~INT -> U4 IO15 (R-INT-01)\n  open drain, 256 us low pulse (SLUSEG4C 8.3.8.3)\nEXP_INT: U17 TCA6408A ~INT -> U4 IO7 (R-INT-01)\n  touch P4 + ACC_INT P5, held until read (SCPS192E 8.3.3)\nPull-ups: ESP32 internal on GPIO15 and GPIO7 (R-INT-03)\nLight sleep only, no deep-sleep wake (R-INT-04)"
+		(exclude_from_sim no)
+		(at 349.25 344.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "b20b2658-976d-5830-99f6-816464bc56aa")
+	)
+	(text "Y1 FC-135R CL 6 pF, ESR 50 kOhm max (FC-135R p2)\nESP32-C5 limit ESR <= 70 kOhm (MINI-1 Fig 9-1 p49)\nC76 = C77 = 2 x (CL - Cstray) = 2 x (6 - 2) = 8.2 pF C0G (R-XT-01)\nXTAL_32K_P/N = U4 IO0/IO1. ePaper CS moved to U4 IO6 (R-XT-02)"
+		(exclude_from_sim no)
+		(at 264.16 370.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "b8e42800-ba61-55d6-97ce-11b240b8f029")
 	)
 	(text "CONTROLLER"
 		(exclude_from_sim no)
@@ -18215,6 +18273,18 @@
 			)
 		)
 		(uuid "c2a894ae-1b66-475a-9b47-d061591f1604")
+	)
+	(text "INT LINE"
+		(exclude_from_sim no)
+		(at 347.98 336.55 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "eef8276a-6039-58ab-8e4d-e2a974785aa7")
 	)
 	(junction
 		(at 74.93 275.59)
@@ -18697,6 +18767,12 @@
 		(uuid "87e4346d-446e-4fd9-85c2-80a4257306e3")
 	)
 	(junction
+		(at 313.69 350.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8af7a564-1836-5820-a793-f99fd0d0b633")
+	)
+	(junction
 		(at 480.06 26.67)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -18809,6 +18885,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a7cfc5a8-5c5b-4131-9c23-eb2dd87b6bfc")
+	)
+	(junction
+		(at 295.91 350.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a8674cf7-9e15-5ff5-b1fd-4040ac17beac")
 	)
 	(junction
 		(at 181.61 373.38)
@@ -19191,6 +19273,10 @@
 	(no_connect
 		(at 127 269.24)
 		(uuid "d474658d-6815-42cf-9967-1e7646d01323")
+	)
+	(no_connect
+		(at 236.22 191.77)
+		(uuid "db62b115-ba7d-573f-9185-ba19e05d7e6e")
 	)
 	(no_connect
 		(at 170.18 175.26)
@@ -20223,6 +20309,16 @@
 			(type default)
 		)
 		(uuid "227ad180-52cf-4f01-9a5b-7cdabbba7188")
+	)
+	(wire
+		(pts
+			(xy 213.36 181.61) (xy 212.09 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22fa1d94-70f6-45b4-a760-79f806d4fb40")
 	)
 	(wire
 		(pts
@@ -22306,6 +22402,16 @@
 	)
 	(wire
 		(pts
+			(xy 308.61 350.52) (xy 313.69 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63c0d36f-0e17-5062-acc1-d0207158c072")
+	)
+	(wire
+		(pts
 			(xy 177.8 383.54) (xy 161.29 383.54)
 		)
 		(stroke
@@ -23536,6 +23642,16 @@
 	)
 	(wire
 		(pts
+			(xy 295.91 350.52) (xy 293.37 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8879c75b-25fe-5b21-bdd1-d16fb0f4fcf9")
+	)
+	(wire
+		(pts
 			(xy 30.48 76.2) (xy 30.48 80.01)
 		)
 		(stroke
@@ -24043,6 +24159,16 @@
 			(type default)
 		)
 		(uuid "993de961-ffaa-400c-8231-79e4a7c9144d")
+	)
+	(wire
+		(pts
+			(xy 300.99 350.52) (xy 295.91 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99476109-f2b8-580e-8437-e9200a0112f7")
 	)
 	(wire
 		(pts
@@ -24653,6 +24779,16 @@
 			(type default)
 		)
 		(uuid "a974b1a5-879e-424e-9b00-2449ffbb463e")
+	)
+	(wire
+		(pts
+			(xy 162.56 323.85) (xy 172.72 323.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a9e7a96b-e26c-4421-8afc-e528b91d429b")
 	)
 	(wire
 		(pts
@@ -27446,6 +27582,16 @@
 	)
 	(wire
 		(pts
+			(xy 313.69 350.52) (xy 316.23 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa1306df-e39e-512e-b782-a92346f5aaad")
+	)
+	(wire
+		(pts
 			(xy 132.08 127) (xy 184.15 127)
 		)
 		(stroke
@@ -27904,6 +28050,16 @@
 		)
 		(uuid "26faf6a7-fa60-49f8-8534-1106c032deb5")
 	)
+	(label "CHG_INT"
+		(at 172.72 323.85 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "29250916-c2ca-43f5-abf9-b5c3b0baf4db")
+	)
 	(label "LED_6_G"
 		(at 490.22 163.83 180)
 		(effects
@@ -27983,46 +28139,6 @@
 			(justify right bottom)
 		)
 		(uuid "34a5f5f1-2b34-4954-92b8-f8289450a3b7")
-	)
-	(wire
-		(pts
-			(xy 162.56 323.85) (xy 172.72 323.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a9e7a96b-e26c-4421-8afc-e528b91d429b")
-	)
-	(label "I2C_INT"
-		(at 172.72 323.85 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "29250916-c2ca-43f5-abf9-b5c3b0baf4db")
-	)
-	(wire
-		(pts
-			(xy 213.36 181.61) (xy 212.09 181.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "22fa1d94-70f6-45b4-a760-79f806d4fb40")
-	)
-	(label "I2C_INT"
-		(at 212.09 181.61 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "ead46988-268d-48b1-ae89-44b21a808430")
 	)
 	(label "SCL"
 		(at 134.62 259.08 180)
@@ -28454,7 +28570,7 @@
 		)
 		(uuid "78a66469-a774-4d83-933b-5dfae5a2f146")
 	)
-	(label "I2C_INT"
+	(label "EXP_INT"
 		(at 120.65 83.82 0)
 		(effects
 			(font
@@ -28654,7 +28770,17 @@
 		)
 		(uuid "928118bf-d87b-423f-b6bd-e893056d2377")
 	)
-	(label "IO15"
+	(label "XTAL_32K_N"
+		(at 316.23 350.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "931cd4a0-6f3a-5aca-ab80-49decfe7dd9e")
+	)
+	(label "CHG_INT"
 		(at 176.53 76.2 180)
 		(effects
 			(font
@@ -28913,6 +29039,16 @@
 			(justify left bottom)
 		)
 		(uuid "c52e6a71-f7f8-4522-b430-89a36db8724a")
+	)
+	(label "XTAL_32K_P"
+		(at 293.37 350.52 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c53c66fd-2de5-5ec4-84c9-8c4ca1296879")
 	)
 	(label "MCU_RX"
 		(at 172.72 60.96 180)
@@ -29253,6 +29389,16 @@
 			(justify left bottom)
 		)
 		(uuid "e88486e5-99fa-4a24-9c90-8fdaf414ec25")
+	)
+	(label "EXP_INT"
+		(at 212.09 181.61 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ead46988-268d-48b1-ae89-44b21a808430")
 	)
 	(label "Pack+"
 		(at 118.11 323.85 0)
@@ -31571,6 +31717,84 @@
 			(project "airgradient-go-main"
 				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
 					(reference "#PWR063")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:Earth")
+		(at 313.69 358.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "11be2bc9-a409-5965-ad9d-bf60f339b2ea")
+		(property "Reference" "#PWR002"
+			(at 313.69 364.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PGND"
+			(at 313.69 361.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 313.69 358.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 313.69 358.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
+			(at 313.69 358.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "276bb879-d878-5e7d-8bfd-c978efad5bf7")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "#PWR002")
 					(unit 1)
 				)
 			)
@@ -41068,6 +41292,99 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 313.69 354.33 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "54d33c89-a948-553b-889c-db60c20f8497")
+		(property "Reference" "C77"
+			(at 316.992 353.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "8.2pF/50V"
+			(at 316.992 355.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 313.69 354.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 313.69 354.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "0402CG8R2C500NT"
+			(at 313.69 354.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1579"
+			(at 313.69 354.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "76437e6d-9db3-5378-97a4-5b3342bd82dd")
+		)
+		(pin "2"
+			(uuid "a6a1d9bf-fb9d-5c61-b626-92959d681eb5")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "C77")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:Earth")
 		(at 269.24 279.4 0)
 		(mirror y)
@@ -44960,6 +45277,99 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 295.91 354.33 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "76484ec1-870f-5567-bcad-fb68e1b370fc")
+		(property "Reference" "C76"
+			(at 292.608 353.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "8.2pF/50V"
+			(at 292.608 355.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 295.91 354.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 295.91 354.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "0402CG8R2C500NT"
+			(at 295.91 354.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1579"
+			(at 295.91 354.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ede29d85-3abd-5a2d-8899-db6e91a52f43")
+		)
+		(pin "2"
+			(uuid "7ebb576b-08ea-52f4-b45b-7f3479444dae")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "C76")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:Earth")
 		(at 34.29 151.13 0)
 		(unit 1)
@@ -48118,6 +48528,97 @@
 			(project "airgradient-go-main"
 				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
 					(reference "TP14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Crystal")
+		(at 304.8 350.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "86b3b143-79c0-59bd-b6b8-6103bfb8f55e")
+		(property "Reference" "Y1"
+			(at 304.8 344.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "32.768kHz CL6pF"
+			(at 304.8 346.456 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Crystal:Crystal_SMD_3215-2Pin_3.2x1.5mm"
+			(at 304.8 350.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://download.epsondevice.com/td/pdf/app/FC-135R_en.pdf"
+			(at 304.8 350.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "X1A0001410006"
+			(at 304.8 350.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C94673"
+			(at 304.8 350.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "070e1897-c9ff-5bf5-84f1-e9930edbe2e2")
+		)
+		(pin "2"
+			(uuid "97eea945-d357-5e89-bec0-a56ace0aab30")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "Y1")
 					(unit 1)
 				)
 			)
@@ -62705,6 +63206,84 @@
 	)
 	(symbol
 		(lib_id "power:Earth")
+		(at 295.91 358.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fa53e1e1-6d6d-5233-b445-5776ae8d94a9")
+		(property "Reference" "#PWR001"
+			(at 295.91 364.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PGND"
+			(at 295.91 361.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 295.91 358.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 295.91 358.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
+			(at 295.91 358.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c505c116-bce8-5bb7-88e8-d09b9f0a4c45")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "#PWR001")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:Earth")
 		(at 314.96 207.01 0)
 		(mirror y)
 		(unit 1)
@@ -64184,585 +64763,6 @@
 				)
 			)
 		)
-	)
-	(no_connect
-		(at 236.22 191.77)
-		(uuid "db62b115-ba7d-573f-9185-ba19e05d7e6e")
-	)
-	(wire
-		(pts
-			(xy 300.99 350.52) (xy 295.91 350.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "99476109-f2b8-580e-8437-e9200a0112f7")
-	)
-	(wire
-		(pts
-			(xy 295.91 350.52) (xy 293.37 350.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8879c75b-25fe-5b21-bdd1-d16fb0f4fcf9")
-	)
-	(label "XTAL_32K_P"
-		(at 293.37 350.52 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c53c66fd-2de5-5ec4-84c9-8c4ca1296879")
-	)
-	(wire
-		(pts
-			(xy 308.61 350.52) (xy 313.69 350.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63c0d36f-0e17-5062-acc1-d0207158c072")
-	)
-	(wire
-		(pts
-			(xy 313.69 350.52) (xy 316.23 350.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fa1306df-e39e-512e-b782-a92346f5aaad")
-	)
-	(label "XTAL_32K_N"
-		(at 316.23 350.52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "931cd4a0-6f3a-5aca-ab80-49decfe7dd9e")
-	)
-	(junction
-		(at 295.91 350.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a8674cf7-9e15-5ff5-b1fd-4040ac17beac")
-	)
-	(junction
-		(at 313.69 350.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8af7a564-1836-5820-a793-f99fd0d0b633")
-	)
-	(symbol
-		(lib_id "Device:Crystal")
-		(at 304.8 350.52 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "86b3b143-79c0-59bd-b6b8-6103bfb8f55e")
-		(property "Reference" "Y1"
-			(at 304.8 344.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "32.768kHz CL6pF"
-			(at 304.8 346.456 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Crystal:Crystal_SMD_3215-2Pin_3.2x1.5mm"
-			(at 304.8 350.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://download.epsondevice.com/td/pdf/app/FC-135R_en.pdf"
-			(at 304.8 350.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "X1A0001410006"
-			(at 304.8 350.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C94673"
-			(at 304.8 350.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "070e1897-c9ff-5bf5-84f1-e9930edbe2e2")
-		)
-		(pin "2"
-			(uuid "97eea945-d357-5e89-bec0-a56ace0aab30")
-		)
-		(instances
-			(project "airgradient-go-main"
-				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
-					(reference "Y1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 295.91 354.33 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "76484ec1-870f-5567-bcad-fb68e1b370fc")
-		(property "Reference" "C76"
-			(at 292.608 353.06 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "8.2pF/50V"
-			(at 292.608 355.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 295.91 354.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 295.91 354.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "0402CG8R2C500NT"
-			(at 295.91 354.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C1579"
-			(at 295.91 354.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ede29d85-3abd-5a2d-8899-db6e91a52f43")
-		)
-		(pin "2"
-			(uuid "7ebb576b-08ea-52f4-b45b-7f3479444dae")
-		)
-		(instances
-			(project "airgradient-go-main"
-				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
-					(reference "C76")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 313.69 354.33 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "54d33c89-a948-553b-889c-db60c20f8497")
-		(property "Reference" "C77"
-			(at 316.992 353.06 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "8.2pF/50V"
-			(at 316.992 355.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 313.69 354.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 313.69 354.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "0402CG8R2C500NT"
-			(at 313.69 354.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C1579"
-			(at 313.69 354.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "76437e6d-9db3-5378-97a4-5b3342bd82dd")
-		)
-		(pin "2"
-			(uuid "a6a1d9bf-fb9d-5c61-b626-92959d681eb5")
-		)
-		(instances
-			(project "airgradient-go-main"
-				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
-					(reference "C77")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:Earth")
-		(at 295.91 358.14 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fa53e1e1-6d6d-5233-b445-5776ae8d94a9")
-		(property "Reference" "#PWR001"
-			(at 295.91 364.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PGND"
-			(at 295.91 361.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 295.91 358.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 295.91 358.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 295.91 358.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c505c116-bce8-5bb7-88e8-d09b9f0a4c45")
-		)
-		(instances
-			(project "airgradient-go-main"
-				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
-					(reference "#PWR001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:Earth")
-		(at 313.69 358.14 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "11be2bc9-a409-5965-ad9d-bf60f339b2ea")
-		(property "Reference" "#PWR002"
-			(at 313.69 364.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PGND"
-			(at 313.69 361.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 313.69 358.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 313.69 358.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 313.69 358.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "276bb879-d878-5e7d-8bfd-c978efad5bf7")
-		)
-		(instances
-			(project "airgradient-go-main"
-				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
-					(reference "#PWR002")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(rectangle
-		(start 260.985 334.01)
-		(end 345.44 386.08)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "0bada3e4-6e00-54a0-ae91-81f99f64a09d")
-	)
-	(text "RTC 32K"
-		(exclude_from_sim no)
-		(at 263.525 336.55 0)
-		(effects
-			(font
-				(size 2.54 2.54)
-				(bold yes)
-			)
-			(justify left top)
-		)
-		(uuid "7097356e-c62a-5c77-9516-89008fd7b1ab")
-	)
-	(text "Y1 FC-135R CL 6 pF, ESR 50 kOhm max (FC-135R p2)\nESP32-C5 limit ESR <= 70 kOhm (MINI-1 Fig 9-1 p49)\nC76 = C77 = 2 x (CL - Cstray) = 2 x (6 - 2) = 8.2 pF C0G (R-XT-01)\nXTAL_32K_P/N = U4 IO0/IO1. ePaper CS moved to U4 IO6 (R-XT-02)"
-		(exclude_from_sim no)
-		(at 264.16 370.84 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "b8e42800-ba61-55d6-97ce-11b240b8f029")
-	)
-	(rectangle
-		(start 345.44 334.01)
-		(end 424.18 386.08)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "d9d7eb65-a088-5649-bd54-c356973da214")
-	)
-	(text "INT LINE"
-		(exclude_from_sim no)
-		(at 347.98 336.55 0)
-		(effects
-			(font
-				(size 2.54 2.54)
-				(bold yes)
-			)
-			(justify left top)
-		)
-		(uuid "eef8276a-6039-58ab-8e4d-e2a974785aa7")
-	)
-	(text "I2C_INT: open-drain wired-OR -> U4 IO7 (R-INT-01)\n  U5 BQ25628 ~INT: 256 us low pulse (SLUSEG4C 8.3.8.3)\n  U17 TCA6408A ~INT: touch P4 + ACC_INT P5 (SCPS192E 8.3.3)\nFW: on falling edge read TCA6408A input + Charger_Flag_X\nPull-up: ESP32 internal on GPIO7, rise ~1 us << 256 us (R-INT-03)\nIO7 wakes light sleep only, not deep sleep (R-INT-04)"
-		(exclude_from_sim no)
-		(at 349.25 344.17 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "b20b2658-976d-5830-99f6-816464bc56aa")
 	)
 	(sheet_instances
 		(path "/"

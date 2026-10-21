@@ -575,10 +575,10 @@
    "vias": []
   },
   "exp-int": {
-   "_why": "R-INT-01 I2C_INT (expander branch): U17 pin 11 -> U4 IO7 (pad 19). pcb_path --routed at 0.12 mm clearance (no path at 0.15) with --avoid round Y1 (RF-22): 15.6 mm, 4 vias, 0.5/0.3. B.Cu runs under C76 (In1 GND between; C76 has no RF-22 rule) and under the module edge west of pads 16-18; the last F.Cu run enters pad 19 from the pocket under U4, as the LP I2C routes do (RT-07 is report-only).",
+   "_why": "R-INT-01 EXP_INT: U17 pin 11 -> U4 IO7 (pad 19). pcb_path --routed at 0.12 mm clearance (no path at 0.15) with --avoid round Y1 (RF-22): 15.6 mm, 4 vias, 0.5/0.3. B.Cu runs under C76 (In1 GND between; C76 has no RF-22 rule) and under the module edge west of pads 16-18; the last F.Cu run enters pad 19 from the pocket under U4, as the LP I2C routes do (RT-07 is report-only).",
    "tracks": [
     {
-     "net": "/I2C_INT",
+     "net": "/EXP_INT",
      "layer": "F.Cu",
      "width": 0.25,
      "path": [
@@ -593,7 +593,7 @@
      ]
     },
     {
-     "net": "/I2C_INT",
+     "net": "/EXP_INT",
      "layer": "B.Cu",
      "width": 0.25,
      "path": [
@@ -616,7 +616,7 @@
      ]
     },
     {
-     "net": "/I2C_INT",
+     "net": "/EXP_INT",
      "layer": "F.Cu",
      "width": 0.25,
      "path": [
@@ -643,7 +643,7 @@
      ]
     },
     {
-     "net": "/I2C_INT",
+     "net": "/EXP_INT",
      "layer": "B.Cu",
      "width": 0.25,
      "path": [
@@ -670,7 +670,7 @@
      ]
     },
     {
-     "net": "/I2C_INT",
+     "net": "/EXP_INT",
      "layer": "F.Cu",
      "width": 0.25,
      "path": [
@@ -695,7 +695,7 @@
    ],
    "vias": [
     {
-     "net": "/I2C_INT",
+     "net": "/EXP_INT",
      "at": [
       22.358,
       70.38
@@ -704,7 +704,7 @@
      "drill": 0.3
     },
     {
-     "net": "/I2C_INT",
+     "net": "/EXP_INT",
      "at": [
       25.108,
       69.18
@@ -713,7 +713,7 @@
      "drill": 0.3
     },
     {
-     "net": "/I2C_INT",
+     "net": "/EXP_INT",
      "at": [
       23.558,
       67.13
@@ -722,7 +722,7 @@
      "drill": 0.3
     },
     {
-     "net": "/I2C_INT",
+     "net": "/EXP_INT",
      "at": [
       20.258,
       61.78
@@ -787,10 +787,10 @@
    ]
   },
   "int-u5-escape": {
-   "_why": "R-INT-01 charger branch: U5 pin 11 leaves east at 0.15 mm width between pad 10's corner and the SDA via (0.14 mm each side), to a via at the bottom of the column (0.25 mm from L1's SYS pad, 0.15 from pad 10). The via crosses the SYS pour on F.Cu and the SW island on In2 (antipads only, as the SDA/SCL vias do); estimated SW coupling on B.Cu ~0.09 pF.",
+   "_why": "R-INT-01 CHG_INT: U5 pin 11 leaves east at 0.15 mm width between pad 10's corner and the SDA via (0.14 mm each side), to a via at the bottom of the column (0.25 mm from L1's SYS pad, 0.15 from pad 10). The via crosses the SYS pour on F.Cu and the SW island on In2 (antipads only, as the SDA/SCL vias do); estimated SW coupling on B.Cu ~0.09 pF.",
    "tracks": [
     {
-     "net": "/I2C_INT",
+     "net": "/CHG_INT",
      "layer": "F.Cu",
      "width": 0.15,
      "path": [
@@ -811,7 +811,7 @@
    ],
    "vias": [
     {
-     "net": "/I2C_INT",
+     "net": "/CHG_INT",
      "at": [
       24.2,
       40.276
@@ -822,10 +822,10 @@
    ]
   },
   "int-chg-west": {
-   "_why": "R-INT-01 charger branch: from the U5 column via to the expander branch's via at (20.26,61.78). Every way south from U5 is walled in on F.Cu (SYS pour, C4/C11), In2 (SW island, Pack+ V) and B.Cu (TS pair, BAT+); the only clean way round is the west end. Found with a zone-aware 3-layer A* (scratch pcb_path3.py: fills of non-GND nets are obstacles, L1 +0.15/0.3 kept out, footprint keepouts honoured) at 0.12 mm clearance: 51 mm, B.Cu north-west round U5, south under the module body 3 mm east of the antenna keepout (x 6.3), F.Cu and In2 hops at y 61.9 (2.1 mm across +3.1V). The A* 0.05 mm jog at (12.3-12.65, 46.45) became a 0.35 mm east step at y 46.10, passing 0.47 mm north of the +3.1V via at (12.14,46.92); the x 9.3 leg cannot move east (BAT+).",
+   "_why": "R-INT-01 CHG_INT: from the U5 column via to U4 IO15 (pad 26). Every way south from U5 is walled in on F.Cu (SYS pour, C4/C11), In2 (SW island, Pack+ V) and B.Cu (TS pair, BAT+); the only clean way round is the west end. Found with a zone-aware 3-layer A* (scratch pcb_path3.py: fills of non-GND nets are obstacles, L1 +0.15/0.3 kept out, footprint keepouts honoured) at 0.12 mm clearance: B.Cu north-west round U5 and south under the module body 3 mm east of the antenna keepout (x 6.3). The A* 0.05 mm jog at (12.3-12.65, 46.45) became a 0.35 mm east step at y 46.10, passing 0.47 mm north of the +3.1V via at (12.14,46.92); the x 9.3 leg cannot move east (BAT+). 2026-10-21 split from the expander line: under the module the B.Cu turns east at y 55.48 (0.48 mm north of the pad-61 GND vias, south of the UART pair's diagonals), passes under the UART TX run at y 56.23 to one via at (19.05,56.23) in the F.Cu pocket between ePaper BUSY and pads 22-27, and enters pad 26 from the west (pcb_path3 found the same corridor at 0.15 mm). The old tail (F.Cu/In2 hops at y 61.9, 2 vias) is gone.",
    "tracks": [
     {
-     "net": "/I2C_INT",
+     "net": "/CHG_INT",
      "layer": "B.Cu",
      "width": 0.2,
      "path": [
@@ -879,60 +879,52 @@
       ],
       [
        11.6,
-       58.1
+       55.08
       ],
       [
-       15.4,
-       61.9
+       12.0,
+       55.48
+      ],
+      [
+       17.55,
+       55.48
+      ],
+      [
+       18.3,
+       56.23
+      ],
+      [
+       19.05,
+       56.23
       ]
      ]
     },
     {
-     "net": "/I2C_INT",
+     "net": "/CHG_INT",
      "layer": "F.Cu",
      "width": 0.2,
      "path": [
       [
-       15.4,
-       61.9
+       19.05,
+       56.23
       ],
       [
-       17.35,
-       61.9
-      ]
-     ]
-    },
-    {
-     "net": "/I2C_INT",
-     "layer": "PWR",
-     "width": 0.2,
-     "path": [
-      [
-       17.35,
-       61.9
+       20.65,
+       54.63
       ],
       [
-       20.05,
-       61.9
+       21.008,
+       54.63
       ]
      ]
     }
    ],
    "vias": [
     {
-     "net": "/I2C_INT",
+     "net": "/CHG_INT",
      "at": [
-      15.4,
-      61.9
-     ],
-     "size": 0.5,
-     "drill": 0.3
-    },
-    {
-     "net": "/I2C_INT",
-     "at": [
-      17.35,
-      61.9
+      19.05,
+      56.23
      ],
      "size": 0.5,
      "drill": 0.3

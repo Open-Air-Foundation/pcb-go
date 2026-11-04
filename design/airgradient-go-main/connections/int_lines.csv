@@ -3,5 +3,5 @@ ref,pin,pin_name,net,note
 U5,11,~{INT},CHG_INT,was NC flag; open drain, 256 us low pulse
 U4,26,IO15,CHG_INT,was unused label IO15; internal pull-up; not an LP pin (no deep-sleep wake)
 U17,11,~{INT},EXP_INT,was floating; open drain, aggregates P4 touch INT and P5 ACC_INT
-U4,19,IO7,EXP_INT,was unused label IO7; internal pull-up; JTAG-source strap ignored while EFUSE_JTAG_SEL_ENABLE = 0
+U4,17,IO1,EXP_INT,v3 2026-11-03: moved from IO7 (pad 19) to LP_GPIO1 so it wakes from deep sleep; internal pull-up (R-V3-02)
 U5,10,STAT,NC,unchanged

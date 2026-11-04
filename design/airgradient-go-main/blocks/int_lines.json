@@ -16,7 +16,7 @@
   "connect": [],
   "notes": [
     {
-      "text": "CHG_INT: U5 BQ25628 ~INT -> U4 IO15 (R-INT-01)\n  open drain, 256 us low pulse (SLUSEG4C 8.3.8.3)\nEXP_INT: U17 TCA6408A ~INT -> U4 IO7 (R-INT-01)\n  touch P4 + ACC_INT P5, held until read (SCPS192E 8.3.3)\nPull-ups: ESP32 internal on GPIO15 and GPIO7 (R-INT-03)\nLight sleep only, no deep-sleep wake (R-INT-04)",
+      "text": "CHG_INT: U5 BQ25628 ~INT -> U4 IO15 (R-INT-01)\n  open drain, 256 us low pulse (SLUSEG4C 8.3.8.3)\n  not an LP pin: active and light sleep only\nEXP_INT: U17 TCA6408A ~INT -> U4 IO1 (R-V3-02)\n  touch P4 + ACC_INT P5, held until read (SCPS192E 8.3.3)\n  LP_GPIO1: also wakes the chip from deep sleep\nPull-ups: EXP_INT R61 100K, CONTROLLER pull-up row (R-V3-06)\n  CHG_INT: ESP32 internal on GPIO15 (R-INT-03)\nNAND CS: U4 IO7, was U17 P2 (R-V3-03)\n32 kHz crystal removed, IO0 spare LP GPIO (R-V3-01, -04)",
       "at": [
         349.25,
         344.17

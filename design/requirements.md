@@ -1,8 +1,59 @@
-# GO main v2.1-xtal32k: change requirements
+# GO main v3 (from v2.1-xtal32k): change requirements
 
-Status: layout done (crystal + LP I²C). Requirements and part approved by Tanapat 2026-10-19. Interrupt lines (R-INT): done 2026-10-20 as a wired-OR, split into two lines (charger → IO15, expander → IO7) 2026-10-21.
+Status: v3 requirements approved by Tanapat 2026-11-03 (EXP_INT on an LP GPIO 0–6: IO1, not IO26; R61 100K pull-up added). Schematic drawn and checked, not committed; layout next. Everything below the v3 section is the v2.1-xtal32k history (layout done 2026-10-21); where a v3 item supersedes it, the v3 item wins.
 
-Scope: an engineering change on top of v2.1 (branch `v2.1-xtal32k`, from 426c645). The rest of the GO main board is hand-drawn and out of scope; only the items below change.
+Scope: an engineering change on top of v2.1-xtal32k (branch `v3`, from f1cdbac). The rest of the GO main board is hand-drawn and out of scope; only the items below change.
+
+## v3 changes (Tanapat, 2026-11-03)
+Why: touch (CAP1203 `INT` on expander P4) and motion (LIS2DH12 INT1 = `ACC_INT` on P5) must be able to tell the ESP32 that something happened, including from deep sleep, while both stay on the expander. Sam asked for the NAND CS on a native GPIO so the NAND/SDSPI drivers need no fork (AGFW-867, meeting 2026-11-02). The 32 kHz crystal is no longer needed.
+
+| ID | Requirement | Number |
+|---|---|---|
+| R-V3-01 | Remove the 32 kHz crystal: Y1, C76, C77 and nets `XTAL_32K_P/N`. Supersedes R-XT-01. Firmware goes back to `CONFIG_RTC_CLK_SRC_INT_RC=y` | — |
+| R-V3-02 | `EXP_INT` (U17 TCA6408A `~INT`, open drain) moves from U4 IO7 (pad 19) to U4 IO1 (pad 17, LP_GPIO1). Touch and ACC_INT stay on P4/P5 of the expander. IO1 can wake the chip from deep sleep; IO7 could not. Supersedes the IO7 half of R-INT-01 and R-INT-04 | deep-sleep GPIO wake = GPIO0–6 (ESP-IDF v5.5.2 `soc/esp32c5/include/soc/soc_caps.h:231`); IO1 = GPIO1/LP_GPIO1 (MINI-1 v1.3 Table 3-1, pad 17) |
+| R-V3-03 | `NAND CS` (U1 `/CS`, U2 `DATA3`, R3 100K pull-up) moves from U17 P2 to U4 IO7 (pad 19). U17 P2 gets an NC flag. Not IO26 (the 2026-11-02 pin plan): on B.Cu, pads 31–34 are walled by the QON, ePaper BUSY, ePaper D/C and MISO runs, while pad 19 sits 2 mm south of the existing NAND CS trunk | IO7 = JTAG-source strap, floating by default and ignored while EFUSE_JTAG_SEL_ENABLE = 0 (MINI-1 v1.3 Table 4-1 p16, Table 4-7 p20); R3 holds CS high at reset, so the NAND stays deselected during boot |
+| R-V3-04 | U4 IO0 (pad 16) is left unused (label `IO0`, house style for spare pins): the one spare LP GPIO, e.g. for `CHG_INT` later if USB plug-in should wake the chip from deep sleep | GPIO0/LP_GPIO0 (MINI-1 v1.3 Table 3-1, pad 16) |
+| R-V3-05 | Unchanged: `CHG_INT` on IO15 (internal pull-up, R-INT-03 still holds for it), ePaper CS on IO6, LP I²C on IO2/IO3, WD_RST on IO4, ePaper D/C and RES where they are | — |
+| R-V3-06 | R61 100K pull-up from `EXP_INT` to +3.1V, placed next to U4 pad 17 with one via to the In2 +3.1V plane (the freed crystal area). Supersedes R-INT-03 for EXP_INT. Why: EXP_INT is now the deep-sleep wake source, and an internal pull-up only exists while firmware keeps it (RTC_PERIPH on, or HOLD); the expander's INT is open drain. 100K like R3/R39/R60 (Tanapat, 2026-11-03) | TCA6408A SCPS192E Table 5-1 p3 ("Connect to VCCI through a pull-up resistor"), §8.3.3 p20; ESP-IDF v5.5.4 `esp_sleep.h`, `esp_sleep_enable_ext1_wakeup_io` note ("Internal pullups and pulldowns don't work when RTC peripherals are shut down… external resistors need to be added"); 3.1 V / 100K = 31 µA only while INT is low; rise ≈ 100K × 20 pF = 2 µs |
+
+Pin budget (only the pins that change):
+
+| Pin | v2.1-xtal32k | v3 |
+|---|---|---|
+| U4 pad 16, IO0 (LP) | `XTAL_32K_P` | `IO0`, unused (spare LP GPIO) |
+| U4 pad 17, IO1 (LP) | `XTAL_32K_N` | `EXP_INT` |
+| U4 pad 19, IO7 | `EXP_INT` | `NAND CS` |
+| U17 pin 4, P2 | `NAND CS` | NC |
+| R61 (new) | — | 100K, `EXP_INT` → +3.1V |
+
+Checked on the ESP32-C5 (2026-11-03, ESP-IDF v5.5.4 73550728): deep-sleep GPIO wake is GPIO0–6 (`soc_caps.h:231`, 7 LP IOs at `:248`); EXT1 is supported with a per-pin level (`:639–640`); `esp_sleep_is_valid_wakeup_gpio` checks `RTC_GPIO_IS_VALID_GPIO` (`sleep_modes.c:1885`); GPIO1 is a plain GPIO unless `RTC_CLK_SRC_EXT_CRYS` is chosen, and the default is `INT_RC` (`esp_hw_support/port/esp32c5/Kconfig.rtc:3`). GO firmware already wakes from deep sleep through EXT1 ANY_LOW on GPIO5, the power button (`go_power.cpp:839–850`, `board_config.h:110`); the boot button on GPIO28 is left out because it is not an LP pin.
+
+Interrupt sources behind the expander (2026-11-03):
+
+| Source | Output | Held or pulse | Pull-up |
+|---|---|---|---|
+| CAP1203 `ALERT#` → P4 | open drain, active low (DS00001572B Table 1-1 p4) | Held until the host clears the INT bit in Main Control (§4.8 p17, p22). Fires on touch and, by default, on release (`INT_REL_n = 0`, Config 2 44h, p27) | R38 100K to VCC on the touch board |
+| LIS2DH12 `INT1` → P5 | push-pull, active high by default (DocID025056 Rev 6 p21; `INT_POLARITY`, CTRL_REG6, p38) | Pulse by default: high only while the condition holds. Held when `LIR_INT1 = 1` (CTRL_REG5 24h bit 3, §8.10 p38) until `INT1_SRC` (31h) is read (§8.20 p42). Click has its own latch, `LIR_Click` (CLICK_THS 3Ah bit 7, §8.29 p47), cleared by reading `CLICK_SRC` (39h) | not needed |
+
+The TCA6408A clears `~INT` when the port is read or when an input returns to its old level (SCPS192E §8.3.3 p20). A pulse that ends before the ESP32 reads the port therefore leaves no trace, which is why every source must be latched.
+
+Firmware impact (v3):
+- **Pins.** `EXP_INT = GPIO1`, `NAND_CS = GPIO7` (native GPIO; the NAND/SDSPI drivers use their stock CS handling, no fork). `CHG_INT` stays GPIO15.
+- **RTC clock.** Back to `CONFIG_RTC_CLK_SRC_INT_RC=y`; the v2.1-xtal32k setting `RTC_CLK_SRC_EXT_CRYS` must not be used on v3.
+- **Deep-sleep wake.** Add GPIO1 to the EXT1 mask next to GPIO5: `wake_mask |= 1ULL << 1`, `ESP_EXT1_WAKEUP_ANY_LOW`. Check the return value of `esp_sleep_enable_ext1_wakeup`: a non-LP pin in the mask returns `ESP_ERR_INVALID_ARG` and arms nothing, the power button included. Find the source with `esp_sleep_get_ext1_wakeup_status()`.
+- **Pull-up.** R61 is external, so the internal pull-up on GPIO1 can stay off (it would only add current while INT is low). GPIO15 keeps its internal pull-up.
+- **LIS2DH12.** Set `LIR_INT1 = 1` (CTRL_REG5 bit 3) for motion wake through IA1; if click is used on INT1, set `LIR_Click = 1` (CLICK_THS bit 7). Keep the sensor in a low-power detect mode during deep sleep, or nothing can raise INT1.
+- **CAP1203.** Leave the touch IC sampling in standby during deep sleep (it is the only thing that can raise `ALERT#`). Decide whether release events are wanted; `INT_REL_n = 1` turns them off and halves the wake-ups per touch.
+- **Wake sequence.** (1) read the TCA6408A input port to see the source (P4 low = touch, P5 high = motion); (2) clear it at the source: write 0 to the CAP1203 INT bit, or read `INT1_SRC`/`CLICK_SRC`; (3) read the port again, because the source letting go is another input change that pulls `~INT` low; (4) only then enter sleep. If `~INT` is still low when sleep starts, EXT1 wakes the chip at once.
+- **Touch and ACC_INT polling** can go; both arrive through `EXP_INT`.
+
+Blocks (v3):
+1. Remove block `rtc32k` with `sch_writer.py remove` (Y1, C76, C77, their wires and labels, the frame and its note, and the U17 P7 NC flag it created; that flag comes back as a hand edit).
+2. Hand edits (intent `connections/v3_pins.csv`): U4 pin 16 label `XTAL_32K_P` → `IO0`; pin 17 `XTAL_32K_N` → `EXP_INT`; pin 19 `EXP_INT` → `NAND CS`; U17 pin 4 label `NAND CS` → NC flag; U17 pin 10 (P7) NC flag back.
+3. `int_lines` frame note updated to the v3 pins.
+4. Hand edit in CONTROLLER (Tanapat, 2026-11-03): R61 100K added to the pull-up row at (237.49, 36.83), 12.7 mm right of R38, same style (+3.1V on top, `EXP_INT` label below). The old RTC 32K frame area is empty.
+
+Schematic checks (2026-11-03): `sch_lint` 0 error / 0 warning on the INT LINE block; `net_diff` 29 pins, 0 error; ERC 268 messages = baseline 267 + one `isolated_pin_label` for the spare `IO0` label (house style), errors 14 = baseline.
 
 ## Why
 Battery life. The ESP32-C5 currently runs its RTC from the internal RC (`CONFIG_RTC_CLK_SRC_INT_RC=y`). A 32.768 kHz crystal gives BLE modem sleep and light sleep an accurate sleep clock (Sam's power research, `go/feat/pm`, 2026-10-17).

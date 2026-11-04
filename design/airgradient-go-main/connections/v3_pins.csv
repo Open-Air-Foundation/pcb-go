@@ -1,0 +1,20 @@
+# v3 pin changes intent (2026-11-03). Sources: ESP32-C5-MINI-1 datasheet v1.3 Table 3-1 p14 (pads), Table 4-1 p16 and Table 4-7 p20 (GPIO7 strap); ESP-IDF v5.5.2 soc/esp32c5/include/soc/soc_caps.h:231 (deep-sleep GPIO wake = GPIO0-6); TCA6408A SCPS192E 8.3.3 (open-drain INT held until the input port is read); requirements R-V3-01..05
+ref,pin,pin_name,net,note
+U4,16,IO0,IO0,was XTAL_32K_P; spare LP GPIO, unused label (R-V3-04)
+U4,17,IO1,EXP_INT,was XTAL_32K_N; LP_GPIO1, wakes from deep sleep; internal pull-up (R-V3-02)
+U17,11,~{INT},EXP_INT,unchanged; open drain, aggregates P4 touch INT and P5 ACC_INT
+U4,19,IO7,NAND CS,was EXP_INT; JTAG-source strap ignored while EFUSE_JTAG_SEL_ENABLE = 0 (R-V3-03)
+U17,4,P2,NC,was NAND CS (R-V3-03)
+U17,10,P7,NC,unused; flag was created by the removed rtc32k block, re-added by hand
+U1,1,/CS,NAND CS,W25N512GV chip select
+U2,2,DATA3,NAND CS,ZDSD512 CS (SPI mode)
+R3,1,,NAND CS,100K pull-up keeps CS high at reset
+U5,11,~{INT},CHG_INT,unchanged (R-V3-05)
+U4,26,IO15,CHG_INT,unchanged (R-V3-05)
+# ePaper CS rows moved here from the removed rtc32k.csv (R-XT-02 still holds)
+U4,10,IO6,ePaper CS,unchanged since v2.1-xtal32k
+R39,2,,ePaper CS,100K pull-up
+FPC1,12,,ePaper CS,display CS
+# R-V3-06: external pull-up on EXP_INT (deep-sleep wake source)
+R61,1,,EXP_INT,100K pull-up; hand-drawn in the CONTROLLER pull-up row next to R38
+R61,2,,+3.1V,In2 +3.1V plane via next to U4 pad 17

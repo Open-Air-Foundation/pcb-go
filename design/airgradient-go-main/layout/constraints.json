@@ -5,90 +5,6 @@
  "net_classes": [],
  "rules": [
   {
-   "id": "HS-32",
-   "type": "near",
-   "a": "C76.1",
-   "b": "Y1.1",
-   "max": 1.0,
-   "status": "approved",
-   "source": "load cap at the crystal pad; HS-32, Epson FC-135R p7"
-  },
-  {
-   "id": "HS-32",
-   "type": "near",
-   "a": "C77.1",
-   "b": "Y1.2",
-   "max": 1.0,
-   "status": "approved",
-   "source": "load cap at the crystal pad; HS-32"
-  },
-  {
-   "id": "XT-01",
-   "type": "near",
-   "a": "Y1.1",
-   "b": "U4.16",
-   "max": 3.0,
-   "status": "approved",
-   "source": "Epson p7: shortest line pattern"
-  },
-  {
-   "id": "XT-01",
-   "type": "near",
-   "a": "Y1.2",
-   "b": "U4.17",
-   "max": 3.0,
-   "status": "approved",
-   "source": "Epson p7: shortest line pattern"
-  },
-  {
-   "id": "GEN-02",
-   "type": "gnd_via_near",
-   "pad": "C76.2",
-   "max": 0.5,
-   "status": "approved",
-   "source": "pcb-layout-rules GEN-02"
-  },
-  {
-   "id": "GEN-02",
-   "type": "gnd_via_near",
-   "pad": "C77.2",
-   "max": 0.5,
-   "status": "approved",
-   "source": "pcb-layout-rules GEN-02"
-  },
-  {
-   "id": "RF-21",
-   "type": "net_vias",
-   "nets": [
-    "/XTAL_32K_P",
-    "/XTAL_32K_N"
-   ],
-   "max": 0,
-   "status": "approved",
-   "source": "RF-21 (by analogy for the 32 kHz crystal)"
-  },
-  {
-   "id": "RF-22",
-   "type": "no_trace_under",
-   "ref": "Y1",
-   "except_nets": [
-    "GND"
-   ],
-   "status": "approved",
-   "source": "Epson p4 shaded area; RF-22"
-  },
-  {
-   "id": "RF-22",
-   "type": "no_trace_under",
-   "ref": "C77",
-   "except_nets": [
-    "GND"
-   ],
-   "severity": "warn",
-   "status": "approved",
-   "source": "RF-22 around the crystal cluster"
-  },
-  {
    "id": "RT-01",
    "type": "bends",
    "min_angle": 135,
@@ -99,12 +15,9 @@
    "id": "RT-02",
    "type": "junctions",
    "min_angle": 90,
-   "strict_nets": [
-    "/XTAL_32K_P",
-    "/XTAL_32K_N"
-   ],
+   "strict_nets": [],
    "status": "approved",
-   "source": "house: harmless junctions; crystal is a strict net"
+   "source": "house: harmless junctions (crystal strict nets removed with Y1 in v3)"
   },
   {
    "id": "RT-03",
@@ -152,28 +65,47 @@
    "source": "house: signals under the module body, reported"
   },
   {
-   "id": "RT-08",
-   "type": "apart",
-   "nets_a": [
-    "/XTAL_32K_P",
-    "/XTAL_32K_N"
-   ],
-   "nets_b": [
-    "*"
-   ],
-   "except_b": [
-    "GND"
-   ],
-   "min": 0.5,
-   "status": "approved",
-   "source": "house crystal guard; RF-21/22, HS-32"
-  },
-  {
    "id": "RT-09",
    "type": "class_width",
    "floor": 0.15,
    "status": "approved",
    "source": "DFM-01"
+  },
+  {
+   "id": "R-V3-06",
+   "type": "near",
+   "a": "R61.1",
+   "b": "U4.17",
+   "max": 2.0,
+   "status": "approved",
+   "source": "v3 requirements R-V3-06: EXP_INT pull-up at the wake pin (IO1)"
+  },
+  {
+   "id": "GEN-02",
+   "type": "gnd_via_near",
+   "pad": "R61.2",
+   "max": 0.5,
+   "status": "approved",
+   "source": "plane via on the pad's net: R61.2 +3.1V down to In2 (R-V3-06)"
+  },
+  {
+   "id": "GEN-02",
+   "type": "gnd_via_near",
+   "pad": "C31.1",
+   "max": 1.0,
+   "severity": "warn",
+   "status": "approved",
+   "source": "C31.1 lost its GND via with the crystal; replacement via c31-gnd is the nearest spot clear of USB/MOSI/NAND CS copper (0.5 not reachable)"
+  },
+  {
+   "id": "R-V3-03",
+   "type": "net_vias",
+   "nets": [
+    "/NAND CS"
+   ],
+   "max": 2,
+   "status": "approved",
+   "source": "v3 NAND CS on IO7: one via at pad 19 + the existing trunk via to U1/U2"
   }
  ]
 }

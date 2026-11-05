@@ -811,7 +811,7 @@
         "uuid": "63bfc1c7-4623-455a-8f83-dca1d491c7db"
       }
     ],
-    "used_designators": "CN2-3,U21",
+    "used_designators": "U21,CN2-3",
     "variants": []
   },
   "sheets": [

@@ -19092,9 +19092,116 @@
 		(color 0 0 0 0)
 		(uuid "fd411e59-f7e2-433e-a5b7-a3ed170fe9c4")
 	)
-	(no_connect
-		(at 236.22 179.07)
-		(uuid "1b36b54f-94f7-46ed-883a-cfd82c23f291")
+	(wire
+		(pts
+			(xy 190.5 107.95) (xy 194.31 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2099bce1-0bae-41bf-aada-c14911892817")
+	)
+	(wire
+		(pts
+			(xy 201.93 107.95) (xy 205.74 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55181f27-d013-4373-8caa-424309a5ac0a")
+	)
+	(label "SCLK"
+		(at 190.5 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f33ac583-1c94-44e4-b529-a100c5fc7c49")
+	)
+	(label "ePaper SCLK"
+		(at 205.74 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "196a547b-d063-41b1-87a6-52a4d857e254")
+	)
+	(wire
+		(pts
+			(xy 190.5 115.57) (xy 194.31 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8abb4c06-2f02-48bd-868c-eb5be655aa21")
+	)
+	(wire
+		(pts
+			(xy 201.93 115.57) (xy 205.74 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba4c6a7d-fe83-4a68-9680-91c37132f46b")
+	)
+	(label "SCLK"
+		(at 190.5 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "123f936f-1523-4748-b0b9-f94353d77091")
+	)
+	(label "NAND SCLK"
+		(at 205.74 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8e03cee5-2eef-4ec7-a08a-8ca7dee7e824")
+	)
+	(text "R63, R64: SCLK source series, one per branch, at U4 IO23 (R-V3-10).\nZ0 about 58 ohm less R_drv 33 ohm parallel with the other branch = 34 ohm, so 33R."
+		(exclude_from_sim no)
+		(at 190.5 122.0 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8fe0441f-5d16-4629-ae5d-641865b8119e")
+	)
+	(wire
+		(pts
+			(xy 236.22 179.07) (xy 247.65 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be4f2ccf-b15a-4373-86b3-abe692781e96")
+	)
+	(label "ePaper RES"
+		(at 247.65 179.07 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "65252249-bf5b-44ef-b804-98521044ac22")
 	)
 	(no_connect
 		(at 236.22 191.77)
@@ -19208,9 +19315,25 @@
 		(at 349.25 35.56)
 		(uuid "f9148f72-4798-499e-af72-fe5959c29fa5")
 	)
-	(no_connect
-		(at 402.59 316.23)
-		(uuid "fd815fab-1bfd-4103-8ebf-2c14e10d1f0b")
+	(wire
+		(pts
+			(xy 402.59 316.23) (xy 407.67 316.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1745f193-c229-456c-a829-9262ef547182")
+	)
+	(label "EEPA"
+		(at 407.67 316.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "78ea4062-d143-4edf-80aa-12e0d5589b45")
 	)
 	(wire
 		(pts
@@ -27652,7 +27775,7 @@
 		)
 		(uuid "0bad80bf-4d9e-4cb7-8b9b-09fa58f0b7d2")
 	)
-	(label "SCLK"
+	(label "NAND SCLK"
 		(at 38.1 175.26 0)
 		(effects
 			(font
@@ -27952,7 +28075,7 @@
 		)
 		(uuid "2c16a09a-a02d-4817-9644-23e53d2dbdb5")
 	)
-	(label "SCLK"
+	(label "NAND SCLK"
 		(at 450.85 275.59 0)
 		(effects
 			(font
@@ -28092,7 +28215,7 @@
 		)
 		(uuid "3f622106-6802-4602-89a7-8b009515444c")
 	)
-	(label "ePaper RES"
+	(label "EEPA"
 		(at 120.65 88.9 0)
 		(effects
 			(font
@@ -28272,7 +28395,7 @@
 		)
 		(uuid "645f8083-3538-4c97-afed-5967ee41d59a")
 	)
-	(label "SCLK"
+	(label "ePaper SCLK"
 		(at 312.42 48.26 0)
 		(effects
 			(font
@@ -28392,7 +28515,7 @@
 		)
 		(uuid "726e3956-38c2-4005-823e-1d4e18469cf9")
 	)
-	(label "IO0"
+	(label "CHG_INT"
 		(at 115.57 63.5 0)
 		(effects
 			(font
@@ -28642,7 +28765,7 @@
 		)
 		(uuid "928118bf-d87b-423f-b6bd-e893056d2377")
 	)
-	(label "CHG_INT"
+	(label "IO15"
 		(at 176.53 76.2 180)
 		(effects
 			(font
@@ -28682,7 +28805,7 @@
 		)
 		(uuid "992e7230-d2c4-4974-a618-1aab0a585068")
 	)
-	(label "SCLK"
+	(label "NAND SCLK"
 		(at 87.63 139.7 180)
 		(effects
 			(font
@@ -29445,6 +29568,210 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 198.12 107.95 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8fd6597d-e3dd-4961-902b-12ef3d38071d")
+		(property "Reference" "R63"
+			(at 198.12 110.744 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 198.12 113.284 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 198.12 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C25105.html"
+			(at 198.12 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "0402WGF330JTCE"
+			(at 198.12 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25105"
+			(at 198.12 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 198.12 107.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "92b7e127-bd1f-4a01-95b5-b01e65ad6d77")
+		)
+		(pin "1"
+			(uuid "6666dc55-cff9-43ad-ab73-bf9ef9f1d291")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "R63")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 198.12 115.57 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "94a98587-c9a8-427f-abe4-11dc6dc0c012")
+		(property "Reference" "R64"
+			(at 198.12 118.364 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 198.12 120.904 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 198.12 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C25105.html"
+			(at 198.12 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "0402WGF330JTCE"
+			(at 198.12 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25105"
+			(at 198.12 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 198.12 115.57 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "5159ebf7-0fd6-4c56-9e72-f3fc7c162bc6")
+		)
+		(pin "1"
+			(uuid "65655c70-c30b-4e72-8aff-3672595cb4ff")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "R64")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 237.49 36.83 180)
 		(unit 1)
 		(body_style 1)
@@ -29655,6 +29982,219 @@
 			(justify left bottom)
 		)
 		(uuid "135c730c-8b17-4c40-a50d-5d259910c606")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 250.19 36.83 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d5064f31-06b2-490d-ae3e-0dc07831c41b")
+		(property "Reference" "R62"
+			(at 252.73 35.5599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100K"
+			(at 252.73 38.0999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 257.81 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_100KR-1003-1_C60491.html"
+			(at 260.35 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "MR04X1002FTL"
+			(at 250.19 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C60491"
+			(at 262.89 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 250.19 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "35672d92-664e-4d67-8490-60831018f92f")
+		)
+		(pin "2"
+			(uuid "4918a8fd-83eb-4565-8d4c-bcc3b5a395ab")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "R62")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VDD")
+		(at 250.19 27.94 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9993f5c1-5993-4212-b8e6-90db6bc8233b")
+		(property "Reference" "#PWR0172"
+			(at 250.19 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.1V"
+			(at 252.73 26.6699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 250.19 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VDD\""
+			(at 250.19 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ca2d9fb1-3170-4981-a8c8-e996a6afd383")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "#PWR0172")
+					(unit 1)
+				)
+			)
+		)
+	)
+		(wire
+		(pts
+			(xy 250.19 40.64) (xy 250.19 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f6f804f-57ed-41e3-8865-f041a83d8bb9")
+	)
+		(wire
+		(pts
+			(xy 250.19 27.94) (xy 250.19 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcfaa007-724d-423b-a656-e5bf35ab4e07")
+	)
+		(label "CHG_INT"
+		(at 250.19 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f133c05f-fb13-47e1-90a9-a50b46addc0e")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -50819,7 +51359,219 @@
 				)
 			)
 		)
+	)	(symbol
+		(lib_id "Device:C")
+		(at 172.72 284.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c2c0be3a-ce13-4712-a8ca-15ec6ec062b1")
+		(property "Reference" "C78"
+			(at 176.53 283.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF/25V"
+			(at 176.53 285.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 165.1 284.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL05A104KA5NNNC_100nF-104-10-25V_C100072.html"
+			(at 162.56 284.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 172.72 284.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C100072"
+			(at 160.02 284.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 172.72 284.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2bc72ecc-ddd1-4c5d-9135-53f1dd62e9ec")
+		)
+		(pin "2"
+			(uuid "32580e5d-31f1-4ec4-9513-056f0f121836")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "C78")
+					(unit 1)
+				)
+			)
+		)
+	)	(symbol
+		(lib_id "power:Earth")
+		(at 172.72 290.83 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ff74496f-c0be-411b-a437-9ee5096eafc7")
+		(property "Reference" "#PWR0173"
+			(at 172.72 297.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PGND"
+			(at 175.26 292.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 172.72 290.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 172.72 290.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
+			(at 172.72 290.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "62b6cb5b-1a6a-4e4b-8d4f-29c3fdd944c3")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "#PWR0173")
+					(unit 1)
+				)
+			)
+		)
+	)	(wire
+		(pts
+			(xy 172.72 280.67) (xy 172.72 276.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75ba04dc-e09d-4171-8eb0-7ece192e6fba")
 	)
+	(wire
+		(pts
+			(xy 172.72 288.29) (xy 172.72 290.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f3f98a9-5e84-4e06-8303-f010741d0f70")
+	)
+	(label "BAT-"
+		(at 172.72 276.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "74174607-c860-49ad-9f3f-642f0ab99fe9")
+	)
+
 	(symbol
 		(lib_id "power:Earth")
 		(at 189.23 402.59 0)

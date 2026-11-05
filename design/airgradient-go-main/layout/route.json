@@ -1,914 +1,1406 @@
 {
- "groups": {
-  "mosi-u1": {
-   "_why": "MOSI U4 trunk -> U1.5 (W25N DI) above the RTC crystal (old path ran down the crystal column). 0.5/0.3 via = board via size; 0.53 mm from C77 XTAL_N pad.",
-   "tracks": [
-    {
-     "net": "/MOSI",
-     "layer": "F.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       26.405,
-       58.345
+  "groups": {
+    "mosi-u1": {
+      "_why": "MOSI U4 trunk -> U1.5 (W25N DI) above the RTC crystal (old path ran down the crystal column). 0.5/0.3 via = board via size; 0.53 mm from C77 XTAL_N pad.",
+      "tracks": [
+        {
+          "net": "/MOSI",
+          "layer": "F.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              26.405,
+              58.345
+            ],
+            [
+              25.918,
+              58.84
+            ],
+            [
+              22.868,
+              58.84
+            ]
+          ]
+        },
+        {
+          "net": "/MOSI",
+          "layer": "B.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              22.868,
+              58.84
+            ],
+            [
+              22.818,
+              58.79
+            ],
+            [
+              22.818,
+              54.76
+            ],
+            [
+              22.978,
+              54.6
+            ]
+          ]
+        }
       ],
-      [
-       25.918,
-       58.84
-      ],
-      [
-       22.868,
-       58.84
+      "vias": [
+        {
+          "net": "/MOSI",
+          "at": [
+            22.868,
+            58.84
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        }
       ]
-     ]
     },
-    {
-     "net": "/MOSI",
-     "layer": "B.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       22.868,
-       58.84
+    "mosi-sd": {
+      "_why": "MOSI U1.5 -> U2.5 (SD NAND, DNP) on the right of the RTC crystal (>= 1.4 mm from its pads), replacing the old path down the crystal column.",
+      "tracks": [
+        {
+          "net": "/MOSI",
+          "layer": "F.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              26.4,
+              67.83
+            ],
+            [
+              26.4,
+              62.495
+            ],
+            [
+              25.7,
+              61.795
+            ]
+          ]
+        },
+        {
+          "net": "/MOSI",
+          "layer": "B.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              25.7,
+              61.795
+            ],
+            [
+              25.7,
+              58.895
+            ]
+          ]
+        },
+        {
+          "net": "/MOSI",
+          "layer": "F.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              25.7,
+              58.895
+            ],
+            [
+              26.1,
+              58.495
+            ],
+            [
+              26.405,
+              58.345
+            ]
+          ]
+        }
       ],
-      [
-       22.818,
-       58.79
-      ],
-      [
-       22.818,
-       54.76
-      ],
-      [
-       22.978,
-       54.6
+      "vias": [
+        {
+          "net": "/MOSI",
+          "at": [
+            25.7,
+            61.795
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        },
+        {
+          "net": "/MOSI",
+          "at": [
+            25.7,
+            58.895
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        }
       ]
-     ]
-    }
-   ],
-   "vias": [
-    {
-     "net": "/MOSI",
-     "at": [
-      22.868,
-      58.84
-     ],
-     "size": 0.5,
-     "drill": 0.3
-    }
-   ]
-  },
-  "mosi-sd": {
-   "_why": "MOSI U1.5 -> U2.5 (SD NAND, DNP) on the right of the RTC crystal (>= 1.4 mm from its pads), replacing the old path down the crystal column.",
-   "tracks": [
-    {
-     "net": "/MOSI",
-     "layer": "F.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       26.4,
-       67.83
-      ],
-      [
-       26.4,
-       62.495
-      ],
-      [
-       25.7,
-       61.795
-      ]
-     ]
     },
-    {
-     "net": "/MOSI",
-     "layer": "B.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       25.7,
-       61.795
+    "lp-i2c-scl": {
+      "_why": "LP I2C SCL = U4 IO3 (pad 7), R-LP-01: same corridor as SDA, south lane, to the SCL bus via at (120.02,120.21). pcb_path A*.",
+      "tracks": [
+        {
+          "net": "/SCL",
+          "layer": "F.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              13.158,
+              64.18
+            ],
+            [
+              13.158,
+              63.81
+            ],
+            [
+              13.508,
+              63.46
+            ]
+          ]
+        },
+        {
+          "net": "/SCL",
+          "layer": "B.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              13.508,
+              63.46
+            ],
+            [
+              15.358,
+              63.46
+            ]
+          ]
+        },
+        {
+          "net": "/SCL",
+          "layer": "F.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              15.358,
+              63.46
+            ],
+            [
+              17.47,
+              63.46
+            ],
+            [
+              19.51,
+              61.42
+            ]
+          ]
+        }
       ],
-      [
-       25.7,
-       58.895
+      "vias": [
+        {
+          "net": "/SCL",
+          "at": [
+            13.508,
+            63.46
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        },
+        {
+          "net": "/SCL",
+          "at": [
+            15.358,
+            63.46
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        }
       ]
-     ]
     },
-    {
-     "net": "/MOSI",
-     "layer": "F.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       25.7,
-       58.895
+    "lp-i2c-sda": {
+      "_why": "LP I2C SDA = U4 IO2 (pad 6), R-LP-01: into the pocket under U4, B.Cu under pads 7-9 (crossing WD_RST and QON), F.Cu north of pads 10-15 to the SDA bus via at (120.03,119.40). pcb_path A*.",
+      "tracks": [
+        {
+          "net": "/SDA",
+          "layer": "F.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              12.308,
+              64.18
+            ],
+            [
+              12.308,
+              63.95
+            ],
+            [
+              13.508,
+              62.75
+            ]
+          ]
+        },
+        {
+          "net": "/SDA",
+          "layer": "B.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              13.508,
+              62.75
+            ],
+            [
+              15.408,
+              62.75
+            ]
+          ]
+        },
+        {
+          "net": "/SDA",
+          "layer": "F.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              15.408,
+              62.75
+            ],
+            [
+              17.38,
+              62.75
+            ],
+            [
+              19.52,
+              60.61
+            ]
+          ]
+        }
       ],
-      [
-       26.1,
-       58.495
-      ],
-      [
-       26.405,
-       58.345
+      "vias": [
+        {
+          "net": "/SDA",
+          "at": [
+            13.508,
+            62.75
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        },
+        {
+          "net": "/SDA",
+          "at": [
+            15.408,
+            62.75
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        }
       ]
-     ]
-    }
-   ],
-   "vias": [
-    {
-     "net": "/MOSI",
-     "at": [
-      25.7,
-      61.795
-     ],
-     "size": 0.5,
-     "drill": 0.3
     },
-    {
-     "net": "/MOSI",
-     "at": [
-      25.7,
-      58.895
-     ],
-     "size": 0.5,
-     "drill": 0.3
-    }
-   ]
-  },
-  "lp-i2c-scl": {
-   "_why": "LP I2C SCL = U4 IO3 (pad 7), R-LP-01: same corridor as SDA, south lane, to the SCL bus via at (120.02,120.21). pcb_path A*.",
-   "tracks": [
-    {
-     "net": "/SCL",
-     "layer": "F.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       13.158,
-       64.18
+    "cs-io6": {
+      "_why": "ePaper CS from U4 IO6 (pad 10), R-XT-02: one via below the pad, B.Cu south of the pad row and up the west side to the CS trunk at (108.89,113.38); the old CS via there is gone (the route arrives on B.Cu). 0.2 mm as before. pcb_path A*.",
+      "tracks": [
+        {
+          "net": "/ePaper CS",
+          "layer": "F.Cu",
+          "width": 0.2,
+          "path": [
+            [
+              15.708,
+              64.18
+            ],
+            [
+              15.708,
+              64.423
+            ],
+            [
+              16.315,
+              65.03
+            ]
+          ]
+        },
+        {
+          "net": "/ePaper CS",
+          "layer": "B.Cu",
+          "width": 0.2,
+          "path": [
+            [
+              16.315,
+              65.03
+            ],
+            [
+              15.815,
+              65.53
+            ],
+            [
+              14.565,
+              65.53
+            ],
+            [
+              13.715,
+              66.38
+            ],
+            [
+              10.715,
+              66.38
+            ],
+            [
+              7.965,
+              63.63
+            ],
+            [
+              7.965,
+              55.0
+            ],
+            [
+              8.375,
+              54.59
+            ]
+          ]
+        }
       ],
-      [
-       13.158,
-       63.81
-      ],
-      [
-       13.508,
-       63.46
+      "vias": [
+        {
+          "net": "/ePaper CS",
+          "at": [
+            16.315,
+            65.03
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        }
       ]
-     ]
     },
-    {
-     "net": "/SCL",
-     "layer": "B.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       13.508,
-       63.46
+    "wd-rst-io4": {
+      "_why": "TPL5010 DONE from U4 IO4 (pad 8), R-LP-02: the old CS path from pad 8 with the bend raised to y 121.2 (opens room for the SDA/SCL vias NE of the INT diagonal), one 0.5/0.3 via 0.78 mm SE of the old WD_RST trunk (clear of ePaper RES 0.35 mm west of it), B.Cu onto the trunk. Replaces the WD_RST stub from IO2.",
+      "tracks": [
+        {
+          "net": "/WD_RST",
+          "layer": "F.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              14.008,
+              64.18
+            ],
+            [
+              14.008,
+              62.41
+            ],
+            [
+              9.44,
+              57.842
+            ]
+          ]
+        },
+        {
+          "net": "/WD_RST",
+          "layer": "B.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              9.44,
+              57.842
+            ],
+            [
+              8.66,
+              57.062
+            ],
+            [
+              8.66,
+              55.81
+            ]
+          ]
+        }
       ],
-      [
-       15.358,
-       63.46
+      "vias": [
+        {
+          "net": "/WD_RST",
+          "at": [
+            9.44,
+            57.842
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        }
       ]
-     ]
     },
-    {
-     "net": "/SCL",
-     "layer": "F.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       15.358,
-       63.46
+    "prtrg-dip": {
+      "_why": "R-INT-01: makes room for the EXP_INT via beside U17 pin 11. The F.Cu pocket east of the pad (SCL above, SD_CS below and east) and the free B.Cu band (EN_PM1 above, PRTRG below) did not overlap, so PRTRG (GPS trigger, expander P0 left as input) dips 0.24 mm to y 70.90 between x 21.75 and 23.04. Old B.Cu segments (23.09,70.71)-(23.04,70.66) and (23.04,70.66)-(18.94,70.66) deleted by hand (uuids 3e8fce8f, 87275bb3); the dip leaves the existing jog at (23.09,70.71) with a 45-degree turn (RT-01).",
+      "tracks": [
+        {
+          "net": "/PRTRG",
+          "layer": "B.Cu",
+          "width": 0.2,
+          "path": [
+            [
+              23.0945,
+              70.7107
+            ],
+            [
+              22.9052,
+              70.9
+            ],
+            [
+              21.99,
+              70.9
+            ],
+            [
+              21.75,
+              70.66
+            ],
+            [
+              18.9416,
+              70.66
+            ]
+          ]
+        }
       ],
-      [
-       17.47,
-       63.46
-      ],
-      [
-       19.51,
-       61.42
-      ]
-     ]
-    }
-   ],
-   "vias": [
-    {
-     "net": "/SCL",
-     "at": [
-      13.508,
-      63.46
-     ],
-     "size": 0.5,
-     "drill": 0.3
+      "vias": []
     },
-    {
-     "net": "/SCL",
-     "at": [
-      15.358,
-      63.46
-     ],
-     "size": 0.5,
-     "drill": 0.3
-    }
-   ]
-  },
-  "lp-i2c-sda": {
-   "_why": "LP I2C SDA = U4 IO2 (pad 6), R-LP-01: into the pocket under U4, B.Cu under pads 7-9 (crossing WD_RST and QON), F.Cu north of pads 10-15 to the SDA bus via at (120.03,119.40). pcb_path A*.",
-   "tracks": [
-    {
-     "net": "/SDA",
-     "layer": "F.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       12.308,
-       64.18
+    "exp-int": {
+      "_why": "R-INT-01 / R-V3-02 EXP_INT: U17 pin 11 -> U4 IO1 (pad 17), LP GPIO so the expander INT wakes the C5 from deep sleep; continues to R61.1 (100K pull-up, R-V3-06). v2.1 path kept (pcb_path --routed at 0.12 mm, 4 vias 0.5/0.3, B.Cu under the module edge west of pads 16-18); v3 ECO 2026-11-04 re-ends the last F.Cu run at pad 17 instead of pad 19 (45-degree from the via, RT-01) now that the crystal is gone, then one straight segment east to R61.",
+      "tracks": [
+        {
+          "net": "/EXP_INT",
+          "layer": "F.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              21.447,
+              70.362
+            ],
+            [
+              22.358,
+              70.38
+            ]
+          ]
+        },
+        {
+          "net": "/EXP_INT",
+          "layer": "B.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              22.358,
+              70.38
+            ],
+            [
+              23.408,
+              69.33
+            ],
+            [
+              24.958,
+              69.33
+            ],
+            [
+              25.108,
+              69.18
+            ]
+          ]
+        },
+        {
+          "net": "/EXP_INT",
+          "layer": "F.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              25.108,
+              69.18
+            ],
+            [
+              25.358,
+              68.93
+            ],
+            [
+              25.358,
+              68.38
+            ],
+            [
+              24.108,
+              67.13
+            ],
+            [
+              23.558,
+              67.13
+            ]
+          ]
+        },
+        {
+          "net": "/EXP_INT",
+          "layer": "B.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              23.558,
+              67.13
+            ],
+            [
+              21.458,
+              65.03
+            ],
+            [
+              21.458,
+              64.58
+            ],
+            [
+              20.258,
+              63.38
+            ],
+            [
+              20.258,
+              61.78
+            ]
+          ]
+        },
+        {
+          "net": "/EXP_INT",
+          "layer": "F.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              20.258,
+              61.78
+            ],
+            [
+              20.758,
+              62.28
+            ],
+            [
+              21.008,
+              62.28
+            ],
+            [
+              22.79,
+              62.28
+            ]
+          ]
+        }
       ],
-      [
-       12.308,
-       63.95
-      ],
-      [
-       13.508,
-       62.75
+      "vias": [
+        {
+          "net": "/EXP_INT",
+          "at": [
+            22.358,
+            70.38
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        },
+        {
+          "net": "/EXP_INT",
+          "at": [
+            25.108,
+            69.18
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        },
+        {
+          "net": "/EXP_INT",
+          "at": [
+            23.558,
+            67.13
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        },
+        {
+          "net": "/EXP_INT",
+          "at": [
+            20.258,
+            61.78
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        }
       ]
-     ]
     },
-    {
-     "net": "/SDA",
-     "layer": "B.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       13.508,
-       62.75
+    "u5-i2c-escape": {
+      "_why": "R-INT-01: frees a via spot for U5 pin 11. The SDA escape via moves from (24.25,39.81) to (24.20,39.62), stacked 0.65 mm under the SCL via in the 0.95 mm column between U5's east pads and L1; F.Cu stub and In2 jog redrawn (old 5 F.Cu segments, via and 3 In2 segments deleted by hand). Clearances >= 0.15.",
+      "tracks": [
+        {
+          "net": "/SDA",
+          "layer": "F.Cu",
+          "width": 0.2,
+          "path": [
+            [
+              23.3516,
+              39.5
+            ],
+            [
+              24.08,
+              39.5
+            ],
+            [
+              24.2,
+              39.62
+            ]
+          ]
+        },
+        {
+          "net": "/SDA",
+          "layer": "PWR",
+          "width": 0.25,
+          "path": [
+            [
+              24.2,
+              39.62
+            ],
+            [
+              23.9484,
+              39.62
+            ],
+            [
+              23.5766,
+              39.2482
+            ]
+          ]
+        }
       ],
-      [
-       15.408,
-       62.75
+      "vias": [
+        {
+          "net": "/SDA",
+          "at": [
+            24.2,
+            39.62
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        }
       ]
-     ]
     },
-    {
-     "net": "/SDA",
-     "layer": "F.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       15.408,
-       62.75
+    "int-u5-escape": {
+      "_why": "R-INT-01 CHG_INT: U5 pin 11 leaves east at 0.15 mm width between pad 10's corner and the SDA via (0.14 mm each side), to a via at the bottom of the column (0.25 mm from L1's SYS pad, 0.15 from pad 10). The via crosses the SYS pour on F.Cu and the SW island on In2 (antipads only, as the SDA/SCL vias do); estimated SW coupling on B.Cu ~0.09 pF. 2026-11-04: the rest of CHG_INT (west round U5, under U4, down x 17.0, F.Cu between U4 pads 13/14 into pad 16, on to R62) was re-routed by Tanapat in KiCad to remove a V at (19.05,56.23); it is unlocked board copper, not a route.json group (groups int-chg-west and chg-int-io0 removed so a pcb_route re-run cannot redraw the old path).",
+      "tracks": [
+        {
+          "net": "/CHG_INT",
+          "layer": "F.Cu",
+          "width": 0.15,
+          "path": [
+            [
+              23.35,
+              39.9
+            ],
+            [
+              23.824,
+              39.9
+            ],
+            [
+              24.2,
+              40.276
+            ]
+          ]
+        }
       ],
-      [
-       17.38,
-       62.75
-      ],
-      [
-       19.52,
-       60.61
+      "vias": [
+        {
+          "net": "/CHG_INT",
+          "at": [
+            24.2,
+            40.276
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        }
       ]
-     ]
-    }
-   ],
-   "vias": [
-    {
-     "net": "/SDA",
-     "at": [
-      13.508,
-      62.75
-     ],
-     "size": 0.5,
-     "drill": 0.3
     },
-    {
-     "net": "/SDA",
-     "at": [
-      15.408,
-      62.75
-     ],
-     "size": 0.5,
-     "drill": 0.3
-    }
-   ]
-  },
-  "cs-io6": {
-   "_why": "ePaper CS from U4 IO6 (pad 10), R-XT-02: one via below the pad, B.Cu south of the pad row and up the west side to the CS trunk at (108.89,113.38); the old CS via there is gone (the route arrives on B.Cu). 0.2 mm as before. pcb_path A*.",
-   "tracks": [
-    {
-     "net": "/ePaper CS",
-     "layer": "F.Cu",
-     "width": 0.2,
-     "path": [
-      [
-       15.708,
-       64.18
+    "nand-cs-io7": {
+      "_why": "R-V3-03 NAND CS = U4 IO7 (pad 19), replacing expander U17 P2 and its 30 mm run. Pad 19 east, 45-degree up to one 0.5/0.3 via (0.25 mm from pad 20's corner, 0.28 mm above SDA B.Cu), then B.Cu north at abs x 122.42 into the existing trunk vertex (abs 122.887,115.485; local given to the nm so the ends coincide). The via sits SW of the old crystal GND via spot so the F.Cu GND pour still reaches C31.1 between it and the MOSI via (first try at 122.62,118.46 cut C31.1 off). 45-degree bends only (RT-01), end-to-end joins (RT-02).",
+      "tracks": [
+        {
+          "net": "/NAND CS",
+          "layer": "F.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              21.008,
+              60.58
+            ],
+            [
+              21.288,
+              60.58
+            ],
+            [
+              21.908,
+              59.96
+            ]
+          ]
+        },
+        {
+          "net": "/NAND CS",
+          "layer": "B.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              21.908,
+              59.96
+            ],
+            [
+              21.908,
+              57.161992
+            ],
+            [
+              22.375,
+              56.694992
+            ]
+          ]
+        }
       ],
-      [
-       15.708,
-       64.423
-      ],
-      [
-       16.315,
-       65.03
+      "vias": [
+        {
+          "net": "/NAND CS",
+          "at": [
+            21.908,
+            59.96
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        }
       ]
-     ]
     },
-    {
-     "net": "/ePaper CS",
-     "layer": "B.Cu",
-     "width": 0.2,
-     "path": [
-      [
-       16.315,
-       65.03
+    "r61-3v1": {
+      "_why": "R-V3-06 R61.2 (+3.1V) to a 0.5/0.3 via down to the In2 (PWR) +3.1V plane, 0.7 mm east of the pad, inside the old crystal column (In2 is +3.1V there).",
+      "tracks": [
+        {
+          "net": "+3.1V",
+          "layer": "F.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              23.81,
+              62.28
+            ],
+            [
+              24.51,
+              62.28
+            ]
+          ]
+        }
       ],
-      [
-       15.815,
-       65.53
-      ],
-      [
-       14.565,
-       65.53
-      ],
-      [
-       13.715,
-       66.38
-      ],
-      [
-       10.715,
-       66.38
-      ],
-      [
-       7.965,
-       63.63
-      ],
-      [
-       7.965,
-       55.0
-      ],
-      [
-       8.375,
-       54.59
+      "vias": [
+        {
+          "net": "+3.1V",
+          "at": [
+            24.51,
+            62.28
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        }
       ]
-     ]
-    }
-   ],
-   "vias": [
-    {
-     "net": "/ePaper CS",
-     "at": [
-      16.315,
-      65.03
-     ],
-     "size": 0.5,
-     "drill": 0.3
-    }
-   ]
-  },
-  "wd-rst-io4": {
-   "_why": "TPL5010 DONE from U4 IO4 (pad 8), R-LP-02: the old CS path from pad 8 with the bend raised to y 121.2 (opens room for the SDA/SCL vias NE of the INT diagonal), one 0.5/0.3 via 0.78 mm SE of the old WD_RST trunk (clear of ePaper RES 0.35 mm west of it), B.Cu onto the trunk. Replaces the WD_RST stub from IO2.",
-   "tracks": [
-    {
-     "net": "/WD_RST",
-     "layer": "F.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       14.008,
-       64.18
-      ],
-      [
-       14.008,
-       62.41
-      ],
-      [
-       9.44,
-       57.842
-      ]
-     ]
     },
-    {
-     "net": "/WD_RST",
-     "layer": "B.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       9.44,
-       57.842
-      ],
-      [
-       8.66,
-       57.062
-      ],
-      [
-       8.66,
-       55.81
+    "c31-gnd": {
+      "_why": "GND via for C31.1 (USB_D- cap) after the v3 ECO removed the crystal GND via at abs 122.6,118.6 that tied its F.Cu pour pocket to In1. Free via in the pour corridor SE of the NAND CS via: 0.26 mm from the MOSI via, 0.33 mm from SDA B.Cu, 0.36 mm from NAND CS B.Cu (GEN-02 spirit; C31.1 itself is walled in by USB/MOSI/NAND CS copper, so no via fits within 0.5 mm of it).",
+      "tracks": [],
+      "vias": [
+        {
+          "net": "GND",
+          "at": [
+            22.638,
+            59.56
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        }
       ]
-     ]
-    }
-   ],
-   "vias": [
-    {
-     "net": "/WD_RST",
-     "at": [
-      9.44,
-      57.842
-     ],
-     "size": 0.5,
-     "drill": 0.3
-    }
-   ]
-  },
-  "prtrg-dip": {
-   "_why": "R-INT-01: makes room for the EXP_INT via beside U17 pin 11. The F.Cu pocket east of the pad (SCL above, SD_CS below and east) and the free B.Cu band (EN_PM1 above, PRTRG below) did not overlap, so PRTRG (GPS trigger, expander P0 left as input) dips 0.24 mm to y 70.90 between x 21.75 and 23.04. Old B.Cu segments (23.09,70.71)-(23.04,70.66) and (23.04,70.66)-(18.94,70.66) deleted by hand (uuids 3e8fce8f, 87275bb3); the dip leaves the existing jog at (23.09,70.71) with a 45-degree turn (RT-01).",
-   "tracks": [
-    {
-     "net": "/PRTRG",
-     "layer": "B.Cu",
-     "width": 0.2,
-     "path": [
-      [
-       23.0945,
-       70.7107
-      ],
-      [
-       22.9052,
-       70.9
-      ],
-      [
-       21.99,
-       70.9
-      ],
-      [
-       21.75,
-       70.66
-      ],
-      [
-       18.9416,
-       70.66
-      ]
-     ]
-    }
-   ],
-   "vias": []
-  },
-  "exp-int": {
-   "_why": "R-INT-01 / R-V3-02 EXP_INT: U17 pin 11 -> U4 IO1 (pad 17), LP GPIO so the expander INT wakes the C5 from deep sleep; continues to R61.1 (100K pull-up, R-V3-06). v2.1 path kept (pcb_path --routed at 0.12 mm, 4 vias 0.5/0.3, B.Cu under the module edge west of pads 16-18); v3 ECO 2026-11-04 re-ends the last F.Cu run at pad 17 instead of pad 19 (45-degree from the via, RT-01) now that the crystal is gone, then one straight segment east to R61.",
-   "tracks": [
-    {
-     "net": "/EXP_INT",
-     "layer": "F.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       21.447,
-       70.362
-      ],
-      [
-       22.358,
-       70.38
-      ]
-     ]
     },
-    {
-     "net": "/EXP_INT",
-     "layer": "B.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       22.358,
-       70.38
+    "res-u17-p2": {
+      "_why": "R-V3-07 ePaper RES now driven by expander U17 P2 (pin 4). Found with pcb_path (A*, 0.5/0.3 vias, 0.15 mm clearance) on a scratch copy: F.Cu west out of pin 4 between EN_PM1 and ePaper D/C, round the south of U6, north at x 12.665 between INT and QON, one via SW of U4 pad 8, then B.Cu 45-degree into the kept RES route at y 66.03, split end to end (RT-02). The old stub from U4 pad 21 (now EEPA) and the kept route east of the junction are deleted.",
+      "tracks": [
+        {
+          "net": "/ePaper RES",
+          "layer": "F.Cu",
+          "width": 0.2,
+          "path": [
+            [
+              18.5725,
+              71.362492
+            ],
+            [
+              17.015,
+              71.362492
+            ],
+            [
+              15.9385,
+              70.285992
+            ],
+            [
+              13.815,
+              70.285992
+            ],
+            [
+              12.665,
+              69.135992
+            ],
+            [
+              12.665,
+              66.485
+            ],
+            [
+              13.865,
+              65.285
+            ]
+          ]
+        },
+        {
+          "net": "/ePaper RES",
+          "layer": "B.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              13.865,
+              65.285
+            ],
+            [
+              13.12,
+              66.029992
+            ]
+          ]
+        }
       ],
-      [
-       23.408,
-       69.33
-      ],
-      [
-       24.958,
-       69.33
-      ],
-      [
-       25.108,
-       69.18
+      "vias": [
+        {
+          "net": "/ePaper RES",
+          "at": [
+            13.865,
+            65.285
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        }
       ]
-     ]
     },
-    {
-     "net": "/EXP_INT",
-     "layer": "F.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       25.108,
-       69.18
-      ],
-      [
-       25.358,
-       68.93
-      ],
-      [
-       25.358,
-       68.38
-      ],
-      [
-       24.108,
-       67.13
-      ],
-      [
-       23.558,
-       67.13
+    "gnd-return-v3": {
+      "_why": "Tanapat 2026-11-04: GND vias for return current around the v3 changes (HS-21: a ground via within 5.08 mm of a signal via, closer is better). (13.215,65.185) 0.66 mm from the ePaper RES layer-change via of res-u17-p2; (19.708,62.13) 0.65 mm from the EXP_INT via beside U4 pad 17, also the first via in the B.Cu GND island between SCL and EXP_INT; (30.43,12.375) 0.65 mm from the ePaper RES via at FPC1 (first try at 29.48,12.675 broke the 0.2 mm copper-to-edge rule on the cutout arc); (17.5,57.594) second via in the 18.7 mm2 B.Cu GND pocket under U4 that the CHG_INT run at x 17.0 bounds (its only via was 5 mm away, NE corner). All 0.5/0.3, >= 0.15 mm to other nets, outside non-GND outer pours, the old RES via spot west of pad 21 left free for EEPA. The CHG_INT via at (17.0,64.95) has no spot within 2 mm at 0.15 mm (nearest: 1.4 mm at 0.12 mm, not used).",
+      "tracks": [],
+      "vias": [
+        {
+          "net": "GND",
+          "at": [
+            13.215,
+            65.185
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        },
+        {
+          "net": "GND",
+          "at": [
+            19.708,
+            62.13
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        },
+        {
+          "net": "GND",
+          "at": [
+            30.43,
+            12.375
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        },
+        {
+          "net": "GND",
+          "at": [
+            17.5,
+            57.594
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        }
       ]
-     ]
     },
-    {
-     "net": "/EXP_INT",
-     "layer": "B.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       23.558,
-       67.13
-      ],
-      [
-       21.458,
-       65.03
-      ],
-      [
-       21.458,
-       64.58
-      ],
-      [
-       20.258,
-       63.38
-      ],
-      [
-       20.258,
-       61.78
+    "gnd-return-spi": {
+      "_why": "Tanapat 2026-11-04: GND return vias beside the SPI layer-change vias (SCLK 10 MHz NAND / 4 MHz ePaper, MOSI, MISO; the only nets on GO with repetitive fast edges, so the only ones where the return path follows the trace). Each 0.65 mm (MOSI-at-FPC1 left out: no spot within 1.5 mm clears the FPC cutout edge by 0.2 mm, and a GND via is already 1.63 mm away) from its signal via, >= 0.15 mm to other nets, touching a GND fill: SCLK (24.708,55.331) (24.17,60.53) (10.514,9.705, nearest GND via was 7.8 mm); MOSI (2.741,21.718) (17.43,49.33); MISO (19.86,53.22) (31.4,66.47). On F.Cu<->B.Cu changes the B.Cu reference is In2 +3.1V, so these vias tie the outer GND pours to In1; the In1<->In2 bridge is still the decoupling caps.",
+      "tracks": [],
+      "vias": [
+        {
+          "net": "GND",
+          "at": [
+            24.708,
+            55.331
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        },
+        {
+          "net": "GND",
+          "at": [
+            24.17,
+            60.53
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        },
+        {
+          "net": "GND",
+          "at": [
+            10.514,
+            9.705
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        },
+        {
+          "net": "GND",
+          "at": [
+            2.741,
+            21.718
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        },
+        {
+          "net": "GND",
+          "at": [
+            17.43,
+            49.33
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        },
+        {
+          "net": "GND",
+          "at": [
+            19.86,
+            53.22
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        },
+        {
+          "net": "GND",
+          "at": [
+            31.4,
+            66.47
+          ],
+          "size": 0.5,
+          "drill": 0.3
+        }
       ]
-     ]
     },
-    {
-     "net": "/EXP_INT",
-     "layer": "F.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       20.258,
-       61.78
-      ],
-      [
-       20.758,
-       62.28
-      ],
-      [
-       21.008,
-       62.28
-      ],
-      [
-       22.79,
-       62.28
+    "c78-bundle": {
+      "_why": "Tanapat placed C78 (BAT- to GND bridge, R-V3-09) on the SCLK crossing of the In1 gap and cleared the F.Cu bundle. Rebuilt: east of x 109.7 the previous route is kept point for point; SCLK crosses the gap at x 109.108, about 0.53 mm from C78 pad 2; INT leaves the user's via at (108.207,100.61) on F.Cu to its old tail. Tanapat 2026-11-05: SCLK, D/C and BUSY are 0.15 mm over this whole rebuilt run, not necked. The 0.81 mm between the BAT- via (108.682,101.74) and R8.1 (x 109.747) only fits three 0.15 mm tracks at 0.1 mm clearance with a 0.038 mm jog between the via level and the R8.1 level, so each track steps once, staggered so neighbours stay 0.25 mm apart. Clearance there is 0.1005 mm. 2026-11-05: D/C moved from y 107.05 to 106.98 between x 115.04 and 119.47 to clear R63 (R-V3-10).",
+      "tracks": [
+        {
+          "net": "/ePaper SCLK",
+          "layer": "F.Cu",
+          "width": 0.15,
+          "path": [
+            [
+              15.778441,
+              48.699992
+            ],
+            [
+              15.665441,
+              48.586992
+            ],
+            [
+              14.464881,
+              48.586992
+            ],
+            [
+              13.123,
+              47.245111
+            ],
+            [
+              13.123,
+              46.644068
+            ],
+            [
+              12.845924,
+              46.366992
+            ],
+            [
+              12.334172,
+              46.366992
+            ],
+            [
+              10.369172,
+              44.401992
+            ],
+            [
+              9.159172,
+              44.401992
+            ],
+            [
+              8.596441,
+              43.839261
+            ],
+            [
+              8.596441,
+              42.809992
+            ],
+            [
+              8.558441,
+              42.771992
+            ],
+            [
+              8.558441,
+              41.976292
+            ],
+            [
+              7.012999,
+              40.43085
+            ],
+            [
+              7.012999,
+              36.766911
+            ]
+          ]
+        },
+        {
+          "net": "/ePaper BUSY",
+          "layer": "F.Cu",
+          "width": 0.15,
+          "path": [
+            [
+              19.392972,
+              47.844992
+            ],
+            [
+              14.644948,
+              47.844992
+            ],
+            [
+              13.825,
+              47.025044
+            ],
+            [
+              13.825,
+              46.35329
+            ],
+            [
+              13.136701,
+              45.664992
+            ],
+            [
+              12.624948,
+              45.664992
+            ],
+            [
+              10.65995,
+              43.699992
+            ],
+            [
+              9.388441,
+              43.699992
+            ],
+            [
+              9.097441,
+              43.408992
+            ],
+            [
+              9.097441,
+              42.609992
+            ],
+            [
+              9.059441,
+              42.571992
+            ],
+            [
+              9.059441,
+              41.628992
+            ],
+            [
+              7.639999,
+              40.20955
+            ],
+            [
+              7.639999,
+              36.507199
+            ]
+          ]
+        },
+        {
+          "net": "/ePaper D{slash}C",
+          "layer": "F.Cu",
+          "width": 0.15,
+          "path": [
+            [
+              19.442037,
+              48.669992
+            ],
+            [
+              18.962037,
+              48.189992
+            ],
+            [
+              14.530329,
+              48.189992
+            ],
+            [
+              13.45,
+              47.109663
+            ],
+            [
+              13.45,
+              46.50862
+            ],
+            [
+              12.981372,
+              46.039992
+            ],
+            [
+              12.46962,
+              46.039992
+            ],
+            [
+              10.50462,
+              44.074992
+            ],
+            [
+              9.213441,
+              44.074992
+            ],
+            [
+              8.846941,
+              43.708492
+            ],
+            [
+              8.846941,
+              42.709992
+            ],
+            [
+              8.808941,
+              42.671992
+            ],
+            [
+              8.808941,
+              41.802592
+            ],
+            [
+              7.339999,
+              40.33365
+            ],
+            [
+              7.339999,
+              36.631463
+            ]
+          ]
+        },
+        {
+          "net": "/INT",
+          "layer": "F.Cu",
+          "width": 0.2,
+          "path": [
+            [
+              7.695,
+              41.819992
+            ],
+            [
+              6.685999,
+              40.810991
+            ],
+            [
+              6.685999,
+              36.902358
+            ]
+          ]
+        }
       ]
-     ]
-    }
-   ],
-   "vias": [
-    {
-     "net": "/EXP_INT",
-     "at": [
-      22.358,
-      70.38
-     ],
-     "size": 0.5,
-     "drill": 0.3
     },
-    {
-     "net": "/EXP_INT",
-     "at": [
-      25.108,
-      69.18
-     ],
-     "size": 0.5,
-     "drill": 0.3
+    "p31-bridge": {
+      "_why": "In2 +3.1V split after the v3 In2 reroutes (Net-(U5-TS) added at via 102.31,87.07; REG25 and TS moved west to clear the C78 vias), leaving 305 mm2 with LED1, LED2, CN2.1, R39, R40 cut off from the main plane; KiCad DRC showed it as one +3.1V unconnected. The F.Cu +3.1V track joins R40.1 (split-off side) to the main-plane via at FPC1 (132.72,68.81): 11.6 mm, no vias, 0.15 mm because it threads the FPC via row; the In2 routes stay as drawn. It cuts the F.Cu GND pocket holding R42.1, R43.1 and via (128.58,68.71) from its old link, and no through via fits there, so the B.Cu GND track joins that via to FPC1.8.",
+      "tracks": [
+        {
+          "net": "+3.1V",
+          "layer": "F.Cu",
+          "width": 0.15,
+          "path": [
+            [
+              21.560441,
+              10.829992
+            ],
+            [
+              21.588441,
+              10.834992
+            ],
+            [
+              23.538441,
+              10.834992
+            ],
+            [
+              24.913441,
+              9.459992
+            ],
+            [
+              25.863441,
+              9.459992
+            ],
+            [
+              26.063441,
+              9.659992
+            ],
+            [
+              27.713441,
+              9.659992
+            ],
+            [
+              27.913441,
+              9.459992
+            ],
+            [
+              31.463441,
+              9.459992
+            ],
+            [
+              31.888441,
+              9.884992
+            ],
+            [
+              32.21,
+              10.019992
+            ]
+          ]
+        },
+        {
+          "net": "GND",
+          "layer": "B.Cu",
+          "width": 0.15,
+          "path": [
+            [
+              28.07,
+              9.919992
+            ],
+            [
+              28.128441,
+              9.919992
+            ],
+            [
+              28.948441,
+              10.739992
+            ],
+            [
+              29.108441,
+              11.029992
+            ]
+          ]
+        }
+      ],
+      "vias": []
     },
-    {
-     "net": "/EXP_INT",
-     "at": [
-      23.558,
-      67.13
-     ],
-     "size": 0.5,
-     "drill": 0.3
+    "sclk-series": {
+      "_why": "R-V3-10: series 33R per branch near U4 IO23. R63 (ePaper) at abs (116.8,107.49), about 4 mm of track from pad 31, between ePaper D/C, the U4 courtyard and the vias at y 108.12. R64 (NAND) at abs (123.97,111.655) on the F.Cu run, about 5 mm of track from pad 31, so via (120.52,110.28) stays. These tracks are the U4 side of each R and the NAND side of R64; the ePaper side of R63 is in c78-bundle.",
+      "tracks": [
+        {
+          "net": "/SCLK",
+          "layer": "F.Cu",
+          "width": 0.15,
+          "path": [
+            [
+              18.696756,
+              48.586992
+            ],
+            [
+              16.911441,
+              48.586992
+            ],
+            [
+              16.798441,
+              48.699992
+            ]
+          ]
+        },
+        {
+          "net": "/SCLK",
+          "layer": "F.Cu",
+          "width": 0.2,
+          "path": [
+            [
+              22.63,
+              52.719992
+            ],
+            [
+              22.775,
+              52.864992
+            ],
+            [
+              22.948441,
+              52.864992
+            ]
+          ]
+        },
+        {
+          "net": "/NAND SCLK",
+          "layer": "F.Cu",
+          "width": 0.2,
+          "path": [
+            [
+              23.968441,
+              52.864992
+            ],
+            [
+              24.113441,
+              52.719992
+            ],
+            [
+              25.52,
+              52.719992
+            ]
+          ]
+        }
+      ]
     },
-    {
-     "net": "/EXP_INT",
-     "at": [
-      20.258,
-      61.78
-     ],
-     "size": 0.5,
-     "drill": 0.3
-    }
-   ]
-  },
-  "u5-i2c-escape": {
-   "_why": "R-INT-01: frees a via spot for U5 pin 11. The SDA escape via moves from (24.25,39.81) to (24.20,39.62), stacked 0.65 mm under the SCL via in the 0.95 mm column between U5's east pads and L1; F.Cu stub and In2 jog redrawn (old 5 F.Cu segments, via and 3 In2 segments deleted by hand). Clearances >= 0.15.",
-   "tracks": [
-    {
-     "net": "/SDA",
-     "layer": "F.Cu",
-     "width": 0.2,
-     "path": [
-      [
-       23.3516,
-       39.5
-      ],
-      [
-       24.08,
-       39.5
-      ],
-      [
-       24.2,
-       39.62
+    "sd-r52": {
+      "_why": "Tanapat 2026-11-05: R52 moved to just south of U2.5 so a DNP SD slot leaves 1.3 mm of MOSI stub past U2.5 instead of 10.8 mm. The old stub copper (via 127.59,125.36, B.Cu, via 128.33,121.7, F.Cu) is unchanged and becomes the TF1 side. R50 already sits on the MISO run and R53 on the unshared SD_CS. R51 stays: no route exists from a spot west of U2 to its old run, even with vias.",
+      "tracks": [
+        {
+          "net": "/MOSI",
+          "layer": "F.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              26.4,
+              67.829992
+            ],
+            [
+              26.4,
+              69.109992
+            ]
+          ]
+        },
+        {
+          "net": "Net-(TF1-CMD)",
+          "layer": "F.Cu",
+          "width": 0.2,
+          "path": [
+            [
+              27.420441,
+              69.109992
+            ],
+            [
+              27.148441,
+              69.109992
+            ],
+            [
+              27.018441,
+              68.979992
+            ],
+            [
+              27.018441,
+              66.630992
+            ],
+            [
+              27.079441,
+              66.569992
+            ]
+          ]
+        },
+        {
+          "net": "Net-(TF1-CMD)",
+          "layer": "F.Cu",
+          "width": 0.25,
+          "path": [
+            [
+              31.991441,
+              63.734992
+            ],
+            [
+              33.011441,
+              63.734992
+            ]
+          ]
+        }
       ]
-     ]
-    },
-    {
-     "net": "/SDA",
-     "layer": "PWR",
-     "width": 0.25,
-     "path": [
-      [
-       24.2,
-       39.62
-      ],
-      [
-       23.9484,
-       39.62
-      ],
-      [
-       23.5766,
-       39.2482
-      ]
-     ]
     }
-   ],
-   "vias": [
-    {
-     "net": "/SDA",
-     "at": [
-      24.2,
-      39.62
-     ],
-     "size": 0.5,
-     "drill": 0.3
-    }
-   ]
-  },
-  "int-u5-escape": {
-   "_why": "R-INT-01 CHG_INT: U5 pin 11 leaves east at 0.15 mm width between pad 10's corner and the SDA via (0.14 mm each side), to a via at the bottom of the column (0.25 mm from L1's SYS pad, 0.15 from pad 10). The via crosses the SYS pour on F.Cu and the SW island on In2 (antipads only, as the SDA/SCL vias do); estimated SW coupling on B.Cu ~0.09 pF.",
-   "tracks": [
-    {
-     "net": "/CHG_INT",
-     "layer": "F.Cu",
-     "width": 0.15,
-     "path": [
-      [
-       23.35,
-       39.9
-      ],
-      [
-       23.824,
-       39.9
-      ],
-      [
-       24.2,
-       40.276
-      ]
-     ]
-    }
-   ],
-   "vias": [
-    {
-     "net": "/CHG_INT",
-     "at": [
-      24.2,
-      40.276
-     ],
-     "size": 0.5,
-     "drill": 0.3
-    }
-   ]
-  },
-  "int-chg-west": {
-   "_why": "R-INT-01 CHG_INT: from the U5 column via to U4 IO15 (pad 26). Every way south from U5 is walled in on F.Cu (SYS pour, C4/C11), In2 (SW island, Pack+ V) and B.Cu (TS pair, BAT+); the only clean way round is the west end. Found with a zone-aware 3-layer A* (scratch pcb_path3.py: fills of non-GND nets are obstacles, L1 +0.15/0.3 kept out, footprint keepouts honoured) at 0.12 mm clearance: B.Cu north-west round U5 and south under the module body 3 mm east of the antenna keepout (x 6.3). The A* 0.05 mm jog at (12.3-12.65, 46.45) became a 0.35 mm east step at y 46.10, passing 0.47 mm north of the +3.1V via at (12.14,46.92); the x 9.3 leg cannot move east (BAT+). 2026-10-21 split from the expander line: under the module the B.Cu turns east at y 55.48 (0.48 mm north of the pad-61 GND vias, south of the UART pair's diagonals), passes under the UART TX run at y 56.23 to one via at (19.05,56.23) in the F.Cu pocket between ePaper BUSY and pads 22-27, and enters pad 26 from the west (pcb_path3 found the same corridor at 0.15 mm). The old tail (F.Cu/In2 hops at y 61.9, 2 vias) is gone.",
-   "tracks": [
-    {
-     "net": "/CHG_INT",
-     "layer": "B.Cu",
-     "width": 0.2,
-     "path": [
-      [
-       24.2,
-       40.3
-      ],
-      [
-       20.85,
-       36.95
-      ],
-      [
-       20.85,
-       35.3
-      ],
-      [
-       19.0,
-       33.45
-      ],
-      [
-       16.3,
-       33.45
-      ],
-      [
-       9.3,
-       40.45
-      ],
-      [
-       9.3,
-       43.45
-      ],
-      [
-       11.95,
-       46.1
-      ],
-      [
-       12.3,
-       46.1
-      ],
-      [
-       12.65,
-       46.45
-      ],
-      [
-       12.65,
-       50.6
-      ],
-      [
-       11.6,
-       51.65
-      ],
-      [
-       11.6,
-       55.08
-      ],
-      [
-       12.0,
-       55.48
-      ],
-      [
-       17.55,
-       55.48
-      ],
-      [
-       18.3,
-       56.23
-      ],
-      [
-       19.05,
-       56.23
-      ]
-     ]
-    },
-    {
-     "net": "/CHG_INT",
-     "layer": "F.Cu",
-     "width": 0.2,
-     "path": [
-      [
-       19.05,
-       56.23
-      ],
-      [
-       20.65,
-       54.63
-      ],
-      [
-       21.008,
-       54.63
-      ]
-     ]
-    }
-   ],
-   "vias": [
-    {
-     "net": "/CHG_INT",
-     "at": [
-      19.05,
-      56.23
-     ],
-     "size": 0.5,
-     "drill": 0.3
-    }
-   ]
-  },
-  "nand-cs-io7": {
-   "_why": "R-V3-03 NAND CS = U4 IO7 (pad 19), replacing expander U17 P2 and its 30 mm run. Pad 19 east, 45-degree up to one 0.5/0.3 via (0.25 mm from pad 20's corner, 0.28 mm above SDA B.Cu), then B.Cu north at abs x 122.42 into the existing trunk vertex (abs 122.887,115.485; local given to the nm so the ends coincide). The via sits SW of the old crystal GND via spot so the F.Cu GND pour still reaches C31.1 between it and the MOSI via (first try at 122.62,118.46 cut C31.1 off). 45-degree bends only (RT-01), end-to-end joins (RT-02).",
-   "tracks": [
-    {
-     "net": "/NAND CS",
-     "layer": "F.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       21.008,
-       60.58
-      ],
-      [
-       21.288,
-       60.58
-      ],
-      [
-       21.908,
-       59.96
-      ]
-     ]
-    },
-    {
-     "net": "/NAND CS",
-     "layer": "B.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       21.908,
-       59.96
-      ],
-      [
-       21.908,
-       57.161992
-      ],
-      [
-       22.375,
-       56.694992
-      ]
-     ]
-    }
-   ],
-   "vias": [
-    {
-     "net": "/NAND CS",
-     "at": [
-      21.908,
-      59.96
-     ],
-     "size": 0.5,
-     "drill": 0.3
-    }
-   ]
-  },
-  "r61-3v1": {
-   "_why": "R-V3-06 R61.2 (+3.1V) to a 0.5/0.3 via down to the In2 (PWR) +3.1V plane, 0.7 mm east of the pad, inside the old crystal column (In2 is +3.1V there).",
-   "tracks": [
-    {
-     "net": "+3.1V",
-     "layer": "F.Cu",
-     "width": 0.25,
-     "path": [
-      [
-       23.81,
-       62.28
-      ],
-      [
-       24.51,
-       62.28
-      ]
-     ]
-    }
-   ],
-   "vias": [
-    {
-     "net": "+3.1V",
-     "at": [
-      24.51,
-      62.28
-     ],
-     "size": 0.5,
-     "drill": 0.3
-    }
-   ]
-  },
-  "c31-gnd": {
-   "_why": "GND via for C31.1 (USB_D- cap) after the v3 ECO removed the crystal GND via at abs 122.6,118.6 that tied its F.Cu pour pocket to In1. Free via in the pour corridor SE of the NAND CS via: 0.26 mm from the MOSI via, 0.33 mm from SDA B.Cu, 0.36 mm from NAND CS B.Cu (GEN-02 spirit; C31.1 itself is walled in by USB/MOSI/NAND CS copper, so no via fits within 0.5 mm of it).",
-   "tracks": [],
-   "vias": [
-    {
-     "net": "GND",
-     "at": [
-      22.638,
-      59.56
-     ],
-     "size": 0.5,
-     "drill": 0.3
-    }
-   ]
   }
- }
 }

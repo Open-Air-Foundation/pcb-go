@@ -1,0 +1,13 @@
+# SCLK series resistors, intent 2026-11-05 (R-V3-10). One 33R per branch beside U4 IO23; simulation and arithmetic in the requirement.
+ref,pin,pin_name,net,note
+U4,31,IO23,SCLK,driver
+R63,1,,SCLK,ePaper branch series R
+R63,2,,ePaper SCLK,
+FPC1,13,,ePaper SCLK,78.7 mm branch
+R64,1,,SCLK,NAND branch series R
+R64,2,,NAND SCLK,
+U1,6,CLK,NAND SCLK,W25N512GV
+U2,3,CLK,NAND SCLK,DNP alternative
+R51,1,,NAND SCLK,DNP 22R to the TF1 slot
+R51,2,,Net-(TF1-CLK),
+TF1,5,CLK,Net-(TF1-CLK),DNP

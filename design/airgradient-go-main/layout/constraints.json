@@ -36,7 +36,7 @@
    "min_len": 4.0,
    "except": [
     "GND",
-    "+3.1V",
+    "+3.3V",
     "SYS",
     "PMID",
     "Pack+",
@@ -86,7 +86,7 @@
    "pad": "R61.2",
    "max": 0.5,
    "status": "approved",
-   "source": "plane via on the pad's net: R61.2 +3.1V down to In2 (R-V3-06)"
+   "source": "plane via on the pad's net: R61.2 +3.3V down to In2 (R-V3-06)"
   },
   {
    "id": "GEN-02",

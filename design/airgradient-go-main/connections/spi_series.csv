@@ -1,0 +1,17 @@
+# MOSI and MISO series resistors, intent 2026-11-06 (R-V3-12). One 33R per MOSI branch beside U4 IO25; one 33R on the MISO run on the U1 side.
+ref,pin,pin_name,net,note
+U4,33,IO25,MOSI,driver
+R65,1,,MOSI,ePaper branch series R
+R65,2,,ePaper MOSI,
+FPC1,14,,ePaper MOSI,about 75 mm branch
+R66,1,,MOSI,NAND branch series R
+R66,2,,NAND MOSI,
+U1,5,DI,NAND MOSI,W25N512GV
+U2,5,CMD,NAND MOSI,DNP alternative
+R52,2,,NAND MOSI,DNP 22R to the TF1 slot
+U4,32,IO24,MISO,receiver
+R67,1,,MISO,series R
+R67,2,,NAND MISO,
+U1,2,DO,NAND MISO,driver
+U2,6,DATA0,NAND MISO,DNP alternative
+R50,1,,NAND MISO,DNP 22R to the TF1 slot

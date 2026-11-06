@@ -17,14 +17,14 @@ R39,2,,ePaper CS,100K pull-up
 FPC1,12,,ePaper CS,display CS
 # R-V3-06: external pull-up on EXP_INT (deep-sleep wake source)
 R61,1,,EXP_INT,100K pull-up; hand-drawn in the CONTROLLER pull-up row next to R38
-R61,2,,+3.1V,In2 +3.1V plane via next to U4 pad 17
+R61,2,,+3.3V,In2 +3.3V plane via next to U4 pad 17
 # R-V3-07: S12 rev 2 EEPA (EEPROM write in progress, PCN16844) read directly by the ESP32; ePaper RES moves to the expander (output, no interrupt)
 U4,21,IO9,EEPA,was ePaper RES; input, FW checks it before cutting S12 power
 U16,6,EEPA,EEPA,was NC; rev 1 sensors put DE (UART TX enable) here, so FW must know the sensor revision
 FPC1,10,,ePaper RES,unchanged display reset pin; driver is now U17 P2
 # R-V3-08: CHG_INT moves to LP GPIO0 and gets an external pull-up, like EXP_INT (R-V3-06)
 R62,1,,CHG_INT,100K pull-up; CONTROLLER pull-up row next to R61
-R62,2,,+3.1V,In2 +3.1V plane via next to U4 pad 16
+R62,2,,+3.3V,In2 +3.3V plane via next to U4 pad 16
 # R-V3-09: HF bridge across the In1 BAT-/GND split where SCLK crosses it (DC still joins only at NT1)
 C78,1,,BAT-,0.1uF 0402, In1 BAT- island via
 C78,2,,GND,GND via just south of the island edge

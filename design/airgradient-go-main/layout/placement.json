@@ -1,5 +1,5 @@
 {
- "_why": "ECO v3 (2026-11-04): the RTC crystal cluster (Y1, C76, C77) is gone; R61 100K EXP_INT pull-up (R-V3-06) takes its column beside U4 pad 17 (IO1), on the same row as the pad so the EXP_INT stub is one straight F.Cu segment. x keeps the courtyard 0.27 mm clear of U4 (DFM-24 >= 0.2); pad 2 (+3.1V) faces east to its plane via.",
+ "_why": "ECO v3 (2026-11-04): the RTC crystal cluster (Y1, C76, C77) is gone; R61 100K EXP_INT pull-up (R-V3-06) takes its column beside U4 pad 17 (IO1), on the same row as the pad so the EXP_INT stub is one straight F.Cu segment. x keeps the courtyard 0.27 mm clear of U4 (DFM-24 >= 0.2); pad 2 (+3.3V) faces east to its plane via.",
  "parts": [
   {
    "ref": "R61",

@@ -19094,6 +19094,126 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 100.33) (xy 228.6 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2be42380-7fcd-403b-81a5-ab48eb990dcc")
+	)
+	(wire
+		(pts
+			(xy 236.22 100.33) (xy 240.03 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62e1be0c-b8b3-4202-b755-59ec14939da4")
+	)
+	(label "MISO"
+		(at 224.79 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "67666a74-7934-42de-9473-c57e1515295f")
+	)
+	(label "NAND MISO"
+		(at 240.03 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "883f0db3-d3e0-4bd3-859b-481dd0ee4f9e")
+	)
+	(wire
+		(pts
+			(xy 224.79 107.95) (xy 228.6 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "832689cb-bc39-401f-acfb-503cfbfe0e82")
+	)
+	(wire
+		(pts
+			(xy 236.22 107.95) (xy 240.03 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1809f57-182c-4515-b31c-88737417e09b")
+	)
+	(label "MOSI"
+		(at 224.79 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e8593598-b580-4859-8bfd-9114b802fa8f")
+	)
+	(label "ePaper MOSI"
+		(at 240.03 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4839e3e3-3f2b-47a9-a509-1f4dcdf79bfe")
+	)
+	(wire
+		(pts
+			(xy 224.79 115.57) (xy 228.6 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e95257d-dbcc-4c36-8311-29f002ea686c")
+	)
+	(wire
+		(pts
+			(xy 236.22 115.57) (xy 240.03 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "379c9bf2-5ec1-48ca-ac86-2332321c53f2")
+	)
+	(label "MOSI"
+		(at 224.79 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d84300ff-0313-482c-8077-48b288b0f9ec")
+	)
+	(label "NAND MOSI"
+		(at 240.03 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8722e89c-cd49-485f-a620-9af2b86a3080")
+	)
+	(wire
+		(pts
 			(xy 190.5 107.95) (xy 194.31 107.95)
 		)
 		(stroke
@@ -19172,9 +19292,9 @@
 		)
 		(uuid "8e03cee5-2eef-4ec7-a08a-8ca7dee7e824")
 	)
-	(text "R63, R64: SCLK source series, one per branch, at U4 IO23 (R-V3-10).\nZ0 about 58 ohm less R_drv 33 ohm parallel with the other branch = 34 ohm, so 33R."
+	(text "R63, R64, R65, R66: SCLK and MOSI source series, one per branch at U4 (R-V3-10, R-V3-12).\nZ0 about 58 ohm less R_drv 33 ohm parallel with the other branch = 34 ohm, so 33R.\nR67: MISO series, U1 side of the run to U4 (R-V3-12). Simulated: damps little, costs nothing."
 		(exclude_from_sim no)
-		(at 190.5 122.0 0)
+		(at 201.93 127.0 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -27905,7 +28025,7 @@
 		)
 		(uuid "18a0b0e2-49ec-4ddb-9f48-2a74972074a3")
 	)
-	(label "MISO"
+	(label "NAND MISO"
 		(at 81.28 175.26 180)
 		(effects
 			(font
@@ -27985,7 +28105,7 @@
 		)
 		(uuid "21c87aab-b5bd-4d13-b02e-aa62aff0f537")
 	)
-	(label "MOSI"
+	(label "NAND MOSI"
 		(at 81.28 177.8 180)
 		(effects
 			(font
@@ -28095,7 +28215,7 @@
 		)
 		(uuid "30658f2a-fc41-42fb-9124-3c4aba2658d0")
 	)
-	(label "MISO"
+	(label "NAND MISO"
 		(at 33.02 137.16 0)
 		(effects
 			(font
@@ -28345,7 +28465,7 @@
 		)
 		(uuid "5bb594cb-ccf9-4004-bb7b-681b3fb11616")
 	)
-	(label "MOSI"
+	(label "ePaper MOSI"
 		(at 361.95 48.26 180)
 		(effects
 			(font
@@ -28425,7 +28545,7 @@
 		)
 		(uuid "682b5e37-9e64-4211-80d5-682029cb3a63")
 	)
-	(label "MOSI"
+	(label "NAND MOSI"
 		(at 450.85 270.51 0)
 		(effects
 			(font
@@ -29215,7 +29335,7 @@
 		)
 		(uuid "df645ebc-6aeb-4bb1-866e-c619d1b0d8a4")
 	)
-	(label "MISO"
+	(label "NAND MISO"
 		(at 450.85 280.67 0)
 		(effects
 			(font
@@ -29246,7 +29366,7 @@
 		)
 		(uuid "e1e25798-8344-4445-a652-dcc32de61e9e")
 	)
-	(label "MOSI"
+	(label "NAND MOSI"
 		(at 87.63 142.24 180)
 		(effects
 			(font
@@ -29565,6 +29685,312 @@
 			(justify left bottom)
 		)
 		(uuid "faf16083-8127-42a1-ab19-bcac1bb11e2f")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 232.41 107.95 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8a84abeb-ea17-4176-bb68-9bc7fc614c94")
+		(property "Reference" "R65"
+			(at 232.41 110.744 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 232.41 113.284 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 232.41 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C25105.html"
+			(at 232.41 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "0402WGF330JTCE"
+			(at 232.41 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25105"
+			(at 232.41 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 232.41 107.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "608696b2-2a69-4461-b68e-2f2edf9e356f")
+		)
+		(pin "1"
+			(uuid "814cf7dc-af9b-4777-ae02-d0e1c7d53545")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "R65")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 232.41 115.57 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1e2aed9d-f91c-4ce7-8c62-6fc1a39a32d3")
+		(property "Reference" "R66"
+			(at 232.41 118.364 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 232.41 120.904 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 232.41 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C25105.html"
+			(at 232.41 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "0402WGF330JTCE"
+			(at 232.41 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25105"
+			(at 232.41 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 232.41 115.57 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "0613d722-4b52-4249-a4d9-d1aefd5c5802")
+		)
+		(pin "1"
+			(uuid "6445331b-9b1c-49fd-92bc-665aee9608db")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "R66")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 232.41 100.33 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "33f9df4a-c356-4fbe-bad2-7c8413c3447e")
+		(property "Reference" "R67"
+			(at 232.41 103.124 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 232.41 105.664 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 232.41 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C25105.html"
+			(at 232.41 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "0402WGF330JTCE"
+			(at 232.41 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25105"
+			(at 232.41 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 232.41 100.33 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "444532f3-3304-4f8e-9217-f28aad679a86")
+		)
+		(pin "1"
+			(uuid "f4fb5fbf-e820-4d9e-92f2-d08c5378a319")
+		)
+		(instances
+			(project "airgradient-go-main"
+				(path "/63bfc1c7-4623-455a-8f83-dca1d491c7db"
+					(reference "R67")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -29897,7 +30323,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 240.03 26.6699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30110,7 +30536,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 252.73 26.6699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30403,7 +30829,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 33.02 118.1099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31318,7 +31744,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 403.86 236.2199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31397,7 +31823,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 208.28 62.2299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32001,7 +32427,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 331.47 170.1799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32262,7 +32688,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 190.5 26.6699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -33076,7 +33502,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 569.722 148.082 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -33314,7 +33740,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 403.86 265.4299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -33669,7 +34095,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 323.85 119.3799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34720,7 +35146,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 466.09 106.68 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -36134,7 +36560,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 284.48 72.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -36794,7 +37220,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 408.94 173.9899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -37856,7 +38282,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 370.84 308.6099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -38972,7 +39398,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 201.93 26.6699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40015,7 +40441,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 109.22 165.0999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40198,7 +40624,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 227.33 26.6699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41258,7 +41684,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 412.75 303.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -42901,7 +43327,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 228.6 161.2899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43439,7 +43865,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 276.86 298.4499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44237,7 +44663,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 533.908 148.336 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44892,7 +45318,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 135.89 38.0999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45910,7 +46336,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 271.78 219.7099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46488,7 +46914,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 181.61 361.9499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47536,7 +47962,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 563.88 25.3999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -49303,7 +49729,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 435.864 249.174 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -52204,7 +52630,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "475K"
+		(property "Value" "511K"
 			(at 246.38 373.3799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -52248,7 +52674,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C5713272"
+		(property "LCSC Part" "C5126239"
 			(at 238.76 372.11 0)
 			(hide yes)
 			(show_name no)
@@ -52412,7 +52838,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 356.87 21.5899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -53789,7 +54215,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 24.13 118.203 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -53868,7 +54294,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 328.93 21.5899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -54981,7 +55407,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 412.75 276.8599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -55454,7 +55880,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 387.35 236.2199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -55741,7 +56167,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 215.9 26.6699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -55821,7 +56247,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 246.38 387.3499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -56647,7 +57073,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 157.48 166.3699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -57223,7 +57649,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 246.38 363.2199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -58717,7 +59143,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 171.45 362.4579 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -59629,7 +60055,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 425.704 124.714 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -59867,7 +60293,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 271.78 256.5399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -60243,7 +60669,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 181.61 26.6699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -60503,7 +60929,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 297.18 72.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -60765,7 +61191,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 134.62 124.4599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -61223,7 +61649,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 114.3 118.1099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -61302,7 +61728,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 90.17 118.1099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -62363,7 +62789,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 321.31 262.8899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -62983,7 +63409,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 569.976 123.19 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -63838,7 +64264,7 @@
 				)
 			)
 		)
-		(property "Value" "+3.1V"
+		(property "Value" "+3.3V"
 			(at 533.908 122.936 0)
 			(show_name no)
 			(do_not_autoplace no)

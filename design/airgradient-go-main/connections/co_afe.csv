@@ -1,0 +1,41 @@
+# CO sensor AFE, intent 2026-11-10 (R-V3-17). U11 ES1-CO-100-01 -> U22 LMP91002 potentiostat/TIA -> U23 ADS1115 (0x49).
+ref,pin,pin_name,net,note
+U11,1,R,CO_RE,reference electrode
+U11,2,S,CO_S,sensing (working) electrode
+U11,3,C,CO_CE,counter electrode
+U22,14,CE,CO_CE,
+U22,13,RE,CO_RE,
+U22,12,WE,CO_WE,through R69
+R69,1,,CO_WE,100R external load
+R69,2,,CO_S,10R internal + 100R = 110R
+U22,11,VREF,+3.3V,unused reference input tied to VDD (1.5 V..VDD allowed)
+U22,6,VDD,+3.3V,
+C76,1,,+3.3V,U22 decoupling
+C76,2,,GND,
+U22,1,DGND,GND,
+U22,7,AGND,GND,
+U22,15,DAP,GND,
+U22,8,VOUT,CO_VOUT,
+U22,10,C1,CO_C1,TIA filter
+U22,9,C2,CO_C2,TIA filter
+C77,1,,CO_C1,
+C77,2,,CO_C2,
+U22,3,SCL,SCL,
+U22,4,SDA,SDA,
+U22,2,MENB,CO_MENB,
+R70,1,,CO_MENB,100K pull-up: AFE off the bus by default
+R70,2,,+3.3V,
+U22,5,NC,NC,NC flag
+U23,8,VDD,+3.3V,
+C79,1,,+3.3V,U23 decoupling
+C79,2,,GND,
+U23,3,GND,GND,
+U23,4,AIN0,+3.3V,ratiometric reference for the internal zero
+U23,5,AIN1,CO_VOUT,
+U23,6,AIN2,GND,unused
+U23,7,AIN3,GND,unused
+U23,10,SCL,SCL,
+U23,9,SDA,SDA,
+U23,1,ADDR,+3.3V,address 0x49
+U23,2,ALERT/RDY,NC,NC flag
+U17,10,P7,CO_MENB,expander output drives MENB low to talk to U22

@@ -5,7 +5,7 @@
  "items": {
   "d9d7eb65-a088-5649-bd54-c356973da214": "[\"rectangle\", [345.44, 334.01], [424.18, 386.08]]",
   "eef8276a-6039-58ab-8e4d-e2a974785aa7": "[\"text\", \"INT LINE\", [347.98, 336.55, 0.0]]",
-  "b20b2658-976d-5830-99f6-816464bc56aa": "[\"text\", \"CHG_INT: U5 BQ25628 ~INT -> U4 IO15 (R-INT-01)\\n  open drain, 256 us low pulse (SLUSEG4C 8.3.8.3)\\n  not an LP pin: active and light sleep only\\nEXP_INT: U17 TCA6408A ~INT -> U4 IO1 (R-V3-02)\\n  touch P4 + ACC_INT P5, held until read (SCPS192E 8.3.3)\\n  LP_GPIO1: also wakes the chip from deep sleep\\nPull-ups: EXP_INT R61 100K, CONTROLLER pull-up row (R-V3-06)\\n  CHG_INT: ESP32 internal on GPIO15 (R-INT-03)\\nNAND CS: U4 IO7, was U17 P2 (R-V3-03)\\n32 kHz crystal removed, IO0 spare LP GPIO (R-V3-01, -04)\", [349.25, 344.17, 0.0]]"
+  "b20b2658-976d-5830-99f6-816464bc56aa": "[\"text\", \"CHG_INT: U5 BQ25628 ~INT -> U4 IO0 (R-V3-08)\\n  open drain, 256 us low pulse (SLUSEG4C 8.3.8.3)\\n  LP_GPIO0: also wakes the chip from deep sleep\\nEXP_INT: U17 TCA6408A ~INT -> U4 IO1 (R-V3-02)\\n  touch P4 + ACC_INT P5, held until read (SCPS192E 8.3.3)\\n  LP_GPIO1: also wakes the chip from deep sleep\\nPull-ups: CONTROLLER pull-up row, 100K each\\n  EXP_INT R61 (R-V3-06), CHG_INT R62 (R-V3-08)\\nNAND CS: U4 IO7, was U17 P2 (R-V3-03)\\n32 kHz crystal removed (R-V3-01); IO15 now unused (R-V3-08)\", [349.25, 344.17, 0.0]]"
  },
  "pwr": {}
 }

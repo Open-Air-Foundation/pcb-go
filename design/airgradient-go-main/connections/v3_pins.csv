@@ -5,7 +5,7 @@ U4,17,IO1,EXP_INT,was XTAL_32K_N; LP_GPIO1, wakes from deep sleep; internal pull
 U17,11,~{INT},EXP_INT,unchanged; open drain, aggregates P4 touch INT and P5 ACC_INT
 U4,19,IO7,NAND CS,was EXP_INT; JTAG-source strap ignored while EFUSE_JTAG_SEL_ENABLE = 0 (R-V3-03)
 U17,4,P2,ePaper RES,was NAND CS (v2); now the display reset so IO9 is free for EEPA (R-V3-07)
-U17,10,P7,NC,unused; flag was created by the removed rtc32k block, re-added by hand
+U17,10,P7,CO_MENB,was NC; now drives the CO AFE enable (R-V3-17)
 U1,1,/CS,NAND CS,W25N512GV chip select
 U2,2,DATA3,NAND CS,ZDSD512 CS (SPI mode)
 R3,1,,NAND CS,100K pull-up keeps CS high at reset
@@ -26,5 +26,3 @@ FPC1,10,,ePaper RES,unchanged display reset pin; driver is now U17 P2
 R62,1,,CHG_INT,100K pull-up; CONTROLLER pull-up row next to R61
 R62,2,,+3.3V,In2 +3.3V plane via next to U4 pad 16
 # R-V3-09: HF bridge across the In1 BAT-/GND split where SCLK crosses it (DC still joins only at NT1)
-C78,1,,BAT-,0.1uF 0402, In1 BAT- island via
-C78,2,,GND,GND via just south of the island edge

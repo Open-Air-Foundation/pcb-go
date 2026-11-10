@@ -1,0 +1,16 @@
+pin,name,type,function,page
+1,DGND,power_in,digital ground,3
+2,MENB,input,module enable active low,3
+3,SCL,input,I2C clock,3
+4,SDA,bidirectional,I2C data,3
+5,NC,nc,not internally connected,3
+6,VDD,power_in,supply 2.7-3.6 V,3
+7,AGND,power_in,analog ground,3
+8,VOUT,output,analog output of the TIA,3
+9,C2,passive,TIA external node 2 (filter cap or gain R),3
+10,C1,passive,TIA external node 1 (filter cap or gain R),3
+11,VREF,input,external reference input,3
+12,WE,passive,working electrode,3
+13,RE,input,reference electrode,3
+14,CE,output,counter electrode,3
+15,DAP,ep,die attach pad to GND,3

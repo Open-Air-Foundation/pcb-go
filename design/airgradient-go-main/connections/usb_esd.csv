@@ -1,0 +1,7 @@
+# USB ESD part, intent 2026-11-06 (R-V3-14). Both USB lines clamped next to USB1. Pins 1 and 2 are NC in the DRL package.
+ref,pin,pin_name,net,note
+U21,3,IO1,USB_D-,clamp
+U21,5,IO2,USB_D+,clamp
+U21,4,GND,GND,via beside the pad
+U21,1,NC,NC,NC flag
+U21,2,NC,NC,NC flag

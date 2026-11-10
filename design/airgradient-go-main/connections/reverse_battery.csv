@@ -1,0 +1,12 @@
+# Reverse-battery FET, intent 2026-11-10 (R-V3-15). Q6 = CSD83325L, both halves in series in the BT1- lead.
+ref,pin,pin_name,net,note
+BT1,2,-,CELL-,cell - terminal
+Q6,A1,S,CELL-,
+Q6,C1,S,CELL-,
+Q6,A2,S,BAT-,
+Q6,C2,S,BAT-,
+Q6,B1,G,Q6_GATE,joined to B2
+Q6,B2,G,Q6_GATE,joined to B1
+R68,1,,Q6_GATE,10K gate resistor
+R68,2,,BAT+_RS,R8.2 / Q3 S1 node
+R8,2,,BAT+_RS,

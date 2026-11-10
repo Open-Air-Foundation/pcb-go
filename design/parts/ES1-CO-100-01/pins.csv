@@ -1,0 +1,4 @@
+pin,name,type,function,page
+1,R,passive,reference electrode,2
+2,S,passive,sensing (working) electrode,2
+3,C,passive,counter electrode,2

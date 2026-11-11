@@ -7,13 +7,13 @@ This compares two designs of the main board (`PCB/airgradient-go-main`) in https
 | Old | tag `v2` (commit e806931, also the head of `main`) | 2.1 | the boards that were produced |
 | New | branch `v3-reroute` | 3.0 | prototype, not ordered yet, not tagged yet |
 
-v3 has no final tag yet. A tag `v3` was set on 2026-11-11 and points at an earlier commit of the branch (af463c6), one layout fix behind (C86, section 5). Take the branch, not that tag; the tag will be set again when the design is final. Section 7 says how to get both designs and which files to give a reviewer or an AI.
+v3 is not tagged yet: it gets its tag when the design is final. Until then the branch is the design. Section 7 says how to get both designs and which files to give a reviewer or an AI.
 
 The other boards (touch pad, LED + touch, SCD4x module) are the same in both.
 
-In short: v3 keeps the outline, the mounting holes and every connector, switch and sensor where v2 has them. It changes which ESP32 pin does what (eight pins), wires the interrupt lines so touch, motion and the charger can wake the chip from deep sleep, raises the rail from 3.11 V to 3.31 V, makes a 2 A charge possible, adds protection against a reversed cell, moves the four LEDs under the battery holder, gives the GNSS antenna the matching network of its manual, and adds an unfitted read-out circuit for a CO sensor. All copper was redrawn.
+In short: v3 keeps the outline, the mounting holes and every connector, switch and sensor where v2 has them; the four screw holes at the bottom corners are drilled smaller. It changes which ESP32 pin does what (eight pins), wires the interrupt lines so touch, motion and the charger can wake the chip from deep sleep, raises the rail from 3.11 V to 3.31 V, makes a 2 A charge possible, adds protection against a reversed cell, moves the four LEDs under the battery holder, gives the GNSS antenna the matching network of its manual, and adds an unfitted read-out circuit for a CO sensor. All copper was redrawn.
 
-The full record, with the reason and the source for every number, is `design/requirements.md` (rows R-V3-01 to R-V3-34). IDs in the tables below point there.
+The full record, with the reason and the source for every number, is `design/requirements.md` (rows R-V3-01 to R-V3-35). IDs in the tables below point there.
 
 ## 1. Firmware: pin map
 
@@ -96,6 +96,7 @@ The full record, with the reason and the source for every number, is `design/req
 | CO sensor | footprint only | read-out circuit: U22 LMP91002, U23 ADS1115, U24 3.0 V LDO, all not fitted | to be tested apart from the board first | R-V3-17, 24, 26 |
 | Charger NTC divider | R18, R19 part numbers of other values | part numbers match the values (5.23k, 30.1k) | the assembly BOM is built from that field; values did not change | R-V3-27 |
 | Accelerometer | address pin on ground through pour slivers only | track from U14 pad 3 to ground | if the sliver broke, the address would move from 0x18 to 0x19 | R-V3-33 |
+| Screw holes | four plated holes at the bottom corners, drilled 2.5 mm in a 2.6 mm pad | drilled 1.82 mm, same pad | under the upper two the enclosure has a boss with a 1.5 mm pilot bore, so only a screw passes the board there. The 2.5 mm drill left a 0.05 mm ring | R-V3-35 |
 | Routing | | every track and zone redrawn; layer 2 is ground without any track | return paths | R-V3-11 |
 
 ## 4. Parts
@@ -143,6 +144,8 @@ The outline is identical. These parts moved; everything else is where v2 has it.
 | R43 | 126.94, 69.50 | 139.30, 69.50 | |
 | R52 | 133.01, 122.52 | 127.42, 127.90 | |
 | C45, L3 | | 0.25 mm and 0.4 mm | |
+
+The four screw holes at the bottom corners keep their places and their 2.6 mm pads: (102.71, 126.88), (161.21, 126.88), (102.71, 132.38) and (161.21, 132.38). Their drill is 1.82 mm (2.5 mm in v2).
 
 Coordinates are KiCad's, in mm. The board's top edge is at y 58.79 and its centre line at x 131.96, so the LEDs sit:
 
@@ -219,4 +222,4 @@ kicad-cli sch export pdf -o schematic.pdf PCB/airgradient-go-main/airgradient-go
 
 (`kicad-cli` comes with KiCad; on macOS it is `/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`.)
 
-Design checks on the head of `v3-reroute`: electrical rule check 276 messages, none of them a wrong connection; layout check 0 unconnected, schematic and board agree; its errors are all in `v2` as well (the battery holder's outline drawing, the holes of the USB connector and the mounting posts, one via under the fuel gauge, the battery contacts at the board edge, two pairs of part outlines that overlap).
+Design checks on the head of `v3-reroute`: electrical rule check 276 messages, none of them a wrong connection; layout check 0 unconnected, schematic and board agree; its errors are all in `v2` as well (the battery holder's outline drawing, the holes of the USB connector, one via under the fuel gauge, the battery contacts at the board edge, two pairs of part outlines that overlap).

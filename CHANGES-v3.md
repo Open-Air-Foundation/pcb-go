@@ -11,6 +11,8 @@ v3 is not tagged yet: it gets its tag when the design is final. Until then the b
 
 The other boards (touch pad, LED + touch, SCD4x module) are the same in both.
 
+For v1 as well, with the three versions next to each other, see `VERSIONS.md`.
+
 In short: v3 keeps the outline, the mounting holes and every connector, switch and sensor where v2 has them; the four screw holes at the bottom corners are drilled smaller. It changes which ESP32 pin does what (eight pins), wires the interrupt lines so touch, motion and the charger can wake the chip from deep sleep, raises the rail from 3.11 V to 3.31 V, makes a 2 A charge possible, adds protection against a reversed cell, moves the four LEDs under the battery holder, gives the GNSS antenna the matching network of its manual, and adds an unfitted read-out circuit for a CO sensor. All copper was redrawn.
 
 The full record, with the reason and the source for every number, is `design/requirements.md` (rows R-V3-01 to R-V3-35). IDs in the tables below point there.

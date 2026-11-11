@@ -11,7 +11,7 @@ The other boards (touch pad, LED + touch, SCD4x module) are the same in both tag
 
 In short: v3 keeps the outline, the mounting holes and every connector, switch and sensor where v2 has them. It changes which ESP32 pin does what (eight pins), wires the interrupt lines so touch, motion and the charger can wake the chip from deep sleep, raises the rail from 3.11 V to 3.31 V, makes a 2 A charge possible, adds protection against a reversed cell, moves the four LEDs under the battery holder, gives the GNSS antenna the matching network of its manual, and adds an unfitted read-out circuit for a CO sensor. All copper was redrawn.
 
-The full record, with the reason and the source for every number, is `design/requirements.md` (rows R-V3-01 to R-V3-33). IDs in the tables below point there.
+The full record, with the reason and the source for every number, is `design/requirements.md` (rows R-V3-01 to R-V3-34). IDs in the tables below point there.
 
 ## 1. Firmware: pin map
 
@@ -152,12 +152,14 @@ Coordinates are KiCad's, in mm. The board's top edge is at y 58.79 and its centr
 
 Around the antenna, nothing but the feed and L4 is nearer than 2.0 mm to the antenna's pads on any layer (0.49 mm in v2).
 
+The battery holder has a foot on the top side round its screw at (155.47, 71.15), which bears on the board. C86 stands upright between the GNSS module and L5, 0.40 mm clear of it; the module's nearest pad is 0.45 mm clear (R-V3-34, R-V3-18).
+
 ## 6. To check on the first boards
 
 - I2C at 100K pull-ups: rise time on a scope, and the clock it allows.
 - Does the charger's 256 µs pulse on `EXP_INT` wake the chip from deep sleep?
 - GNSS: C/N0 against a v2 unit, then tune L4, L5 and C86 with a network analyzer on a complete unit. The fitted values are those of the antenna maker's test board.
-- LED4 against a real battery holder.
+- LED4 and C86 against a real battery holder.
 - A full 2 A charge with temperatures.
 - SPI clock edges at the display and at the NAND with the 33 Ω resistors.
 - The accelerometer answers at 0x18.

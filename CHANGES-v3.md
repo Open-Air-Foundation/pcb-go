@@ -1,13 +1,15 @@
 # AirGradient GO main board: what changed from v2 to v3
 
-This compares two tags of this repository, for the main board only (`PCB/airgradient-go-main`):
+This compares two designs of the main board (`PCB/airgradient-go-main`) in https://github.com/Open-Air-Foundation/pcb-go:
 
-| | Tag | PCB revision | State |
+| | Where | PCB revision | State |
 |---|---|---|---|
-| Old | `v2` | 2.1 | the boards that were produced |
-| New | `v3` | 3.0 | prototype, not ordered yet |
+| Old | tag `v2` (commit e806931, also the head of `main`) | 2.1 | the boards that were produced |
+| New | branch `v3-reroute` | 3.0 | prototype, not ordered yet, not tagged yet |
 
-The other boards (touch pad, LED + touch, SCD4x module) are the same in both tags.
+v3 has no final tag yet. A tag `v3` was set on 2026-11-11 and points at an earlier commit of the branch (af463c6), one layout fix behind (C86, section 5). Take the branch, not that tag; the tag will be set again when the design is final. Section 7 says how to get both designs and which files to give a reviewer or an AI.
+
+The other boards (touch pad, LED + touch, SCD4x module) are the same in both.
 
 In short: v3 keeps the outline, the mounting holes and every connector, switch and sensor where v2 has them. It changes which ESP32 pin does what (eight pins), wires the interrupt lines so touch, motion and the charger can wake the chip from deep sleep, raises the rail from 3.11 V to 3.31 V, makes a 2 A charge possible, adds protection against a reversed cell, moves the four LEDs under the battery holder, gives the GNSS antenna the matching network of its manual, and adds an unfitted read-out circuit for a CO sensor. All copper was redrawn.
 
@@ -119,6 +121,9 @@ Changed:
 | U11 | PS1-CO-SMOKE-10k | ES1-CO-100-01, same footprint, not fitted |
 | U16 | S12 footprint | S12 rev 2 footprint |
 | AE1 | pads 1.1 x 3.2 mm, 7.5 mm apart | pads 1.2 x 3.0 mm, 8.0 mm apart |
+| L3 | value text XRTC201210S100MBCA | XRIM201210S100MBCA, the name of the part that is fitted (C39846618 in both) |
+
+U4's symbol had two pins numbered 12 and none numbered 11 (both not connected): pad 11 has its own pin now. The 3.3 V net is named `+3.3V` (`+3.1V` in v2).
 
 Files: `PCB/airgradient-go-main/BOM.csv` (schematic BOM) and `PCB/airgradient-go-main/production/Airgradient-GO_3.0*` (gerbers, drill, assembly BOM, positions).
 
@@ -154,7 +159,24 @@ Around the antenna, nothing but the feed and L4 is nearer than 2.0 mm to the ant
 
 The battery holder has a foot on the top side round its screw at (155.47, 71.15), which bears on the board. C86 stands upright between the GNSS module and L5, 0.40 mm clear of it; the module's nearest pad is 0.45 mm clear (R-V3-34, R-V3-18).
 
-## 6. To check on the first boards
+## 6. Open points
+
+### What the review meeting of 2026-11-11 asked for
+
+| Asked | State in v3 |
+|---|---|
+| The GPIO differences in a table, and all changes from v2 in one document, on GitHub | this document |
+| A tag for v3 | not yet (see the top) |
+| LEDs about 1 cm in from the top edge, behind the battery holder | all four are under the holder now (section 5): LED1 and LED4 13 mm below the top edge, LED2 and LED3 still 2 mm below it, under the holder's bar. The places come from a sketch made after the meeting and are not confirmed yet |
+| The antenna turned along the top edge | not done. Its feed pad would sit 0.8 mm from the GNSS module's pads, and its manual asks for 2 mm to ground (R-V3-28) |
+| CO circuit: keep the footprint, do not fit it, give it its own low-noise LDO and a filter at VREF | footprints kept, nothing fitted, LDO U24 added. No separate RC at the LMP91002's VREF: there is no room for two more parts at that pin, so VREF shares the LDO's rail with VDD (R-V3-26) |
+| F1: a footprint that takes a resettable fuse, a one-time fuse or 0 Ω | the 1206 footprint takes all three. A 2.6 A resettable fuse is fitted; the part for production is not chosen |
+| 2 A charge as a user setting | firmware. The hardware allows it (section 2); a full charge with logged temperatures has not been run |
+| A smaller LED driver | no change, the LP5036 stays |
+
+The I2C pull-ups are 100K by choice, for the current while a line is low. The design review of the same day asked for 2.2 to 3.3 kΩ; see section 2.
+
+### To check on the first boards
 
 - I2C at 100K pull-ups: rise time on a scope, and the clock it allows.
 - Does the charger's 256 µs pulse on `EXP_INT` wake the chip from deep sleep?
@@ -165,12 +187,36 @@ The battery holder has a foot on the top side round its screw at (155.47, 71.15)
 - The accelerometer answers at 0x18.
 - S12 `EEPA`: polarity and timing.
 
-## 7. Comparing the two designs yourself
+## 7. Getting the two designs for a review
 
 ```
-git fetch --tags
-git diff v2 v3 --stat -- PCB/airgradient-go-main
-git checkout v2      # or v3, then open PCB/airgradient-go-main/airgradient-go-main.kicad_pro in KiCad 10
+git clone https://github.com/Open-Air-Foundation/pcb-go.git
+cd pcb-go
+git checkout v2             # the old design
+git checkout v3-reroute     # the new design
+git rev-parse --short HEAD  # the commit you have: quote it with anything you find
+git diff v2 v3-reroute --stat -- PCB/airgradient-go-main
 ```
 
-Design checks on `v3`: electrical rule check 276 messages, none of them a wrong connection; layout check 0 unconnected, schematic and board agree; its errors are all in `v2` as well (the battery holder's outline drawing, the holes of the USB connector and the mounting posts, one via under the fuel gauge, the battery contacts at the board edge, two pairs of part outlines that overlap).
+Open `PCB/airgradient-go-main/airgradient-go-main.kicad_pro` in KiCad 10. What each design holds:
+
+| File | What it is | v2 | v3 |
+|---|---|---|---|
+| `PCB/airgradient-go-main/airgradient-go-main.kicad_sch` | schematic, one sheet | yes | yes |
+| `PCB/airgradient-go-main/airgradient-go-main.kicad_pcb` | board, 4 layers | yes | yes |
+| `PCB/airgradient-go-main/BOM.csv` | schematic BOM | yes | yes |
+| `PCB/airgradient-go-main/production/` | gerbers, drill, assembly BOM, positions | `Airgradient-GO_2.0*` | `Airgradient-GO_3.0*` |
+| `CHANGES-v3.md` | this document | | yes |
+| `design/requirements.md` | every v3 change with its reason, its numbers and the datasheet pages | | yes |
+| `design/airgradient-go-main/connections/*.csv` | the intended connections of the changed blocks, pin by pin | | yes |
+
+For an AI review, give it this document and the two schematics. A netlist is easier for it to compare than the schematic file, and a PDF is easier to read; in each checkout:
+
+```
+kicad-cli sch export netlist --format kicadxml -o netlist.xml PCB/airgradient-go-main/airgradient-go-main.kicad_sch
+kicad-cli sch export pdf -o schematic.pdf PCB/airgradient-go-main/airgradient-go-main.kicad_sch
+```
+
+(`kicad-cli` comes with KiCad; on macOS it is `/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`.)
+
+Design checks on the head of `v3-reroute`: electrical rule check 276 messages, none of them a wrong connection; layout check 0 unconnected, schematic and board agree; its errors are all in `v2` as well (the battery holder's outline drawing, the holes of the USB connector and the mounting posts, one via under the fuel gauge, the battery contacts at the board edge, two pairs of part outlines that overlap).

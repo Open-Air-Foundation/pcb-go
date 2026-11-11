@@ -4,7 +4,7 @@
  "frame": [
   260.985,
   334.01,
-  345.44,
+  383.54,
   407.67
  ],
  "defaults": {
@@ -26,13 +26,15 @@
    "description": "Potentiostat AFE for a 0 mV bias CO sensor, I2C 0x48 when MENB low (R-V3-17); LMP91000SDX fits the same pads",
    "fields": {
     "LCSC Part": "C2651581"
-   }
+   },
+   "dnp": true,
+   "in_bom": false
   },
   {
    "ref": "U23",
    "lib_id": "easyeda2kicad-oaf:ADS1115IDGS",
    "at": [
-    325.12,
+    363.22,
     363.22
    ],
    "value": "ADS1115IDGSR",
@@ -41,7 +43,9 @@
    "description": "16-bit I2C ADC, ADDR to VDD = 0x49 (R-V3-17)",
    "fields": {
     "LCSC Part": "C37593"
-   }
+   },
+   "dnp": true,
+   "in_bom": false
   },
   {
    "ref": "R69",
@@ -57,7 +61,9 @@
    "description": "CO sensor load: 100R + 10R inside U22 (R-V3-17)",
    "fields": {
     "LCSC Part": "C25076"
-   }
+   },
+   "dnp": true,
+   "in_bom": false
   },
   {
    "ref": "C76",
@@ -68,12 +74,15 @@
     "toward": "left"
    },
    "lib_id": "Device:C",
-   "value": "0.1uF/25V",
+   "value": "1uF/25V",
    "footprint": "Capacitor_SMD:C_0402_1005Metric",
-   "datasheet": "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL05A104KA5NNNC_100nF-104-10-25V_C100072.html",
+   "datasheet": "https://www.lcsc.com/product-detail/C52923.html",
    "fields": {
-    "LCSC Part": "C100072"
-   }
+    "LCSC Part": "C52923"
+   },
+   "dnp": true,
+   "in_bom": false,
+   "description": "CL05A105KA5NQNC; U22 VDD and VREF (R-V3-26)"
   },
   {
    "ref": "C77",
@@ -88,7 +97,9 @@
    "datasheet": "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL05A104KA5NNNC_100nF-104-10-25V_C100072.html",
    "fields": {
     "LCSC Part": "C100072"
-   }
+   },
+   "dnp": true,
+   "in_bom": false
   },
   {
    "ref": "R70",
@@ -104,7 +115,9 @@
    "datasheet": "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_100KR-1003-1_C60491.html",
    "fields": {
     "LCSC Part": "C60491"
-   }
+   },
+   "dnp": true,
+   "in_bom": false
   },
   {
    "ref": "C79",
@@ -115,11 +128,157 @@
    "fields": {
     "LCSC Part": "C100072"
    },
+   "dnp": true,
+   "in_bom": false,
+   "at": [
+    373.38,
+    340.36
+   ],
+   "rot": 90
+  },
+  {
+   "ref": "R71",
+   "lib_id": "Device:R",
+   "attach": {
+    "to": "U22.8",
+    "mode": "series",
+    "gap": 11.43
+   },
+   "value": "1K",
+   "footprint": "Resistor_SMD:R_0402_1005Metric",
+   "datasheet": "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_1KR-1001-1_C106235.html",
+   "description": "RC0402FR-071KL; AIN1 filter with C80 (R-V3-24)",
+   "fields": {
+    "LCSC Part": "C106235"
+   },
+   "dnp": true,
+   "in_bom": false
+  },
+  {
+   "ref": "C80",
+   "lib_id": "Device:C",
+   "attach": {
+    "to": "U23.5",
+    "mode": "shunt",
+    "gap": 27.94,
+    "toward": "down"
+   },
+   "value": "1uF/50V",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric",
+   "datasheet": "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL05A105KO5NNNC_1uF-105-10-16V_C29266.html",
+   "description": "CC0402KRX5R9BB105",
+   "fields": {
+    "LCSC Part": "C7500380"
+   },
+   "dnp": true,
+   "in_bom": false
+  },
+  {
+   "ref": "R72",
+   "lib_id": "Device:R",
+   "at": [
+    355.6,
+    391.16
+   ],
+   "rot": 0,
+   "value": "120K",
+   "footprint": "Resistor_SMD:R_0402_1005Metric",
+   "datasheet": "https://www.lcsc.com/product-detail/C25750.html",
+   "description": "0402WGF1203TCE; zero divider top (R-V3-24)",
+   "fields": {
+    "LCSC Part": "C25750"
+   },
+   "dnp": true,
+   "in_bom": false
+  },
+  {
+   "ref": "R73",
+   "lib_id": "Device:R",
+   "at": [
+    355.6,
+    398.78
+   ],
+   "rot": 0,
+   "value": "30K",
+   "footprint": "Resistor_SMD:R_0402_1005Metric",
+   "datasheet": "https://www.lcsc.com/product-detail/C25776.html",
+   "description": "0402WGF3002TCE; zero divider bottom (R-V3-24)",
+   "fields": {
+    "LCSC Part": "C25776"
+   },
+   "dnp": true,
+   "in_bom": false
+  },
+  {
+   "ref": "C81",
+   "lib_id": "Device:C",
+   "at": [
+    365.76,
+    398.78
+   ],
+   "rot": 0,
+   "value": "47nF/25V",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric",
+   "datasheet": "https://lcsc.com/product-detail/Others_Guangdong-Fenghua-Advanced-Tech-0402B473K250NT_C285062.html",
+   "description": "0402B473K250NT",
+   "fields": {
+    "LCSC Part": "C285062"
+   },
+   "dnp": true,
+   "in_bom": false
+  },
+  {
+   "ref": "U24",
+   "lib_id": "easyeda2kicad-oaf:TPS7A0228DQNR",
+   "at": [
+    326.39,
+    346.71
+   ],
+   "value": "TPS7A2030PDQNR",
+   "footprint": "easyeda2kicad-oaf:X2SON-4_L1.0-W1.0-P0.65-TL-EP",
+   "datasheet": "https://www.ti.com/lit/ds/symlink/tps7a20.pdf",
+   "description": "3.0 V low-noise LDO for the CO AFE, always on from Pack+ (R-V3-26); same pinout as U9",
+   "fields": {
+    "LCSC Part": "C5220164"
+   },
+   "dnp": true,
+   "in_bom": false
+  },
+  {
+   "lib_id": "Device:C",
+   "value": "1uF/25V",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric",
+   "datasheet": "https://www.lcsc.com/product-detail/C52923.html",
+   "fields": {
+    "LCSC Part": "C52923"
+   },
+   "ref": "C84",
+   "at": [
+    342.9,
+    353.06
+   ],
+   "rot": 0,
+   "description": "CL05A105KA5NQNC; U24 input (R-V3-26)",
+   "dnp": true,
+   "in_bom": false
+  },
+  {
+   "lib_id": "Device:C",
+   "value": "1uF/25V",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric",
+   "datasheet": "https://www.lcsc.com/product-detail/C52923.html",
+   "fields": {
+    "LCSC Part": "C52923"
+   },
+   "ref": "C85",
    "at": [
     304.8,
-    345.44
+    350.52
    ],
-   "rot": 0
+   "rot": 0,
+   "description": "CL05A105KA5NQNC; U24 output (R-V3-26)",
+   "dnp": true,
+   "in_bom": false
   }
  ],
  "connect": [
@@ -137,14 +296,14 @@
   },
   {
    "pin": "U22.11",
-   "power": "+3.3V",
-   "symbol": "power:+3.3V",
-   "stub": 7.62
+   "stub": 7.62,
+   "power": "VDD_CO",
+   "symbol": "power:VDD"
   },
   {
    "pin": "U22.6",
-   "power": "+3.3V",
-   "symbol": "power:+3.3V"
+   "power": "VDD_CO",
+   "symbol": "power:VDD"
   },
   {
    "pin": "C76.2",
@@ -167,12 +326,6 @@
    "pin": "U22.7",
    "power": "GND",
    "symbol": "power:Earth"
-  },
-  {
-   "wire": [
-    "U22.8",
-    "U23.5"
-   ]
   },
   {
    "label": "CO_VOUT",
@@ -208,7 +361,7 @@
   },
   {
    "pin": "R70.2",
-   "power": "+3.3V",
+   "power": "VDD_CO",
    "symbol": "power:VDD"
   },
   {
@@ -217,8 +370,8 @@
   },
   {
    "pin": "U23.8",
-   "power": "+3.3V",
-   "symbol": "power:+3.3V"
+   "power": "VDD_CO",
+   "symbol": "power:VDD"
   },
   {
    "pin": "U23.3",
@@ -227,20 +380,15 @@
   },
   {
    "pin": "U23.4",
-   "power": "+3.3V",
-   "symbol": "power:+3.3V",
-   "stub": 5.08
-  },
-  {
-   "wire": [
-    "U23.6",
-    "U23.7"
-   ]
+   "stub": 2.54,
+   "power": "VDD_CO",
+   "symbol": "power:VDD"
   },
   {
    "pin": "U23.6",
    "power": "GND",
-   "symbol": "power:Earth"
+   "symbol": "power:Earth",
+   "stub": 15.24
   },
   {
    "pin": "U23.10",
@@ -252,31 +400,177 @@
   },
   {
    "pin": "U23.1",
-   "power": "+3.3V",
-   "symbol": "power:+3.3V",
-   "stub": 5.08
+   "stub": 5.08,
+   "power": "VDD_CO",
+   "symbol": "power:VDD"
   },
   {
    "pin": "U23.2",
    "nc": true
   },
   {
-   "pin": "C79.1",
-   "power": "+3.3V",
-   "symbol": "power:+3.3V"
-  },
-  {
    "pin": "C79.2",
    "power": "GND",
    "symbol": "power:Earth"
+  },
+  {
+   "wire": [
+    [
+     318.77,
+     365.76
+    ],
+    [
+     325.12,
+     365.76
+    ]
+   ]
+  },
+  {
+   "label": "CO_AIN1",
+   "at": [
+    337.82,
+    365.76
+   ],
+   "angle": 0
+  },
+  {
+   "pin": "C80.2",
+   "power": "GND",
+   "symbol": "power:Earth"
+  },
+  {
+   "pin": "U23.7",
+   "label": "CO_ZERO"
+  },
+  {
+   "pin": "R73.2",
+   "power": "GND",
+   "symbol": "power:Earth",
+   "stub": 1.27
+  },
+  {
+   "wire": [
+    [
+     355.6,
+     394.97
+    ],
+    [
+     365.76,
+     394.97
+    ]
+   ]
+  },
+  {
+   "label": "CO_ZERO",
+   "at": [
+    358.14,
+    394.97
+   ],
+   "angle": 0
+  },
+  {
+   "pin": "C81.2",
+   "power": "GND",
+   "symbol": "power:Earth",
+   "stub": 1.27
+  },
+  {
+   "pin": "C85.1",
+   "power": "VDD_CO",
+   "symbol": "power:VDD"
+  },
+  {
+   "pin": "C85.2",
+   "power": "GND",
+   "symbol": "power:Earth"
+  },
+  {
+   "pin": "C84.1",
+   "power": "Pack+",
+   "symbol": "power:VDD"
+  },
+  {
+   "pin": "C84.2",
+   "power": "GND",
+   "symbol": "power:Earth"
+  },
+  {
+   "pin": "U24.5",
+   "power": "GND",
+   "symbol": "power:Earth",
+   "stub": 2.54
+  },
+  {
+   "wire": [
+    [
+     317.5,
+     346.71
+    ],
+    [
+     304.8,
+     346.71
+    ]
+   ]
+  },
+  {
+   "wire": [
+    [
+     317.5,
+     349.25
+    ],
+    [
+     317.5,
+     354.33
+    ]
+   ]
+  },
+  {
+   "wire": [
+    [
+     317.5,
+     354.33
+    ],
+    [
+     304.8,
+     354.33
+    ]
+   ]
+  },
+  {
+   "wire": [
+    "U24.3",
+    "U24.4"
+   ]
+  },
+  {
+   "wire": [
+    [
+     335.28,
+     349.25
+    ],
+    [
+     342.9,
+     349.25
+    ]
+   ]
+  },
+  {
+   "pin": "C79.1",
+   "power": "VDD_CO",
+   "symbol": "power:VDD"
+  },
+  {
+   "pin": "R72.1",
+   "power": "VDD_CO",
+   "symbol": "power:VDD"
   }
  ],
  "notes": [
   {
-   "text": "CO AFE (R-V3-17), on +3.3V (3.31 V)\nU22: TIA 120k, zero 20 % of VDD,\n  3-lead mode, 0x48 while MENB low\nR69 100R + 10R in U22 = 110R load\nVOUT = 0.2 VDD + I x 120k <= 1.44 V\nU23 0x49: AIN1 VOUT, AIN0 +3.3V\n  (ratiometric zero); C79 = U23 VDD",
+   "text": "CO AFE (R-V3-17, 24, 26), not fitted\nU24: VDD_CO 3.0 V from Pack+, always on\nU22 0x48: TIA 120k, zero 20 % of VDD_CO\nU23 0x49: AIN1 - AIN3 = I x 120k",
    "at": [
     302.26,
-    392.43
+    396.24
    ]
   }
  ]

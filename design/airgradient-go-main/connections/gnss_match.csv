@@ -1,0 +1,10 @@
+# GNSS antenna matching, intent 2026-11-11 (R-V3-31). The T network of the CA-G01 manual (CA-G01_V01 5.3, p4): 6.2 nH in series at the antenna, 6.2 nH to ground, 100 pF in series at the RF port. Values are those of the maker's test board; AE1 pad 2 only holds the part.
+ref,pin,pin_name,net,note
+AE1,1,A,Net-(AE1-A),feed pad
+L4,1,,Net-(AE1-A),Series 1 of the manual, inside the clear area
+L4,2,,GNSS_T,
+L5,1,,GNSS_T,Shunt 1, at the edge of the ground
+L5,2,,GND,
+C86,1,,GNSS_T,Series 2
+C86,2,,GNSS_RF,
+U18,11,RF_IN,GNSS_RF,TAU1113 datasheet V1.4 p11

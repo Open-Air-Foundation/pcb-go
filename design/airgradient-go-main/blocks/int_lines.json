@@ -2,9 +2,9 @@
   "block": "int_lines",
   "title": "INT LINE",
   "frame": [
-    345.44,
-    334.01,
-    424.18,
+    383.54,
+    339.09,
+    449.58,
     386.08
   ],
   "defaults": {
@@ -16,10 +16,10 @@
   "connect": [],
   "notes": [
     {
-      "text": "CHG_INT: U5 BQ25628 ~INT -> U4 IO0 (R-V3-08)\n  open drain, 256 us low pulse (SLUSEG4C 8.3.8.3)\n  LP_GPIO0: also wakes the chip from deep sleep\nEXP_INT: U17 TCA6408A ~INT -> U4 IO1 (R-V3-02)\n  touch P4 + ACC_INT P5, held until read (SCPS192E 8.3.3)\n  LP_GPIO1: also wakes the chip from deep sleep\nPull-ups: CONTROLLER pull-up row, 100K each\n  EXP_INT R61 (R-V3-06), CHG_INT R62 (R-V3-08)\nNAND CS: U4 IO7, was U17 P2 (R-V3-03)\n32 kHz crystal removed (R-V3-01); IO15 now unused (R-V3-08)",
+      "text": "CHG_INT: U5 BQ25628 ~INT -> U17 P3 (R-V3-30, was U4 IO0)\n  open drain, 256 us low pulse (SLUSEG4C 8.3.8.3)\n  not held: EXP_INT follows it for 256 us, then read\n  the charger flags (they latch until read)\nEXP_INT: U17 TCA6408A ~INT -> U4 IO1 (R-V3-02)\n  touch P4 + ACC_INT P5, held until read (SCPS192E 8.3.3)\n  LP_GPIO1: also wakes the chip from deep sleep\nPull-ups: CONTROLLER pull-up row, 100K each\n  EXP_INT R61 (R-V3-06), CHG_INT R62 (R-V3-08)\nePaper D/C: U4 IO0, was U17 P3 (R-V3-30)\nNAND CS: U4 IO7, was U17 P2 (R-V3-03)\n32 kHz crystal removed (R-V3-01); IO15 now unused (R-V3-08)",
       "at": [
-        349.25,
-        344.17
+        387.35,
+        349.25
       ]
     }
   ]

@@ -1,0 +1,7 @@
+# BAT+ RF shunt, intent 2026-11-11 (R-V3-20). Two capacitors in series from BAT+ to GND, ahead of R8/Q3: one shorted capacitor must not short the cell.
+ref,pin,pin_name,net,note
+BT1,1,+,BAT+,cell + contact
+C75,1,,BAT+,
+C75,2,,BAT_SHUNT_MID,series node
+C82,1,,BAT_SHUNT_MID,
+C82,2,,GND,

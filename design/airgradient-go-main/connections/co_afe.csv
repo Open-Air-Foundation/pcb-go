@@ -1,4 +1,4 @@
-# CO sensor AFE, intent 2026-11-10 (R-V3-17). U11 ES1-CO-100-01 -> U22 LMP91002 potentiostat/TIA -> U23 ADS1115 (0x49).
+# CO sensor AFE, intent 2026-11-10 (R-V3-17), AIN1 filter and AIN3 zero divider 2026-11-11 (R-V3-24), own 3.0 V rail 2026-11-11 (R-V3-26). U11 ES1-CO-100-01 -> U22 LMP91002 potentiostat/TIA -> U23 ADS1115 (0x49).
 ref,pin,pin_name,net,note
 U11,1,R,CO_RE,reference electrode
 U11,2,S,CO_S,sensing (working) electrode
@@ -8,9 +8,9 @@ U22,13,RE,CO_RE,
 U22,12,WE,CO_WE,through R69
 R69,1,,CO_WE,100R external load
 R69,2,,CO_S,10R internal + 100R = 110R
-U22,11,VREF,+3.3V,unused reference input tied to VDD (1.5 V..VDD allowed)
-U22,6,VDD,+3.3V,
-C76,1,,+3.3V,U22 decoupling
+U22,11,VREF,VDD_CO,reference input tied to VDD (no room for an RC at the pin)
+U22,6,VDD,VDD_CO,
+C76,1,,VDD_CO,1uF at U22 VDD
 C76,2,,GND,
 U22,1,DGND,GND,
 U22,7,AGND,GND,
@@ -24,18 +24,37 @@ U22,3,SCL,SCL,
 U22,4,SDA,SDA,
 U22,2,MENB,CO_MENB,
 R70,1,,CO_MENB,100K pull-up: AFE off the bus by default
-R70,2,,+3.3V,
+R70,2,,VDD_CO,
 U22,5,NC,NC,NC flag
-U23,8,VDD,+3.3V,
-C79,1,,+3.3V,U23 decoupling
+U23,8,VDD,VDD_CO,same rail as U22 so its inputs never sit above its supply
+C79,1,,VDD_CO,U23 decoupling
 C79,2,,GND,
 U23,3,GND,GND,
-U23,4,AIN0,+3.3V,ratiometric reference for the internal zero
-U23,5,AIN1,CO_VOUT,
+U23,4,AIN0,VDD_CO,rail read-back
+R71,1,,CO_VOUT,1K series: filter with C80 (159 Hz)
+R71,2,,CO_AIN1,
+C80,1,,CO_AIN1,1uF
+C80,2,,GND,
+U23,5,AIN1,CO_AIN1,
 U23,6,AIN2,GND,unused
-U23,7,AIN3,GND,unused
+U23,7,AIN3,CO_ZERO,0.2 x VDD like the zero inside U22: read AIN1 - AIN3 in one conversion
+R72,1,,VDD_CO,120K
+R72,2,,CO_ZERO,
+R73,1,,CO_ZERO,30K
+R73,2,,GND,
+C81,1,,CO_ZERO,47nF: 24k x 47n = 1.1 ms like R71 x C80
+C81,2,,GND,
 U23,10,SCL,SCL,
 U23,9,SDA,SDA,
-U23,1,ADDR,+3.3V,address 0x49
+U23,1,ADDR,VDD_CO,address 0x49
 U23,2,ALERT/RDY,NC,NC flag
 U17,10,P7,CO_MENB,expander output drives MENB low to talk to U22
+U24,4,IN,Pack+,always on like U9
+U24,3,EN,Pack+,
+U24,1,OUT,VDD_CO,3.0 V
+U24,2,GND,GND,
+U24,5,EP,GND,
+C84,1,,Pack+,1uF input
+C84,2,,GND,
+C85,1,,VDD_CO,1uF output (0.47 uF effective needed)
+C85,2,,GND,

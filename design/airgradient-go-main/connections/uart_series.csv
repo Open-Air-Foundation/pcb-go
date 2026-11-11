@@ -1,0 +1,10 @@
+# UART0 series resistors, intent 2026-11-11 (R-V3-25). 499R on U0TXD per the Espressif hardware guidelines; 499R on U0RXD so a UART tool at U4 can override the GNSS TXD.
+ref,pin,pin_name,net,note
+U4,39,TXD0,U0TXD,ROM boot log comes out here
+R74,1,,U0TXD,series R beside U4
+R74,2,,MCU_TX,
+U18,3,RXD1,MCU_TX,GNSS receive
+U18,2,TXD1,MCU_RX,GNSS transmit
+R75,1,,MCU_RX,series R beside U4
+R75,2,,U0RXD,
+U4,40,RXD0,U0RXD,

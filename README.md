@@ -62,6 +62,7 @@ PCB/
 └── scd4x-module/            # Optional SCD4x CO₂ daughterboard
 libraries/                   # Shared KiCad symbols, footprints, 3D models
 graphics/                    # Logos and artwork
+SPEC-SHEET.md                # Hardware spec sheet: sensors, radio, power, mechanics, display, battery, internal cables
 ```
 
 ## Fabrication

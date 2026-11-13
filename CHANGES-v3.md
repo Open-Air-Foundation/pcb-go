@@ -4,7 +4,7 @@ This compares two designs of the main board (`PCB/airgradient-go-main`) in https
 
 | | Where | PCB revision | State |
 |---|---|---|---|
-| Old | tag `v2` (commit 0ff8df9, also the head of `main`) | 2.1 | the boards that were produced |
+| Old | tag `v2` (commit 58b90d4, also the head of `main`) | 2.1 | the boards that were produced |
 | New | branch `v3-reroute` | 3.0 | prototype, not ordered yet, not tagged yet |
 
 v3 is not tagged yet: it gets its tag when the design is final. Until then the branch is the design. Section 7 says how to get both designs and which files to give a reviewer or an AI.

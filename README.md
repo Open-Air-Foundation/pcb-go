@@ -36,6 +36,10 @@ Each version has a hardware spec sheet. It includes the parts the KiCad BOM does
 - v1: [SPEC-SHEET-v1.md](SPEC-SHEET-v1.md)
 - v3: [SPEC-SHEET.md on branch `v3-reroute`](https://github.com/Open-Air-Foundation/pcb-go/blob/v3-reroute/SPEC-SHEET.md)
 
+The manufacturers' documents (PDF) are in [`documents/`](documents/README.md): datasheets of the main parts (ESP32-C5 module, charger, fuel gauge, power parts, sensors, peripherals), and the documents a search does not find (display, battery, Senseair S12, GNSS antenna).
+
+[`CLAUDE.md`](CLAUDE.md) and [`AGENTS.md`](AGENTS.md) are instructions for an AI working in this repository: which git ref is which version, which document answers which question, the traps.
+
 ## Boards in this repository
 
 | Board | Directory | Production set | Layers | Used by | Description |
@@ -97,6 +101,9 @@ libraries/                   # Shared KiCad symbols, footprints, 3D models
 graphics/                    # Logos and artwork
 SPEC-SHEET.md                # Hardware spec sheet of v2
 SPEC-SHEET-v1.md             # Hardware spec sheet of v1
+documents/                   # Manufacturers' documents: datasheets of the main parts, display, battery, S12
+CLAUDE.md                    # Instructions for AI agents
+AGENTS.md                    # Points other AI agents to CLAUDE.md
 ```
 
 ## Fabrication
@@ -117,7 +124,7 @@ These main-board parts have no LCSC number and are supplied separately for assem
 - TAU1113
 - CA-G01 antenna
 
-The display, the battery and the two internal cables are not in the KiCad BOM: see [SPEC-SHEET.md](SPEC-SHEET.md).
+The display, the battery and the two internal cables are not in the KiCad BOM: see [SPEC-SHEET.md](SPEC-SHEET.md). The datasheets of the main parts, and the manufacturers' documents for the display, the battery, the S12 and the GNSS antenna, are in [`documents/`](documents/README.md).
 
 ## Versioning & releases
 

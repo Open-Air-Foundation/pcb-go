@@ -10,6 +10,8 @@ Where v2 and v3 differ, both are given.
 
 v1 and v2 also have sheets of their own on branch `main`: [SPEC-SHEET-v1.md](https://github.com/Open-Air-Foundation/pcb-go/blob/main/SPEC-SHEET-v1.md) for v1 and [SPEC-SHEET.md](https://github.com/Open-Air-Foundation/pcb-go/blob/main/SPEC-SHEET.md) for v2.
 
+The manufacturers' documents for the display, the battery, the S12 and the GNSS antenna are in this repository: [`documents/`](documents/README.md). The other parts have public datasheets.
+
 Sensor values come from each sensor's own datasheet (named in every row). They describe the sensor, not a tested accuracy of the finished device: inside the enclosure the device's own heat, the airflow and the firmware's compensation all change what a reading means.
 
 ## 1. At a glance
@@ -32,7 +34,7 @@ Sensor values come from each sensor's own datasheet (named in every row). They d
 | Measures | Sensor | Range | Datasheet accuracy | Source |
 |---|---|---|---|---|
 | PM1.0, PM2.5, PM4, PM10 mass; PM0.5 to PM10 particle count | Sensirion **SPS30**, laser scattering, on its own 5 V supply | 0 to 1000 µg/m³; 0 to 3000 #/cm³; particles 0.3 to 10 µm | PM1.0 and PM2.5: ±(5 µg/m³ + 5 %) from 0 to 100 µg/m³, ±10 % from 100 to 1000 µg/m³. PM4 and PM10: ±25 µg/m³ / ±25 % | SPS30 datasheet v2.0 (June 2023), p2 |
-| CO2 | Senseair **S12** (article 012-0-0001), NDIR | 400 to 5000 ppm (extended range to 10 000 ppm) | ±(50 ppm + 3 % of reading) from 0 to 5000 ppm, at 25 °C, 1013 mbar, 50 %RH; response T63 < 30 s | S12 product specification PSP15871 Rev 4 (preliminary), p2 |
+| CO2 | Senseair **S12** (article 012-0-0001), NDIR | 400 to 5000 ppm (extended range to 10 000 ppm) | ±(50 ppm + 3 % of reading) from 0 to 5000 ppm, at 25 °C, 1013 mbar, 50 %RH; response T63 < 30 s | [S12 product specification PSP15871 Rev 4](documents/co2-s12/Senseair_S12_product-spec_PSP15871_Rev4.pdf) (preliminary), p2 |
 | Temperature and relative humidity | Sensirion **SHT40** (SHT40-AD1B-R2) | −40 to 125 °C; 0 to 100 %RH | ±0.2 °C typical (±0.4 °C max from 0 to 65 °C); ±1.8 %RH typical (±3.5 %RH max from 10 to 90 %RH) | SHT4x datasheet v7.3, p4 to p7 |
 | VOC Index, NOx Index | Sensirion **SGP41** (SGP41-D-R4), metal oxide | VOC Index 1 to 500; NOx Index 1 to 500 | an index, not a concentration: firmware computes it from the raw signals with Sensirion's Gas Index Algorithm. Valid after < 1.5 h (VOC) and < 6 h (NOx) | SGP41 datasheet v1.0, p3, p4, p10 |
 | Barometric pressure | Goermicro **SPL07-003** | 300 to 1100 hPa | ±0.3 hPa absolute, ±3 Pa relative (typical) | SPL07-003 datasheet v1.0, p6 |
@@ -49,7 +51,7 @@ Notes:
 - The module can also receive GLONASS G1, Galileo E1, QZSS and SBAS. Which systems it tracks is set by a mode stored in its flash.
 - 88 channels, up to 5 Hz updates.
 - From the module datasheet, open sky: position 1.5 m CEP (< 1.0 m with SBAS); cold start 26 to 28 s, hot start 1 to 2 s; tracking sensitivity −163 dBm (measured with a good external LNA). Source: TAU1113 datasheet V1.4 (preliminary), p9, p10.
-- Antenna: a CA-G01 chip antenna on the main board, 8 × 3 mm. v2 has no matching network fitted. v3 fits the matching network from the antenna's manual.
+- Antenna: a CA-G01 chip antenna on the main board, 8 × 3 mm. v2 has no matching network fitted. v3 fits the matching network from the [antenna's manual](documents/gnss/CrossAir_CA-G01_antenna_application-manual_V01_CN.pdf).
 - How well it receives inside the enclosure has not been specified.
 
 **Accelerometer: LIS2DH12.** 3-axis, full scale ±2, ±4, ±8 or ±16 g, with programmable motion and wake-up interrupts (LIS2DH12 datasheet Rev 6, p1). On v3 its interrupt can wake the ESP32 through the I/O expander; on v2 the firmware polls it.
@@ -125,7 +127,7 @@ The firmware addresses the panel as 128 × 250, because the controller's RAM row
 
 Not the **GDEY0213B74H**: that panel has the same outline and nearly the same name, but 144 × 296 pixels.
 
-Source: Good Display product specification GDEY0213B74, 2021/03/17 (values p6, pin table p8, BS1 p9).
+Source: [Good Display product specification GDEY0213B74, 2021/03/17](documents/display/GDEY0213B74_GoodDisplay_2021-03-17.pdf) (values p6, pin table p8, BS1 p9).
 
 ## 9. Battery
 
@@ -147,7 +149,7 @@ Source: Good Display product specification GDEY0213B74, 2021/03/17 (values p6, p
 
 The cell is bought as an "18500", but by its drawing it is physically an 18490.
 
-Cowon's documents name the model in two ways: INR18490NP in the cell spec (revision A0, 2025-06-13) and INR18500 26N in the MSDS (2026-10-15). Both give 2600 mAh and 3.7 V. Neither says whether the cell has its own protection circuit; the board protects it in any case (section 6).
+Cowon's documents name the model in two ways: INR18490NP in the [cell spec](documents/battery/Cowon_INR18490NP_2600mAh_cell-spec_A0.pdf) (revision A0, 2025-06-13) and INR18500 26N in the [MSDS](documents/battery/Cowon_INR18500-26N_MSDS_2026-10-15.pdf) (2026-10-15). Both give 2600 mAh and 3.7 V. Neither says whether the cell has its own protection circuit; the board protects it in any case (section 6).
 
 The 2 A charge that v3 allows is inside the cell's 1C limit.
 

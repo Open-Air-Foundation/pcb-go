@@ -47,7 +47,7 @@ Documents in this checkout:
 | `VERSIONS.md` | the three versions side by side, with pin maps and the reasons for each change |
 | `CHANGES-v3.md` | every v2 → v3 change, with its reason and its source |
 | `SPEC-SHEET.md` | the hardware, including the parts the KiCad BOM does not define: the display, the battery and the internal cables |
-| [`documents/`](documents/README.md) | the manufacturers' documents (PDF) for the parts a search does not find: the display, the battery, the Senseair S12 and the GNSS antenna |
+| [`documents/`](documents/README.md) | the manufacturers' documents (PDF): datasheets of the main parts (ESP32-C5 module, charger, fuel gauge, power parts, sensors, peripherals), and the documents a search does not find (display, battery, Senseair S12, GNSS antenna) |
 | [`CLAUDE.md`](CLAUDE.md), [`AGENTS.md`](AGENTS.md) | instructions for an AI working in this repository: which git ref is which version, which document answers which question, the traps |
 
 ## Boards in this repository
@@ -115,7 +115,7 @@ graphics/                    # Logos and artwork
 VERSIONS.md                  # v1, v2 and v3 side by side
 CHANGES-v3.md                # v2 → v3 change record
 SPEC-SHEET.md                # Hardware spec sheet
-documents/                   # Manufacturers' documents: display, battery, S12, GNSS antenna
+documents/                   # Manufacturers' documents: datasheets of the main parts, display, battery, S12
 CLAUDE.md                    # Instructions for AI agents
 AGENTS.md                    # Points other AI agents to CLAUDE.md
 ```
@@ -138,7 +138,7 @@ These main-board parts have no LCSC number and are supplied separately for assem
 - TAU1113
 - CA-G01 antenna
 
-The display, the battery and the two internal cables are not in the KiCad BOM: see `SPEC-SHEET.md`. The manufacturers' documents for the display, the battery, the S12 and the GNSS antenna are in [`documents/`](documents/README.md).
+The display, the battery and the two internal cables are not in the KiCad BOM: see `SPEC-SHEET.md`. The datasheets of the main parts, and the manufacturers' documents for the display, the battery, the S12 and the GNSS antenna, are in [`documents/`](documents/README.md).
 
 ## Versioning & releases
 

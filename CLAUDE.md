@@ -26,7 +26,7 @@ Three designs of the main board are in this repository. Before you read the desi
 | Why one v3 change was made, with its numbers and datasheet pages (IDs `R-V3-01` to `R-V3-35`) | `design/requirements.md` |
 | How a changed block is meant to be connected, pin by pin | `design/airgradient-go-main/connections/*.csv` |
 | Product-level specifications; the display, the battery and the cables, which the BOM does not define | `SPEC-SHEET.md` |
-| The manufacturer's document for the display, the battery, the Senseair S12 or the GNSS antenna | `documents/README.md`, then the PDF it names |
+| A part's datasheet: the ESP32-C5 module, the charger, the fuel gauge, the sensors, the display, the battery, the Senseair S12 | `documents/README.md`, then the PDF it names |
 | A part's value, part number or LCSC number | `PCB/airgradient-go-main/BOM.csv` (schematic) and `production/*_bom.csv` (what is assembled) |
 
 ## Reading the design
@@ -39,8 +39,8 @@ The schematic (`.kicad_sch`, 1.2 MB) and the board (`.kicad_pcb`, 3.7 MB) are S-
 
 ## Traps
 
-- **Manufacturers' documents.** For the display, the battery, the S12 and the GNSS antenna, use the PDFs in `documents/`, not a web search. `documents/README.md` names the look-alike part a search returns for the display, and the S12 document that overrides another one on pin 6.
-- **Module, not chip.** U4 is the module ESP32-C5-MINI-1-N4. Take pad numbers, limits and strapping pins from the module datasheet. Label any value that only the ESP32-C5 chip datasheet gives.
+- **Datasheets.** For a part that `documents/` holds, read its PDF there: it is the revision whose pages these documents cite, and a web search returns other revisions and look-alike parts. `documents/README.md` names the traps: the look-alike display, the S12 notice that overrides the S12 specification on pin 6, the two revisions of the module datasheet, and the documents that are not there.
+- **Module, not chip.** U4 is the module ESP32-C5-MINI-1-N4. Take pad numbers, limits and strapping pins from the module datasheet (`documents/mcu/`). Label any value that only the ESP32-C5 chip datasheet gives.
 - **Not fitted.** A symbol with `(dnp yes)` is not assembled. In v3 that is 42 parts, among them the whole CO read-out (U11, U22, U23, U24 and their passives), U2, TF1, R35 and R46. Check the flag before you report a fault in a circuit.
 - **Test points.** The 16 test points (TP1 to TP17) are in the schematic only. The board has none.
 - **Reference designators** were renumbered between v1 and v2 (the charger is U3 in v1, U5 afterwards). Across versions, match parts by part number and by net.

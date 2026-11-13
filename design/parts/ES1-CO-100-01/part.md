@@ -1,6 +1,6 @@
 # ES1-CO-100-01 — 3-electrode CO sensor (U11, R-V3-17)
 
-EC Sense datasheet V1.4 (2025-02-28), `~/Documents/Engineering/Datasheets/Sensors/`.
+EC Sense datasheet V1.4 (2025-02-28): `documents/sensors/ECSense_ES1-CO-100-01_datasheet_V1.4.pdf`.
 Amperometric, bias 0 mV, 30 ± 15 nA/ppm, 0–100 ppm, zero ±100 nA, load resistor 100 Ω recommended,
 T90 < 30 s (p1). Pins C, S, R in a row, 2.54 mm pitch, ø0.4 mm; body 11.5 mm, 12.5 mm over the tabs (p2).
 Sensitivity about 11 / 17.5 / 25 nA/ppm at 0 / 20 / 50 °C (p3).

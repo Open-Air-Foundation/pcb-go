@@ -16,4 +16,4 @@ Where the rest is:
 | v1, v2 and v3 side by side | [`VERSIONS.md`](VERSIONS.md) |
 | Every change from v2 to v3 | [`CHANGES-v3.md`](CHANGES-v3.md) |
 | Hardware spec sheet | [`SPEC-SHEET.md`](SPEC-SHEET.md) |
-| Manufacturers' PDFs for the parts a web search does not find | [`documents/`](documents/README.md) |
+| Datasheets and other manufacturers' PDFs: the chips, the sensors, the display, the battery | [`documents/`](documents/README.md) |

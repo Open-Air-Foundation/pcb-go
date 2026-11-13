@@ -29,7 +29,12 @@ This repository contains the complete electronics design: schematics, PCB layout
 | v2 | tag `v2`, branch `main` | 2.1 | **the produced boards** (this checkout) |
 | v3 | branch `v3-reroute` | 3.0 | prototype |
 
-[VERSIONS.md](https://github.com/Open-Air-Foundation/pcb-go/blob/v3-reroute/VERSIONS.md) (on branch `v3-reroute`) compares the three side by side, with pin maps and the reasons for each change. [SPEC-SHEET.md](https://github.com/Open-Air-Foundation/pcb-go/blob/v3-reroute/SPEC-SHEET.md) describes the hardware of v2 and v3, including the parts the KiCad BOM does not define: the display, the battery and the internal cables.
+[VERSIONS.md](https://github.com/Open-Air-Foundation/pcb-go/blob/v3-reroute/VERSIONS.md) (on branch `v3-reroute`) compares the three side by side, with pin maps and the reasons for each change.
+
+Each version has a hardware spec sheet. It includes the parts the KiCad BOM does not define: the display, the battery and the internal cables.
+- v2: [SPEC-SHEET.md](SPEC-SHEET.md)
+- v1: [SPEC-SHEET-v1.md](SPEC-SHEET-v1.md)
+- v3: [SPEC-SHEET.md on branch `v3-reroute`](https://github.com/Open-Air-Foundation/pcb-go/blob/v3-reroute/SPEC-SHEET.md)
 
 ## Boards in this repository
 
@@ -90,6 +95,8 @@ PCB/
 └── scd4x-module/            # Optional SCD4x CO₂ daughterboard
 libraries/                   # Shared KiCad symbols, footprints, 3D models
 graphics/                    # Logos and artwork
+SPEC-SHEET.md                # Hardware spec sheet of v2
+SPEC-SHEET-v1.md             # Hardware spec sheet of v1
 ```
 
 ## Fabrication
@@ -110,7 +117,7 @@ These main-board parts have no LCSC number and are supplied separately for assem
 - TAU1113
 - CA-G01 antenna
 
-The display, the battery and the two internal cables are not in the KiCad BOM: see SPEC-SHEET.md.
+The display, the battery and the two internal cables are not in the KiCad BOM: see [SPEC-SHEET.md](SPEC-SHEET.md).
 
 ## Versioning & releases
 

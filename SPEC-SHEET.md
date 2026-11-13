@@ -8,6 +8,8 @@ It applies to two designs:
 
 Where v2 and v3 differ, both are given.
 
+v1 and v2 also have sheets of their own on branch `main`: [SPEC-SHEET-v1.md](https://github.com/Open-Air-Foundation/pcb-go/blob/main/SPEC-SHEET-v1.md) for v1 and [SPEC-SHEET.md](https://github.com/Open-Air-Foundation/pcb-go/blob/main/SPEC-SHEET.md) for v2.
+
 Sensor values come from each sensor's own datasheet (named in every row). They describe the sensor, not a tested accuracy of the finished device: inside the enclosure the device's own heat, the airflow and the firmware's compensation all change what a reading means.
 
 ## 1. At a glance
@@ -42,7 +44,7 @@ Notes:
 
 ## 3. Location and motion
 
-**GNSS: TAU1113 module (TAU1113-1010A00).**
+**GNSS: TAU1113 module** (ordering number TAU1113-1010A00E in its datasheet).
 - Receives **GPS L1 C/A and BeiDou B1I** (single band).
 - The module can also receive GLONASS G1, Galileo E1, QZSS and SBAS. Which systems it tracks is set by a mode stored in its flash.
 - 88 channels, up to 5 Hz updates.
@@ -92,7 +94,7 @@ These are what the hardware can do. Which radios are used, and how, is set by th
 | Fuel gauge and protection | TI **BQ27742-G1**: Impedance Track gauge reporting state of charge, remaining capacity, time to empty, voltage, current and temperature. It also protects the cell against over-voltage, under-voltage, over-current in charge and discharge, and short circuit, through a CSD83325L FET pair and a 5 mΩ sense resistor (BQ27742-G1 datasheet SLUSBV9D, p1) |
 | Reversed cell | v3 only: a second CSD83325L blocks a cell put in backwards |
 | System rail | TPS63802 buck-boost converter, 3.11 V (v2) or 3.31 V (v3). Its input comes through an LM66200 ideal-diode switch: on v2 from USB or the charger's system output, on v3 from the system output only |
-| SPS30 supply | its own 5 V supply, switched on and off by firmware; its I2C lines are disconnected by a TMUX121 switch while it is off |
+| SPS30 supply | 5 V from the charger's PMID output, through a FET switch that closes when the charger reports PMID good. PMID carries the USB voltage while USB is connected and the charger's boost output on battery (3.84 to 5.2 V, set by firmware; BQ25628 datasheet, p1, p6). The SPS30's I2C lines are disconnected by a TMUX121 switch while it is off |
 
 Battery life depends on the mode and the firmware, and is not specified in this sheet.
 

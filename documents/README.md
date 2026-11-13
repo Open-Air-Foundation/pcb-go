@@ -1,12 +1,14 @@
 # Manufacturers' documents
 
-The manufacturers' documents the GO was designed from, so that a person or an AI reviewing the design has everything in one repository and reads the revision the design was made from. The page numbers cited in `SPEC-SHEET.md`, `CHANGES-v3.md` and `design/requirements.md` are those of the revisions kept here.
+The manufacturers' documents the GO was designed from, so that a person or an AI reviewing the design has everything in one repository and reads the revision the design was made from. The page numbers cited in the spec sheets, and on branch `v3-reroute` in `CHANGES-v3.md` and `design/requirements.md`, are those of the revisions kept here.
+
+This folder is the same on branch `main` and on branch `v3-reroute`. Some notes below name files that only `v3-reroute` has: `CHANGES-v3.md` and everything under `design/`.
 
 Two kinds of document are here:
 - **Section 1:** documents a search does not find, or finds wrong: the display, the battery, the Senseair S12, the GNSS antenna and module.
 - **Section 2:** datasheets of the main parts: the ESP32-C5 module, the charger, the fuel gauge, the power parts, the sensors, the peripherals.
 
-The documents apply to v2 (tag `v2`) and to v3 (branch `v3-reroute`), except where a note says otherwise. References (`U5`, `CN1`) are those of v2 and v3; v1 numbers its parts differently.
+The documents apply to v2 (tag `v2`) and to v3 (branch `v3-reroute`), except where a note says otherwise. References (`U5`, `CN1`) are those of v2 and v3; v1 numbers its parts differently. v1 (tag `v1.0`) shares most of these parts; the two datasheets that only v1 needs are marked "v1 only".
 
 ## 1. Parts a search does not find
 
@@ -56,7 +58,7 @@ The documents apply to v2 (tag `v2`) and to v3 (branch `v3-reroute`), except whe
 | Espressif ESP32-C5, the chip inside the module | | chip datasheet v1.5, 2026-09-03 | 96 | [Espressif_ESP32-C5_chip-datasheet_v1.5.pdf](mcu/Espressif_ESP32-C5_chip-datasheet_v1.5.pdf) |
 | | | ESP32-C5 Hardware Design Guidelines, release of 2026-10-12 | 32 | [Espressif_ESP32-C5_hardware-design-guidelines_2026-10-12.pdf](mcu/Espressif_ESP32-C5_hardware-design-guidelines_2026-10-12.pdf) |
 
-The board carries the module. Take pad numbers and limits from the module datasheet, and use the chip datasheet only for what the module datasheet does not give. Two revisions of the module datasheet are here because both are cited: `design/requirements.md` gives pages of v1.3, `SPEC-SHEET.md` pages of v1.4.
+The board carries the module. Take pad numbers and limits from the module datasheet, and use the chip datasheet only for what the module datasheet does not give. Two revisions of the module datasheet are here because both are cited: `design/requirements.md` gives pages of v1.3, the spec sheets pages of v1.4.
 
 ### Charging, battery and power: `power/`
 
@@ -65,6 +67,7 @@ The board carries the module. Take pad numbers and limits from the module datash
 | TI BQ25628, battery charger | `U5` | datasheet SLUSEG4C, February 2025 | 89 | [TI_BQ25628_charger_SLUSEG4C.pdf](power/TI_BQ25628_charger_SLUSEG4C.pdf) |
 | TI BQ27742-G1, fuel gauge and cell protector | `U3` | datasheet SLUSBV9D, January 2018 | 46 | [TI_BQ27742-G1_gauge-protector_SLUSBV9D.pdf](power/TI_BQ27742-G1_gauge-protector_SLUSBV9D.pdf) |
 | | | technical reference manual SLUUAX0C, July 2015: commands and data flash | 125 | [TI_BQ27742-G1_technical-reference_SLUUAX0C.pdf](power/TI_BQ27742-G1_technical-reference_SLUUAX0C.pdf) |
+| TI BQ27427, fuel gauge of v1 | v1 only | datasheet SLUSEB5B, September 2025 | 23 | [TI_BQ27427_gauge_SLUSEB5B.pdf](power/TI_BQ27427_gauge_SLUSEB5B.pdf) |
 | TI CSD83325L, dual N-FET | `Q3`; `Q6` in v3 | datasheet SLPS494C, November 2023 | 14 | [TI_CSD83325L_dual-NMOS_SLPS494C.pdf](power/TI_CSD83325L_dual-NMOS_SLPS494C.pdf) |
 | TI LM66200, ideal-diode switch | `U19` | datasheet SLVSG04, November 2021 | 21 | [TI_LM66200_ideal-diode_SLVSG04.pdf](power/TI_LM66200_ideal-diode_SLVSG04.pdf) |
 | TI TPS63802, buck-boost converter | `U8` | datasheet SLVSEU9D, January 2021 | 38 | [TI_TPS63802_buck-boost_SLVSEU9D.pdf](power/TI_TPS63802_buck-boost_SLVSEU9D.pdf) |
@@ -80,7 +83,8 @@ The board carries the module. Take pad numbers and limits from the module datash
 | Sensirion SHT40, temperature and humidity | `U12` | SHT4x datasheet v7.3, June 2026 | 25 | [Sensirion_SHT4x_datasheet_v7.3.pdf](sensors/Sensirion_SHT4x_datasheet_v7.3.pdf) |
 | Sensirion SGP41, VOC and NOx | `U10` | datasheet v1.0, December 2021 | 22 | [Sensirion_SGP41_datasheet_v1.0.pdf](sensors/Sensirion_SGP41_datasheet_v1.0.pdf) |
 | ST LIS2DH12, accelerometer | `U14` | datasheet DocID025056 Rev 6, May 2017 | 53 | [ST_LIS2DH12_datasheet_Rev6.pdf](sensors/ST_LIS2DH12_datasheet_Rev6.pdf) |
-| EC Sense ES1-CO-100-01, CO sensor (not fitted) | `U11` | datasheet V1.4, 2025-02-28 | 5 | [ECSense_ES1-CO-100-01_datasheet_V1.4.pdf](sensors/ECSense_ES1-CO-100-01_datasheet_V1.4.pdf) |
+| EC Sense ES1-CO-100-01, CO sensor (not fitted) | `U11` in v3 | datasheet V1.4, 2025-02-28 | 5 | [ECSense_ES1-CO-100-01_datasheet_V1.4.pdf](sensors/ECSense_ES1-CO-100-01_datasheet_V1.4.pdf) |
+| Infineon DPS368, pressure sensor of v1 | v1 only | datasheet v1.1, 2019-07-03 | 44 | [Infineon_DPS368_datasheet_v1.1.pdf](sensors/Infineon_DPS368_datasheet_v1.1.pdf) |
 
 The Senseair S12 is in section 1.
 
@@ -114,6 +118,7 @@ The Senseair S12 is in section 1.
 | ESP32-C5 | technical reference manual v1.1 | 1746 pages, 15 MB | www.espressif.com |
 | CO read-out, not fitted: LMP91002 (`U22`), ADS1115 (`U23`), TPS7A2030 (`U24`) | their TI datasheets | not fitted on any board | www.ti.com. `design/parts/` has extracts for the LMP91002 and the ADS1115 |
 | The two internal cables, the battery holder, the enclosure | none: the manufacturer has no document for them | | `SPEC-SHEET.md`, sections 7 and 10 |
+| The other parts only v1 has: the KNTC0805 thermistor, the GPS1003 antenna, the pouch cell | public datasheets for the first two; no specification is on record for the cell | | `SPEC-SHEET-v1.md` on branch `main` |
 | Every other part: resistors, capacitors, inductors, the fuse, the switches, the display's FPC socket, the unfitted microSD socket and second flash | its public datasheet | a search finds it | `PCB/airgradient-go-main/BOM.csv` gives the part number and the LCSC number |
 
 ## Licence

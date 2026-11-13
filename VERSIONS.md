@@ -5,7 +5,7 @@ Three designs of the main board (`PCB/airgradient-go-main`) in https://github.co
 | | Where | PCB revision | State |
 |---|---|---|---|
 | v1 | tag `v1.0` (commit 96f6503) | 1.0 | the first product |
-| v2 | tag `v2` (commit e806931, also the head of `main`) | 2.1 | the boards that were produced |
+| v2 | tag `v2` (commit 0ff8df9, also the head of `main`) | 2.1 | the boards that were produced |
 | v3 | branch `v3-reroute` | 3.0 | prototype, not ordered yet, not tagged yet |
 
 The tables are read from the KiCad files of the three designs: a netlist exported from each schematic, and the three board files. Reference designators were renumbered between v1 and v2 (the charger is U3 in v1 and U5 afterwards), so parts are named here by what they do and by part number. The reasons in section 3 are the designer's.

@@ -4,7 +4,7 @@ This compares two designs of the main board (`PCB/airgradient-go-main`) in https
 
 | | Where | PCB revision | State |
 |---|---|---|---|
-| Old | tag `v2` (commit e806931, also the head of `main`) | 2.1 | the boards that were produced |
+| Old | tag `v2` (commit 0ff8df9, also the head of `main`) | 2.1 | the boards that were produced |
 | New | branch `v3-reroute` | 3.0 | prototype, not ordered yet, not tagged yet |
 
 v3 is not tagged yet: it gets its tag when the design is final. Until then the branch is the design. Section 7 says how to get both designs and which files to give a reviewer or an AI.
@@ -118,13 +118,11 @@ Changed:
 | R22 | 475K (C5713272) | 511K (C5126239) |
 | R26, R30 | 10K (C327797) | 100K (C60491) |
 | R49 | 5.1K (C105872) | 10K (C327797) |
-| R18 | 5.23k, field said C327340 | 5.23k (C2933105) |
-| R19 | 30.1k, field said C851231 | 30.1k (C29402) |
+| R18 | 5.23k (C25907) | 5.23k (C2933105) |
 | R35, R46 | fitted | not fitted |
 | U11 | PS1-CO-SMOKE-10k | ES1-CO-100-01, same footprint, not fitted |
 | U16 | S12 footprint | S12 rev 2 footprint |
 | AE1 | pads 1.1 x 3.2 mm, 7.5 mm apart | pads 1.2 x 3.0 mm, 8.0 mm apart |
-| L3 | value text XRTC201210S100MBCA | XRIM201210S100MBCA, the name of the part that is fitted (C39846618 in both) |
 
 U4's symbol had two pins numbered 12 and none numbered 11 (both not connected): pad 11 has its own pin now. The 3.3 V net is named `+3.3V` (`+3.1V` in v2).
 
@@ -210,7 +208,7 @@ Open `PCB/airgradient-go-main/airgradient-go-main.kicad_pro` in KiCad 10. What e
 | `PCB/airgradient-go-main/airgradient-go-main.kicad_sch` | schematic, one sheet | yes | yes |
 | `PCB/airgradient-go-main/airgradient-go-main.kicad_pcb` | board, 4 layers | yes | yes |
 | `PCB/airgradient-go-main/BOM.csv` | schematic BOM | yes | yes |
-| `PCB/airgradient-go-main/production/` | gerbers, drill, assembly BOM, positions | `Airgradient-GO_2.0*` | `Airgradient-GO_3.0*` |
+| `PCB/airgradient-go-main/production/` | gerbers, drill, assembly BOM, positions | `Airgradient-GO_2.1*` (and the 2.0 prototype set) | `Airgradient-GO_3.0*` |
 | `CHANGES-v3.md` | this document | | yes |
 | `design/requirements.md` | every v3 change with its reason, its numbers and the datasheet pages | | yes |
 | `design/airgradient-go-main/connections/*.csv` | the intended connections of the changed blocks, pin by pin | | yes |

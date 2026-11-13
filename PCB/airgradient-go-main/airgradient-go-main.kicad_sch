@@ -30061,7 +30061,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Others_YAGEO-RC0402FR-074K12L_C327340.html"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C25907.html"
 			(at 110.49 323.85 0)
 			(hide yes)
 			(show_name no)
@@ -30083,7 +30083,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C327340"
+		(property "LCSC Part" "C25907"
 			(at 113.03 323.85 0)
 			(hide yes)
 			(show_name no)
@@ -34638,7 +34638,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C29402.html"
 			(at 100.33 339.09 0)
 			(hide yes)
 			(show_name no)
@@ -34660,7 +34660,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C851231"
+		(property "LCSC Part" "C29402"
 			(at 110.49 339.09 0)
 			(hide yes)
 			(show_name no)
@@ -36578,7 +36578,7 @@
 				)
 			)
 		)
-		(property "Value" "XRTC201210S100MBCA"
+		(property "Value" "XRIM201210S100MBCA"
 			(at 336.55 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
